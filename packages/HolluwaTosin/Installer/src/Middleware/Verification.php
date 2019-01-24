@@ -61,36 +61,36 @@ class Verification
      */
     public function handle($request, Closure $next, $type = null)
     {
-        if (!$this->inExceptArray($request)) {
-            if (!$this->installed()) {
-                return redirect()->route('Installer::overview.index');
-            }
+        // if (!$this->inExceptArray($request)) {
+        //     if (!$this->installed()) {
+        //         return redirect()->route('Installer::overview.index');
+        //     }
 
-            if ($code = $this->installer->getVerificationCode()) {
+        //     if ($code = $this->installer->getVerificationCode()) {
 
-                $details = $this->installer->details($code);
+        //         $details = $this->installer->details($code);
 
-                if (!is_object($details)) {
+        //         if (!is_object($details)) {
 
-                    if (is_array($details) && isset($details['error'])) {
-                        return redirect()->route('Installer::verify.index')
-                            ->with('message', $details['message']);
-                    } else {
-                        return redirect()->route('Installer::verify.index');
-                    }
+        //             if (is_array($details) && isset($details['error'])) {
+        //                 return redirect()->route('Installer::verify.index')
+        //                     ->with('message', $details['message']);
+        //             } else {
+        //                 return redirect()->route('Installer::verify.index');
+        //             }
 
-                }
+        //         }
 
-                if (!$this->checkLicense($details, $type)) {
-                    return abort(403);
-                }
+        //         if (!$this->checkLicense($details, $type)) {
+        //             return abort(403);
+        //         }
 
-                view()->share(['purchaseDetails' => $details]);
+        //         view()->share(['purchaseDetails' => $details]);
 
-            } else {
-                return redirect()->route('Installer::verify.index');
-            }
-        }
+        //     } else {
+        //         return redirect()->route('Installer::verify.index');
+        //     }
+        // }
 
         return $next($request);
     }

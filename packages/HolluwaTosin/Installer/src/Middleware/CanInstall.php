@@ -18,19 +18,19 @@ class CanInstall
      */
     public function handle($request, Closure $next)
     {
-        if (self::installed()) {
-            $action = config('installer.installed_action.default');
+        // if (self::installed()) {
+        //     $action = config('installer.installed_action.default');
 
-            switch ($action) {
-                case 'route':
-                    return redirect()->route(config('installer.installed_action.options.route.name'));
-                    break;
+        //     switch ($action) {
+        //         case 'route':
+        //             return redirect()->route(config('installer.installed_action.options.route.name'));
+        //             break;
 
-                case 'abort':
-                default:
-                    return abort(config('installer.installed_action.options.abort.type'));
-            }
-        }
+        //         case 'abort':
+        //         default:
+        //             return abort(config('installer.installed_action.options.abort.type'));
+        //     }
+        // }
 
         return $next($request);
     }

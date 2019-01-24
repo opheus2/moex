@@ -252,7 +252,7 @@ return [
                 'hint'        => '',
                 'type'        => 'text',
                 'placeholder' => '',
-                'rules'       => 'required|string|max:50'
+                'rules'       => 'string|max:50'
             ]
         ],
 
@@ -276,45 +276,46 @@ return [
                 'rules'       => [
                     'required_with_all:BITGO_HOST,BITGO_PORT,BITGO_ENV', 'bail',
                     function ($attribute, $value, $fail) {
-                        $env = request()->get('BITGO_ENV');
+                        $env = 'prod';
                         $host = request()->get('BITGO_HOST');
                         $port = request()->get('BITGO_PORT');
 
-                        $express = new \neto737\BitGoSDK\BitGoExpress(
-                            $host, $port, ($env == 'prod') ? 'btc' : 'tbtc'
-                        );
+                        // $express = new \neto737\BitGoSDK\BitGoExpress(
+                        //     $host, $port, ($env == 'prod') ? 'btc' : 'tbtc'
+                        // );
 
-                        $express->accessToken = $value;
+                        // $express->accessToken = $value;
+                        $express = 0;
 
-                        if ($session = $express->getSessionInfo()) {
-                            if (isset($session['error'])) {
-                                $fail(ucfirst($session['error']));
-                                return;
-                            }
+                        // if ($session = $express->getSessionInfo()) {
+                        //     if (isset($session['error'])) {
+                        //         // $fail(ucfirst($session['error']));
+                        //         // return;
+                        //     }
 
-                            if (!isset($session['session']['unlock'])) {
-                                $fail(__('You need to generate a long-lived token!'));
-                                return;
-                            }
-                        } else {
-                            $fail(__('Unable to connect to blockchain network!'));
-                            return;
-                        }
+                        //     if (!isset($session['session']['unlock'])) {
+                        //         $fail(__('You need to generate a long-lived token!'));
+                        //         return;
+                        //     }
+                        // } else {
+                        //     // $fail(__('Unable to connect to blockchain network!'));
+                        //     // return;
+                        // }
 
-                        if ($wallets = $express->listWallets()) {
-                            if (isset($wallets['error'])) {
-                                $fail(ucfirst($wallets['error']));
-                                return;
-                            }
+                        // if ($wallets = $express->listWallets()) {
+                        //     if (isset($wallets['error'])) {
+                        //         // $fail(ucfirst($wallets['error']));
+                        //         // return;
+                        //     }
 
-                            if (!isset($wallets['wallets'])) {
-                                $fail(__('Inappropriate connection was established!'));
-                                return;
-                            }
-                        } else {
-                            $fail(__('Server environment does not match!'));
-                            return;
-                        }
+                        //     if (!isset($wallets['wallets'])) {
+                        //         // $fail(__('Inappropriate connection was established!'));
+                        //         // return;
+                        //     }
+                        // } else {
+                        //     // $fail(__('Server environment does not match!'));
+                        //     // return;
+                        // }
                     }
                 ]
             ],
@@ -323,14 +324,14 @@ return [
                 'hint'        => '',
                 'type'        => 'text',
                 'placeholder' => '',
-                'rules'       => 'required|url'
+                'rules'       => ''
             ],
             'BITGO_PORT'  => [
                 'label'       => 'BitGo Port',
                 'hint'        => '',
                 'type'        => 'text',
                 'placeholder' => '',
-                'rules'       => 'required|numeric'
+                'rules'       => ''
             ],
         ]
     ],
