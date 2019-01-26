@@ -17,7 +17,7 @@
             <h6 class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt. Nullam nec nulla tortor. Maecenas eros est, tempus sed placerat non, laoreet vitae diam. Aenean eu pretium risus. Pellentesque vel lorem tempus, aliquet justo eleifend, commodo nunc. Aliquam sed libero malesuada, venenatis augue in, ornare lectus.</h6>
         </div>
         <div class="col-md-6">
-            <!-- <img  style="margin-top: -32%;" src="{{ asset('images/bit.png')}}"> -->
+            <img  style="margin-top: -32%;" src="{{ asset('images/bit.png')}}">
         </div>
     </div>
     <div class="row" style="margin-top:52px">
