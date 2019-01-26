@@ -79,23 +79,23 @@ class InstallController extends Controller
 
             $key = $this->installer->prefix . 'code';
 
-            if(!($details instanceof PurchaseDetails)){
-                if(is_array($details) && isset($details['error'])){
-                    $validator->getMessageBag()->add(
-                        'verification', $details['message']
-                    );
+            // if(!($details instanceof PurchaseDetails)){
+            //     if(is_array($details) && isset($details['error'])){
+            //         $validator->getMessageBag()->add(
+            //             'verification', $details['message']
+            //         );
 
-                }else{
-                    $validator->getMessageBag()->add(
-                        'verification', 'Something went wrong!'
-                    );
-                }
+            //     }else{
+            //         $validator->getMessageBag()->add(
+            //             'verification', 'Something went wrong!'
+            //         );
+            //     }
 
-                return redirect()->back()->withErrors($validator);
+            //     return redirect()->back()->withErrors($validator);
 
-            }else{
+            // }else{
                 session()->put($key, $code);
-            }
+            // }
         }catch(\Exception $e){
             $validator->getMessageBag()->add('verification', $e->getMessage());
 

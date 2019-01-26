@@ -43,7 +43,7 @@ class VerifyController extends Controller
     public function verify(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'verification' => 'required|string|min:10',
+            'verification' => 'string|min:10',
         ]);
 
         if($validator->fails()){
@@ -55,22 +55,22 @@ class VerifyController extends Controller
 
             $details = $this->installer->check($code);
 
-            if(!($details instanceof PurchaseDetails)){
-                if(is_array($details) && isset($details['error'])){
-                    $validator->getMessageBag()->add(
-                        'verification', $details['message']
-                    );
-                }else{
-                    $validator->getMessageBag()->add(
-                        'verification', 'Something unexpected went wrong!'
-                    );
-                }
+            // if(!($details instanceof PurchaseDetails)){
+            //     if(is_array($details) && isset($details['error'])){
+            //         $validator->getMessageBag()->add(
+            //             'verification', $details['message']
+            //         );
+            //     }else{
+            //         $validator->getMessageBag()->add(
+            //             'verification', 'Something unexpected went wrong!'
+            //         );
+            //     }
 
-                return redirect()->back()->withErrors($validator);
-            }else{
-                $this->installer->setVerificationCode($code);
+            //     return redirect()->back()->withErrors($validator);
+            // }else{
+                dd($this->installer->setVerificationCode($code));
                 $this->installer->clearDetails();
-            }
+            // }
         }catch(\Exception $e){
             $validator->getMessageBag()->add('verification', $e->getMessage());
 

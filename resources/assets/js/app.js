@@ -32,6 +32,7 @@ import Menu from './menu';
 import Navigation from './nav';
 import Footer from './footer';
 
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -91,6 +92,8 @@ Vue.component('knob', require('./components/Knob'));
 Vue.component('app-admin-menu', AdminMenu);
 Vue.component('app-admin-navigation', AdminNavigation);
 Vue.component('app-admin-footer', AdminFooter);
+
+Vue.component('landing', require('./components/Landing.vue'));
 
 import global from './core/global';
 import menu from './core/menu';

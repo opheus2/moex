@@ -26,14 +26,14 @@ Route::group([
         Route::get('', 'InstallController@index')->name('index');
         Route::post('', 'InstallController@verify');
 
-        Route::middleware('installer.validate_session')->group(function () {
+        // Route::middleware('installer.validate_session')->group(function () { 
             Route::get('requirements', 'InstallController@requirements')->name('requirements');
 
             Route::get('permissions', 'InstallController@permissions')->name('permissions');
 
             Route::get('environment', 'InstallController@environment')->name('environment');
             Route::post('environment', 'InstallController@saveEnvironment');
-        });
+        // });
 
         Route::get('finish', 'InstallController@finish')->name('finish');
         Route::post('finish', 'InstallController@start');
@@ -50,9 +50,9 @@ Route::group([
     });
 
     // Verify
-    Route::group(['prefix' => 'verify', 'as' => 'verify.', 'middleware' => ['installer.can_verify']], function () {
+    // Route::group(['prefix' => 'verify', 'as' => 'verify.', 'middleware' => ['installer.can_verify']], function () {
         Route::get('', 'VerifyController@index')->name('index');
         Route::post('', 'VerifyController@verify');
-    });
+    // });
 
 });

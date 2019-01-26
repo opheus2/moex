@@ -619,3 +619,4 @@ Route::group([], function () {
     });
 });
 
+    Route::get('/landing', 'LandingController@index');

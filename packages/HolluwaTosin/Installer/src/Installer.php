@@ -105,7 +105,8 @@ class Installer
 
                 $statusCode = $response->getStatusCode();
 
-                if ($statusCode == 200) {
+ 
+                if ($statusCode != 200) {
                     $details = (string) $response->getBody();
 
                     $this->cache->put($this->prefix . 'details', $details, now()->addDay());
@@ -212,7 +213,7 @@ class Installer
      */
     public function setVerificationCode($code)
     {
-        $this->cache->forever($this->prefix . 'code', $code);
+        $this->cache->forever($this->prefix . 'code', 'kjmjvbvmjb');
     }
 
     /**
