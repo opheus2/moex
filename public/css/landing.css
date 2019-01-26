@@ -1,0 +1,436 @@
+.header-brand{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 38px !important;
+    letter-spacing: 0.02em;
+    color: #FFFFFF !important;
+    line-height: 53px !important;
+}
+.navbar {
+    min-height: 87px !important;
+}
+
+.header-links{
+    height: 23px;
+    top: 71px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 18px;
+    color: #FFFFFF !important;    
+    margin-top: 16px !important;
+    margin-right: 12px !important;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #FFFFFF !important;
+}
+
+.header-bg{
+    background-color: #1B264B;
+    border-color: #1B264B;
+    border-radius: 0px !important;
+}
+
+.landing-buy{
+    margin-top: 15%;
+    margin-left: 78px;
+}
+
+.landing-buy span{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    /* line-height: 102px; */
+    /* font-size: 50px; */
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.landing-buy h6{
+    /* width: 705px; */
+    width: 50%;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 48px;
+    font-size: 36px;
+    letter-spacing:  0.02em;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+
+}
+
+.text-color{
+    color: #ffffff !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none !important;
+    background-color: #1B264B !important;
+}
+footer{
+    background-color: #1B264B;
+    color: #ffffff !important;
+}
+.footer-margin{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 75px;
+}
+
+.footer-h5{
+    line-height: 35px;
+}
+.footer-list{
+    list-style: none;
+}
+
+.foot{
+    margin-bottom: 23px;
+}
+
+.button-sign{
+    width: 164px;
+    height: 45px;
+    color: black !important;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 3px !important;
+    line-height: 15px !important;
+}
+.footer-list h6{
+    line-height: 24px;
+}
+
+.landing{
+    height: 1263px;
+    background: url(../images/landing-bg.png) no-repeat;
+    background-size: cover;
+}
+
+nav{
+    margin-bottom: 0px !important;
+}
+
+.myown{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36px;
+    color: #656262;
+}
+
+.lorem{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 37px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+
+    color: #656262;
+}
+
+.trade{
+    left: 42.78%;
+    right: 42.85%;
+    top: 37.2%;
+    bottom: 61.73%;
+    text-align: center;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36px;
+    color: #656262;
+}
+.button-group{
+    float: right !important;
+    margin-top: 12px;
+    margin-right: 0px;
+}
+
+.btn-purple{
+    border-radius: 0px;
+    background-color: #6C63FF;
+    margin-right: -3px;
+    width: 217px;
+    color: #ffffff;
+}
+
+.btn-white{
+    background-color: #ffffff;
+    border: 1px #ffffff;
+    width: 217px;
+    color: #6C63FF;
+    border: 1px solid !important;
+    border-radius: 0px !important;
+    margin-left: -2px;
+}
+
+.btn-nig {
+    width: 164px;
+    background-color: #ffffff;
+    border: 1px #ffffff;
+    width: 217px;
+    color: #6C63FF;
+    border: 1px solid !important;
+    border-radius: 0px !important;
+}
+
+.buy-cash{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    color: #656262;
+}
+
+table tr{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 24px; */
+
+    color: #656262;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 0px solid #ddd !important;
+}
+
+tbody>:nth-child(2n-1) {
+    background-color: #dddddd;
+}
+
+.show-more{
+    background-color: #6C63FF;
+    height: 57px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.notch{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    color: #656262;
+    text-align: center;
+}
+
+.transactions{
+    margin-top: 139px;
+}
+
+.myimage{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ssl-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #656262;
+}
+
+.ssl-text-head{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size:24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #656262;
+}
+
+.refer{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36px;
+    color: #656262;
+    float: right;
+}
+
+.refer h3{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 36px;
+    color: #656262;
+    float: right;
+}
+
+.refer-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 37px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    width: 100%;
+    color: #656262;
+    float: right;
+}
+
+.count{
+    background: url(../images/count.png) no-repeat;
+    height: 408px;
+    background-size: cover;
+    line-height: 200px;
+
+}
+
+.text h4, .text h6{
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.text h4{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 48px;
+    letter-spacing: 0.1em;
+}
+
+.text h6{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 18px;
+    letter-spacing: 0.1em; 
+}
+
+.join{
+    height: 185px;
+    background: #FAFAFA;
+    padding: 34px;
+
+}
+.us{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 30px;
+    color: #656262;
+    padding-top: 15px;
+}
+
+.join .text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 29px;
+    font-size: 18px;
+    color: #656262;
+}
+.join .btn-purple, .join .btn-white{
+    height: 41px;
+    width: 176px;
+}
+
+.join .button-group{
+    float: right !important;
+    margin-top: 37px;
+    margin-right: -27px;
+}
+
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .vl-featured-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.navbar-toggle {
+    border: 1px solid #fff !important;
+    margin-top: 25px !important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media (min-width: 768px){
+    .sidenav {
+        display: none;
+    }
+}
