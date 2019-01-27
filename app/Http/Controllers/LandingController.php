@@ -17,4 +17,9 @@ class LandingController extends Controller
     {        
         return view('landing.privacy');
     }
+
+    public function contact()
+    {        
+        return view('landing.contact');
+    }
 }
