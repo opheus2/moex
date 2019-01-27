@@ -1,3 +1,6 @@
+body{
+    height: fit-content;
+}
 .header-brand{
     font-family: Nunito;
     font-style: normal;
@@ -98,7 +101,7 @@ footer{
     background: #FFFFFF;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
     border-radius: 3px !important;
-    line-height: 15px !important;
+    line-height: 22px !important;
 }
 .footer-list h6{
     line-height: 24px;
@@ -432,5 +435,192 @@ body {
   @media (min-width: 768px){
     .sidenav {
         display: none;
+    }
+}
+
+.banner {
+    height: 250px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/banner.png) no-repeat;
+    background-size: cover;
+}
+
+.policy {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 82px;
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.read {
+    font-family: Nunito;
+    font-style: normal;
+    line-height: 49px;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF; 
+    text-align: center;
+}
+
+.bar {
+    height: 139px;
+    left: 105px;
+    top: 305px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: -43px;
+}
+
+.term {
+    width: 112px;
+    height: 21px;
+    right: 1178px;
+    top: calc(50% - 21px/2 - 1344px);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 3px;
+    font-size: 14px;
+    text-align: center;
+    color: #6C63FF;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-left: 25px;
+    border-bottom: 2px solid;
+}
+
+.terms {
+    display: inline-flex;
+}
+
+.polici{
+    width: 112px;
+    height: 21px;
+    right: 1178px;
+    top: calc(50% - 21px/2 - 1344px);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 3px;
+    font-size: 14px;
+    text-align: center;
+    color: #797979;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.service{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 42px;
+    color: #505050;
+    padding-top: 40px;
+}
+
+.pol-container {
+    padding-right: 90px !important;
+    padding-left: 90px !important;
+}
+
+.sub{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 21px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #505050;
+    margin-top: 40px;
+}
+
+.content{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    margin-top: 15px;
+    color: #878787;
+}
+
+.last{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    color: #878787;
+    float:right;
+    margin-top: 40px;
+}
+.bg{
+    height: 173px;
+    left: 0px;
+    background: #6C63FF;
+}
+
+.bg-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 36px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.bg-text-2{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF; 
+}
+
+.drop{
+    border-radius: 8px;
+    width: 260px;
+    text-align: left !important;
+}
+
+.drop-d{
+    float: right ;
+    margin-top: 50px;
+    margin-right: 40px !important;
+}
+
+.drop-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #797979;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px){
+    .pol-container{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin-right: auto !important;
+        margin-left: auto;
+        display: table;
+        content: " ";
+    }
+    .pol-container:after {
+        clear: both;
+        display: table;
+        content: " ";
     }
 }

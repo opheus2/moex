@@ -620,3 +620,4 @@ Route::group([], function () {
 });
 
     Route::get('/landing', 'LandingController@index');
+    Route::get('/privacy', 'LandingController@privacy');
