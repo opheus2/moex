@@ -621,3 +621,4 @@ Route::group([], function () {
 
     Route::get('/landing', 'LandingController@index');
     Route::get('/privacy', 'LandingController@privacy');
+    Route::get('/contact', 'LandingController@contact');
