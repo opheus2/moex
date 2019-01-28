@@ -5,13 +5,7 @@
         <div class="content-wrapper">
             <div class="content-body">
 
-                @if($purchaseDetails->isRegularLicense())
-                    <div class="bs-callout-info callout-border-left mb-1 p-1">
-                        <p class="card-text">
-                            <b>{{__('Notice!')}}</b> {{__('You current license type is Regular. While all the functionality is made available, Escrow Fees will not be charged on any trade. An Extended License or greater is required to enable this.')}}
-                        </p>
-                    </div>
-                @endif
+                
 
                 <section>
                     <div class="row">
