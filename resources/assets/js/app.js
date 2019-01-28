@@ -31,6 +31,48 @@ import Auth from './pages/auth';
 import Menu from './menu';
 import Navigation from './nav';
 import Footer from './footer';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Routes from './route'
+import land from './components/Landing'
+import Homes from './components/gon' 
+import terms from './components/terms' 
+import privacy from './components/privacy' 
+import contact from './components/contact' 
+
+
+Vue.use('VueRouter');
+
+const router = new VueRouter({
+    routes: [
+        {
+          path: '/',
+          name: 'landing',
+          component: land
+        },
+        {
+            path: '/home',
+            name: 'Home',
+            component: Homes
+          },
+          {
+            path: '/terms-of-service',
+            name: 'terms-of-service',
+            component: terms
+          },
+          {
+            path: '/privacy-policy',
+            name: 'Privacy Policy',
+            component: privacy
+          },
+          {
+            path: '/contact',
+            name: 'Contact',
+            component: contact
+          }
+      ]
+})
+
 
 
 /**
@@ -87,6 +129,9 @@ Vue.component('user-tag', require('./components/UserTag'));
 Vue.component('count-down', require('./components/CountDown'));
 Vue.component('select2', require('./components/Select2'));
 Vue.component('knob', require('./components/Knob'));
+Vue.component('gon', require('./components/gon'));
+Vue.component('navbar', require('./components/Navbar'));
+Vue.component('app', require('./components/App'));
 
 
 Vue.component('app-admin-menu', AdminMenu);
@@ -100,6 +145,7 @@ import menu from './core/menu';
 
 window.App = new Vue({
     el: '#app',
+    router: router,
     data: {
         dataTable: {}
     },
@@ -234,6 +280,8 @@ window.App = new Vue({
                 },
                 idle: 1000 * 60,
             });
+        }else{
+
         }
     },
 });

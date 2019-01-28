@@ -16,13 +16,14 @@ use Vsch\TranslationManager\Translator;
 Route::group([], function () {
     // Landing routes
     Route::get('/', function () {
-        $root_url = platformSettings()->root_url;
+        return view('landing.index');
+    //     $root_url = platformSettings()->root_url;
 
-        if (!$root_url || Auth::check()) {
-            return redirect()->route('home.index');
-        }
+    //     if (!$root_url || Auth::check()) {
+    //         return redirect()->route('home.index');
+    //     }
 
-        return redirect()->away($root_url);
+    //     return redirect()->away($root_url);
     });
 
     // Authentication route
@@ -622,3 +623,4 @@ Route::group([], function () {
     Route::get('/landing', 'LandingController@index');
     Route::get('/privacy', 'LandingController@privacy');
     Route::get('/contact', 'LandingController@contact');
+    Route::get('/test', 'LandingController@test');
