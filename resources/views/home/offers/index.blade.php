@@ -217,13 +217,13 @@
 
                                 </div>
                                 <div class="text-center">
-                                    <a href="{{share_link('facebook', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mr-1 mb-1 btn-facebook">
+                                    <a href="{{share_link('facebook', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mr-1 mb-1 btn-facebook" target="_blank">
                                         <span class="la la-facebook"></span>
                                     </a>
-                                    <a href="{{share_link('twitter', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mr-1 mb-1 btn-twitter">
+                                    <a href="{{share_link('twitter', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mr-1 mb-1 btn-twitter" target="_blank">
                                         <span class="la la-twitter white"></span>
                                     </a>
-                                    <a href="{{share_link('linkedin', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mb-1 btn-linkedin">
+                                    <a href="{{share_link('linkedin', request()->fullUrl(), get_offer_title($offer))}}" class="btn btn-social-icon mb-1 btn-linkedin" target="_blank">
                                         <span class="la la-linkedin"></span>
                                     </a>
                                 </div>
