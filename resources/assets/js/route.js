@@ -1,22 +1,41 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import land from './components/land'
-import Home from './components/gon' // this is the import line to add
+import land from './components/Landing'
+import Homes from './components/gon' 
+import terms from './components/terms' 
+import privacy from './components/privacy' 
+import contact from './components/contact' 
 
 Vue.use(Router)
 
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/landing',
       name: 'landing',
       component: land
     },
     {
-        path: '/home',
-        name: 'Home',
-        component: Home
-      }
+      path: '/home',
+      name: 'Home',
+      component: Homes
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: terms
+    },
+    {
+      path: '/privacy-policy',
+      name: 'Privacy Policy',
+      component: privacy
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: contact
+    }
   ]
 })
