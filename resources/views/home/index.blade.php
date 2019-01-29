@@ -26,7 +26,7 @@
                     <div class="col-xl-4 col-lg-6 col-12">
                         <div class="card crypto-card-3 bg-warning">
                             <div class="card-content">
-                                <div class="card-body cc BTC pb-1">
+                                <div class="card-body cc BTC pb-1" onclick="location.href='{{route('wallet.index') . '#bitcoin'}}';" style="cursor: pointer;">
                                     <div class="row">
                                         <div class="col-6">
                                             <h4 class="text-white mb-3">
@@ -66,7 +66,7 @@
                     <div class="col-xl-4 col-lg-6 col-12">
                         <div class="card crypto-card-3 bg-primary">
                             <div class="card-content">
-                                <div class="card-body cc DASH pb-1">
+                                <div class="card-body cc DASH pb-1" onclick="location.href='{{route('wallet.index') . '#dash'}}';" style="cursor: pointer;">
                                     <div class="row">
                                         <div class="col-6">
                                             <h4 class="text-white mb-3">
@@ -106,7 +106,7 @@
                     <div class="col-xl-4 col-lg-6 col-12">
                         <div class="card crypto-card-3 bg-secondary">
                             <div class="card-content">
-                                <div class="card-body cc LTC pb-1">
+                                <div class="card-body cc LTC pb-1" onclick="location.href='{{route('wallet.index') . '#litecoin'}}';" style="cursor: pointer;">
                                     <div class="row">
                                         <div class="col-6">
                                             <h4 class="text-white mb-3">

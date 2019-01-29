@@ -107,6 +107,10 @@ footer{
     line-height: 24px;
 }
 
+.footer-list router-link{
+    line-height: 24px;
+}
+
 .landing{
     height: 1263px;
     background: url(../images/landing-bg.png) no-repeat;
