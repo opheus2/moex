@@ -10,6 +10,8 @@
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('css/landing.css')}}">
     <title>@yield("title", config('app.name', 'Moex'))</title>
+    @include('includes.scripts')
+
     <!-- Fonts -->
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
