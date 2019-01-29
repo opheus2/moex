@@ -59,25 +59,25 @@ import Echo from 'laravel-echo'
 window.Pusher = require('pusher-js');
 window.io = require('socket.io-client');
 
-// const broadcaster = window.Laravel.broadcaster;
+const broadcaster = window.Laravel.broadcaster;
 
-// if(broadcaster === "pusher"){
-//     const pusher = window.Laravel.pusher;
+if(broadcaster === "pusher"){
+    const pusher = window.Laravel.pusher;
 
-//     window.Echo = new Echo({
-//         broadcaster: 'pusher',
-//         cluster: pusher.cluster,
-//         key: pusher.key,
-//         encrypted: true
-//     });
-// }else if(broadcaster === "redis"){
-//     const host = window.location.hostname;
+    window.Echo = new Echo({
+        broadcaster: 'pusher',
+        cluster: pusher.cluster,
+        key: pusher.key,
+        encrypted: true
+    });
+}else if(broadcaster === "redis"){
+    const host = window.location.hostname;
 
-//     window.Echo = new Echo({
-//         broadcaster: 'socket.io',
-//         host: host + ':6001'
-//     });
-// }
+    window.Echo = new Echo({
+        broadcaster: 'socket.io',
+        host: host + ':6001'
+    });
+}
 
 /**
  * This section includes other NPM dependecies which are require by the
