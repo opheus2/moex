@@ -31,47 +31,11 @@ import Auth from './pages/auth';
 import Menu from './menu';
 import Navigation from './nav';
 import Footer from './footer';
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Routes from './route'
-import land from './components/Landing'
-import Homes from './components/gon' 
-import terms from './components/terms' 
-import privacy from './components/privacy' 
-import contact from './components/contact' 
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
+import router from './route'
+import Landing from './components/App'
 
-
-Vue.use('VueRouter');
-
-const router = new VueRouter({
-    routes: [
-        {
-          path: '/',
-          name: 'landing',
-          component: land
-        },
-        {
-            path: '/home',
-            name: 'Home',
-            component: Homes
-          },
-          {
-            path: '/terms-of-service',
-            name: 'terms-of-service',
-            component: terms
-          },
-          {
-            path: '/privacy-policy',
-            name: 'Privacy Policy',
-            component: privacy
-          },
-          {
-            path: '/contact',
-            name: 'Contact',
-            component: contact
-          }
-      ]
-})
 
 
 
@@ -145,7 +109,10 @@ import menu from './core/menu';
 
 window.App = new Vue({
     el: '#app',
-    router: router,
+    router,
+    // template: '<Landing/>',
+      components: { Landing },
+
     data: {
         dataTable: {}
     },
@@ -250,6 +217,7 @@ window.App = new Vue({
     },
 
     mounted: function () {
+        // this.$router.replace('/'); // added this
         menu(window, document, $);
         global(window, document, $);
 

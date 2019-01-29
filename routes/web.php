@@ -621,8 +621,7 @@ Route::group([], function () {
 
     Route::get('/landing', function(){
         return view('landing.index');
-
     });
-    Route::get('/privacy', 'LandingController@privacy');
+    Route::get('/privacy', 'LandingController@index');
     Route::get('/contact', 'LandingController@contact');
     Route::get('/test', 'LandingController@test');

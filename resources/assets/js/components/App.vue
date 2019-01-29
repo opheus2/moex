@@ -10,7 +10,7 @@
 import Navigation from './Navbar'
 import Footer from './footer'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     'Navigation': Navigation,
     'Footer': Footer
