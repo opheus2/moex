@@ -30,7 +30,7 @@
                 @yield('content')
             </main>
         @include('layouts.landing.footer') -->
-        {{-- <app></app> --}}
+        <app></app>
 </div>
 
     </body>

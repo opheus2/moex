@@ -34,7 +34,7 @@ import Footer from './footer';
 // import Vue from 'vue'
 // import VueRouter from 'vue-router'
 import router from './route'
-import App from './components/App'
+import Landing from './components/App'
 
 
 
@@ -110,8 +110,8 @@ import menu from './core/menu';
 window.App = new Vue({
     el: '#app',
     router,
-    template: '<App/>',
-      components: { App },
+    // template: '<Landing/>',
+      components: { Landing },
 
     data: {
         dataTable: {}
