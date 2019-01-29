@@ -44,6 +44,8 @@ import contact from './components/contact'
 Vue.use('VueRouter');
 
 const router = new VueRouter({
+    mode: 'history',
+    hashbang: false,
     routes: [
         {
           path: '/',
