@@ -25,6 +25,7 @@ _ide_helper_models.php
 /packages/HolluwaTosin/Installer/src/Middleware/CanInstall.php
 /packages/HolluwaTosin/Installer/src/Middleware/Verification.php
 /packages/HolluwaTosin/Installer/src/routes.php
+
 /vendor
 /public/js/app.js
 vendor.zip
