@@ -10,7 +10,7 @@
                         <div class="card-header border-0">
                             <div class="card-title text-center">
                                 <a href="{{url('/')}}">
-                                    <img src="{{config('app.logo_brand') ?: asset('/images/logo/logo-dark.png')}}" alt="branding logo">
+                                    <img src="{{config('app.logo_brand') ?: asset('/images/logo/logo-dark.png')}}" alt="branding logo" style="width:125px!important; height:50px;">
                                 </a>
                             </div>
                         </div>
@@ -94,5 +94,3 @@
 {{--<script> document.getElementById('two-factor').style.display = 'block'; </script>--}}
 {{--@endpush--}}
 {{--@endif--}}
-
-
