@@ -25,19 +25,14 @@
 <body>
 
 <div id="app">
-        <!-- @include('layouts.landing.header')
-            <main id="main" class="py-0" style="margin-top: -19px;">
-                @yield('content')
-            </main>
-        @include('layouts.landing.footer') -->
-        <app></app>
+    <landing></landing>
 </div>
 
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/landing.js') }}"></script>
 @yield('custom_js')
 
 </html>
