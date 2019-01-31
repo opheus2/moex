@@ -10,7 +10,7 @@
                         <div class="card-header border-0">
                             <div class="card-title text-center">
                                 <a href="{{url('/')}}">
-                                    <img src="{{asset('images/logo/logo-dark.png')}}" alt="branding logo">
+                                    <img src="{{asset('images/logo/logo-dark.png')}}" alt="branding logo" style="width:125px!important; height:50px;">
                                 </a>
                             </div>
                         </div>

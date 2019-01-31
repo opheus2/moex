@@ -33,8 +33,7 @@ import Navigation from './nav';
 import Footer from './footer';
 // import Vue from 'vue'
 // import VueRouter from 'vue-router'
-import router from './route'
-import Landing from './components/App'
+
 
 
 
@@ -102,17 +101,13 @@ Vue.component('app-admin-menu', AdminMenu);
 Vue.component('app-admin-navigation', AdminNavigation);
 Vue.component('app-admin-footer', AdminFooter);
 
-Vue.component('landing', require('./components/Landing.vue'));
+
 
 import global from './core/global';
 import menu from './core/menu';
 
 window.App = new Vue({
     el: '#app',
-    router,
-    // template: '<Landing/>',
-      components: { Landing },
-
     data: {
         dataTable: {}
     },

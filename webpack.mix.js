@@ -17,6 +17,9 @@ let mix = require('laravel-mix');
  * folder.
  */
 
+/*Landing Pages*/
+mix.js('resources/assets/js/landing.js', 'public/js')
+
 /* Dashboard - Global */
 mix.js('resources/assets/js/app.js', 'public/js');
 
