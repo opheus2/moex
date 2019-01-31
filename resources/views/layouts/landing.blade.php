@@ -9,6 +9,7 @@
     <meta name="description" content="@yield('meta-description')">
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('css/landing.css')}}">
+    <link rel="stylesheet" href="{{asset('css/extra.css')}}">
     <title>@yield("title", config('app.name', 'Moex'))</title>
     @include('includes.scripts')
 
