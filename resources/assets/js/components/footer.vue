@@ -1,17 +1,17 @@
 <template>
-    
+
 <footer>
-    <div class="container-fluid d-flex justify-content-center main-footer ">
+    <div class="container-fluid main-footer ">
         <section id="contact-group" class="visible-xs-block col-xs-12 col-md-3">
-        	<div class="col-xs-12 h-100 d-flex flex-column justify-content-end">
-				<h6>Get updates from us</h6>
-				<div class="input-group">
-		             <input type="text" class="form-control" placeholder="Type Email Address">
-		            <span class="input-group-btn">
-	                	<button class="btn btn-moex" type="button">Send</button>
-		            </span>
+        	<div class="col-xs-12 h-100 px-0">
+    				<h6>Get updates from us</h6>
+    				<div class="input-group">
+	            <input type="text" class="form-control" placeholder="Type Email Address">
+	            <span class="input-group-btn">
+              	<button class="btn btn-moex" type="button">Send</button>
+	            </span>
 		        </div>
-			</div>
+    			</div>
         </section>
         <section class="col-xs-12 mt-xs-2 pr-xs-0 col-md-9">
         	<div class="col-xs-12  px-0 col-md-6">
@@ -51,7 +51,7 @@
 		            </ul>
 		        </div>
         	</div>
-	        
+
         </section>
         <section id="contact-group" class="hidden-xs px-0 col-xs-12 col-md-3">
         	<div class="col-xs-12 h-100 d-flex flex-column justify-content-end">
@@ -84,7 +84,7 @@
 	}
     .text-white {
        color: white;
-    } 
+    }
     .px-0 {
     	padding-right: 0px;
     	padding-left: 0px;
@@ -129,7 +129,7 @@
 	}
 
 	/* Desktops and laptops ----------- */
-	@media only screen 
+	@media only screen
 	and (min-width : 1224px) {
 		.px-md-0 {
 			padding-right: 0px;
@@ -138,8 +138,8 @@
 	}
 
     /* Smartphones (portrait and landscape) ----------- */
-    @media only screen 
-    and (min-device-width : 320px) 
+    @media only screen
+    and (min-device-width : 320px)
     and (max-device-width : 480px) {
     	footer {
     		padding: 0px;
