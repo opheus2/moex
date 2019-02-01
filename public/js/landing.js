@@ -15718,7 +15718,7 @@ function load() {
 
   // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
   if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = Object({"MIX_BROADCAST_DRIVER":"pusher","MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"b1291e2318bc9becde1a","NODE_ENV":"development"}).DEBUG;
+    r = Object({"MIX_BROADCAST_DRIVER":"pusher","MIX_PUSHER_APP_KEY":"2970a507b8397775e182","MIX_PUSHER_APP_CLUSTER":"eu","NODE_ENV":"development"}).DEBUG;
   }
 
   return r;
@@ -67715,7 +67715,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Navbar.vue"
+Component.options.__file = "resources/assets/js/components/Navbar.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -67724,9 +67724,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-cd7fb372", Component.options)
+    hotAPI.createRecord("data-v-cadbadf2", Component.options)
   } else {
-    hotAPI.reload("data-v-cd7fb372", Component.options)
+    hotAPI.reload("data-v-cadbadf2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -120562,7 +120562,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\gon.vue"
+Component.options.__file = "resources/assets/js/components/gon.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -120571,9 +120571,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2c615602", Component.options)
+    hotAPI.createRecord("data-v-d08b6b82", Component.options)
   } else {
-    hotAPI.reload("data-v-2c615602", Component.options)
+    hotAPI.reload("data-v-d08b6b82", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -120599,7 +120599,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2c615602", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-d08b6b82", module.exports)
   }
 }
 
@@ -120629,7 +120629,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\App.vue"
+Component.options.__file = "resources/assets/js/components/App.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -120638,9 +120638,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-117390fa", Component.options)
+    hotAPI.createRecord("data-v-8142f38c", Component.options)
   } else {
-    hotAPI.reload("data-v-117390fa", Component.options)
+    hotAPI.reload("data-v-8142f38c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -120970,7 +120970,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-cd7fb372", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-cadbadf2", module.exports)
   }
 }
 
@@ -120993,7 +120993,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-f887b39c"
+var __vue_scopeId__ = "data-v-f5e3ae1c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -121004,7 +121004,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\footer.vue"
+Component.options.__file = "resources/assets/js/components/footer.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -121013,9 +121013,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f887b39c", Component.options)
+    hotAPI.createRecord("data-v-f5e3ae1c", Component.options)
   } else {
-    hotAPI.reload("data-v-f887b39c", Component.options)
+    hotAPI.reload("data-v-f5e3ae1c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -121036,13 +121036,13 @@ var content = __webpack_require__(338);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(16)("78f783f6", content, false, {});
+var update = __webpack_require__(16)("13ca0022", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f887b39c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f887b39c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f5e3ae1c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f5e3ae1c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -121060,7 +121060,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-moex[data-v-f887b39c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f887b39c] {\n       color: white;\n}\n.px-0[data-v-f887b39c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f887b39c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f887b39c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f887b39c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f887b39c] {\n    \theight: 200px;\n}\n.main-footer section[data-v-f887b39c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f887b39c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f887b39c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f887b39c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f887b39c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f887b39c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f887b39c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f887b39c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f887b39c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f887b39c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f887b39c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f887b39c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f887b39c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f887b39c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f887b39c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
+exports.push([module.i, "\n.btn-moex[data-v-f5e3ae1c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f5e3ae1c] {\n       color: white;\n}\n.px-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f5e3ae1c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f5e3ae1c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \theight: 200px;\n}\n.main-footer section[data-v-f5e3ae1c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f5e3ae1c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f5e3ae1c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f5e3ae1c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f5e3ae1c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f5e3ae1c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f5e3ae1c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f5e3ae1c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
 
 // exports
 
@@ -121071,7 +121071,6 @@ exports.push([module.i, "\n.btn-moex[data-v-f887b39c] {\n\t\tbackground-color: #
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
 //
 //
 //
@@ -121272,9 +121271,15 @@ var render = function() {
             _c("ul", { staticClass: "footer-list" }, [
               _vm._m(2),
               _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
-              _vm._m(4),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "careers" } }, [
+                    _c("p", { staticClass: "text-white" }, [_vm._v("Careers")])
+                  ])
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "li",
@@ -121300,7 +121305,15 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _vm._m(5)
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "blog" } }, [
+                    _c("p", { staticClass: "text-white" }, [_vm._v("Blog")])
+                  ])
+                ],
+                1
+              )
             ])
           ])
         ]),
@@ -121308,12 +121321,12 @@ var render = function() {
         _c("div", { staticClass: "col-xs-12 px-xs-0 mt-xs-2 col-md-6" }, [
           _c("div", { staticClass: "col-xs-6 pl-xs-0 col-md-6" }, [
             _c("ul", { staticClass: "footer-list" }, [
-              _vm._m(6),
+              _vm._m(3),
               _vm._v(" "),
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "contact" } }, [
+                  _c("router-link", { attrs: { to: "contact-us" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v(" Contact Us")
                     ])
@@ -121322,21 +121335,39 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _vm._m(7),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "faq" } }, [
+                    _c("p", { staticClass: "text-white" }, [_vm._v("FAQ")])
+                  ])
+                ],
+                1
+              ),
               _vm._v(" "),
-              _vm._m(8)
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: "api" } }, [
+                    _c("p", { staticClass: "text-white" }, [
+                      _vm._v("API Documention")
+                    ])
+                  ])
+                ],
+                1
+              )
             ])
           ]),
           _vm._v(" "),
-          _vm._m(9)
+          _vm._m(4)
         ])
       ]),
       _vm._v(" "),
-      _vm._m(10)
+      _vm._m(5)
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "container-fluid" }, [
-      _vm._m(11),
+      _vm._m(6),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-12 px-0 foot" }, [
         _c("p", { staticClass: "col-xs-8 col-md-9" }, [
@@ -121420,41 +121451,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [
-      _c("p", { staticClass: "text-white" }, [_vm._v("Careers")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("p", { staticClass: "text-white" }, [_vm._v("Fees")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("p", { staticClass: "text-white" }, [_vm._v("Blog")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
       _c("h4", { staticClass: "text-white" }, [_vm._v("Support")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("p", { staticClass: "text-white" }, [_vm._v("FAQ")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("p", { staticClass: "text-white" }, [_vm._v("Forgot Password")])
     ])
   },
   function() {
@@ -121536,7 +121533,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-f887b39c", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-f5e3ae1c", module.exports)
   }
 }
 
@@ -121566,7 +121563,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-117390fa", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
   }
 }
 
@@ -121642,6 +121639,15 @@ window.Landing = new Vue({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_privacy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_privacy__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_contact__ = __webpack_require__(366);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_contact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_contact__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_faq__ = __webpack_require__(1198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_faq___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_faq__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_career__ = __webpack_require__(1200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_career___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_career__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_blog__ = __webpack_require__(1202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_blog___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_blog__);
+
+
+
 
 
 
@@ -121674,6 +121680,18 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         path: '/contact',
         name: 'Contact',
         component: __WEBPACK_IMPORTED_MODULE_6__components_contact___default.a
+    }, {
+        path: '/blog',
+        name: 'Blog',
+        component: __WEBPACK_IMPORTED_MODULE_9__components_blog___default.a
+    }, {
+        path: '/careers',
+        name: 'Careers',
+        component: __WEBPACK_IMPORTED_MODULE_8__components_career___default.a
+    }, {
+        path: '/faq',
+        name: 'Faq',
+        component: __WEBPACK_IMPORTED_MODULE_7__components_faq___default.a
     }],
     scrollBehavior: function scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {
@@ -124339,7 +124357,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Landing.vue"
+Component.options.__file = "resources/assets/js/components/Landing.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -124348,9 +124366,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-35fb1d70", Component.options)
+    hotAPI.createRecord("data-v-5ee972b0", Component.options)
   } else {
-    hotAPI.reload("data-v-35fb1d70", Component.options)
+    hotAPI.reload("data-v-5ee972b0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -124371,13 +124389,13 @@ var content = __webpack_require__(354);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(16)("1ddd92a1", content, false, {});
+var update = __webpack_require__(16)("d5254638", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35fb1d70\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35fb1d70\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ee972b0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ee972b0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -124702,7 +124720,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-78bc0cac"
+var __vue_scopeId__ = "data-v-1f6a11ec"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -124713,7 +124731,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\TableView.vue"
+Component.options.__file = "resources/assets/js/components/TableView.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -124722,9 +124740,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-78bc0cac", Component.options)
+    hotAPI.createRecord("data-v-1f6a11ec", Component.options)
   } else {
-    hotAPI.reload("data-v-78bc0cac", Component.options)
+    hotAPI.reload("data-v-1f6a11ec", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -124745,13 +124763,13 @@ var content = __webpack_require__(358);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(16)("3db40e3f", content, false, {});
+var update = __webpack_require__(16)("296e1378", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78bc0cac\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78bc0cac\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f6a11ec\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f6a11ec\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -125054,7 +125072,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-78bc0cac", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-1f6a11ec", module.exports)
   }
 }
 
@@ -125476,7 +125494,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-35fb1d70", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-5ee972b0", module.exports)
   }
 }
 
@@ -125506,7 +125524,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\terms.vue"
+Component.options.__file = "resources/assets/js/components/terms.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -125515,9 +125533,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6acbf140", Component.options)
+    hotAPI.createRecord("data-v-49ce9680", Component.options)
   } else {
-    hotAPI.reload("data-v-6acbf140", Component.options)
+    hotAPI.reload("data-v-49ce9680", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -125696,7 +125714,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125716,7 +125734,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125726,7 +125744,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125738,7 +125756,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125748,7 +125766,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125760,13 +125778,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -125812,7 +125830,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6acbf140", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-49ce9680", module.exports)
   }
 }
 
@@ -125842,7 +125860,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\privacy.vue"
+Component.options.__file = "resources/assets/js/components/privacy.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -125851,9 +125869,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0e8a3e81", Component.options)
+    hotAPI.createRecord("data-v-377893c1", Component.options)
   } else {
-    hotAPI.reload("data-v-0e8a3e81", Component.options)
+    hotAPI.reload("data-v-377893c1", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -126032,7 +126050,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126052,7 +126070,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126062,7 +126080,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126074,7 +126092,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126084,7 +126102,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126096,13 +126114,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -126148,7 +126166,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0e8a3e81", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-377893c1", module.exports)
   }
 }
 
@@ -126178,7 +126196,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\contact.vue"
+Component.options.__file = "resources/assets/js/components/contact.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -126187,9 +126205,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-914399ce", Component.options)
+    hotAPI.createRecord("data-v-3f66ef4e", Component.options)
   } else {
-    hotAPI.reload("data-v-914399ce", Component.options)
+    hotAPI.reload("data-v-3f66ef4e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -126221,7 +126239,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("h6", { staticClass: "read" }, [
             _vm._v(
-              "Do you have questions or suggestions you want to send to MOEX Team?\r\nPlease kindly fill the form below."
+              "Do you have questions or suggestions you want to send to MOEX Team?\nPlease kindly fill the form below."
             )
           ])
         ])
@@ -126375,7 +126393,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-914399ce", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-3f66ef4e", module.exports)
   }
 }
 
@@ -126495,6 +126513,1015 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
+/* 487 */,
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */,
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */,
+/* 515 */,
+/* 516 */,
+/* 517 */,
+/* 518 */,
+/* 519 */,
+/* 520 */,
+/* 521 */,
+/* 522 */,
+/* 523 */,
+/* 524 */,
+/* 525 */,
+/* 526 */,
+/* 527 */,
+/* 528 */,
+/* 529 */,
+/* 530 */,
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */,
+/* 536 */,
+/* 537 */,
+/* 538 */,
+/* 539 */,
+/* 540 */,
+/* 541 */,
+/* 542 */,
+/* 543 */,
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */,
+/* 557 */,
+/* 558 */,
+/* 559 */,
+/* 560 */,
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */,
+/* 572 */,
+/* 573 */,
+/* 574 */,
+/* 575 */,
+/* 576 */,
+/* 577 */,
+/* 578 */,
+/* 579 */,
+/* 580 */,
+/* 581 */,
+/* 582 */,
+/* 583 */,
+/* 584 */,
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */,
+/* 597 */,
+/* 598 */,
+/* 599 */,
+/* 600 */,
+/* 601 */,
+/* 602 */,
+/* 603 */,
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */,
+/* 612 */,
+/* 613 */,
+/* 614 */,
+/* 615 */,
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */,
+/* 623 */,
+/* 624 */,
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */,
+/* 629 */,
+/* 630 */,
+/* 631 */,
+/* 632 */,
+/* 633 */,
+/* 634 */,
+/* 635 */,
+/* 636 */,
+/* 637 */,
+/* 638 */,
+/* 639 */,
+/* 640 */,
+/* 641 */,
+/* 642 */,
+/* 643 */,
+/* 644 */,
+/* 645 */,
+/* 646 */,
+/* 647 */,
+/* 648 */,
+/* 649 */,
+/* 650 */,
+/* 651 */,
+/* 652 */,
+/* 653 */,
+/* 654 */,
+/* 655 */,
+/* 656 */,
+/* 657 */,
+/* 658 */,
+/* 659 */,
+/* 660 */,
+/* 661 */,
+/* 662 */,
+/* 663 */,
+/* 664 */,
+/* 665 */,
+/* 666 */,
+/* 667 */,
+/* 668 */,
+/* 669 */,
+/* 670 */,
+/* 671 */,
+/* 672 */,
+/* 673 */,
+/* 674 */,
+/* 675 */,
+/* 676 */,
+/* 677 */,
+/* 678 */,
+/* 679 */,
+/* 680 */,
+/* 681 */,
+/* 682 */,
+/* 683 */,
+/* 684 */,
+/* 685 */,
+/* 686 */,
+/* 687 */,
+/* 688 */,
+/* 689 */,
+/* 690 */,
+/* 691 */,
+/* 692 */,
+/* 693 */,
+/* 694 */,
+/* 695 */,
+/* 696 */,
+/* 697 */,
+/* 698 */,
+/* 699 */,
+/* 700 */,
+/* 701 */,
+/* 702 */,
+/* 703 */,
+/* 704 */,
+/* 705 */,
+/* 706 */,
+/* 707 */,
+/* 708 */,
+/* 709 */,
+/* 710 */,
+/* 711 */,
+/* 712 */,
+/* 713 */,
+/* 714 */,
+/* 715 */,
+/* 716 */,
+/* 717 */,
+/* 718 */,
+/* 719 */,
+/* 720 */,
+/* 721 */,
+/* 722 */,
+/* 723 */,
+/* 724 */,
+/* 725 */,
+/* 726 */,
+/* 727 */,
+/* 728 */,
+/* 729 */,
+/* 730 */,
+/* 731 */,
+/* 732 */,
+/* 733 */,
+/* 734 */,
+/* 735 */,
+/* 736 */,
+/* 737 */,
+/* 738 */,
+/* 739 */,
+/* 740 */,
+/* 741 */,
+/* 742 */,
+/* 743 */,
+/* 744 */,
+/* 745 */,
+/* 746 */,
+/* 747 */,
+/* 748 */,
+/* 749 */,
+/* 750 */,
+/* 751 */,
+/* 752 */,
+/* 753 */,
+/* 754 */,
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */,
+/* 760 */,
+/* 761 */,
+/* 762 */,
+/* 763 */,
+/* 764 */,
+/* 765 */,
+/* 766 */,
+/* 767 */,
+/* 768 */,
+/* 769 */,
+/* 770 */,
+/* 771 */,
+/* 772 */,
+/* 773 */,
+/* 774 */,
+/* 775 */,
+/* 776 */,
+/* 777 */,
+/* 778 */,
+/* 779 */,
+/* 780 */,
+/* 781 */,
+/* 782 */,
+/* 783 */,
+/* 784 */,
+/* 785 */,
+/* 786 */,
+/* 787 */,
+/* 788 */,
+/* 789 */,
+/* 790 */,
+/* 791 */,
+/* 792 */,
+/* 793 */,
+/* 794 */,
+/* 795 */,
+/* 796 */,
+/* 797 */,
+/* 798 */,
+/* 799 */,
+/* 800 */,
+/* 801 */,
+/* 802 */,
+/* 803 */,
+/* 804 */,
+/* 805 */,
+/* 806 */,
+/* 807 */,
+/* 808 */,
+/* 809 */,
+/* 810 */,
+/* 811 */,
+/* 812 */,
+/* 813 */,
+/* 814 */,
+/* 815 */,
+/* 816 */,
+/* 817 */,
+/* 818 */,
+/* 819 */,
+/* 820 */,
+/* 821 */,
+/* 822 */,
+/* 823 */,
+/* 824 */,
+/* 825 */,
+/* 826 */,
+/* 827 */,
+/* 828 */,
+/* 829 */,
+/* 830 */,
+/* 831 */,
+/* 832 */,
+/* 833 */,
+/* 834 */,
+/* 835 */,
+/* 836 */,
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */,
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */,
+/* 846 */,
+/* 847 */,
+/* 848 */,
+/* 849 */,
+/* 850 */,
+/* 851 */,
+/* 852 */,
+/* 853 */,
+/* 854 */,
+/* 855 */,
+/* 856 */,
+/* 857 */,
+/* 858 */,
+/* 859 */,
+/* 860 */,
+/* 861 */,
+/* 862 */,
+/* 863 */,
+/* 864 */,
+/* 865 */,
+/* 866 */,
+/* 867 */,
+/* 868 */,
+/* 869 */,
+/* 870 */,
+/* 871 */,
+/* 872 */,
+/* 873 */,
+/* 874 */,
+/* 875 */,
+/* 876 */,
+/* 877 */,
+/* 878 */,
+/* 879 */,
+/* 880 */,
+/* 881 */,
+/* 882 */,
+/* 883 */,
+/* 884 */,
+/* 885 */,
+/* 886 */,
+/* 887 */,
+/* 888 */,
+/* 889 */,
+/* 890 */,
+/* 891 */,
+/* 892 */,
+/* 893 */,
+/* 894 */,
+/* 895 */,
+/* 896 */,
+/* 897 */,
+/* 898 */,
+/* 899 */,
+/* 900 */,
+/* 901 */,
+/* 902 */,
+/* 903 */,
+/* 904 */,
+/* 905 */,
+/* 906 */,
+/* 907 */,
+/* 908 */,
+/* 909 */,
+/* 910 */,
+/* 911 */,
+/* 912 */,
+/* 913 */,
+/* 914 */,
+/* 915 */,
+/* 916 */,
+/* 917 */,
+/* 918 */,
+/* 919 */,
+/* 920 */,
+/* 921 */,
+/* 922 */,
+/* 923 */,
+/* 924 */,
+/* 925 */,
+/* 926 */,
+/* 927 */,
+/* 928 */,
+/* 929 */,
+/* 930 */,
+/* 931 */,
+/* 932 */,
+/* 933 */,
+/* 934 */,
+/* 935 */,
+/* 936 */,
+/* 937 */,
+/* 938 */,
+/* 939 */,
+/* 940 */,
+/* 941 */,
+/* 942 */,
+/* 943 */,
+/* 944 */,
+/* 945 */,
+/* 946 */,
+/* 947 */,
+/* 948 */,
+/* 949 */,
+/* 950 */,
+/* 951 */,
+/* 952 */,
+/* 953 */,
+/* 954 */,
+/* 955 */,
+/* 956 */,
+/* 957 */,
+/* 958 */,
+/* 959 */,
+/* 960 */,
+/* 961 */,
+/* 962 */,
+/* 963 */,
+/* 964 */,
+/* 965 */,
+/* 966 */,
+/* 967 */,
+/* 968 */,
+/* 969 */,
+/* 970 */,
+/* 971 */,
+/* 972 */,
+/* 973 */,
+/* 974 */,
+/* 975 */,
+/* 976 */,
+/* 977 */,
+/* 978 */,
+/* 979 */,
+/* 980 */,
+/* 981 */,
+/* 982 */,
+/* 983 */,
+/* 984 */,
+/* 985 */,
+/* 986 */,
+/* 987 */,
+/* 988 */,
+/* 989 */,
+/* 990 */,
+/* 991 */,
+/* 992 */,
+/* 993 */,
+/* 994 */,
+/* 995 */,
+/* 996 */,
+/* 997 */,
+/* 998 */,
+/* 999 */,
+/* 1000 */,
+/* 1001 */,
+/* 1002 */,
+/* 1003 */,
+/* 1004 */,
+/* 1005 */,
+/* 1006 */,
+/* 1007 */,
+/* 1008 */,
+/* 1009 */,
+/* 1010 */,
+/* 1011 */,
+/* 1012 */,
+/* 1013 */,
+/* 1014 */,
+/* 1015 */,
+/* 1016 */,
+/* 1017 */,
+/* 1018 */,
+/* 1019 */,
+/* 1020 */,
+/* 1021 */,
+/* 1022 */,
+/* 1023 */,
+/* 1024 */,
+/* 1025 */,
+/* 1026 */,
+/* 1027 */,
+/* 1028 */,
+/* 1029 */,
+/* 1030 */,
+/* 1031 */,
+/* 1032 */,
+/* 1033 */,
+/* 1034 */,
+/* 1035 */,
+/* 1036 */,
+/* 1037 */,
+/* 1038 */,
+/* 1039 */,
+/* 1040 */,
+/* 1041 */,
+/* 1042 */,
+/* 1043 */,
+/* 1044 */,
+/* 1045 */,
+/* 1046 */,
+/* 1047 */,
+/* 1048 */,
+/* 1049 */,
+/* 1050 */,
+/* 1051 */,
+/* 1052 */,
+/* 1053 */,
+/* 1054 */,
+/* 1055 */,
+/* 1056 */,
+/* 1057 */,
+/* 1058 */,
+/* 1059 */,
+/* 1060 */,
+/* 1061 */,
+/* 1062 */,
+/* 1063 */,
+/* 1064 */,
+/* 1065 */,
+/* 1066 */,
+/* 1067 */,
+/* 1068 */,
+/* 1069 */,
+/* 1070 */,
+/* 1071 */,
+/* 1072 */,
+/* 1073 */,
+/* 1074 */,
+/* 1075 */,
+/* 1076 */,
+/* 1077 */,
+/* 1078 */,
+/* 1079 */,
+/* 1080 */,
+/* 1081 */,
+/* 1082 */,
+/* 1083 */,
+/* 1084 */,
+/* 1085 */,
+/* 1086 */,
+/* 1087 */,
+/* 1088 */,
+/* 1089 */,
+/* 1090 */,
+/* 1091 */,
+/* 1092 */,
+/* 1093 */,
+/* 1094 */,
+/* 1095 */,
+/* 1096 */,
+/* 1097 */,
+/* 1098 */,
+/* 1099 */,
+/* 1100 */,
+/* 1101 */,
+/* 1102 */,
+/* 1103 */,
+/* 1104 */,
+/* 1105 */,
+/* 1106 */,
+/* 1107 */,
+/* 1108 */,
+/* 1109 */,
+/* 1110 */,
+/* 1111 */,
+/* 1112 */,
+/* 1113 */,
+/* 1114 */,
+/* 1115 */,
+/* 1116 */,
+/* 1117 */,
+/* 1118 */,
+/* 1119 */,
+/* 1120 */,
+/* 1121 */,
+/* 1122 */,
+/* 1123 */,
+/* 1124 */,
+/* 1125 */,
+/* 1126 */,
+/* 1127 */,
+/* 1128 */,
+/* 1129 */,
+/* 1130 */,
+/* 1131 */,
+/* 1132 */,
+/* 1133 */,
+/* 1134 */,
+/* 1135 */,
+/* 1136 */,
+/* 1137 */,
+/* 1138 */,
+/* 1139 */,
+/* 1140 */,
+/* 1141 */,
+/* 1142 */,
+/* 1143 */,
+/* 1144 */,
+/* 1145 */,
+/* 1146 */,
+/* 1147 */,
+/* 1148 */,
+/* 1149 */,
+/* 1150 */,
+/* 1151 */,
+/* 1152 */,
+/* 1153 */,
+/* 1154 */,
+/* 1155 */,
+/* 1156 */,
+/* 1157 */,
+/* 1158 */,
+/* 1159 */,
+/* 1160 */,
+/* 1161 */,
+/* 1162 */,
+/* 1163 */,
+/* 1164 */,
+/* 1165 */,
+/* 1166 */,
+/* 1167 */,
+/* 1168 */,
+/* 1169 */,
+/* 1170 */,
+/* 1171 */,
+/* 1172 */,
+/* 1173 */,
+/* 1174 */,
+/* 1175 */,
+/* 1176 */,
+/* 1177 */,
+/* 1178 */,
+/* 1179 */,
+/* 1180 */,
+/* 1181 */,
+/* 1182 */,
+/* 1183 */,
+/* 1184 */,
+/* 1185 */,
+/* 1186 */,
+/* 1187 */,
+/* 1188 */,
+/* 1189 */,
+/* 1190 */,
+/* 1191 */,
+/* 1192 */,
+/* 1193 */,
+/* 1194 */,
+/* 1195 */,
+/* 1196 */,
+/* 1197 */,
+/* 1198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(7)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(1199)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/faq.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4b1a7ccf", Component.options)
+  } else {
+    hotAPI.reload("data-v-4b1a7ccf", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 1199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("FAQ")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4b1a7ccf", module.exports)
+  }
+}
+
+/***/ }),
+/* 1200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(7)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(1201)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/career.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-aacc5d56", Component.options)
+  } else {
+    hotAPI.reload("data-v-aacc5d56", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 1201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("CAREERS")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-aacc5d56", module.exports)
+  }
+}
+
+/***/ }),
+/* 1202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(7)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(1203)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/blog.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-83a4698e", Component.options)
+  } else {
+    hotAPI.reload("data-v-83a4698e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 1203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("BLOG")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-83a4698e", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
