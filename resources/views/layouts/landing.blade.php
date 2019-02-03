@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('meta-description')">
+    {{--<meta name="theme-color" content="{{ settings.color_primary }}">--}}
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('css/landing.css')}}">
     <link rel="stylesheet" href="{{asset('css/extra.css')}}">

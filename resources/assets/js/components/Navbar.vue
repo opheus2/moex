@@ -2,7 +2,7 @@
   <nav id="navbar" class="navbar header-bg">
     <div class="w-93">
       <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" @click="openNav()" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" @click="openNav()" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
