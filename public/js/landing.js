@@ -121060,7 +121060,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-moex[data-v-f5e3ae1c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f5e3ae1c] {\n       color: white;\n}\n.px-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f5e3ae1c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f5e3ae1c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \theight: 200px;\n}\n.main-footer section[data-v-f5e3ae1c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f5e3ae1c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f5e3ae1c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f5e3ae1c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f5e3ae1c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f5e3ae1c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f5e3ae1c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f5e3ae1c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
+exports.push([module.i, "\n.btn-moex[data-v-f5e3ae1c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f5e3ae1c] {\n       color: white;\n}\n.px-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f5e3ae1c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f5e3ae1c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \tmin-height: 200px;\n}\n.main-footer section[data-v-f5e3ae1c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f5e3ae1c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f5e3ae1c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f5e3ae1c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f5e3ae1c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f5e3ae1c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f5e3ae1c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f5e3ae1c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
 
 // exports
 
@@ -125164,7 +125164,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", {}, [
+    return _c("div", { staticStyle: { "margin-bottom": "5%" } }, [
       _c(
         "h4",
         {
@@ -125334,12 +125334,19 @@ var staticRenderFns = [
       },
       [
         _c("div", { staticClass: "row w-93" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("img", {
-              staticClass: "responsive",
-              attrs: { src: "/images/convo.png" }
-            })
-          ]),
+          _c(
+            "div",
+            {
+              staticClass: "col-md-6",
+              staticStyle: { "padding-left": "0px!important" }
+            },
+            [
+              _c("img", {
+                staticClass: "responsive",
+                attrs: { src: "/images/convo.png" }
+              })
+            ]
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-6" }, [
             _c(
@@ -125369,29 +125376,25 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", {}, [
       _c("div", { staticClass: "count d-flex justify-content-around" }, [
-        _c(
-          "div",
-          { staticClass: "row", staticStyle: { "padding-top": "11%" } },
-          [
-            _c("div", { staticClass: "col-md-4 text" }, [
-              _c("h4", [_vm._v("$900M+")]),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Digital Currency Exchanged")])
-            ]),
+        _c("div", { staticClass: "row w-93" }, [
+          _c("div", { staticClass: "col-md-4 text" }, [
+            _c("h4", [_vm._v("$900M+")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-4 text" }, [
-              _c("h4", [_vm._v("50+")]),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Countries Supported")])
-            ]),
+            _c("h6", [_vm._v("Digital Currency Exchanged")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 text" }, [
+            _c("h4", [_vm._v("50+")]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-4 text" }, [
-              _c("h4", [_vm._v("3.1M+")]),
-              _vm._v(" "),
-              _c("h6", [_vm._v("Customers Served")])
-            ])
-          ]
-        )
+            _c("h6", [_vm._v("Countries Supported")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 text" }, [
+            _c("h4", [_vm._v("3.1M+")]),
+            _vm._v(" "),
+            _c("h6", [_vm._v("Customers Served")])
+          ])
+        ])
       ])
     ])
   },
