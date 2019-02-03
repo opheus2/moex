@@ -20,14 +20,14 @@
                         <div class="form-group">
                             <h4>{!! Form::label('dob', __('Date of Birth')) !!}</h4>
                             
-                            {!! Form::date('dob', $user->identityDetails->dob, ['class' => 'form-control', 'required' => 'required']) !!}
+                            {!! Form::date('dob', (!empty($user->identityDetails->dob)) ? $user->identityDetails->dob : '' , ['class' => 'form-control', 'required' => 'required']) !!}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <h4>{!! Form::label('address', __('Address')) !!}</h4>
                             
-                            {!! Form::text('address', $user->identityDetails->address, ['class' => 'form-control', 'required' => 'required']) !!}
+                            {!! Form::text('address', (!empty($user->identityDetails->address)) ? $user->identityDetails->address : '', ['class' => 'form-control', 'required' => 'required']) !!}
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <h4>{!! Form::label('currency', __('Means of Verification')) !!}</h4>
 
-                            {{Form::select('verification_type', get_verification_type(), $user->identityDetails->identity_type, ['is' => 'select2', 'html-class' => 'form-control', 'placeholder' => __('Select means of verification'), 'v-model' => 'profile.currency', 'required' => 'required'])}}
+                            {{Form::select('verification_type', get_verification_type(), (!empty($user->identityDetails->identity_type)) ? $user->identityDetails->identity_type : '' , ['is' => 'select2', 'html-class' => 'form-control', 'placeholder' => __('Select means of verification'), 'v-model' => 'profile.currency', 'required' => 'required'])}}
                         </div>
                     </div>
                 </div>
