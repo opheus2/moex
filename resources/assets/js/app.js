@@ -31,8 +31,7 @@ import Auth from './pages/auth';
 import Menu from './menu';
 import Navigation from './nav';
 import Footer from './footer';
-// import Vue from 'vue'
-// import VueRouter from 'vue-router'
+
 
 
 
