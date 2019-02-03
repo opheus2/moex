@@ -827,4 +827,17 @@ if (!function_exists('get_trade_title')) {
     }
 }
 
+if (!function_exists('get_verification_type')) {
+    /**
+     * @return array
+     */
+    function get_verification_type()
+    {
+        $data = [
+        "Driver License" => "Driver License",
+        "National ID" => "National ID Card",
+        ];
+        return $data;
+    }
+}
 

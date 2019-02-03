@@ -64,6 +64,15 @@ class User extends Authenticatable implements CanVerifyEmailContract
     ];
 
     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $with = ['identityDetails'];
+
+
+    
+    /**
      * Get the route key for the model.
      *
      * @return string
@@ -590,5 +599,15 @@ class User extends Authenticatable implements CanVerifyEmailContract
             });
 
         return $wallets[strtolower($coin)];
+    }
+
+    /**
+     * Get user's kyc
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function identityDetails()
+    {
+        return $this->hasOne('App\Models\Kyc', 'user_id', 'id');
     }
 }

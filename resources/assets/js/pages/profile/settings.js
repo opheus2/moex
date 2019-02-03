@@ -75,6 +75,8 @@ export default {
                         acceptedFiles: 'image/*',
                         addRemoveLinks: false,
                         autoProcessQueue: false,
+                        maxFiles: 1,
+ 
                         success: function (file, response) {
                             toastr.success(response);
                         },
