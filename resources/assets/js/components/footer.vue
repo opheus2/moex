@@ -98,7 +98,7 @@
     	padding: 30px;
     }
     .main-footer {
-    	height: 200px;
+    	min-height: 200px;
     }
     .main-footer section {
     	height: 100%;

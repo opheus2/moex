@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-
     <title>{{__('Page Not Found!')}} | {{config('app.name')}}</title>
 
-    <!-- BEGIN FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{config('app.shortcut_icon') ?: asset('/images/icon/favicon.ico')}}">
-    <!-- END FAVICON -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="title" content="@yield('title')">
+    <meta name="description" content="@yield('meta-description')">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/landing.css')}}">
+    <link rel="stylesheet" href="{{asset('css/extra.css')}}">
+    <link rel="stylesheet" href="{{asset('css/error.css')}}">
+    <style>
 
-    <!-- BEGIN DESCRIPTION -->
-    <meta name="description" content="{{config('app.description')}}">
-    <!-- END DESCRIPTION -->
-
-    <!-- BEGIN KEYWORDS -->
-    <meta name="keywords" content="{{config('app.keywords')}}">
-    <!-- END KEYWORDS -->
-
-    <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/vendors.css')}}">
-    <!-- END VENDOR CSS-->
-
-    <!-- BEGIN APPLICATION CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-    <!-- END APPLICATION CSS-->
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
-
-    <!-- BEGIN PAGE CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/pages/error.css')}}">
-    <!-- END PAGE CSS-->
+    </style>
 </head>
 
-<body class="vertical-layout vertical-menu 1-column   menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-menu" data-col="1-column">
-    <div class="app-content content">
-        <div class="content-wrapper">
-            <div class="content-body">
+<body>
+  @include('includes.navbar')
 
-                <section class="flexbox-container">
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <div class="col-md-4 col-10 p-0">
-
-                            <div class="card-header bg-transparent border-0">
-                                <h2 class="error-code text-center mb-2">
-                                    404
-                                </h2>
-                                <h3 class="text-uppercase text-center">
-                                    {{__('Page Not Found!')}}
-                                </h3>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-            </div>
+    <div class="error-div">
+      <div class="">
+        <div class="d-flex justify-content-center">
+          <img src="images/404.svg" alt="404" style="width:50%; height:50vh">
         </div>
+        <p class="error-message">Oh No! Seems this page is broken</p>
+        <div class="" style="width:100%; text-align:center">
+          <a href="#">Go Back</a>
+        </div>
+      </div>
     </div>
+    <div class="trading">
+      <div class="">
+        <p>Start Trading</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
+        <div class="d-flex justify-content-center">
+          <a class="text-color btn btn-default btn-lg button-sign" href="#">Sign Up</a>
+        </div>
+      </div>
+    </div>
+    @include('includes.footer')
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

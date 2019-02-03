@@ -1,0 +1,158 @@
+.error-header {
+  background-color: #1B264B!important;
+  border-color: #1B264B;
+  border-radius: 0px !important;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.error-div{
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.error-div a{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+  text-decoration-line: underline;
+  text-align: center;
+  width: 100%;
+  color: #6C63FF;
+  margin-top:30px;
+}
+
+.trading {
+  min-height: 173px;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  background-color: #6C63FF;
+}
+.trading p{
+  text-align: center;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 36px;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+      .btn-moex {
+    		background-color: #6C63FF;
+    		color: #ffffff;
+    	}
+        .text-white {
+           color: white!important;
+        }
+        .px-0 {
+        	padding-right: 0px;
+        	padding-left: 0px;
+        }
+        .pr-0 {
+        	padding-right: 0px;
+        }
+        .pl-0 {
+        	padding-left: 0px;
+        }
+        footer{
+        	padding: 10px;
+          background-color: #1B264B;
+
+        }
+        .main-footer {
+        	min-height: 200px;
+        }
+        .main-footer section {
+        	height: 100%;
+        }
+        .main-footer section:last-of-type {
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: flex-end;
+        }
+        footer p {
+    		font-family: Nunito;
+    		font-style: normal;
+    		font-weight: 300;
+    		font-size: 14px;
+    		opacity: 0.7;
+    		letter-spacing: 0.02em;
+    	}
+    	footer p:hover {
+    		opacity: 1;
+    	}
+    	footer a {
+    		text-decoration: none;
+    	}
+    	footer h4 {
+    		margin-bottom: 1.5rem;
+    		font-size: 19px;
+    	}
+
+    	/* Desktops and laptops ----------- */
+    	@media only screen
+    	and (min-width : 1224px) {
+    		.px-md-0 {
+    			padding-right: 0px;
+    			padding-left: 0px;
+    		}
+    	}
+
+        /* Smartphones (portrait and landscape) ----------- */
+        @media only screen
+        and (min-device-width : 320px)
+        and (max-device-width : 480px) {
+        	footer {
+        		padding: 0px;
+        		padding-top: 10px;
+        	}
+        	.main-footer {
+        		height: auto;
+        	}
+        	footer ul {
+        		padding-left: 0px;
+        	}
+        	footer p {
+    			font-size: 12px;
+    			letter-spacing: 0.01em;
+        	}
+        	.px-xs-0 {
+        		padding-left: 0px !important;
+        		padding-right: 0px !important;
+        	}
+        	.pr-xs-0 {
+        		padding-right: 0px !important;
+        	}
+    		.pl-xs-0 {
+        		padding-left: 0px !important;
+        	}
+        	.mt-xs-2 {
+        		margin-top: 1rem;
+        	}
+        }
+
+
+        .error-message{
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          line-height: normal;
+          font-size: 24px;
+          color: #828282;
+          margin-top: 50px;
+          text-align: center;
+        }

@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="">
+    <div class="" style="margin-bottom:5%;">
         <h4 class="trade" style="margin-top:5%;margin-bottom:0%; text-align:center">Trade Offers</h4>
         <div class="d-flex justify-content-center">
           <div class="d-flex justify-content-between w-93 sm-block" style="margin-top:0%;margin-bottom:0%;">
@@ -162,7 +162,7 @@
     </div>
     <div class="d-flex justify-content-center" style="margin-top: 67px;">
         <div class="row w-93">
-            <div class="col-md-6">
+            <div class="col-md-6" style="padding-left:0px!important;">
                 <img src="/images/convo.png" class="responsive">
             </div>
             <div class="col-md-6" >
@@ -179,7 +179,7 @@
     </div>
     <div class="">
       <div class="count d-flex justify-content-around">
-        <div class="row" style="padding-top: 11%;">
+        <div class="row w-93">
           <div class="col-md-4 text">
             <h4>$900M+</h4>
             <h6>Digital Currency Exchanged</h6>
