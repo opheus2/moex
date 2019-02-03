@@ -596,5 +596,7 @@
     "Generate New Address": "Generate New Address",
     "A minimum of :n confirmations is required before your balance is credited on incoming transaction.": "A minimum of :n confirmations is required before your balance is credited on incoming transaction.",
     "Your dash deposit address is below:": "Your dash deposit address is below:",
-    "Your litecoin deposit address is below:": "Your litecoin deposit address is below:"
+    "Your litecoin deposit address is below:": "Your litecoin deposit address is below:",
+    "Verify Your Identity": "Verify Your Identity"
+
 }

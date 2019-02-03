@@ -20,6 +20,10 @@ use Illuminate\Validation\Rule;
 use Intervention\Image\Facades\Image;
 use PragmaRX\Google2FA\Google2FA;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Kyc;
+
+
 
 class SettingsController extends Controller
 {
@@ -59,10 +63,14 @@ class SettingsController extends Controller
 
         $qr_code = $this->getQRCodeUrl($user, true);
 
+        $kycs     = Kyc::all(); 
+
+
         return view('profile.settings.index')
             ->with(compact('user', 'profile'))
             ->with(compact('notification_settings'))
-            ->with(compact('qr_code', 'setting'));
+            ->with(compact('qr_code', 'setting'))
+            ->with(compact('kycs', 'kycs'));
     }
 
     /**
@@ -420,5 +428,40 @@ class SettingsController extends Controller
         } else {
             return abort(403);
         }
+    }
+
+    public function addKyc(Request $request)
+    {
+        $dob                = $request->dob;
+        $address            = $request->address;
+        $frontview          = $request->file('front_view');
+        $backview           = $request->file('back_view');
+        $verificationType   = $request->verification_type;
+
+        $frontViewname      = time().'-'.$frontview->getClientOriginalName();
+        $backViewname       = time().'-'.$backview->getClientOriginalName();
+
+        Storage::disk('local')->putFileAs( 'kyc/', $frontview, $frontViewname);
+        Storage::disk('local')->putFileAs( 'kyc/', $backview, $backViewname);
+
+        $kyc                = Kyc::updateOrCreate(['user_id' => $request->user_id],
+                                [
+                                    'identity_type' => $verificationType,
+                                    'front_view'    => $frontViewname,
+                                    'back_view'     => $backViewname,
+                                    'dob'           => $dob,
+                                    'address'       => $address,
+                                    'user_id'       => $request->user_id,
+                                ]
+
+        );
+  
+  
+        if($kyc){
+            return back()->with('status', 'Profile updated!');
+        }else{
+
+        }
+
     }
 }
