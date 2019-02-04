@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc1f3b7ddac5e55b69b032dcc18fffe9",
+    "content-hash": "498483639aa2c54d4e4bb650221f378c",
     "packages": [
         {
             "name": "africastalking/africastalking",
@@ -6664,7 +6664,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -8581,8 +8581,8 @@
     "prefer-lowest": false,
     "platform": {
         "php": "^7.1.3",
-        "ext-json": "*",
         "ext-curl": "*",
+        "ext-json": "*",
         "ext-mysqli": "*"
     },
     "platform-dev": []

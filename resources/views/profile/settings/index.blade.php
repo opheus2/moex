@@ -102,12 +102,12 @@
                                             <i class="ft-briefcase"></i> {{__('Manage')}}
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" id="kyc-tab" data-toggle="pill"
                                             href="#kyc" role="tab" aria-controls="kyc" aria-expanded="false">
                                             <i class="ft-briefcase"></i> KYC
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 @endif
 
                             </ul>

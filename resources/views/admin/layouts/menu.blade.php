@@ -22,6 +22,12 @@
                         <span class="menu-title">{{__('Users')}}</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('admin.kyc.index')}}">
+                        <i class="la la-users"></i>
+                        <span class="menu-title">KYC Control</span>
+                    </a>
+                </li>
 
                 <li class="navigation-header">
                     <span>{{__('SETTINGS')}}</span>
