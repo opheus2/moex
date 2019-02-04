@@ -1,7 +1,7 @@
 <template>
   <div class="">
       <div style="overflow-x:auto;">
-          <table class="table table-hover table-responsive responsive" style="">
+          <table class="table table-hover table-responsive responsive" id="tableView" style="">
               <thead>
                   <tr>
                       <th>Seller</th>
@@ -87,9 +87,16 @@
 </template>
 
 <script>
-export default {
-  name: 'TableView'
-};
+
+    export default {
+        name: 'TableView',
+        mounted() {
+            setTimeout ( ()=> {
+                $('#tableView').dataTable();
+            }, 100 )
+
+        },
+    };
 </script>
 
 <style lang="css" scoped>

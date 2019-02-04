@@ -67,6 +67,7 @@
         "sweetalert": "^2.1.0",
         "tinymce": "^4.8.3",
         "toastr": "^2.1.4",
+        "v-select2-component": "^0.3.2",
         "vue": "^2.5.17",
         "vue-autosize": "^1.0.2",
         "vue-disable-autocomplete": "0.0.4",

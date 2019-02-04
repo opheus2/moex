@@ -15,16 +15,23 @@ use Illuminate\Http\Request;
 
 // Offers
 Route::group(['namespace' => 'Resources', 'middleware' => 'authorize.public_ip'], function () {
-    // Offers
+
+});
+
+Route::group(['namespace' => 'Resources'], function () {
+    //Offers
     Route::group(['prefix' => 'offers'], function (){
         // Buy
         Route::get('buy', 'OffersController@buy')->name('buy');
 
         // Sell
-        Route::get('sell', 'OffersController@sell')->name('sell');
+        Route::get('sell','OffersController@sell')->name('sell');
+
+        Route::get('payment-methods', 'OffersController@getPaymentMethods')->name('payment-methods');
 
         // Get
         Route::get('{id}', 'OffersController@get')->name('get');
+
     });
 });
 
