@@ -1,5 +1,4 @@
 {
-    "/js/app.js": "/js/app.js",
     "/js/landing.js": "/js/landing.js",
     "/css/vendors.css": "/css/vendors.css",
     "/css/app.css": "/css/app.css",
@@ -19,5 +18,6 @@
     "/css/core/colors/palette-gradient.css": "/css/core/colors/palette-gradient.css",
     "/css/core/colors/palette-callout.css": "/css/core/colors/palette-callout.css",
     "/css/core/colors/palette-tooltip.css": "/css/core/colors/palette-tooltip.css",
-    "/css/core/colors/palette-noui.css": "/css/core/colors/palette-noui.css"
+    "/css/core/colors/palette-noui.css": "/css/core/colors/palette-noui.css",
+    "/js/app.js": "/js/app.js"
 }
