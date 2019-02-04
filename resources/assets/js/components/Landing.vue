@@ -27,7 +27,7 @@
             <div class="pl-0 d-flex child">
               <h6 class="buy-cash lg-hide " style="margin-bottom:0px; margin-right:15px; margin-top:15px;" >Buy Bitcoins with </h6>
               <div class="button-group">
-                <button class="btn btn-white">Cash</button>
+                <select2 v-model="selectedPaymentMethod" :options="paymentMethods.map(method => {return {id: method.id, text: method.name} })"/>
               </div>
               <div class="button-group sm-hide">
                 <button class="btn btn-white">In Nigeria</button>
@@ -265,11 +265,35 @@
   }
 </style>
 <script>
-  import TableView from './TableView'
-  export default ({
-    name: "Landing",
-    components: {
-      TableView,
-    }
-  })
+    import Select2 from 'v-select2-component';
+    import TableView from './TableView';
+
+    export default ({
+        name: "Landing",
+        data () {
+            return {
+                selectedPaymentMethod: "24",
+                paymentMethods: []
+            }
+        },
+        created () {
+            window.axios.get('/api/offers/payment-methods')
+                .then(res => {
+                    res.data.forEach (method => {
+                        this.paymentMethods.push(...method);
+                    });
+                })
+                .catch(err => {
+                    console.error(err.response.data);
+                })
+            ;
+        },
+        components: {
+            TableView,
+            Select2
+        },
+        mounted () {
+            // $('#paymentMethods').select2()
+        }
+    })
 </script>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Resources;
 
 use App\Models\Offer;
+use App\Models\PaymentMethodCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
@@ -131,5 +132,22 @@ class OffersController extends Controller
                 }
             ])
             ->findOrFail($id);
+    }
+
+    /**
+     * @return array
+     */
+    public function getPaymentMethods()
+    {
+
+        $categories = PaymentMethodCategory::all();
+
+        $payment_methods = collect([]);
+
+        foreach ($categories as $category) {
+            $payment_methods->push($category->payment_methods()->get());
+        }
+
+        return $payment_methods;
     }
 }
