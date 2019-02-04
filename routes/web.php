@@ -363,6 +363,9 @@ Route::group([], function () {
 
                 // Delete Account
                 Route::post('delete-account', 'SettingsController@deleteAccount')->name('delete-account');
+
+
+                Route::post('addKyc', 'SettingsController@addKyc')->name('addKyc');
             });
 
             // Two Factor Authentication
@@ -622,7 +625,6 @@ Route::group([], function () {
     Route::get('/landing', function(){
         return view('landing.index');
     });
-    Route::get('/terms-of-service', 'LandingController@index');
-    Route::get('/privacy-policy', 'LandingController@index');
-    Route::get('/contact', 'LandingController@index');
-    Route::get('/test', 'LandingController@test');
+    Route::get('kyc/{image}', [
+        'uses'      => 'KycController@picture'
+    ]);

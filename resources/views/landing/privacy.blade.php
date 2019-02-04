@@ -105,13 +105,5 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg">
-        <div class="">
-            <p class="bg-text">Start Trading</p>
-            <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
-            <div align="center">
-                <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>  
-            </div>
-        </div>
-    </div>
+    
 @endsection

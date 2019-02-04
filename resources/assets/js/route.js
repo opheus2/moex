@@ -5,6 +5,9 @@ import Homes from './components/gon'
 import terms from './components/terms'
 import privacy from './components/privacy'
 import contact from './components/contact'
+import faq from './components/faq'
+import career from './components/career'
+import blog from './components/blog'
 
 Vue.use(Router)
 
@@ -36,6 +39,21 @@ export default new Router({
             path: '/contact',
             name: 'Contact',
             component: contact
+        },
+        {
+            path: '/blog',
+            name: 'Blog',
+            component: blog
+        },
+        {
+            path: '/careers',
+            name: 'Careers',
+            component: career
+        },
+        {
+            path: '/faq',
+            name: 'Faq',
+            component: faq
         }
     ],
     scrollBehavior (to, from, savedPosition) {

@@ -33,12 +33,21 @@
                                      aria-labelledby="security-tab" aria-expanded="false">
                                     @include('profile.settings.partials.tabs.security')
                                 </div>
+                                <div class="tab-pane fade" id="verify" role="tabpanel"
+                                     aria-labelledby="verify-tab" aria-expanded="false">
+                                    @include('profile.settings.partials.tabs.verify')
+                                </div>
+                               
 
                                 @if(Auth::user()->priority() < $user->priority())
                                     <div class="tab-pane fade" id="panel" role="tabpanel"
                                          aria-labelledby="panel-tab" aria-expanded="false">
                                         @include('profile.settings.partials.tabs.administration')
                                     </div>
+                                    <div class="tab-pane fade" id="kyc" role="tabpanel"
+                                    aria-labelledby="kyc-tab" aria-expanded="false">
+                                @include('profile.settings.partials.tabs.kyc')
+                            </div>
                                 @endif
                             </div>
                         </div>
@@ -77,12 +86,26 @@
                                         <i class="ft-shield"></i> {{__('Security')}}
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="security-tab" data-toggle="pill"
+                                       href="#verify" role="tab" aria-controls="verify" aria-expanded="false">
+                                        <i class="ft-key"></i> {{__('Verify Your Identity')}}
+                                    </a>
+                                </li>
+
+                               
 
                                 @if(Auth::user()->priority() < $user->priority())
                                     <li class="nav-item">
                                         <a class="nav-link" id="panel-tab" data-toggle="pill"
                                            href="#panel" role="tab" aria-controls="panel" aria-expanded="false">
                                             <i class="ft-briefcase"></i> {{__('Manage')}}
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="kyc-tab" data-toggle="pill"
+                                            href="#kyc" role="tab" aria-controls="kyc" aria-expanded="false">
+                                            <i class="ft-briefcase"></i> KYC
                                         </a>
                                     </li>
                                 @endif

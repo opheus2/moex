@@ -24,11 +24,10 @@
 		        <div class="col-xs-6 col-md-6">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">About</h4></li>
-		                <li><p class="text-white">Careers</p></li>
-		                <li><p class="text-white">Fees</p></li>
+		                <li><router-link to="careers"><p class="text-white">Careers</p></router-link></li>
 		                <li><router-link to="terms-of-service"><p class="text-white">Terms of Service</p></router-link></li>
 		                <li><router-link to="privacy-policy"><p class="text-white">Privacy Policy</p></router-link></li>
-		                <li><p class="text-white">Blog</p></li>
+		                <li><router-link to="blog"><p class="text-white">Blog</p></router-link></li>
 		            </ul>
 		        </div>
         	</div>
@@ -36,9 +35,9 @@
         		<div class="col-xs-6 pl-xs-0 col-md-6">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">Support</h4></li>
-		                <li><router-link to="contact"><p class="text-white"> Contact Us</p></router-link></li>
-		                <li><p class="text-white">FAQ</p></li>
-		                <li><p class="text-white">Forgot Password</p></li>
+		                <li><router-link to="contact-us"><p class="text-white"> Contact Us</p></router-link></li>
+		                <li><router-link to="faq"><p class="text-white">FAQ</p></router-link></li>
+		                <li><router-link to="api"><p class="text-white">API Documention</p></router-link></li>
 		            </ul>
 		        </div>
 		        <div class="col-xs-6 col-md-6">
@@ -99,7 +98,7 @@
     	padding: 30px;
     }
     .main-footer {
-    	height: 200px;
+    	min-height: 200px;
     }
     .main-footer section {
     	height: 100%;
