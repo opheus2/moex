@@ -11,9 +11,9 @@ class Kyc extends Model
 
     protected $table    = "kyc";
     protected $fillable = [
-        'identity_type', 'front_view', 'back_view', 'dob', 'address', 'user_id'
+        'identity_type', 'front_view', 'back_view', 'dob', 'address', 'user_id', 'country', 'city', 'state', 'bvn', 'verified'
     ];
-    protected $appends = ['username'];
+    protected $appends = ['username', 'verify'];
 
 
 
@@ -33,5 +33,15 @@ class Kyc extends Model
     	return optional(User::find($this->user_id))->name;
     }
 
-
+    public function getVerifyAttribute()
+    {
+        if ($this->attributes['verified'] == 1){
+            return 'Verified';
+        }else{
+            return 'Not Verified';
+        }
+    }
 }
+
+
+

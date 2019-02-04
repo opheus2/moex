@@ -9,7 +9,7 @@
             <h4 class="card-title">{{__('Verify Your Identity')}}</h4>
         </div>
     </div>
-
+ 
     <div class="card-content">
         <div class="card-body">
             <form action="settings/addKyc" method="post" enctype="multipart/form-data">
@@ -32,9 +32,41 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h4>{!! Form::label('city', __('City')) !!}</h4>
+                            
+                            {!! Form::text('city', (!empty($user->identityDetails->city)) ? $user->identityDetails->city : '' , ['class' => 'form-control', 'required' => 'required']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h4>{!! Form::label('state', __('State')) !!}</h4>
+                            
+                            {!! Form::text('state', (!empty($user->identityDetails->state)) ? $user->identityDetails->state : '', ['class' => 'form-control', 'required' => 'required']) !!}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h4>{!! Form::label('country', __('Country')) !!}</h4>
+                            
+                            {!! Form::text('country', (!empty($user->identityDetails->country)) ? $user->identityDetails->country : '', ['class' => 'form-control', 'required' => 'required']) !!}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <h4>{!! Form::label('bvn', __('BVN')) !!}</h4>
+
+                            {!! Form::text('bvn', (!empty($user->identityDetails->bvn)) ? $user->identityDetails->bvn : '', ['class' => 'form-control', 'required' => 'required']) !!}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <h4>{!! Form::label('currency', __('Means of Verification')) !!}</h4>
+                            <h4>{!! Form::label('means', __('Means of Verification')) !!}</h4>
 
                             {{Form::select('verification_type', get_verification_type(), (!empty($user->identityDetails->identity_type)) ? $user->identityDetails->identity_type : '' , ['is' => 'select2', 'html-class' => 'form-control', 'placeholder' => __('Select means of verification'), 'v-model' => 'profile.currency', 'required' => 'required'])}}
                         </div>

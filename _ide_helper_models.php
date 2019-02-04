@@ -14,12 +14,12 @@ namespace App\Models{
 /**
  * App\Models\PaymentMethod
  *
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
- * @property string $name
  * @property int $payment_method_category_id
- * @property int $time_frame
+ * @property string $name
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $time_frame
  * @property-read \App\Models\PaymentMethodCategory $category
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PaymentMethod newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PaymentMethod newQuery()
@@ -38,12 +38,12 @@ namespace App\Models{
 /**
  * App\Models\DashAddress
  *
+ * @property int $id
  * @property string $address
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property int $id
- * @property string|null $label
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int|null $wallet_id
+ * @property string|null $label
  * @property-read \App\Models\DashWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\DashAddress newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\DashAddress newQuery()
@@ -62,12 +62,12 @@ namespace App\Models{
 /**
  * App\Models\LitecoinAddress
  *
+ * @property int $id
  * @property string $address
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property int $id
- * @property string|null $label
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int|null $wallet_id
+ * @property string|null $label
  * @property-read \App\Models\LitecoinWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LitecoinAddress newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LitecoinAddress newQuery()
@@ -86,27 +86,27 @@ namespace App\Models{
 /**
  * App\Models\Offer
  *
- * @property string $coin
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string $currency
- * @property int $deadline
- * @property int $email_verification
  * @property int $id
- * @property string|null $label
- * @property float $max_amount
- * @property float $min_amount
- * @property string $payment_method
- * @property int $phone_verification
- * @property float $profit_margin
- * @property int $status
- * @property array $tags
- * @property string|null $terms
  * @property string $token
- * @property string|null $trade_instruction
- * @property int $trusted_offer
  * @property string $type
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string $coin
+ * @property string $currency
  * @property int $user_id
+ * @property int $status
+ * @property float $min_amount
+ * @property float $max_amount
+ * @property float $profit_margin
+ * @property string $payment_method
+ * @property array $tags
+ * @property string|null $trade_instruction
+ * @property string|null $terms
+ * @property string|null $label
+ * @property int $phone_verification
+ * @property int $email_verification
+ * @property int $trusted_offer
+ * @property int $deadline
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newQuery()
@@ -141,17 +141,17 @@ namespace App\Models{
 /**
  * App\Models\DashTransaction
  *
+ * @property int $id
+ * @property string|null $hash
  * @property int|null $confirmations
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $date
- * @property string|null $hash
- * @property int $id
- * @property string $state
- * @property string $transaction_id
- * @property string $type
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $value
+ * @property string $transaction_id
+ * @property string $state
+ * @property string|null $date
  * @property int|null $wallet_id
+ * @property string $type
+ * @property int|null $value
  * @property-read \App\Models\DashWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\DashTransaction newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\DashTransaction newQuery()
@@ -175,15 +175,15 @@ namespace App\Models{
 /**
  * App\Models\BitcoinWallet
  *
- * @property int $balance
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
+ * @property string $wallet_id
+ * @property int|null $user_id
  * @property mixed $keys
  * @property string $label
+ * @property int $balance
  * @property mixed $passphrase
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $user_id
- * @property string $wallet_id
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinAddress[] $addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinTransaction[] $transactions
  * @property-read \App\Models\User|null $user
@@ -207,13 +207,13 @@ namespace App\Models{
 /**
  * App\Models\TradeChat
  *
- * @property string $content
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
  * @property int|null $trade_id
+ * @property string $content
  * @property string $type
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int|null $user_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Trade|null $trade
  * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\TradeChat newModelQuery()
@@ -234,9 +234,9 @@ namespace App\Models{
 /**
  * App\Models\PaymentMethodCategory
  *
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
  * @property string $name
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PaymentMethod[] $payment_methods
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PaymentMethodCategory newModelQuery()
@@ -254,13 +254,13 @@ namespace App\Models{
 /**
  * App\Models\UserSetting
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property int $google2fa_status
  * @property int $id
- * @property int $outgoing_transfer_2fa
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int $user_id
+ * @property int $google2fa_status
  * @property int $user_login_2fa
+ * @property int $outgoing_transfer_2fa
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\UserSetting newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\UserSetting newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\UserSetting query()
@@ -279,9 +279,9 @@ namespace App\Models{
 /**
  * App\Models\Tag
  *
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
  * @property string $name
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tag newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tag newQuery()
@@ -298,27 +298,27 @@ namespace App\Models{
 /**
  * App\Models\User
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string $currency
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property string $email
- * @property string|null $google2fa_secret
  * @property int $id
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string $presence
  * @property string|null $last_seen
  * @property string $name
- * @property string $password
+ * @property string $email
  * @property string|null $phone
- * @property string $presence
- * @property string|null $remember_token
- * @property int $schedule_deactivate
- * @property int $schedule_delete
+ * @property string $currency
  * @property string $status
- * @property string|null $timezone
+ * @property int $verified_phone
+ * @property string $password
+ * @property string|null $google2fa_secret
  * @property string|null $token
  * @property string|null $token_expiry
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property bool $verified
- * @property int $verified_phone
+ * @property int $schedule_delete
+ * @property int $schedule_deactivate
+ * @property string|null $timezone
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinAddress[] $bitcoin_addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinTransaction[] $bitcoin_transactions
  * @property-read \App\Models\BitcoinWallet $bitcoin_wallet
@@ -330,7 +330,7 @@ namespace App\Models{
  * @property-read mixed $sum_rating
  * @property-read mixed $user_average_rating
  * @property-read mixed $user_sum_rating
- * @property-read \App\Models\Profile $identityDetails
+ * @property-read \App\Models\Kyc $identityDetails
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\LitecoinAddress[] $litecoin_addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\LitecoinTransaction[] $litecoin_transactions
  * @property-read \App\Models\LitecoinWallet $litecoin_wallet
@@ -385,10 +385,10 @@ namespace App\Models{
 /**
  * App\Models\Role
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string $guard_name
  * @property int $id
  * @property string $name
+ * @property string $guard_name
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
@@ -409,14 +409,14 @@ namespace App\Models{
 /**
  * App\Models\ModerationActivity
  *
+ * @property int $id
+ * @property int $user_id
+ * @property string $moderator
  * @property string $activity
  * @property string|null $comment
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property int $id
  * @property string|null $link
- * @property string $moderator
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $user_id
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ModerationActivity newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ModerationActivity newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ModerationActivity query()
@@ -434,17 +434,59 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Kyc
+ *
+ * @property int $id
+ * @property string|null $user_id
+ * @property string|null $identity_type
+ * @property string|null $front_view
+ * @property string|null $back_view
+ * @property string|null $dob
+ * @property string|null $address
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $country
+ * @property string|null $state
+ * @property string|null $city
+ * @property string|null $bvn
+ * @property int $verified
+ * @property-read mixed $username
+ * @property-read mixed $verify
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereBackView($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereBvn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCountry($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereDob($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereFrontView($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereIdentityType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereVerified($value)
+ */
+	class Kyc extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\LitecoinWallet
  *
- * @property int $balance
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
+ * @property string $wallet_id
+ * @property int|null $user_id
  * @property mixed $keys
  * @property string $label
+ * @property int $balance
  * @property mixed $passphrase
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $user_id
- * @property string $wallet_id
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\LitecoinAddress[] $addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\LitecoinTransaction[] $transactions
  * @property-read \App\Models\User|null $user
@@ -468,13 +510,13 @@ namespace App\Models{
 /**
  * App\Models\PlatformSetting
  *
- * @property string|null $allowed_public_ip
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
- * @property string|null $root_url
- * @property string|null $style
+ * @property string|null $allowed_public_ip
  * @property string $template
+ * @property string|null $style
  * @property string $theme_color
+ * @property string|null $root_url
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PlatformSetting newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\PlatformSetting newQuery()
@@ -495,12 +537,12 @@ namespace App\Models{
 /**
  * App\Models\BitcoinAddress
  *
+ * @property int $id
  * @property string $address
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property int $id
- * @property string|null $label
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property int|null $wallet_id
+ * @property string|null $label
  * @property-read \App\Models\BitcoinWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BitcoinAddress newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BitcoinAddress newQuery()
@@ -519,11 +561,11 @@ namespace App\Models{
 /**
  * App\Models\EmailComponent
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $footer
- * @property string|null $header
  * @property int $id
  * @property string|null $name
+ * @property string|null $header
+ * @property string|null $footer
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\EmailComponent newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\EmailComponent newQuery()
@@ -542,17 +584,17 @@ namespace App\Models{
 /**
  * App\Models\LitecoinTransaction
  *
+ * @property int $id
+ * @property string|null $hash
  * @property int|null $confirmations
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $date
- * @property string|null $hash
- * @property int $id
- * @property string $state
- * @property string $transaction_id
- * @property string $type
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $value
+ * @property string $transaction_id
+ * @property string $state
+ * @property string|null $date
  * @property int|null $wallet_id
+ * @property string $type
+ * @property int|null $value
  * @property-read \App\Models\LitecoinWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LitecoinTransaction newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\LitecoinTransaction newQuery()
@@ -576,15 +618,15 @@ namespace App\Models{
 /**
  * App\Models\NotificationSetting
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property int|null $database
+ * @property int $id
+ * @property int $user_id
+ * @property string $name
  * @property string $description
  * @property int|null $email
- * @property int $id
- * @property string $name
+ * @property int|null $database
  * @property int|null $sms
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $user_id
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\NotificationSetting newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\NotificationSetting newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\NotificationSetting query()
@@ -605,14 +647,14 @@ namespace App\Models{
 /**
  * App\Models\Profile
  *
+ * @property int $id
+ * @property int $user_id
+ * @property string|null $picture
+ * @property string|null $first_name
+ * @property string|null $last_name
  * @property string|null $bio
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $first_name
- * @property int $id
- * @property string|null $last_name
- * @property string|null $picture
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $user_id
  * @property-read \App\Models\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Profile newQuery()
@@ -633,15 +675,15 @@ namespace App\Models{
 /**
  * App\Models\DashWallet
  *
- * @property int $balance
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
+ * @property string $wallet_id
+ * @property int|null $user_id
  * @property mixed $keys
  * @property string $label
+ * @property int $balance
  * @property mixed $passphrase
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $user_id
- * @property string $wallet_id
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\DashAddress[] $addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\DashTransaction[] $transactions
  * @property-read \App\Models\User|null $user
@@ -665,17 +707,17 @@ namespace App\Models{
 /**
  * App\Models\NotificationTemplate
  *
- * @property string|null $action
- * @property int $action_editable
- * @property string|null $channels
- * @property \Illuminate\Support\Carbon|null $created_at
  * @property int $id
- * @property string|null $intro_line
- * @property string $level
- * @property string|null $message
  * @property string $name
- * @property string|null $outro_line
+ * @property string $level
  * @property string|null $subject
+ * @property string|null $intro_line
+ * @property string|null $action
+ * @property string|null $channels
+ * @property string|null $outro_line
+ * @property string|null $message
+ * @property int $action_editable
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\NotificationTemplate newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\NotificationTemplate newQuery()
@@ -700,11 +742,11 @@ namespace App\Models{
 /**
  * App\Models\Permission
  *
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string $guard_name
  * @property int $id
  * @property string $name
  * @property int $priority
+ * @property string $guard_name
+ * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Role[] $roles
@@ -728,29 +770,29 @@ namespace App\Models{
 /**
  * App\Models\Trade
  *
- * @property int $amount
- * @property string $coin
- * @property int $confirmed
- * @property \Illuminate\Support\Carbon|null $confirmed_at
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string $currency
- * @property int $deadline
- * @property string|null $dispute_by
- * @property string|null $dispute_comment
- * @property float $fee
  * @property int $id
- * @property string|null $instruction
- * @property string|null $label
- * @property int|null $offer_id
- * @property string|null $offer_terms
- * @property int $partner_id
- * @property string $payment_method
- * @property float $rate
- * @property string $status
  * @property string $token
  * @property string $type
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string $coin
  * @property int $user_id
+ * @property int $partner_id
+ * @property int|null $offer_id
+ * @property string $currency
+ * @property float $fee
+ * @property int $amount
+ * @property float $rate
+ * @property string|null $offer_terms
+ * @property string|null $instruction
+ * @property string|null $label
+ * @property string|null $dispute_by
+ * @property string|null $dispute_comment
+ * @property int $confirmed
+ * @property int $deadline
+ * @property string $status
+ * @property string $payment_method
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $confirmed_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\TradeChat[] $chats
  * @property-read \App\Models\Offer|null $offer
  * @property-read \App\Models\User $partner
@@ -790,17 +832,17 @@ namespace App\Models{
 /**
  * App\Models\BitcoinTransaction
  *
+ * @property int $id
+ * @property string|null $hash
  * @property int|null $confirmations
  * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $date
- * @property string|null $hash
- * @property int $id
- * @property string $state
- * @property string $transaction_id
- * @property string $type
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $value
+ * @property string $transaction_id
+ * @property string $state
+ * @property string|null $date
  * @property int|null $wallet_id
+ * @property string $type
+ * @property int|null $value
  * @property-read \App\Models\BitcoinWallet|null $wallet
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BitcoinTransaction newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BitcoinTransaction newQuery()
