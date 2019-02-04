@@ -7,6 +7,7 @@ use App\Models\PaymentMethodCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
+use GuzzleHttp\Client;
 
 class OffersController extends Controller
 {
@@ -149,5 +150,12 @@ class OffersController extends Controller
         }
 
         return $payment_methods;
+    }
+
+    public function sellTest()
+    {
+        $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
+        $response = $client->get('sell');
+        return $response->getBody();
     }
 }

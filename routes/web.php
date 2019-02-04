@@ -464,6 +464,15 @@ Route::group([], function () {
                 Route::post('trash', 'UsersController@trash')->name('trash');
             });
 
+            Route::group([
+                'as'     => 'kyc.',
+                'prefix' => 'kyc'
+            ], function () {
+                // Index
+                Route::get('', 'KycController@index')->name('index');
+                
+            });
+
             // Users Page
             Route::group([
                 'as'         => 'earnings.',

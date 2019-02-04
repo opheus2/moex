@@ -76,6 +76,7 @@
         "vue-perfect-scrollbar": "^0.1.0",
         "vue-router": "^3.0.2",
         "vue-scrollto": "^2.13.0",
+        "vue-tables-2": "^1.4.70",
         "vue-template-compiler": "^2.5.17",
         "vue-textarea-autosize": "^1.0.4",
         "vue-tinymce-editor": "^1.6.2",

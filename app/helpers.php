@@ -836,6 +836,7 @@ if (!function_exists('get_verification_type')) {
         $data = [
         "Driver License" => "Driver License",
         "National ID" => "National ID Card",
+        "Intternstional Passport" => "Intternstional Passport",
         ];
         return $data;
     }

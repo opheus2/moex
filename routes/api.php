@@ -29,6 +29,8 @@ Route::group(['namespace' => 'Resources'], function () {
 
         Route::get('payment-methods', 'OffersController@getPaymentMethods')->name('payment-methods');
 
+        Route::get('test-sell', 'OffersController@sellTest');
+
         // Get
         Route::get('{id}', 'OffersController@get')->name('get');
 

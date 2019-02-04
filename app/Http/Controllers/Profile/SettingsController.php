@@ -22,6 +22,8 @@ use PragmaRX\Google2FA\Google2FA;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Kyc;
+use GuzzleHttp\Client;
+
 
 
 
@@ -432,11 +434,24 @@ class SettingsController extends Controller
 
     public function addKyc(Request $request)
     {
+        $client             = new Client();
         $dob                = $request->dob;
         $address            = $request->address;
         $frontview          = $request->file('front_view');
         $backview           = $request->file('back_view');
         $verificationType   = $request->verification_type;
+        $url                = 'https://gwot5erqucxr9jlrx-mock.stoplight-proxy.io/api/uverify-ms/api2/bvn';
+
+        $params             = [
+                                'surname'   => 'shafii',
+                                'bvn'       => '01012341234',
+                                'dob'       => '1990-02-19',
+                                'api_key'   => 'JHFvljhvhouyfylvfCOUUFovluhjvjhOFHJv',
+                                'userid'    => '65610124',
+                            ];
+        $response            = $client->post($url, ['form_params' => $params]);
+        $content             = json_decode($response->getBody()->getContents());
+
 
         $frontViewname      = time().'-'.$frontview->getClientOriginalName();
         $backViewname       = time().'-'.$backview->getClientOriginalName();
@@ -452,6 +467,10 @@ class SettingsController extends Controller
                                     'dob'           => $dob,
                                     'address'       => $address,
                                     'user_id'       => $request->user_id,
+                                    'country'       => $request->country,
+                                    'state'         => $request->state,
+                                    'city'          => $request->city,
+                                    'bvn'          => $request->bvn,
                                 ]
 
         );
