@@ -68,7 +68,7 @@
                         <div class="form-group">
                             <h4>{!! Form::label('means', __('Means of Verification')) !!}</h4>
 
-                            {{Form::select('verification_type', get_verification_type(), (!empty($user->identityDetails->identity_type)) ? $user->identityDetails->identity_type : '' , ['is' => 'select2', 'html-class' => 'form-control', 'placeholder' => __('Select means of verification'), 'v-model' => 'profile.currency', 'required' => 'required'])}}
+                            {{Form::select('verification_type', get_verification_type(), (!empty($user->identityDetails->identity_type)) ? $user->identityDetails->identity_type : '' , ['is' => 'select2', 'html-class' => 'form-control', 'placeholder' => __('Select means of verification'), 'required' => 'required'])}}
                         </div>
                     </div>
                 </div>
