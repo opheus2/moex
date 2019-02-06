@@ -121979,7 +121979,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "careers" } }, [
+                  _c("router-link", { attrs: { to: "/landing/careers" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("Careers")])
                   ])
                 ],
@@ -121989,11 +121989,15 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "terms-of-service" } }, [
-                    _c("p", { staticClass: "text-white" }, [
-                      _vm._v("Terms of Service")
-                    ])
-                  ])
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/landing/terms-of-service" } },
+                    [
+                      _c("p", { staticClass: "text-white" }, [
+                        _vm._v("Terms of Service")
+                      ])
+                    ]
+                  )
                 ],
                 1
               ),
@@ -122001,11 +122005,15 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "privacy-policy" } }, [
-                    _c("p", { staticClass: "text-white" }, [
-                      _vm._v("Privacy Policy")
-                    ])
-                  ])
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/landing/privacy-policy" } },
+                    [
+                      _c("p", { staticClass: "text-white" }, [
+                        _vm._v("Privacy Policy")
+                      ])
+                    ]
+                  )
                 ],
                 1
               ),
@@ -122013,7 +122021,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "blog" } }, [
+                  _c("router-link", { attrs: { to: "/landing/blog" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("Blog")])
                   ])
                 ],
@@ -122031,7 +122039,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "contact-us" } }, [
+                  _c("router-link", { attrs: { to: "/landing/contact-us" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v(" Contact Us")
                     ])
@@ -122043,7 +122051,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "faq" } }, [
+                  _c("router-link", { attrs: { to: "/landing/faq" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("FAQ")])
                   ])
                 ],
@@ -122053,7 +122061,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "api" } }, [
+                  _c("router-link", { attrs: { to: "/landing/api" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v("API Documention")
                     ])
