@@ -27,5 +27,6 @@ _ide_helper_models.php
 /packages/HolluwaTosin/Installer/src/routes.php
 
 /vendor
-/public/js/app.js
+public/js/app.js
+public/js/landing.js
 vendor.zip
