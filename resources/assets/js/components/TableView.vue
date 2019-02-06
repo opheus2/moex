@@ -22,6 +22,7 @@
                 Seen 3 hours ago
             </span>-->
         </div>
+        <div slot="amount_range" slot-scope="props"><strong>{{ props.row.amount_range }}</strong></div>
     </v-client-table>
     <!--<div class="">
       <div style="overflow-x:auto;">
