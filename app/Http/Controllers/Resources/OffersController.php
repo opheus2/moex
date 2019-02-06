@@ -329,10 +329,10 @@ class OffersController extends Controller
     "to": 4,
     "total": 4
 }';
-   /*     $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
+        $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
         $response = $client->get('sell');
-        return $response->getBody();*/
+        return $response->getBody();
 
-   return $json;
+//   return $json;
     }
 }

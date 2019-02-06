@@ -73802,7 +73802,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Navbar.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Navbar.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -73811,9 +73811,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-cadbadf2", Component.options)
+    hotAPI.createRecord("data-v-cd7fb372", Component.options)
   } else {
-    hotAPI.reload("data-v-cadbadf2", Component.options)
+    hotAPI.reload("data-v-cd7fb372", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -121267,7 +121267,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/gon.vue"
+Component.options.__file = "resources\\assets\\js\\components\\gon.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -121276,9 +121276,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d08b6b82", Component.options)
+    hotAPI.createRecord("data-v-2c615602", Component.options)
   } else {
-    hotAPI.reload("data-v-d08b6b82", Component.options)
+    hotAPI.reload("data-v-2c615602", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -121304,7 +121304,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-d08b6b82", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2c615602", module.exports)
   }
 }
 
@@ -121334,7 +121334,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/App.vue"
+Component.options.__file = "resources\\assets\\js\\components\\App.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -121343,9 +121343,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8142f38c", Component.options)
+    hotAPI.createRecord("data-v-117390fa", Component.options)
   } else {
-    hotAPI.reload("data-v-8142f38c", Component.options)
+    hotAPI.reload("data-v-117390fa", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -121675,7 +121675,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-cadbadf2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-cd7fb372", module.exports)
   }
 }
 
@@ -121698,7 +121698,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-f5e3ae1c"
+var __vue_scopeId__ = "data-v-f887b39c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -121709,7 +121709,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/footer.vue"
+Component.options.__file = "resources\\assets\\js\\components\\footer.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -121718,9 +121718,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f5e3ae1c", Component.options)
+    hotAPI.createRecord("data-v-f887b39c", Component.options)
   } else {
-    hotAPI.reload("data-v-f5e3ae1c", Component.options)
+    hotAPI.reload("data-v-f887b39c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -121741,13 +121741,13 @@ var content = __webpack_require__(342);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(17)("13ca0022", content, false, {});
+var update = __webpack_require__(17)("78f783f6", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f5e3ae1c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f5e3ae1c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f887b39c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-f887b39c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./footer.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -121765,7 +121765,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-moex[data-v-f5e3ae1c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f5e3ae1c] {\n       color: white;\n}\n.px-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f5e3ae1c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f5e3ae1c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f5e3ae1c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \tmin-height: 200px;\n}\n.main-footer section[data-v-f5e3ae1c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f5e3ae1c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f5e3ae1c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f5e3ae1c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f5e3ae1c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f5e3ae1c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f5e3ae1c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f5e3ae1c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f5e3ae1c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f5e3ae1c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f5e3ae1c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
+exports.push([module.i, "\n.btn-moex[data-v-f887b39c] {\n\t\tbackground-color: #6C63FF;\n\t\tcolor: #ffffff;\n}\n.text-white[data-v-f887b39c] {\n       color: white;\n}\n.px-0[data-v-f887b39c] {\n    \tpadding-right: 0px;\n    \tpadding-left: 0px;\n}\n.pr-0[data-v-f887b39c] {\n    \tpadding-right: 0px;\n}\n.pl-0[data-v-f887b39c] {\n    \tpadding-left: 0px;\n}\nfooter[data-v-f887b39c]{\n    \tpadding: 30px;\n}\n.main-footer[data-v-f887b39c] {\n    \tmin-height: 200px;\n}\n.main-footer section[data-v-f887b39c] {\n    \theight: 100%;\n}\n.main-footer section[data-v-f887b39c]:last-of-type {\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n    \t-webkit-box-pack: end;\n    \t    -ms-flex-pack: end;\n    \t        justify-content: flex-end;\n}\nfooter p[data-v-f887b39c] {\n\t\tfont-family: Nunito;\n\t\tfont-style: normal;\n\t\tfont-weight: 300;\n\t\tfont-size: 14px;\n\t\topacity: 0.7;\n\t\tletter-spacing: 0.02em;\n}\nfooter p[data-v-f887b39c]:hover {\n\t\topacity: 1;\n}\nfooter a[data-v-f887b39c] {\n\t\ttext-decoration: none;\n}\nfooter h4[data-v-f887b39c] {\n\t\tmargin-bottom: 1.5rem;\n\t\tfont-size: 19px;\n}\n\n\t/* Desktops and laptops ----------- */\n@media only screen\n\tand (min-width : 1224px) {\n.px-md-0[data-v-f887b39c] {\n\t\t\tpadding-right: 0px;\n\t\t\tpadding-left: 0px;\n}\n}\n\n    /* Smartphones (portrait and landscape) ----------- */\n@media only screen\n    and (min-device-width : 320px)\n    and (max-device-width : 480px) {\nfooter[data-v-f887b39c] {\n    \t\tpadding: 0px;\n    \t\tpadding-top: 10px;\n}\n.main-footer[data-v-f887b39c] {\n    \t\theight: auto;\n}\nfooter ul[data-v-f887b39c] {\n    \t\tpadding-left: 0px;\n}\nfooter p[data-v-f887b39c] {\n\t\t\tfont-size: 12px;\n\t\t\tletter-spacing: 0.01em;\n}\n.px-xs-0[data-v-f887b39c] {\n    \t\tpadding-left: 0px !important;\n    \t\tpadding-right: 0px !important;\n}\n.pr-xs-0[data-v-f887b39c] {\n    \t\tpadding-right: 0px !important;\n}\n.pl-xs-0[data-v-f887b39c] {\n    \t\tpadding-left: 0px !important;\n}\n.mt-xs-2[data-v-f887b39c] {\n    \t\tmargin-top: 1rem;\n}\n}\n", ""]);
 
 // exports
 
@@ -122246,7 +122246,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-f5e3ae1c", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-f887b39c", module.exports)
   }
 }
 
@@ -122276,7 +122276,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-117390fa", module.exports)
   }
 }
 
@@ -126450,7 +126450,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/Landing.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Landing.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -126459,9 +126459,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5ee972b0", Component.options)
+    hotAPI.createRecord("data-v-35fb1d70", Component.options)
   } else {
-    hotAPI.reload("data-v-5ee972b0", Component.options)
+    hotAPI.reload("data-v-35fb1d70", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -126482,13 +126482,13 @@ var content = __webpack_require__(381);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(17)("d5254638", content, false, {});
+var update = __webpack_require__(17)("1ddd92a1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ee972b0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5ee972b0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35fb1d70\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35fb1d70\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Landing.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -126767,7 +126767,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "node_modules/v-select2-component/src/Select2.vue"
+Component.options.__file = "node_modules\\v-select2-component\\src\\Select2.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -126776,9 +126776,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3ae46f98", Component.options)
+    hotAPI.createRecord("data-v-5288c2cd", Component.options)
   } else {
-    hotAPI.reload("data-v-3ae46f98", Component.options)
+    hotAPI.reload("data-v-5288c2cd", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -126976,7 +126976,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3ae46f98", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-5288c2cd", module.exports)
   }
 }
 
@@ -126999,7 +126999,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1f6a11ec"
+var __vue_scopeId__ = "data-v-78bc0cac"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -127010,7 +127010,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/TableView.vue"
+Component.options.__file = "resources\\assets\\js\\components\\TableView.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -127019,9 +127019,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1f6a11ec", Component.options)
+    hotAPI.createRecord("data-v-78bc0cac", Component.options)
   } else {
-    hotAPI.reload("data-v-1f6a11ec", Component.options)
+    hotAPI.reload("data-v-78bc0cac", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -127042,13 +127042,13 @@ var content = __webpack_require__(390);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(17)("296e1378", content, false, {});
+var update = __webpack_require__(17)("3db40e3f", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f6a11ec\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f6a11ec\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78bc0cac\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78bc0cac\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TableView.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -127342,7 +127342,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1f6a11ec", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-78bc0cac", module.exports)
   }
 }
 
@@ -127799,7 +127799,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5ee972b0", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-35fb1d70", module.exports)
   }
 }
 
@@ -127829,7 +127829,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/terms.vue"
+Component.options.__file = "resources\\assets\\js\\components\\terms.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -127838,9 +127838,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-49ce9680", Component.options)
+    hotAPI.createRecord("data-v-6acbf140", Component.options)
   } else {
-    hotAPI.reload("data-v-49ce9680", Component.options)
+    hotAPI.reload("data-v-6acbf140", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128019,7 +128019,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128039,7 +128039,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128049,7 +128049,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128061,7 +128061,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128071,7 +128071,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128083,13 +128083,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128135,7 +128135,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-49ce9680", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-6acbf140", module.exports)
   }
 }
 
@@ -128165,7 +128165,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/privacy.vue"
+Component.options.__file = "resources\\assets\\js\\components\\privacy.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -128174,9 +128174,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-377893c1", Component.options)
+    hotAPI.createRecord("data-v-0e8a3e81", Component.options)
   } else {
-    hotAPI.reload("data-v-377893c1", Component.options)
+    hotAPI.reload("data-v-0e8a3e81", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128355,7 +128355,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128375,7 +128375,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128385,7 +128385,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128397,7 +128397,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128407,7 +128407,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128419,13 +128419,13 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "content" }, [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. Mauris sem quam, commodo vel leo sit amet, egestas congue nibh. Nulla non velit non ipsum vehicula condimentum a non felis. Quisque augue eros, venenatis quis luctus sed, vestibulum in lacus. Vivamus sed dolor vitae diam commodo euismod. Suspendisse quis aliquet ex, vitae sagittis tortor. Curabitur congue lectus quis euismod facilisis. Vestibulum ac diam pulvinar lacus lacinia rutrum ac at mi. Sed at malesuada ipsum.\r\n                Aenean posuere urna ac nisi condimentum, et semper ligula cursus. Proin eget nunc at magna interdum semper vel ac magna. Fusce nulla magna, pellentesque sit amet pretium ut, commodo et ligula. Sed convallis tempor massa id molestie. Morbi id laoreet arcu, eu lobortis ex. Morbi dignissim, ligula nec facilisis lobortis, lectus diam dapibus elit, et posuere tellus augue id sem. Nunc tincidunt mauris justo, ac pulvinar leo accumsan in. Proin id aliquam ex, at feugiat lacus."
           )
         ])
       ]),
@@ -128471,7 +128471,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-377893c1", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0e8a3e81", module.exports)
   }
 }
 
@@ -128501,7 +128501,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/contact.vue"
+Component.options.__file = "resources\\assets\\js\\components\\contact.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -128510,9 +128510,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3f66ef4e", Component.options)
+    hotAPI.createRecord("data-v-914399ce", Component.options)
   } else {
-    hotAPI.reload("data-v-3f66ef4e", Component.options)
+    hotAPI.reload("data-v-914399ce", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128544,7 +128544,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("h6", { staticClass: "read" }, [
             _vm._v(
-              "Do you have questions or suggestions you want to send to MOEX Team?\nPlease kindly fill the form below."
+              "Do you have questions or suggestions you want to send to MOEX Team?\r\nPlease kindly fill the form below."
             )
           ])
         ])
@@ -128698,7 +128698,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-3f66ef4e", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-914399ce", module.exports)
   }
 }
 
@@ -128728,7 +128728,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/faq.vue"
+Component.options.__file = "resources\\assets\\js\\components\\faq.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -128737,9 +128737,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4b1a7ccf", Component.options)
+    hotAPI.createRecord("data-v-c5a0f0e2", Component.options)
   } else {
-    hotAPI.reload("data-v-4b1a7ccf", Component.options)
+    hotAPI.reload("data-v-c5a0f0e2", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128765,7 +128765,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4b1a7ccf", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-c5a0f0e2", module.exports)
   }
 }
 
@@ -128795,7 +128795,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/career.vue"
+Component.options.__file = "resources\\assets\\js\\components\\career.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -128804,9 +128804,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-aacc5d56", Component.options)
+    hotAPI.createRecord("data-v-ad7062d6", Component.options)
   } else {
-    hotAPI.reload("data-v-aacc5d56", Component.options)
+    hotAPI.reload("data-v-ad7062d6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128832,7 +128832,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-aacc5d56", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-ad7062d6", module.exports)
   }
 }
 
@@ -128862,7 +128862,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/blog.vue"
+Component.options.__file = "resources\\assets\\js\\components\\blog.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -128871,9 +128871,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-83a4698e", Component.options)
+    hotAPI.createRecord("data-v-a28bcf0e", Component.options)
   } else {
-    hotAPI.reload("data-v-83a4698e", Component.options)
+    hotAPI.reload("data-v-a28bcf0e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -128899,7 +128899,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-83a4698e", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-a28bcf0e", module.exports)
   }
 }
 
