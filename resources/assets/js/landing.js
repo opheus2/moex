@@ -11,5 +11,6 @@ Vue.use(ClientTable);
 window.Landing = new Vue({
     el: '#app',
     router,
+    template: '<Landing/>',
     components: { Landing },
 });
