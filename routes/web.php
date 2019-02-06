@@ -631,16 +631,9 @@ Route::group([], function () {
     });
 });
 
-    Route::get('/landing', function(){
-        return view('landing.index');
-    });
-Route::get('/terms-of-service', 'LandingController@index' );
-Route::get('/privacy-policy', 'LandingController@index' );
-Route::get('/contact', 'LandingController@index' );
-Route::get('/blog', 'LandingController@index' );
-Route::get('/careers', 'LandingController@index' );
-Route::get('/faq', 'LandingController@index' );
+Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
 
 Route::get('kyc/{image}', [
     'uses'      => 'KycController@picture'
 ]);
+Route::get('/landing/{any}', 'LandingController@index')->where('any', '^(?!api).*$');
