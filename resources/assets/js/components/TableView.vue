@@ -1,5 +1,28 @@
 <template>
-    <v-client-table :data="tableData" :columns="columns" :options="options"></v-client-table>
+    <v-client-table ref="table" :data="tableData" :columns="columns" :options="options">
+        <div slot="seller" slot-scope="props" class="user-tag d-flex">
+            <!--<span class="media">-->
+                <span class="media-left d-none d-sm-block pr-1">
+                    <span  class="avatar avatar-md rounded-circle avatar-off">
+                        <img  src="http://expresscargo.me/images/objects/avatar.png" width="50px" height="50px" style="border-radius: 50%;" alt="avatar">
+                        <i ></i>
+                    </span>
+                </span>
+                <div>
+                    <div class="">
+                        <a  :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">{{ props.row.seller }}</a><br >
+                    </div>
+                    <div class="blue-grey font-small-3 lighten-2 alert-primary">
+                        {{ props.row.user.status }}
+                    </div>
+                </div>
+
+            <!--</span>
+            <span class="blue-grey font-small-3 lighten-2">
+                Seen 3 hours ago
+            </span>-->
+        </div>
+    </v-client-table>
     <!--<div class="">
       <div style="overflow-x:auto;">
           <table class="table table-hover table-responsive responsive" id="tableView" style="">
@@ -88,8 +111,6 @@
 </template>
 
 <script>
-    // const BASEURL = "http://expresscargo.me/api";
-
     export default {
         name: 'TableView',
         props: ['paymentMethod', 'paymentMethods'],
@@ -97,10 +118,12 @@
             return {
                 tableData: [],
                 originalData: [],
-                columns: ['seller', 'paymentMethod', 'nairaPrice', 'dollarPrice', 'limit'],
+                columns: ['seller', 'payment_method', 'coin', 'amount_range'],
                 options: {
-                    perPage: 2,
-                    filterable: false
+                    perPage: 10,
+                    filterable: false,
+                    sortable: ['payment_method', 'amount_range'],
+                    skin: "table table-white-space table-bordered row-grouping display icheck table-middle dataTable dtr-column collapsed"
                 }
             }
         },
@@ -111,14 +134,12 @@
                     return;
                 }
                 let method = this.paymentMethods.find(meth => meth.id === Number(this.paymentMethod));
-                this.tableData = this.originalData.filter(data => {return data.paymentMethod === method.name});
-                // debugger
+                this.tableData = this.originalData.filter(data => {return data.payment_method === method.name});
             }
         },
         created () {
             window.axios.get(`/api/offers/test-sell`)
                 .then(res => {
-                    // console.log([...res.data.data]);
                     console.log(typeof res.data.data);
                     let response = [];
                     for (let data in res.data.data) {
@@ -127,22 +148,27 @@
                     }
                     response.forEach (data => {
                         let seller = data.user.name;
-                        let paymentMethod = data.payment_method;
-                        let nairaPrice = 20000000;
-                        let dollarPrice = 1000;
+                        let user = data.user;
+                        let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
-                        this.tableData.push({seller, paymentMethod, nairaPrice, dollarPrice, limit: `${minAmount} - ${maxAmount}`});
+                        let coin = data.coin.toUpperCase();
+                        this.tableData.push({seller, payment_method , coin, amount_range: `$${minAmount} - $${maxAmount}`, user});
                         this.originalData =[...this.tableData];
                     })
-
-
-
                 })
                 .catch(err => {
                     console.error(err);
                 })
             ;
+        },
+        mounted () {
+            setTimeout(() => {
+
+            }, 500);
+            /*let table = document.querySelector('VueTables__table');
+            table.classList.remove('table-striped','table-bordered');
+            table.classList.add('table-responsive responsive');*/
         }
     };
 </script>

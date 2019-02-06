@@ -38,7 +38,7 @@
                             <button class="btn btn-purple">Sell Bitcoin</button>
                         </div>
                         <div class="button-group">
-                            <button class="btn btn-white">Buy Bitcoin</button>
+                            <button @click="" class="btn btn-white">Buy Bitcoin</button>
                         </div>
                         <div class="button-group lg-hide" style="float:right">
                             <button class="btn btn-white">In Nigeria</button>

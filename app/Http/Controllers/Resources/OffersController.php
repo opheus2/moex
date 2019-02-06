@@ -154,8 +154,185 @@ class OffersController extends Controller
 
     public function sellTest()
     {
-        $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
+        $json = '{
+    "current_page": 1,
+    "data": {
+        "1": {
+            "id": 4,
+            "token": "2w4UWUDMaL",
+            "type": "sell",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 7,
+            "status": 1,
+            "min_amount": 50,
+            "max_amount": 200,
+            "profit_margin": 5,
+            "payment_method": "Cash Deposit To Banks",
+            "tags": [
+                "no verification needed"
+            ],
+            "trade_instruction": "shown after",
+            "terms": "shown before",
+            "label": "INSTANT RELEASE",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 5,
+            "created_at": "2019-01-26 21:42:52",
+            "updated_at": "2019-01-26 21:42:52",
+            "user": {
+                "id": 7,
+                "name": "Opheus",
+                "presence": "offline",
+                "last_seen": "2019-02-06 18:33:01",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        },
+        "2": {
+            "id": 3,
+            "token": "L9VIwopMC9",
+            "type": "sell",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 7,
+            "status": 1,
+            "min_amount": 1,
+            "max_amount": 300,
+            "profit_margin": 5,
+            "payment_method": "Bank Transfers",
+            "tags": [
+                "online payments"
+            ],
+            "trade_instruction": "shown after",
+            "terms": "shown before",
+            "label": "INSTANT RELEASE",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 30,
+            "created_at": "2019-01-26 21:38:37",
+            "updated_at": "2019-01-26 21:38:37",
+            "user": {
+                "id": 7,
+                "name": "Opheus",
+                "presence": "offline",
+                "last_seen": "2019-02-06 18:33:01",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        },
+        "3": {
+            "id": 7,
+            "token": "5VISvULoCH",
+            "type": "sell",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 6,
+            "status": 1,
+            "min_amount": 100,
+            "max_amount": 200,
+            "profit_margin": 5,
+            "payment_method": "Microsoft Gift Card",
+            "tags": [
+                "no receipt needed"
+            ],
+            "trade_instruction": "None",
+            "terms": "University Of Uyo, Mechanical Engineering Department\r\nFaculty Of Engineering",
+            "label": "Instant Release",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 6,
+            "created_at": "2019-02-04 19:35:47",
+            "updated_at": "2019-02-04 19:35:47",
+            "user": {
+                "id": 6,
+                "name": "jaycodes",
+                "presence": "away",
+                "last_seen": "2019-02-06 21:48:57",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        },
+        "4": {
+            "id": 8,
+            "token": "UwyaqFVGgJ",
+            "type": "sell",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 6,
+            "status": 1,
+            "min_amount": 60,
+            "max_amount": 200,
+            "profit_margin": 5,
+            "payment_method": "Nike Gift Card",
+            "tags": [
+                "no receipt needed"
+            ],
+            "trade_instruction": "None",
+            "terms": "28 Edem Urua Street\r\nFaculty Of Engineering",
+            "label": "Instant Release",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 10,
+            "created_at": "2019-02-04 19:36:37",
+            "updated_at": "2019-02-04 19:36:37",
+            "user": {
+                "id": 6,
+                "name": "jaycodes",
+                "presence": "away",
+                "last_seen": "2019-02-06 21:48:57",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        }
+    },
+    "first_page_url": "http://expresscargo.me/api/offers/sell?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://expresscargo.me/api/offers/sell?page=1",
+    "next_page_url": null,
+    "path": "http://expresscargo.me/api/offers/sell",
+    "per_page": 100,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4
+}';
+   /*     $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
         $response = $client->get('sell');
-        return $response->getBody();
+        return $response->getBody();*/
+
+   return $json;
     }
 }
