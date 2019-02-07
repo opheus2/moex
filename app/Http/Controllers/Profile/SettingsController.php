@@ -440,17 +440,17 @@ class SettingsController extends Controller
         $frontview          = $request->file('front_view');
         $backview           = $request->file('back_view');
         $verificationType   = $request->verification_type;
-        $url                = 'https://gwot5erqucxr9jlrx-mock.stoplight-proxy.io/api/uverify-ms/api2/bvn';
+        // $url                = 'https://gwot5erqucxr9jlrx-mock.stoplight-proxy.io/api/uverify-ms/api2/bvn';
 
-        $params             = [
-                                'surname'   => 'shafii',
-                                'bvn'       => '01012341234',
-                                'dob'       => '1990-02-19',
-                                'api_key'   => 'JHFvljhvhouyfylvfCOUUFovluhjvjhOFHJv',
-                                'userid'    => '65610124',
-                            ];
-        $response            = $client->post($url, ['form_params' => $params]);
-        $content             = json_decode($response->getBody()->getContents());
+        // $params             = [
+        //                         'surname'   => 'shafii',
+        //                         'bvn'       => '01012341234',
+        //                         'dob'       => '1990-02-19',
+        //                         'api_key'   => 'JHFvljhvhouyfylvfCOUUFovluhjvjhOFHJv',
+        //                         'userid'    => '65610124',
+        //                     ];
+        // $response            = $client->post($url, ['form_params' => $params]);
+        // $content             = json_decode($response->getBody()->getContents());
 
 
         $frontViewname      = time().'-'.$frontview->getClientOriginalName();

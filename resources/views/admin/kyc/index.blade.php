@@ -4,14 +4,14 @@
 @php
     $sn = 1;
 @endphp
-<admin-users-page inline-template>
+<admin-kyc-page inline-template >
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-2">
                 <h3 class="content-header-title">{{__('KYC')}}</h3>
                 <div class="row breadcrumbs-top">
                     <div class="breadcrumb-wrapper col-12">
-                        {{-- {{ Breadcrumbs::render('admin.users') }} --}}
+                        {{ Breadcrumbs::render('kyc') }}
                     </div>
                 </div>
             </div>
@@ -32,8 +32,10 @@
                                     <tr>
                                         <th>#</th>
                                         <th class="all"> Username </th>
+                                        <th class="all"> BVN </th>
                                         <th class="all"> DOB </th>
                                         <th class="all"> Address </th>
+                                        <th class="all"> Location </th>
                                         <th class="none"> Verification Type</th>
                                         <th class="none"> Verification Status</th>
                                         <th class="all"> Front View </th>
@@ -44,9 +46,11 @@
                                         @foreach($kycs as $kyc)
                                             <tr>
                                                 <td>{{ $sn++ }}</td>
+                                                <td> {{ $kyc->bvn }} </td>
                                                 <td> {{ ucfirst($kyc->username )}} </td>
                                                 <td> {{ $kyc->dob }} </td>
                                                 <td> {{ $kyc->address }} </td>
+                                                <td> {{ $kyc->city }}, {{ $kyc->state }}, {{ $kyc->country }} </td>
                                                 <td> {{ ucfirst($kyc->identity_type) }} </td>
                                                 <td> {{ $kyc->verify }} </td>
                                                 <td><button data-toggle="modal" data-target="#front-{{ $kyc->id }}" class="btn btn-primary">View</button></td>
@@ -62,7 +66,6 @@
             </div>
         </div>
     </div>
-</admin-users-page>
 
 @foreach($kycs as $kyc)
     <div id="front-{{ $kyc->id }}" class="modal fade" role="dialog">
@@ -95,4 +98,5 @@
             </div>
         </div>
     </div>
+</admin-kyc-page>
 @endforeach

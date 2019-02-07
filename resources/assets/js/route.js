@@ -1,13 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import land from './components/Landing'
-import Homes from './components/gon'
-import terms from './components/terms'
-import privacy from './components/privacy'
-import contact from './components/contact'
-import faq from './components/faq'
-import career from './components/career'
-import blog from './components/blog'
+import Vue      from 'vue'
+import Router   from 'vue-router'
+import land     from './components/Landing'
+import Homes    from './components/gon'
+import terms    from './components/terms'
+import privacy  from './components/privacy'
+import contact  from './components/contact'
+import faq      from './components/faq'
+import career   from './components/career'
+import blog     from './components/blog'
 
 Vue.use(Router)
 
