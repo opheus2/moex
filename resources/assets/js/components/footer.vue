@@ -35,7 +35,7 @@
         		<div class="col-xs-6 pl-xs-0 col-md-6">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">Support</h4></li>
-		                <li><router-link to="/landing/contact-us"><p class="text-white"> Contact Us</p></router-link></li>
+		                <li><router-link to="/landing/contact"><p class="text-white"> Contact Us</p></router-link></li>
 		                <li><router-link to="/landing/faq"><p class="text-white">FAQ</p></router-link></li>
 		                <li><router-link to="/landing/api"><p class="text-white">API Documention</p></router-link></li>
 		            </ul>

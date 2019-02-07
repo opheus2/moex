@@ -122039,7 +122039,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "/landing/contact-us" } }, [
+                  _c("router-link", { attrs: { to: "/landing/contact" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v(" Contact Us")
                     ])
