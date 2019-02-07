@@ -631,9 +631,9 @@ Route::group([], function () {
     });
 });
 
-    Route::get('/landing', function(){
-        return view('landing.index');
-    });
-    Route::get('kyc/{image}', [
-        'uses'      => 'KycController@picture'
-    ]);
+Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
+
+Route::get('kyc/{image}', [
+    'uses'      => 'KycController@picture'
+]);
+Route::get('/landing/{any}', 'LandingController@index')->where('any', '^(?!api).*$');

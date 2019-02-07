@@ -28,4 +28,5 @@ _ide_helper_models.php
 
 /vendor
 /public/js/app.js
+/public/js/landing.js
 vendor.zip
