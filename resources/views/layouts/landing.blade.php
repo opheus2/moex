@@ -27,7 +27,7 @@
 <body>
 
 <div id="app">
-    <landing></landing>
+    {{-- <landing></landing> --}}
 </div>
 
     </body>

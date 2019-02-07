@@ -121556,7 +121556,7 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "text-color",
-                        attrs: { to: "/", href: "#" }
+                        attrs: { to: "/landing", href: "#" }
                       },
                       [_vm._v("Blog")]
                     )
@@ -121571,7 +121571,7 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "text-color",
-                        attrs: { to: "/home", href: "#" }
+                        attrs: { to: "/landing/contact", href: "#" }
                       },
                       [_vm._v("About")]
                     )
@@ -121979,7 +121979,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "careers" } }, [
+                  _c("router-link", { attrs: { to: "/landing/careers" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("Careers")])
                   ])
                 ],
@@ -121989,11 +121989,15 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "terms-of-service" } }, [
-                    _c("p", { staticClass: "text-white" }, [
-                      _vm._v("Terms of Service")
-                    ])
-                  ])
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/landing/terms-of-service" } },
+                    [
+                      _c("p", { staticClass: "text-white" }, [
+                        _vm._v("Terms of Service")
+                      ])
+                    ]
+                  )
                 ],
                 1
               ),
@@ -122001,11 +122005,15 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "privacy-policy" } }, [
-                    _c("p", { staticClass: "text-white" }, [
-                      _vm._v("Privacy Policy")
-                    ])
-                  ])
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/landing/privacy-policy" } },
+                    [
+                      _c("p", { staticClass: "text-white" }, [
+                        _vm._v("Privacy Policy")
+                      ])
+                    ]
+                  )
                 ],
                 1
               ),
@@ -122013,7 +122021,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "blog" } }, [
+                  _c("router-link", { attrs: { to: "/landing/blog" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("Blog")])
                   ])
                 ],
@@ -122031,7 +122039,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "contact-us" } }, [
+                  _c("router-link", { attrs: { to: "/landing/contact-us" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v(" Contact Us")
                     ])
@@ -122043,7 +122051,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "faq" } }, [
+                  _c("router-link", { attrs: { to: "/landing/faq" } }, [
                     _c("p", { staticClass: "text-white" }, [_vm._v("FAQ")])
                   ])
                 ],
@@ -122053,7 +122061,7 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: "api" } }, [
+                  _c("router-link", { attrs: { to: "/landing/api" } }, [
                     _c("p", { staticClass: "text-white" }, [
                       _vm._v("API Documention")
                     ])
@@ -123703,6 +123711,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_2_vue_tables_2__["ClientTable"]);
 window.Landing = new Vue({
     el: '#app',
     router: __WEBPACK_IMPORTED_MODULE_0__route__["a" /* default */],
+    template: '<Landing/>',
     components: { Landing: __WEBPACK_IMPORTED_MODULE_1__components_App___default.a }
 });
 
@@ -123747,34 +123756,33 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
     mode: 'history',
     routes: [{
         path: '/landing',
-        name: 'landing',
         component: __WEBPACK_IMPORTED_MODULE_2__components_Landing___default.a
     }, {
-        path: '/home',
+        path: '/landing/home',
         name: 'Home',
         component: __WEBPACK_IMPORTED_MODULE_3__components_gon___default.a
     }, {
-        path: '/terms-of-service',
+        path: '/landing/terms-of-service',
         name: 'terms-of-service',
         component: __WEBPACK_IMPORTED_MODULE_4__components_terms___default.a
     }, {
-        path: '/privacy-policy',
+        path: '/landing/privacy-policy',
         name: 'Privacy Policy',
         component: __WEBPACK_IMPORTED_MODULE_5__components_privacy___default.a
     }, {
-        path: '/contact',
+        path: '/landing/contact',
         name: 'Contact',
         component: __WEBPACK_IMPORTED_MODULE_6__components_contact___default.a
     }, {
-        path: '/blog',
+        path: '/landing/blog',
         name: 'Blog',
         component: __WEBPACK_IMPORTED_MODULE_9__components_blog___default.a
     }, {
-        path: '/careers',
+        path: '/landing/careers',
         name: 'Careers',
         component: __WEBPACK_IMPORTED_MODULE_8__components_career___default.a
     }, {
-        path: '/faq',
+        path: '/landing/faq',
         name: 'Faq',
         component: __WEBPACK_IMPORTED_MODULE_7__components_faq___default.a
     }],
@@ -127058,7 +127066,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -127162,8 +127170,30 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 //
 //
 //
-
-// const BASEURL = "http://expresscargo.me/api";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'TableView',
@@ -127172,10 +127202,12 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         return {
             tableData: [],
             originalData: [],
-            columns: ['seller', 'paymentMethod', 'nairaPrice', 'dollarPrice', 'limit'],
+            columns: ['seller', 'payment_method', 'coin', 'amount_range'],
             options: {
-                perPage: 2,
-                filterable: false
+                perPage: 10,
+                filterable: false,
+                sortable: ['payment_method', 'amount_range'],
+                skin: "table table-white-space table-bordered row-grouping display icheck table-middle dataTable dtr-column collapsed"
             }
         };
     },
@@ -127192,16 +127224,14 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
                 return meth.id === Number(_this.paymentMethod);
             });
             this.tableData = this.originalData.filter(function (data) {
-                return data.paymentMethod === method.name;
+                return data.payment_method === method.name;
             });
-            // debugger
         }
     },
     created: function created() {
         var _this2 = this;
 
         window.axios.get('/api/offers/test-sell').then(function (res) {
-            // console.log([...res.data.data]);
             console.log(_typeof(res.data.data));
             var response = [];
             for (var data in res.data.data) {
@@ -127209,17 +127239,23 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             }
             response.forEach(function (data) {
                 var seller = data.user.name;
-                var paymentMethod = data.payment_method;
-                var nairaPrice = 20000000;
-                var dollarPrice = 1000;
+                var user = data.user;
+                var payment_method = data.payment_method;
                 var maxAmount = data.max_amount;
                 var minAmount = data.min_amount;
-                _this2.tableData.push({ seller: seller, paymentMethod: paymentMethod, nairaPrice: nairaPrice, dollarPrice: dollarPrice, limit: minAmount + ' - ' + maxAmount });
+                var coin = data.coin.toUpperCase();
+                _this2.tableData.push({ seller: seller, payment_method: payment_method, coin: coin, amount_range: '$' + minAmount + ' - $' + maxAmount, user: user });
                 _this2.originalData = [].concat(_toConsumableArray(_this2.tableData));
             });
         }).catch(function (err) {
             console.error(err);
         });
+    },
+    mounted: function mounted() {
+        setTimeout(function () {}, 500);
+        /*let table = document.querySelector('VueTables__table');
+        table.classList.remove('table-striped','table-bordered');
+        table.classList.add('table-responsive responsive');*/
     }
 });
 
@@ -127232,7 +127268,72 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("v-client-table", {
-    attrs: { data: _vm.tableData, columns: _vm.columns, options: _vm.options }
+    ref: "table",
+    attrs: { data: _vm.tableData, columns: _vm.columns, options: _vm.options },
+    scopedSlots: _vm._u([
+      {
+        key: "seller",
+        fn: function(props) {
+          return _c("div", { staticClass: "user-tag d-flex" }, [
+            _c("span", { staticClass: "media-left d-none d-sm-block pr-1" }, [
+              _c(
+                "span",
+                { staticClass: "avatar avatar-md rounded-circle avatar-off" },
+                [
+                  _c("img", {
+                    staticStyle: { "border-radius": "50%" },
+                    attrs: {
+                      src: "http://expresscargo.me/images/objects/avatar.png",
+                      width: "50px",
+                      height: "50px",
+                      alt: "avatar"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("i")
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("div", {}, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "media-heading text-capitalize",
+                    attrs: { href: "/profile/" + props.row.seller }
+                  },
+                  [_vm._v(_vm._s(props.row.seller))]
+                ),
+                _c("br")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "blue-grey font-small-3 lighten-2 alert-primary"
+                },
+                [
+                  _vm._v(
+                    "\n                      " +
+                      _vm._s(props.row.user.status) +
+                      "\n                  "
+                  )
+                ]
+              )
+            ])
+          ])
+        }
+      },
+      {
+        key: "amount_range",
+        fn: function(props) {
+          return _c("div", {}, [
+            _c("strong", [_vm._v(_vm._s(props.row.amount_range))])
+          ])
+        }
+      }
+    ])
   })
 }
 var staticRenderFns = []
@@ -127321,7 +127422,22 @@ var render = function() {
                 _vm._m(2)
               ]),
               _vm._v(" "),
-              _vm._m(3)
+              _c("div", { staticClass: "d-flex child" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "button-group" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white",
+                      on: { click: function($event) {} }
+                    },
+                    [_vm._v("Buy Bitcoin")]
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ])
             ]
           )
         ])
@@ -127334,8 +127450,6 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
       _vm._m(5),
       _vm._v(" "),
       _vm._m(6),
@@ -127344,7 +127458,9 @@ var render = function() {
       _vm._v(" "),
       _vm._m(8),
       _vm._v(" "),
-      _vm._m(9)
+      _vm._m(9),
+      _vm._v(" "),
+      _vm._m(10)
     ],
     1
   )
@@ -127411,26 +127527,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex child" }, [
-      _c("div", { staticClass: "button-group" }, [
-        _c("button", { staticClass: "btn btn-purple" }, [
-          _vm._v("Sell Bitcoin")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "button-group" }, [
-        _c("button", { staticClass: "btn btn-white" }, [_vm._v("Buy Bitcoin")])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "button-group lg-hide",
-          staticStyle: { float: "right" }
-        },
-        [_c("button", { staticClass: "btn btn-white" }, [_vm._v("In Nigeria")])]
-      )
+    return _c("div", { staticClass: "button-group" }, [
+      _c("button", { staticClass: "btn btn-purple" }, [_vm._v("Sell Bitcoin")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "button-group lg-hide", staticStyle: { float: "right" } },
+      [_c("button", { staticClass: "btn btn-white" }, [_vm._v("In Nigeria")])]
+    )
   },
   function() {
     var _vm = this
