@@ -125,3 +125,7 @@ Breadcrumbs::for('profile', function ($trail, $name) {
     $trail->push(__('Profile'), route('profile.index', compact('name')));
 });
 
+Breadcrumbs::for('kyc', function ($trail) {
+    $trail->parent('admin.home');
+    $trail->push('KYC', route('admin.kyc.index'));
+});
