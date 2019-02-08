@@ -194,12 +194,13 @@ nav{
     border: 1px solid !important;
     border-radius: 0px !important;
 }
+/*
 
 table tr{
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
-    /* font-size: 24px; */
+    !* font-size: 24px; *!
 
     color: #656262;
 }
@@ -211,6 +212,7 @@ table tr{
 tbody>:nth-child(2n-1) {
     background-color: #dddddd;
 }
+*/
 
 .show-more{
     background-color: #6C63FF;
@@ -588,4 +590,11 @@ body {
         width: auto !important;
         margin-left: auto !important;
     }
+}
+.align-items-center {
+    align-items: center !important;
+}
+
+.h-50p {
+    height: 50px !important;
 }
