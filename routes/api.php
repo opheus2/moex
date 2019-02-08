@@ -31,6 +31,8 @@ Route::group(['namespace' => 'Resources'], function () {
 
         Route::get('test-sell', 'OffersController@sellTest');
 
+        Route::get('test-buy', 'OffersController@buyTest');
+
         // Get
         Route::get('{id}', 'OffersController@get')->name('get');
 

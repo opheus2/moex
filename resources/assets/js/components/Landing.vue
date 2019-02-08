@@ -35,10 +35,10 @@
                     </div>
                     <div class="d-flex child">
                         <div class="button-group">
-                            <button class="btn btn-purple">Sell Bitcoin</button>
+                            <button @click="tableType = 'sell'" class="btn" :class="tableType === 'sell' ? 'btn-purple' : 'btn-white'">Sell Bitcoin</button>
                         </div>
                         <div class="button-group">
-                            <button @click="" class="btn btn-white">Buy Bitcoin</button>
+                            <button @click="tableType = 'buy'" class="btn" :class="tableType === 'buy' ? 'btn-purple' : 'btn-white'">Buy Bitcoin</button>
                         </div>
                         <div class="button-group lg-hide" style="float:right">
                             <button class="btn btn-white">In Nigeria</button>
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <table-view :paymentMethod="selectedPaymentMethod" :paymentMethods="paymentMethods"></table-view>
+        <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="paymentMethods"></table-view>
         <div class="d-flex justify-content-center security" style="width: 100%">
             <div class="row w-93">
                 <h6 class="notch">Top Notch Security</h6>
@@ -189,7 +189,8 @@
         data () {
             return {
                 selectedPaymentMethod: "all",
-                paymentMethods: []
+                paymentMethods: [],
+                tableType: 'sell'
             }
         },
         created () {

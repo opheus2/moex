@@ -126714,7 +126714,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     data: function data() {
         return {
             selectedPaymentMethod: "all",
-            paymentMethods: []
+            paymentMethods: [],
+            tableType: 'sell'
         };
     },
     created: function created() {
@@ -127066,7 +127067,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -127077,10 +127078,35 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -127197,33 +127223,38 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'TableView',
-    props: ['paymentMethod', 'paymentMethods'],
+    props: ['paymentMethod', 'paymentMethods', 'tableType'],
     data: function data() {
         return {
             tableData: [],
-            originalData: [],
-            columns: ['seller', 'payment_method', 'coin', 'amount_range'],
+            sellData: [],
+            buyData: [],
+            sellColumns: ['seller', 'payment_method', 'coin', 'amount_range', 'action'],
+            buyColumns: ['buyer', 'payment_method', 'coin', 'amount_range', 'action'],
             options: {
                 perPage: 10,
                 filterable: false,
                 sortable: ['payment_method', 'amount_range'],
-                skin: "table table-white-space table-bordered row-grouping display icheck table-middle dataTable dtr-column collapsed"
+                skin: "table mytable table-bordered table-hover"
             }
         };
     },
 
     watch: {
+        tableType: function tableType() {
+            this.tableData = [].concat(_toConsumableArray(this.getCurrentTableData()));
+        },
         paymentMethod: function paymentMethod() {
             var _this = this;
 
             if (this.paymentMethod === "all") {
-                this.tableData = [].concat(_toConsumableArray(this.originalData));
+                this.tableData = [].concat(_toConsumableArray(this.getCurrentTableData()));
                 return;
             }
             var method = this.paymentMethods.find(function (meth) {
                 return meth.id === Number(_this.paymentMethod);
             });
-            this.tableData = this.originalData.filter(function (data) {
+            this.tableData = this.getCurrentTableData().filter(function (data) {
                 return data.payment_method === method.name;
             });
         }
@@ -127232,7 +127263,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         var _this2 = this;
 
         window.axios.get('/api/offers/test-sell').then(function (res) {
-            console.log(_typeof(res.data.data));
             var response = [];
             for (var data in res.data.data) {
                 if (res.data.data.hasOwnProperty(data)) response.push(res.data.data[data]);
@@ -127240,22 +127270,50 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             response.forEach(function (data) {
                 var seller = data.user.name;
                 var user = data.user;
+                var token = data.token;
                 var payment_method = data.payment_method;
                 var maxAmount = data.max_amount;
                 var minAmount = data.min_amount;
                 var coin = data.coin.toUpperCase();
-                _this2.tableData.push({ seller: seller, payment_method: payment_method, coin: coin, amount_range: '$' + minAmount + ' - $' + maxAmount, user: user });
-                _this2.originalData = [].concat(_toConsumableArray(_this2.tableData));
+                _this2.sellData.push({ seller: seller, payment_method: payment_method, coin: coin, amount_range: '$' + minAmount + ' - $' + maxAmount, user: user, token: token });
             });
+            _this2.tableData = [].concat(_toConsumableArray(_this2.getCurrentTableData()));
+        }).catch(function (err) {
+            console.error(err);
+        });
+
+        window.axios.get('/api/offers/test-buy').then(function (res) {
+            var response = [];
+            for (var data in res.data.data) {
+                if (res.data.data.hasOwnProperty(data)) response.push(res.data.data[data]);
+            }
+            response.forEach(function (data) {
+                var buyer = data.user.name;
+                var user = data.user;
+                var token = data.token;
+                var payment_method = data.payment_method;
+                var maxAmount = data.max_amount;
+                var minAmount = data.min_amount;
+                var coin = data.coin.toUpperCase();
+                _this2.buyData.push({ buyer: buyer, payment_method: payment_method, coin: coin, amount_range: '$' + minAmount + ' - $' + maxAmount, user: user, token: token });
+            });
+            _this2.tableData = [].concat(_toConsumableArray(_this2.getCurrentTableData()));
         }).catch(function (err) {
             console.error(err);
         });
     },
     mounted: function mounted() {
-        setTimeout(function () {}, 500);
-        /*let table = document.querySelector('VueTables__table');
-        table.classList.remove('table-striped','table-bordered');
-        table.classList.add('table-responsive responsive');*/
+        this.tableData = [].concat(_toConsumableArray(this.getCurrentTableData()));
+    },
+
+    methods: {
+        getCurrentTableData: function getCurrentTableData() {
+            if (this.tableType === 'buy') {
+                return this.buyData;
+            } else {
+                return this.sellData;
+            }
+        }
     }
 });
 
@@ -127267,74 +127325,293 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-client-table", {
-    ref: "table",
-    attrs: { data: _vm.tableData, columns: _vm.columns, options: _vm.options },
-    scopedSlots: _vm._u([
-      {
-        key: "seller",
-        fn: function(props) {
-          return _c("div", { staticClass: "user-tag d-flex" }, [
-            _c("span", { staticClass: "media-left d-none d-sm-block pr-1" }, [
-              _c(
-                "span",
-                { staticClass: "avatar avatar-md rounded-circle avatar-off" },
-                [
-                  _c("img", {
-                    staticStyle: { "border-radius": "50%" },
-                    attrs: {
-                      src: "http://expresscargo.me/images/objects/avatar.png",
-                      width: "50px",
-                      height: "50px",
-                      alt: "avatar"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("i")
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c("div", {}, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "media-heading text-capitalize",
-                    attrs: { href: "/profile/" + props.row.seller }
-                  },
-                  [_vm._v(_vm._s(props.row.seller))]
-                ),
-                _c("br")
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "blue-grey font-small-3 lighten-2 alert-primary"
-                },
-                [
-                  _vm._v(
-                    "\n                      " +
-                      _vm._s(props.row.user.status) +
-                      "\n                  "
+  return _c(
+    "div",
+    [
+      _vm.tableType === "sell"
+        ? _c("v-client-table", {
+            ref: "table",
+            attrs: {
+              data: _vm.tableData,
+              columns: _vm.sellColumns,
+              options: _vm.options
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "seller",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    { staticClass: "user-tag h-50p d-flex align-items-center" },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "media-left d-none d-sm-block pr-1" },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "avatar avatar-md rounded-circle avatar-off"
+                            },
+                            [
+                              _c("img", {
+                                staticStyle: { "border-radius": "50%" },
+                                attrs: {
+                                  src:
+                                    "http://expresscargo.me/images/objects/avatar.png",
+                                  width: "50px",
+                                  height: "50px",
+                                  alt: "avatar"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("i")
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("div", {}, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "media-heading text-capitalize",
+                              attrs: { href: "/profile/" + props.row.seller }
+                            },
+                            [_vm._v(_vm._s(props.row.seller))]
+                          ),
+                          _c("br")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "blue-grey font-small-3 lighten-2 alert-primary"
+                          },
+                          [
+                            _vm._v(
+                              "\n                      " +
+                                _vm._s(props.row.user.status) +
+                                "\n                  "
+                            )
+                          ]
+                        )
+                      ])
+                    ]
                   )
-                ]
-              )
+                }
+              },
+              {
+                key: "coin",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "h-50p d-flex justify-content-center align-items-center"
+                    },
+                    [_c("p", [_vm._v(_vm._s(props.row.coin))])]
+                  )
+                }
+              },
+              {
+                key: "payment_method",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "h-50p d-flex justify-content-center align-items-center"
+                    },
+                    [_c("p", [_vm._v(_vm._s(props.row.payment_method))])]
+                  )
+                }
+              },
+              {
+                key: "amount_range",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex h-50p justify-content-center align-items-center"
+                    },
+                    [_c("strong", [_vm._v(_vm._s(props.row.amount_range))])]
+                  )
+                }
+              },
+              {
+                key: "action",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex h-50p justify-content-center align-items-center"
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary px-2",
+                          attrs: { href: "/home/offer/" + props.row.token }
+                        },
+                        [_vm._v("Buy")]
+                      )
+                    ]
+                  )
+                }
+              }
             ])
-          ])
-        }
-      },
-      {
-        key: "amount_range",
-        fn: function(props) {
-          return _c("div", {}, [
-            _c("strong", [_vm._v(_vm._s(props.row.amount_range))])
-          ])
-        }
-      }
-    ])
-  })
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.tableType === "buy"
+        ? _c("v-client-table", {
+            ref: "table",
+            attrs: {
+              data: _vm.tableData,
+              columns: _vm.buyColumns,
+              options: _vm.options
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "buyer",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    { staticClass: "user-tag h-50p d-flex align-items-center" },
+                    [
+                      _c(
+                        "span",
+                        { staticClass: "media-left d-none d-sm-block pr-1" },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "avatar avatar-md rounded-circle avatar-off"
+                            },
+                            [
+                              _c("img", {
+                                staticStyle: { "border-radius": "50%" },
+                                attrs: {
+                                  src:
+                                    "http://expresscargo.me/images/objects/avatar.png",
+                                  width: "50px",
+                                  height: "50px",
+                                  alt: "avatar"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("i")
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("div", {}, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "media-heading text-capitalize",
+                              attrs: { href: "/profile/" + props.row.seller }
+                            },
+                            [_vm._v(_vm._s(props.row.buyer))]
+                          ),
+                          _c("br")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "blue-grey font-small-3 lighten-2 alert-primary"
+                          },
+                          [
+                            _vm._v(
+                              "\n                      " +
+                                _vm._s(props.row.user.status) +
+                                "\n                  "
+                            )
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                }
+              },
+              {
+                key: "coin",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "h-50p d-flex justify-content-center align-items-center"
+                    },
+                    [_c("p", [_vm._v(_vm._s(props.row.coin))])]
+                  )
+                }
+              },
+              {
+                key: "payment_method",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "h-50p d-flex justify-content-center align-items-center"
+                    },
+                    [_c("p", [_vm._v(_vm._s(props.row.payment_method))])]
+                  )
+                }
+              },
+              {
+                key: "amount_range",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex h-50p justify-content-center align-items-center"
+                    },
+                    [_c("strong", [_vm._v(_vm._s(props.row.amount_range))])]
+                  )
+                }
+              },
+              {
+                key: "action",
+                fn: function(props) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex h-50p justify-content-center align-items-center"
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary px-2",
+                          attrs: { href: "/home/offer/" + props.row.token }
+                        },
+                        [_vm._v("Sell")]
+                      )
+                    ]
+                  )
+                }
+              }
+            ])
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -127423,20 +127700,41 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "d-flex child" }, [
-                _vm._m(3),
+                _c("div", { staticClass: "button-group" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn",
+                      class:
+                        _vm.tableType === "sell" ? "btn-purple" : "btn-white",
+                      on: {
+                        click: function($event) {
+                          _vm.tableType = "sell"
+                        }
+                      }
+                    },
+                    [_vm._v("Sell Bitcoin")]
+                  )
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "button-group" }, [
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-white",
-                      on: { click: function($event) {} }
+                      staticClass: "btn",
+                      class:
+                        _vm.tableType === "buy" ? "btn-purple" : "btn-white",
+                      on: {
+                        click: function($event) {
+                          _vm.tableType = "buy"
+                        }
+                      }
                     },
                     [_vm._v("Buy Bitcoin")]
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(3)
               ])
             ]
           )
@@ -127445,10 +127743,13 @@ var render = function() {
       _vm._v(" "),
       _c("table-view", {
         attrs: {
+          tableType: _vm.tableType,
           paymentMethod: _vm.selectedPaymentMethod,
           paymentMethods: _vm.paymentMethods
         }
       }),
+      _vm._v(" "),
+      _vm._m(4),
       _vm._v(" "),
       _vm._m(5),
       _vm._v(" "),
@@ -127458,9 +127759,7 @@ var render = function() {
       _vm._v(" "),
       _vm._m(8),
       _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10)
+      _vm._m(9)
     ],
     1
   )
@@ -127521,14 +127820,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "button-group sm-hide" }, [
       _c("button", { staticClass: "btn btn-white" }, [_vm._v("In Nigeria")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "button-group" }, [
-      _c("button", { staticClass: "btn btn-purple" }, [_vm._v("Sell Bitcoin")])
     ])
   },
   function() {
