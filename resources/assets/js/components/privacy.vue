@@ -9,11 +9,11 @@
     <div class="pol-container" style="">
         <div class="bar">
             <div class="row">
-                <div class="col-md-6 terms">
+                <div class="col-12 col-md-6 terms">
                     <router-link to="terms-of-service" class="polici">Terms of Service</router-link>
                     <router-link to="privacy-policy" class="term">Privacy Policy</router-link>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12 col-md-6" style="display:flex; justify-content:flex-end">
                     <div class="dropdown drop-d" style="">
                         <button class="drop btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <h6 class="drop-text">Language</h6>
@@ -109,7 +109,7 @@
             <p class="bg-text">Start Trading</p>
             <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
             <div align="center">
-                <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>  
+                <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>
             </div>
         </div>
     </div>
