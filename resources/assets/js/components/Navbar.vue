@@ -1,5 +1,5 @@
 <template>
-  <nav id="navbar" class="navbar header-bg">
+  <nav id="navbar" class="navbar mynavbar header-bg">
     <div class="w-93">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" @click="openNav()" aria-expanded="false">

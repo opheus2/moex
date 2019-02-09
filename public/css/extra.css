@@ -598,3 +598,8 @@ body {
 .h-50p {
     height: 50px !important;
 }
+.mynavbar {
+    position: absolute!important;
+    width: 100%;
+    overflow-x: hidden;
+}

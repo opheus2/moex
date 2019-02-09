@@ -173,11 +173,7 @@
     </div>
 </template>
 <style>
-    .navbar {
-        position: absolute!important;
-        width: 100%;
-        overflow-x: hidden;
-    }
+
 </style>
 <script>
     import Select2 from 'v-select2-component';
