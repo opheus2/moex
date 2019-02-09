@@ -15,6 +15,9 @@ body{
 .justify-content-around{
   justify-content: space-around;
 }
+.align-items-center {
+  align-items: center;
+}
 
 .sm-hide {
   display: none;
