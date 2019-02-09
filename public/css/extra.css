@@ -696,6 +696,7 @@ body {
 }
 .mynavbar {
     position: absolute!important;
+    background-color: transparent !important;
     width: 100%;
     overflow-x: hidden;
 }
