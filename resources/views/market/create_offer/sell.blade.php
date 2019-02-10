@@ -71,6 +71,7 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
+                                              
                                                 {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
                                                 <p class="help-inline mt-1">
                                                     {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to buy bitcoin with US Dollar currency.')}}
@@ -135,7 +136,7 @@
                                                         {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'min_amount', 'min' => 0]) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
+                                                            <span class="input-group-text" v-text="">BTC</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -146,7 +147,7 @@
                                                         {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'max_amount', 'min' => 0]) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
+                                                            <span class="input-group-text" v-text="">BTC</span>
                                                         </div>
                                                     </div>
                                                 </div>

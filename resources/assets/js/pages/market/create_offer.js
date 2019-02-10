@@ -12,7 +12,8 @@ export default {
 
     methods: {
         formatAmount: function (value) {
-            let currency = (this.currency) ? this.currency : 'USD';
+            // let currency = (this.currency) ? this.currency : 'BTC';
+            let currency = 'BTC';
 
             return new Intl.NumberFormat(this.locale, {
                 style: 'currency', currencyDisplay: 'symbol', currency: currency
@@ -40,8 +41,10 @@ export default {
         },
 
         coinPrice: function () {
-            let currency = (this.currency) ? this.currency : 'USD';
-            let coin = (this.coin) ? this.coin : 'BTC';
+            // let currency = (this.currency) ? this.currency : 'BTC';
+            let currency = 'BTC';
+            let coin = 'btc';
+            // let coin = (this.coin) ? this.coin : 'BTC';
 
             return this.coin_prices[coin.toUpperCase()][currency.toUpperCase()];
         },
