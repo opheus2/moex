@@ -42,14 +42,14 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                {!! Form::label('SET_MIN_OFFER_AMOUNT', __('Min. Offer Amount (USD)'), ['class' => 'col-md-3']) !!}
+                                                {!! Form::label('SET_MIN_OFFER_AMOUNT', __('Min. Offer Amount (BTC)'), ['class' => 'col-md-3']) !!}
                                                 <div class="col-md-9">
                                                     {!! Form::text('SET_MIN_OFFER_AMOUNT', $env['SET_MIN_OFFER_AMOUNT']['value'], ['class' => 'form-control', 'required']) !!}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                {!! Form::label('SET_MAX_OFFER_AMOUNT', __('Max. Offer Amount (USD)'), ['class' => 'col-md-3']) !!}
+                                                {!! Form::label('SET_MAX_OFFER_AMOUNT', __('Max. Offer Amount (BTC)'), ['class' => 'col-md-3']) !!}
                                                 <div class="col-md-9">
                                                     {!! Form::text('SET_MAX_OFFER_AMOUNT', $env['SET_MAX_OFFER_AMOUNT']['value'], ['class' => 'form-control', 'required']) !!}
                                                 </div>

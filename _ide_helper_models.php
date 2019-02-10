@@ -305,7 +305,6 @@ namespace App\Models{
  * @property string $name
  * @property string $email
  * @property string|null $phone
- * @property string $currency
  * @property string $status
  * @property int $verified_phone
  * @property string $password
@@ -319,6 +318,7 @@ namespace App\Models{
  * @property int $schedule_delete
  * @property int $schedule_deactivate
  * @property string|null $timezone
+ * @property string $currency
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinAddress[] $bitcoin_addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinTransaction[] $bitcoin_transactions
  * @property-read \App\Models\BitcoinWallet $bitcoin_wallet
