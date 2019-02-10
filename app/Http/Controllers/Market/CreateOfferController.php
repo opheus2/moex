@@ -43,11 +43,11 @@ class CreateOfferController extends Controller
 
             $min_amount_rule = "required|numeric|min:{$min_offer_amount}";
 
-            // $max_offer_amount = currency_convert(
-            //     (float) config('settings.max_offer_amount'), 'BTC', $currency
-            // );
+            $max_offer_amount = currency_convert(
+                (float) config('settings.max_offer_amount'), 'BTC', $currency
+            );
             
-            $max_offer_amount = 10;
+            // $max_offer_amount = 10;
             
             $max_amount_rule = "required|numeric|max:{$max_offer_amount}|gte:min_amount";
         }else{
