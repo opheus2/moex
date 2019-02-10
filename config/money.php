@@ -1808,26 +1808,6 @@ return [
     ],
 
 
-    'BTC' => [
-        'name'                => 'Bitcoin',
-        'code'                => '',
-        'precision'           => 2,
-        'subunit'             => 100,
-        'symbol'              => 'BTC',
-        'symbol_first'        => false,
-        'decimal_mark'        => '.',
-        'thousands_separator' => ',',
-    ],
 
-    'LTC' => [
-        'name'                => 'Litecoin',
-        'code'                => '',
-        'precision'           => 2,
-        'subunit'             => 100,
-        'symbol'              => 'LTC',
-        'symbol_first'        => false,
-        'decimal_mark'        => '.',
-        'thousands_separator' => ',',
-    ],
 ];
 
