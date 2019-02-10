@@ -44,25 +44,27 @@ class BuyCoinController extends Controller
                     ])->get();
             });
 
-            if ($filter = $request->currency) {
-                $offers = $offers->where('currency', $filter);
-            }
+            // if ($filter = $request->currency) {
+            //     $offers = $offers->where('currency', $filter);
+            // }
 
-            if ($filter = $request->amount) {
-                $offers = $offers->where('min_amount', '<=', $filter)->where('max_amount', '>=', $filter);
-            }
+            // if ($filter = $request->amount) {
+            //     $offers = $offers->where('min_amount', '<=', $filter)->where('max_amount', '>=', $filter);
+            // }
 
-            if ($filter = $request->coin) {
-                $offers = $offers->where('coin', $filter);
-            }
+            // if ($filter = $request->coin) {
+            //     $offers = $offers->where('coin', $filter);
+            // }
 
-            if ($filter = $request->payment_method) {
-                $offers = $offers->where('payment_method', $filter);
-            }
+            // if ($filter = $request->payment_method) {
+            //     $offers = $offers->where('payment_method', $filter);
+            // }
 
-            $offers = $offers->filter(function ($offer) {
-                return $offer->canShow(Auth::user(), true);
-            });
+            // $offers = $offers->filter(function ($offer) {
+            //     return $offer->canShow(Auth::user(), true);
+            // });
+            // dd($offers);
+
 
             return DataTables::of($offers)
                 ->addColumn('seller', function ($data) {
