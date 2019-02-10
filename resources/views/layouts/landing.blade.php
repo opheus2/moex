@@ -8,6 +8,7 @@
     <meta name="title" content="@yield('title')">
     <meta name="description" content="@yield('meta-description')">
     {{--<meta name="theme-color" content="{{ settings.color_primary }}">--}}
+    <link rel="shortcut icon" type="image/x-icon" href="{{config('app.shortcut_icon') ?: asset('/images/icon/favicon.ico')}}">
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('css/landing.css')}}">
     <link rel="stylesheet" href="{{asset('css/extra.css')}}">
@@ -16,8 +17,9 @@
 
     <!-- Fonts -->
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
-<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
 <!-- <link rel="stylesheet" href="https://max÷cdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> -->
 
 

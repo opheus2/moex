@@ -53,15 +53,15 @@
 
         </section>
         <section id="contact-group" class="hidden-xs px-0 col-xs-12 col-md-3">
-        	<div class="col-xs-12 h-100 d-flex flex-column justify-content-end">
-				<h6>Get updates from us</h6>
-				<div class="input-group">
+        	<div class="col-xs-12 h-100 " style="margin-top:30%;">
+      				<h6>Get updates from us</h6>
+      				<div class="input-group">
 		             <input type="text" class="form-control" placeholder="Type Email Address">
 		            <span class="input-group-btn">
 	                	<button class="btn btn-moex" type="button">Send</button>
 		            </span>
 		        </div>
-			</div>
+			    </div>
         </section>
     </div>
     <div class="container-fluid">

@@ -15,6 +15,9 @@ body{
 .justify-content-around{
   justify-content: space-around;
 }
+.align-items-center {
+  align-items: center;
+}
 
 .sm-hide {
   display: none;
@@ -489,10 +492,10 @@ nav{
 
 
 
-  @media (min-width: 768px){
-    .sidenav {
-        display: none;
-    }
+@media (min-width: 768px){
+  .sidenav {
+      display: none;
+  }
 
 }
 
