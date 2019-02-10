@@ -23,7 +23,7 @@ class OffersController extends Controller
         $offers = Offer::has('user')->where('status', true)
             ->where('token', $token)->get();
 
-        // $offers = $offers->filter(function ($offer) {return $offer->canShow(Auth::user());});
+        $offers = $offers->filter(function ($offer) {return $offer->canShow(Auth::user());});
 
         if ($offer = $offers->first()) {
             $rate = get_price($offer->multiplier(), $offer->coin, $offer->currency, false);
