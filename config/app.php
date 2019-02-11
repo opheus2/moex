@@ -170,7 +170,7 @@ return [
         HolluwaTosin\Installer\InstallerServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Jackiedo\DotenvEditor\DotenvEditorServiceProvider::class,
-        Torann\Currency\CurrencyServiceProvider::class,
+        \Torann\Currency\CurrencyServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,6 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Currency' => \Torann\Currency\Facades\Currency::class,
+
 
         /*
          * Package Service Providers...

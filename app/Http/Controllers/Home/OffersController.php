@@ -35,8 +35,10 @@ class OffersController extends Controller
             // $min_amount = money($offer->min_amount, $offer->currency, true);
             // $max_amount = money($offer->max_amount, $offer->currency, true);
 
-            $min_amount = money($offer->min_amount, 'BTC', true);
-            $max_amount = money($offer->max_amount, 'BTC', true);
+            $min_amount = $offer->min_amount . $offer->coin;
+            $max_amount = $offer->max_amount . $offer->coin;
+
+            // dd($min_amount);
             
 
             return view('home.offers.index')
