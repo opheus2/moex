@@ -61,27 +61,37 @@
                                             @endif
 
                                             <div class="form-group row">
-                                                <div class="col-6">
-                                                    {!! Form::label('amount', __('Amount in Currency:')) !!}
+                                                <div class="col-4">
+                                                    {!! Form::label('amount', __('Amount in USD:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $offer->min_amount, 'max' => $offer->max_amount]) !!}
+                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text">{{strtoupper($offer->currency)}}</span>
+                                                            <span class="input-group-text">USD</span>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-6">
+                                                <div class="col-4">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'novalidate', 'readonly']) !!}
+                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">{{strtoupper($offer->coin)}}</span>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-4">
+                                                        {!! Form::label('amount', __('Amount in Currency:')) !!}
+                                                        <div class="input-group">
+                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $offer->min_amount, 'max' => $offer->max_amount]) !!}
+    
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text">{{ $offer->currency }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                             </div>
 
                                             @if($offer->type == 'buy')
@@ -149,7 +159,7 @@
                                                     <div class="bs-callout-black callout-transparent callout-border-left mt-1 p-1">
                                                         <h4 class="black">{{__('INFORMATION')}}</h4>
                                                         <p class="card-text">
-                                                            {!! __('Your amount should be between :min_amount and :max_amount', ['min_amount' => "<b>{$min_amount}</b>", 'max_amount' => "<b>{$max_amount}</b>"]) !!}
+                                                            {!! __('Your amount should be between :min_amount and :max_amount', ['min_amount' => "<b>{$min_amount}</b>", 'max_amount' => "<b>{$max_amount}</b>"] , 'in sellers currency') !!}
                                                             <br/>
                                                             @php $worth = (100 - $offer->profit_margin); @endphp
                                                             {!! __('You will get :worth% worth of your money in return for this trade.', ['worth' => "<b>{$worth}</b>"]) !!}
@@ -284,6 +294,7 @@
                 ],
 
                 'rate' => $rate,
+                'usd_rate' => $usd_rate,
 
             ]) !!}
     </script>

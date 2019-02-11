@@ -29,12 +29,19 @@ class OffersController extends Controller
             $rate = get_price($offer->multiplier(), $offer->coin, $offer->currency, false);
             $rate_formatted = get_price($offer->multiplier(), $offer->coin, $offer->currency);
 
-            $min_amount = money($offer->min_amount, $offer->currency, true);
-            $max_amount = money($offer->max_amount, $offer->currency, true);
+            $usd_rate = get_price($offer->multiplier(), $offer->coin, 'USD', false);
+            $usd_rate_formatted = get_price($offer->multiplier(), $offer->coin, 'USD');
+
+            // $min_amount = money($offer->min_amount, $offer->currency, true);
+            // $max_amount = money($offer->max_amount, $offer->currency, true);
+
+            $min_amount = money($offer->min_amount, 'BTC', true);
+            $max_amount = money($offer->max_amount, 'BTC', true);
+            
 
             return view('home.offers.index')
                 ->with(compact('min_amount', 'max_amount'))
-                ->with(compact('offer', 'rate', 'rate_formatted'));
+                ->with(compact('offer', 'rate', 'rate_formatted', 'usd_rate', 'usd_rate_formatted'));
         } else {
             return abort(404);
         }

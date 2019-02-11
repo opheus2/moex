@@ -64,6 +64,7 @@ class BuyCoinController extends Controller
                 return $offer->canShow(Auth::user(), true);
             });
 
+
             return DataTables::of($offers)
                 ->addColumn('seller', function ($data) {
                     return view('market.buy_coin.partials.datatable.seller')
