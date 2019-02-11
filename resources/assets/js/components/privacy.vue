@@ -6,7 +6,7 @@
         <h6 class="read">Read through our governing terms of service and privacy policy</h6>
     </div>
 </div>
-    <div class="pol-container" style="">
+    <div class="container" style="">
         <div class="bar">
             <div class="row">
                 <div class="col-12 col-md-6 terms">
