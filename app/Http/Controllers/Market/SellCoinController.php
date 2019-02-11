@@ -77,8 +77,8 @@ class SellCoinController extends Controller
                         ->with(compact('data'));
                 })
                 ->addColumn('amount_range', function ($data) {
-                    $min = money($data->min_amount, $data->currency, true);
-                    $max = money($data->max_amount, $data->currency, true);
+                    $min = $data->min_amount . $data->coin;
+                    $max = $data->max_amount . $data->coin;
 
                     return "<b>{$min}</b>" . ' - ' . "<b>{$max}</b>";
                 })

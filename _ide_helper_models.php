@@ -107,6 +107,7 @@ namespace App\Models{
  * @property int $deadline
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $user_trade_in
  * @property-read \App\Models\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newQuery()
@@ -132,6 +133,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUserTradeIn($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer withToken($flag = true)
  */
 	class Offer extends \Eloquent {}
