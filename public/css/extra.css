@@ -86,7 +86,14 @@ body{
     background-color: transparent!important;
 }
 
-.nav li btn:focus, .nav li .btn:hover {
+.nav li .btn:focus, .nav li .btn:hover {
+    text-decoration: none!important;
+    background-color: #1B264B!important;
+    border: 1px solid #1B264B!important;
+    color: #FFFFFF!important;
+}
+
+.button-sign:hover {
     text-decoration: none!important;
     background-color: #1B264B!important;
     border: 1px solid #1B264B!important;
@@ -653,8 +660,8 @@ body {
         padding-left: 15px !important;
         margin-right: auto !important;
         margin-left: auto;
-        display: table;
-        content: " ";
+        /*display: table;
+        content: " ";*/
     }
     .pol-container:after {
         clear: both;

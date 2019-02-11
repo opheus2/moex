@@ -142,11 +142,13 @@ class OffersController extends Controller
     {
 
         $categories = PaymentMethodCategory::all();
-
-        $payment_methods = collect([]);
-
+        $payment_methods = [];
+        $i = 0;
         foreach ($categories as $category) {
-            $payment_methods->push($category->payment_methods()->get());
+            array_push($payment_methods, ['id' => $category->id, 'name' => $category->name, 'children' => []]);
+            $payment_methods[$i]['children'] = $category->payment_methods()->get();
+            
+            $i++;
         }
 
         return $payment_methods;

@@ -27,10 +27,13 @@
                     <div class="pl-0 d-flex child">
                         <h6 class="buy-cash lg-hide " style="margin-bottom:0px; margin-right:15px; margin-top:15px;" >Buy Bitcoins with </h6>
                         <div class="button-group">
-                            <select2 v-model="selectedPaymentMethod" :options="paymentMethods.map(method => {return {id: method.id, text: method.name} })"/>
+                            <select2 v-model="selectedPaymentMethod" :options="paymentMethods"/>
                         </div>
                         <div class="button-group sm-hide">
-                            <button class="btn btn-white">In Nigeria</button>
+                            <select class="form-control" disabled>
+                                <option>In Nigeria</option>
+                            </select>
+                            <!-- <button class="btn btn-white">In Nigeria</button> -->
                         </div>
                     </div>
                     <div class="d-flex child">
@@ -40,14 +43,16 @@
                         <div class="button-group">
                             <button @click="tableType = 'buy'" class="btn" :class="tableType === 'buy' ? 'btn-purple' : 'btn-white'">Buy Bitcoin</button>
                         </div>
-                        <div class="button-group lg-hide" style="float:right">
-                            <button class="btn btn-white">In Nigeria</button>
+                        <div class="button-group lg-hide" style="float:right; margin-left: 5px; ">
+                            <select class="form-control" disabled>
+                                <option>In Nigeria</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="paymentMethods"></table-view>
+        <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
         <div class="d-flex justify-content-center security" style="width: 100%">
             <div class="row w-93">
                 <h6 class="notch">Top Notch Security</h6>
@@ -165,7 +170,7 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="button-group">
                         <button class="btn btn-purple signup">SIGN UP</button>
-                        <button class="btn btn-white login">LOGIN</button>
+                        <button class="btn btn-white login">SIGN IN</button>
                     </div>
                 </div>
             </div>
@@ -186,16 +191,29 @@
             return {
                 selectedPaymentMethod: "all",
                 paymentMethods: [],
+                children: [],
                 tableType: 'sell'
             }
         },
         created () {
             window.axios.get('/api/offers/payment-methods')
                 .then(res => {
-                    res.data.forEach (method => {
-                        this.paymentMethods.push(...method);
+                    let data = [...res.data];
+                    data.forEach (method => {
+                        this.children.push(...method.children);
+                        method.children = method.children.map(child => {
+                            return {
+                                id: child.id,
+                                text: child.name
+                            }
+                        })
+                        this.paymentMethods.push({
+                            id : method.id,
+                            text : method.name,
+                            children: [...method.children]
+                        })
                     });
-                    this.paymentMethods.push({id: 'all', name: 'All Payment Methods'});
+                    this.paymentMethods.unshift({id: 'all', text: 'All Payment Methods'});
                 })
                 .catch(err => {
                     console.error(err.response.data);
