@@ -334,11 +334,6 @@ body {
     .sidenav a {font-size: 18px;}
   }
 
-  @media (min-width: 768px){
-    .sidenav {
-        display: none;
-    }
-}
 
 .banner {
     height: 250px;
