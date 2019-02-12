@@ -107,19 +107,19 @@ export default {
 
     watch: {
         amount: function (value) {
-            this.coinValue = parseFloat((value / this.rate).toFixed(8));
-            this.usd_amount = parseFloat((value / this.usd_rate).toFixed(8));
+            this.coinValue  = parseFloat((value / this.rate).toFixed(8));
+            this.usd_amount = parseFloat((value / this.cur_rate).toFixed(8));
         },
 
         coinValue: function (value) {
-            this.amount = parseFloat((value * this.rate).toFixed(8));
+            this.amount     = parseFloat((value * this.rate).toFixed(8));
             this.usd_amount = parseFloat((value * this.usd_rate).toFixed(8));
         },
 
         usd_amount: function (value) {
-            this.amount = parseFloat((value * this.rate).toFixed(8));
+            this.amount     = parseFloat((value * this.cur_rate).toFixed(8));
             // this.coinValue = parseFloat((value / this.rate).toFixed(8));
-
+            // this.amount = parseFloat((value / this.rate).toFixed(8));
         }
     },
 
