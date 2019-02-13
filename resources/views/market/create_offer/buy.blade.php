@@ -124,7 +124,7 @@
                                                         {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'minAmount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" v-text="currency"></span>
+                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -135,7 +135,7 @@
                                                         {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'minAmount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" v-text="coin"></span>
+                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
                                                         </div>
                                                     </div>
                                                 </div>
