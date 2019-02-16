@@ -631,6 +631,8 @@ Route::group([], function () {
     });
 });
 
+Route::get('/r/{username}', 'ReferralController@index');
+
 Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
 
 Route::get('kyc/{image}', [
