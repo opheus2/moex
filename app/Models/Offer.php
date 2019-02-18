@@ -147,7 +147,6 @@ class Offer extends Model
             return ($user)? $user->id == $this->user->id: false;
         }
 
-
         if ($this->type == 'sell') {
             $balance = $this->user->getCoinAvailable($this->coin);
 
@@ -155,42 +154,10 @@ class Offer extends Model
 
             $fee = calc_fee($this->max_amount, $this->coin);
 
-            // if( $this->max_amount > $balance){
-            //     return false;
-            // }
             if($user && !$public){
                 return (($this->max_amount + $fee) <= $available) || $user->id == $this->user->id;
             }else{
                 return (($this->max_amount + $fee) <= $available);
-            }
-        }
-
-        return true;
-    }
-
-    public function tradeShow($userid = null, $public = false)
-    {
-        $user = User::find($userid)->first();
-        if($user && !$this->trust($user)) {
-            return false;
-        }
-
-        if($this->user->schedule_deactivate || $this->user->schedule_delete){
-            return ($user)? $user->id == $this->user->id: false;
-        }
-
-
-        if ($this->type == 'sell') {
-            $balance = $this->user->getCoinAvailable($this->coin);
-
-            $available = get_price($balance, $this->coin, $this->currency, false);
-
-            $fee = calc_fee($this->max_amount, $this->coin);
-
-            // dd($balance);
-
-            if( $this->max_amount > $balance){
-                return false;
             }
         }
 
