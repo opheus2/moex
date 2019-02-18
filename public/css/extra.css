@@ -660,8 +660,8 @@ body {
         padding-left: 15px !important;
         margin-right: auto !important;
         margin-left: auto;
-        /*display: table;
-        content: " ";*/
+        display: table;
+        content: " ";
     }
     .pol-container:after {
         clear: both;

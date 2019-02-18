@@ -1806,17 +1806,6 @@ return [
         'thousands_separator' => ',',
     ],
 
-    'BTC' => [
-        'name'                => 'Bitcoin',
-        'code'                => '',
-        'precision'           => 2,
-        'subunit'             => 100,
-        'symbol'              => 'BTC',
-        'symbol_first'        => false,
-        'decimal_mark'        => '.',
-        'thousands_separator' => ',',
-    ],
-
 
 
 ];

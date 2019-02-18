@@ -11,7 +11,7 @@ if (!function_exists('currency_convert')) {
      *
      * @return \Torann\Currency\Currency|string
      */
-    function currency_convert($amount = null, $from = null, $to = null, $format = true)
+    function currency_convert($amount = null, $from = null, $to = null, $format = false)
     {
         if (is_null($amount)) {
             return app('currency');

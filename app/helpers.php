@@ -565,24 +565,6 @@ if (!function_exists('get_price')) {
     }
 }
 
-if (!function_exists('get_convert')) {
-    /**
-     * @param $format
-     * @param $amount
-     * @param $coin
-     * @param string $currency
-     * @return \Akaunting\Money\Money|int|float
-     */
-    function get_convert($amount, $coin, $currency = 'USD', $format = false)
-    {
-        $multiplier = get_prices()[strtoupper($coin)][strtoupper($currency)];
-
-        $price = $amount / $multiplier;
-
-        return ($format) ? money($price, $currency, true) : round($price, 8);
-    }
-}
-
 
 if (!function_exists('get_iso_currencies')) {
     /**
