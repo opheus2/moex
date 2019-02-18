@@ -164,7 +164,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-
         /*
          * Package Service Providers...
          */
@@ -172,8 +171,6 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Jackiedo\DotenvEditor\DotenvEditorServiceProvider::class,
         \Torann\Currency\CurrencyServiceProvider::class,
-        Akaunting\Money\Provider::class,
-
 
         /*
          * Application Service Providers...
