@@ -8,7 +8,6 @@
 
 namespace App\Traits;
 
-const TRADE_COIN = "BTC";
 const MINIMUM_TRADE_AMOUNT = 10;
 
 use App\Models\Referral;
