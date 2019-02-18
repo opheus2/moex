@@ -72,7 +72,7 @@ export default {
 
         coinPrice: function () {
             let currency = (this.currency) ? this.currency : 'USD';
-            let coin     = (this.coin) ? this.coin : 'BTC';
+            let coin = (this.coin) ? this.coin : 'BTC';
             
             return this.coin_prices[coin.toUpperCase()][currency.toUpperCase()];
         },
