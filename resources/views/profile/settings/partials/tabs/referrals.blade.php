@@ -36,7 +36,7 @@
                         @foreach($referrals as $referral)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->referrer->name}} </a></td>
+                                <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->user->name}} </a></td>
                                 <td class="text-capitalize">
                                     @if ($referral->is_verified)
                                         <button type="button" class="btn btn-success" >Verified</button>  
