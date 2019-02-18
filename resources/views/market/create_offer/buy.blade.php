@@ -121,10 +121,10 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'minAmount', 'novalidate']) !!}
+                                                        {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'min_amount', 'min' => 0]) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
+                                                            <span class="input-group-text" v-text="currency"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -132,10 +132,10 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'minAmount', 'novalidate']) !!}
+                                                        {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'max_amount', 'min' => 0]) !!}
 
                                                         <div class="input-group-append">
-                                                            <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
+                                                            <span class="input-group-text" v-text="currency"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -245,12 +245,6 @@
                 'currency' => Auth::user()->currency,
                 'coins' => get_coins(),
                 'coin_prices' => get_prices(),
-                'btc_min'   => $min_btc_amount,
-                'btc_max'   => $max_btc_amount,
-                'ltc_min'   => $min_ltc_amount,
-                'ltc_max'   => $max_ltc_amount,
-                'dash_min'  => $min_dash_amount,
-                'dash_max'  => $max_dash_amount,
             ]) !!}
     </script>
 @endpush

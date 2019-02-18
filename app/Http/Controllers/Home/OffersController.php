@@ -68,16 +68,14 @@ class OffersController extends Controller
         $from_Currency  = urlencode($from_currency);
         $to_Currency    = urlencode($to_currency);
         $query          =  "{$from_Currency}_{$to_Currency}";
-        $url            = "https://forex.1forge.com/1.0.3/convert?from=$from_Currency&to=$to_Currency&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
-        // $url            = "https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
+        $url            = "http://free.currencyconverterapi.com/api/v6/convert?q=$query";
 
         $client         = new Client();
         $response       = $client->get($url);
 
         $response       = json_decode($client->get($url)->getBody(), true);
-        dd($response['value']);
         
-        $val            = $response['value'];
+        $val            = $response['results'][$query]['val'];
 
         return $val;
     }
