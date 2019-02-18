@@ -75,7 +75,6 @@ class OffersController extends Controller
         $response       = $client->get($url);
 
         $response       = json_decode($client->get($url)->getBody(), true);
-        dd($response['value']);
         
         $val            = $response['value'];
 
@@ -146,7 +145,7 @@ class OffersController extends Controller
                     'coin' => $offer->coin,
                     'partner_id' => $offer->user->id,
                     'offer_id' => $offer->id,
-                    'currency' => $offer->currency,
+                    'currency' => $offer->coin,
                     'fee' => get_fee_percentage($offer->coin),
                     'offer_terms' => $offer->terms,
                     'instruction' => $offer->trade_instruction,
