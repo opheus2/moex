@@ -10,8 +10,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
-
-
 class CreateOfferController extends Controller
 {
     public function buyIndex()
@@ -24,18 +22,9 @@ class CreateOfferController extends Controller
 
     public function sellIndex()
     {
-        $min_btc_amount     = get_convert(config('settings.min_offer_amount'), 'BTC',  config('settings.default_currency'));
-        $min_ltc_amount     = get_convert(config('settings.min_offer_amount'), 'LTC',  config('settings.default_currency'));
-        $min_dash_amount    = get_convert(config('settings.min_offer_amount'), 'DASH',  config('settings.default_currency'));
-
-
-        $max_btc_amount     = get_convert(config('settings.max_offer_amount'), 'BTC',  config('settings.default_currency'));
-        $max_ltc_amount     = get_convert(config('settings.max_offer_amount'), 'LTC',  config('settings.default_currency'));
-        $max_dash_amount    = get_convert(config('settings.max_offer_amount'), 'DASH',  config('settings.default_currency'));
-
-            return view('market.create_offer.sell', [
+        return view('market.create_offer.sell', [
             'payment_methods' => $this->getPaymentMethods()
-            ], compact('min_btc_amount', 'max_btc_amount', 'min_ltc_amount', 'max_ltc_amount', 'min_dash_amount', 'max_dash_amount'));
+        ]);
     }
 
     /**
@@ -48,18 +37,17 @@ class CreateOfferController extends Controller
     public function store(Request $request, $type)
     {
         if($currency = $request->currency){
-            // $min_offer_amount = currency_convert(
-            //     (float) config('settings.min_offer_amount'), 'USD', $currency
-            // );
-            $min_offer_amount    = get_convert(config('settings.min_offer_amount'), $request->coin,  config('settings.default_currency'));
-
+            $min_offer_amount = currency_convert(
+                (float) config('settings.min_offer_amount'), 'BTC', $currency
+            );
 
             $min_amount_rule = "required|numeric|min:{$min_offer_amount}";
 
-            // $max_offer_amount = currency_convert(
-            //     (float) config('settings.max_offer_amount'), 'USD', $currency
-            // );
-            $max_offer_amount    = get_convert(config('settings.max_offer_amount'), $request->coin,  config('settings.default_currency'));
+            $max_offer_amount = currency_convert(
+                (float) config('settings.max_offer_amount'), 'BTC', $currency
+            );
+            
+            // $max_offer_amount = 10;
             
             $max_amount_rule = "required|numeric|max:{$max_offer_amount}|gte:min_amount";
         }else{
@@ -105,7 +93,6 @@ class CreateOfferController extends Controller
                     'phone_verification' => $request->filled('phone_verification'),
                     'email_verification' => $request->filled('email_verification'),
                     'type'               => $type,
-                    'user_trade_in'      => strtoupper($request->coin),
                 ]);
 
                 if (!$offer->token) {

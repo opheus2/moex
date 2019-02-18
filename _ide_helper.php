@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.39 on 2019-02-11 10:32:21.
+ * Generated for Laravel 5.6.39 on 2019-02-10 18:45:35.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3391,6 +3391,103 @@ namespace Illuminate\Support\Facades {
         public static function getQueuedCookies()
         {
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     * @see \Illuminate\Encryption\Encrypter
+     */ 
+    class Crypt {
+        
+        /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */ 
+        public static function supported($key, $cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+        
+        /**
+         * Create a new encryption key for the given cipher.
+         *
+         * @param string $cipher
+         * @return string 
+         * @static 
+         */ 
+        public static function generateKey($cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::generateKey($cipher);
+        }
+        
+        /**
+         * Encrypt the given value.
+         *
+         * @param mixed $value
+         * @param bool $serialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encrypt($value, $serialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::encrypt($value, $serialize);
+        }
+        
+        /**
+         * Encrypt a string without serialization.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptString($value)
+        {
+            return \Illuminate\Encryption\Encrypter::encryptString($value);
+        }
+        
+        /**
+         * Decrypt the given value.
+         *
+         * @param mixed $payload
+         * @param bool $unserialize
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decrypt($payload, $unserialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::decrypt($payload, $unserialize);
+        }
+        
+        /**
+         * Decrypt the given string without unserialization.
+         *
+         * @param string $payload
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptString($payload)
+        {
+            return \Illuminate\Encryption\Encrypter::decryptString($payload);
+        }
+        
+        /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getKey()
+        {
+            return \Illuminate\Encryption\Encrypter::getKey();
         }
          
     }
@@ -15303,46 +15400,6 @@ namespace DaveJamesMiller\Breadcrumbs\Facades {
  
 }
 
-namespace Swap\Laravel\Facades { 
-
-    /**
-     * Facade for Swap.
-     *
-     * @author Florian Voutzinos <florian@voutzinos.com>
-     */ 
-    class Swap {
-        
-        /**
-         * Quotes a currency pair.
-         *
-         * @param string $currencyPair The currency pair like "EUR/USD"
-         * @param array $options An array of query options
-         * @return \Exchanger\ExchangeRate 
-         * @static 
-         */ 
-        public static function latest($currencyPair, $options = array())
-        {
-            return \Swap\Swap::latest($currencyPair, $options);
-        }
-        
-        /**
-         * Quotes a currency pair.
-         *
-         * @param string $currencyPair The currency pair like "EUR/USD"
-         * @param \DateTimeInterface $date An optional date for historical rates
-         * @param array $options An array of query options
-         * @return \Exchanger\ExchangeRate 
-         * @static 
-         */ 
-        public static function historical($currencyPair, $date, $options = array())
-        {
-            return \Swap\Swap::historical($currencyPair, $date, $options);
-        }
-         
-    }
- 
-}
-
 namespace Intervention\Image\Facades { 
 
     /**
@@ -15766,256 +15823,6 @@ namespace PragmaRX\Yaml\Package {
  
 }
 
-namespace Secrethash\Trickster\Facade { 
-
-    /**
-     * 
-     *
-     */ 
-    class Trickster {
-        
-        /**
-         * Yo can truncate text and specify number of characters you want to show
-         *
-         * @param string $text Input the text that you want to cut
-         * @param int $number Number of characters you want to show
-         * @param string $suffix What do you want to show at the end
-         * @return mixed Return truncated text with suffix
-         * @static 
-         */ 
-        public static function truncator($text, $number, $suffix = '...see more')
-        {
-            return \Secrethash\Trickster\Trickster::truncator($text, $number, $suffix);
-        }
-        
-        /**
-         * This function validates a given email address
-         *
-         * @param string $email Email address for validate
-         * @return bool Return true when email is valid and return false when email is invalid
-         * @static 
-         */ 
-        public static function emailValid($email)
-        {
-            return \Secrethash\Trickster\Trickster::emailValid($email);
-        }
-        
-        /**
-         * This function is useful if you would like to generate clean a URL
-         *
-         * @param string $string The text that you want to convert
-         * @return mixed Return slug-clean-url
-         * @static 
-         */ 
-        public static function slug($string)
-        {
-            return \Secrethash\Trickster\Trickster::slug($string);
-        }
-        
-        /**
-         * This function convert a date and time string into xx time ago
-         * Give the data and time string in this format: yyyy-mm-dd hh:ii:ss and it will return you the time ago
-         *
-         * @param string $datetime Date and time string
-         * @param boolean $full true for full time ago e.g: 6 months, 1 week, 23 hours, 51 minutes, 21 seconds ago
-         *                           false for only first time e.g: 6 months ago
-         * @return mixed Return converted date and time in xx time ago format
-         * @static 
-         */ 
-        public static function timeAgo($date)
-        {
-            return \Secrethash\Trickster\Trickster::timeAgo($date);
-        }
-        
-        /**
-         * This function return number of shares or tweets of the specified page
-         *
-         * @param string $network Social network, facebook or twitter
-         * @param string $url Url for get shares or tweets
-         * @return mixed Return number of shares or tweets
-         * @static 
-         */ 
-        public static function social($network, $url)
-        {
-            return \Secrethash\Trickster\Trickster::social($network, $url);
-        }
-        
-        /**
-         * If you want to generate a shorten url simply use this function
-         *
-         * @param string $url Used for shorten
-         * @param string $provider Used two providers, tinyurl and google
-         * @return mixed Return url shortened
-         * @static 
-         */ 
-        public static function shortenUrl($url, $provider)
-        {
-            return \Secrethash\Trickster\Trickster::shortenUrl($url, $provider);
-        }
-        
-        /**
-         * This function replaces all youtube link into videos
-         *
-         * @param string $url The url to the video
-         * @param integer $width The width of the player in pixels
-         * @param integer $height The height of the player in pixels
-         * @param string $theme Color of the player "dark" or "light"
-         * @return mixed Return youtube video player
-         * @static 
-         */ 
-        public static function youtube($url, $width = 400, $height = 250, $theme = 'dark')
-        {
-            return \Secrethash\Trickster\Trickster::youtube($url, $width, $height, $theme);
-        }
-        
-        /**
-         * This function replaces all vimeo link into videos
-         *
-         * @param string $url The url to the video
-         * @param integer $width The width of the player in pixels
-         * @param integer $height The height of the player in pixels
-         * @return mixed Return vimeo video player
-         * @static 
-         */ 
-        public static function vimeo($url, $width = 400, $height = 250)
-        {
-            return \Secrethash\Trickster\Trickster::vimeo($url, $width, $height);
-        }
-        
-        /**
-         * Create an encryption string with a special algorithm and key
-         *
-         * @param string $algo The algorithm to use
-         * @param string $string The string to encrypt
-         * @param string $key A salt to apply to the encryption
-         * @return string Return encrypted key
-         * @static 
-         */ 
-        public static function encryptString($algo, $string, $key = null)
-        {
-            return \Secrethash\Trickster\Trickster::encryptString($algo, $string, $key);
-        }
-        
-        /**
-         * Get either a Gravatar URL or complete image tag for a specified email address.
-         *
-         * @param string $email The email address
-         * @param string $s Size in pixels, defaults to 80px [ 1 - 2048 ]
-         * @param string $d Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]
-         * @param string $r Maximum rating (inclusive) [ g | pg | r | x ]
-         * @param bool $img True to return a complete IMG tag False for just the URL
-         * @param array $atts Optional, additional key/value attributes to include in the IMG tag
-         * @return string Containing either just a URL or a complete image tag
-         * @source https://gravatar.com/site/implement/images/php/
-         * @static 
-         */ 
-        public static function gravatar($email, $s = 100, $d = 'mm', $r = 'g', $img = false, $atts = array())
-        {
-            return \Secrethash\Trickster\Trickster::gravatar($email, $s, $d, $r, $img, $atts);
-        }
-        
-        /**
-         * This function converts the following bbcodes into html
-         *
-         * @param string $string BBcodes you can to converts
-         * @return mixed Return html
-         * @static 
-         */ 
-        public static function bbcode($string)
-        {
-            return \Secrethash\Trickster\Trickster::bbcode($string);
-        }
-        
-        /**
-         * Get filename last extension
-         *
-         * @param string $file File name
-         * @return mixed Return last file name extension
-         * @static 
-         */ 
-        public static function getExtension($file)
-        {
-            return \Secrethash\Trickster\Trickster::getExtension($file);
-        }
-        
-        /**
-         * This function clean any text by removing unwanted tags
-         *
-         * @param string $string Text for removing unwanted tags
-         * @return mixed Return cleaned text
-         * @static 
-         */ 
-        public static function clean($string)
-        {
-            return \Secrethash\Trickster\Trickster::clean($string);
-        }
-        
-        /**
-         * Get wikipedia definition
-         *
-         * @param string $keyword Keyword for get definition
-         * @return mixed Return array with description and url
-         * @static 
-         */ 
-        public static function wiki($keyword)
-        {
-            return \Secrethash\Trickster\Trickster::wiki($keyword);
-        }
-        
-        /**
-         * Get google suggest for keywords
-         *
-         * @param string $keyword Keyword for get suggest
-         * @return mixed Return array with suggest data
-         * @static 
-         */ 
-        public static function suggest($keyword)
-        {
-            return \Secrethash\Trickster\Trickster::suggest($keyword);
-        }
-        
-        /**
-         * This function get real ip address
-         *
-         * @return int return ip
-         * @static 
-         */ 
-        public static function ip()
-        {
-            return \Secrethash\Trickster\Trickster::ip();
-        }
-        
-        /**
-         * Get video info from youtube and vimeo
-         *
-         * @param string $url Url for video info, youtube or vimeo
-         * @return mixed Return array with video information
-         * @static 
-         */ 
-        public static function getVideoInfo($url)
-        {
-            return \Secrethash\Trickster\Trickster::getVideoInfo($url);
-        }
-        
-        /**
-         * This function converts the currency in desired form.
-         *
-         * @access public
-         * @param \Secrethash\Trickster\init $amount Amount to be converted
-         * @param string $from Currency Code to convert "from"
-         * @param string $to Currency code to convert "to" Default=INR
-         * @return string Return json data
-         * @static 
-         */ 
-        public static function currencyConvert($amount, $from, $to)
-        {
-            return \Secrethash\Trickster\Trickster::currencyConvert($amount, $from, $to);
-        }
-         
-    }
- 
-}
-
 namespace Yajra\DataTables\Facades { 
 
     /**
@@ -16364,6 +16171,8 @@ namespace  {
     class Config extends \Illuminate\Support\Facades\Config {}
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
+
+    class Crypt extends \Illuminate\Support\Facades\Crypt {}
 
     class DB extends \Illuminate\Support\Facades\DB {}
 
@@ -18702,8 +18511,6 @@ namespace  {
 
     class Breadcrumbs extends \DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs {}
 
-    class Swap extends \Swap\Laravel\Facades\Swap {}
-
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Html extends \Collective\Html\HtmlFacade {}
@@ -18713,8 +18520,6 @@ namespace  {
     class Version extends \PragmaRX\Version\Package\Facade {}
 
     class Yaml extends \PragmaRX\Yaml\Package\Facade {}
-
-    class Trickster extends \Secrethash\Trickster\Facade\Trickster {}
 
     class DataTables extends \Yajra\DataTables\Facades\DataTables {}
 
