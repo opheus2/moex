@@ -46,9 +46,13 @@
                                     </div>
                                     <div class="tab-pane fade" id="kyc" role="tabpanel"
                                     aria-labelledby="kyc-tab" aria-expanded="false">
-                                @include('profile.settings.partials.tabs.kyc')
-                            </div>
+                                        @include('profile.settings.partials.tabs.kyc')
+                                    </div>
                                 @endif
+                                <div class="tab-pane fade" id="referral" role="tabpanel"
+                                    aria-labelledby="referral-tab" aria-expanded="false">
+                                    @include('profile.settings.partials.tabs.referrals')
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -109,6 +113,13 @@
                                         </a>
                                     </li> --}}
                                 @endif
+                                <li class="nav-item">
+                                    <a class="nav-link" id="referral-tab" data-toggle="pill"
+                                        href="#referral" role="tab" aria-controls="panel" aria-expanded="false">
+                                        <i class="la la-users"></i>
+                                        {{__('Referrals')}}
+                                    </a>
+                                </li>
 
                             </ul>
                         </div>

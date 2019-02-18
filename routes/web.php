@@ -645,7 +645,7 @@ Route::group([], function () {
     });
 });
 
-Route::get('/r/{username}', 'ReferralController@index');
+Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
 Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
 
