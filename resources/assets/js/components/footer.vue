@@ -3,8 +3,8 @@
 <footer>
     <div class="container-fluid main-footer ">
         <section id="contact-group" class="visible-xs-block md-show col-xs-12 col-md-3">
-        	<div class="col-xs-12 h-100 px-0" style="margin-bottom:20px;">
-    				<h4>GET UPDATES FROM US</h4>
+        	<div class="col-xs-12 h-100 px-0">
+    				<h6>Get updates from us</h6>
     				<div class="input-group">
 	            <input type="text" class="form-control" placeholder="Type Email Address">
 	            <span class="input-group-btn">
