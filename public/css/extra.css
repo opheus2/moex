@@ -1,11 +1,6 @@
 body{
     height: fit-content;
 }
-body > div:first-of-type {
-  display: flex;
-  flex-direction: column;
-      min-height: 100vh;
-}
 
 .header-brand{
     font-family: Nunito;
@@ -113,7 +108,6 @@ body > div:first-of-type {
 footer{
     background-color: #1B264B;
     color: #ffffff !important;
-    margin-top:auto;
 }
 .footer-margin{
     margin-top: 30px;
@@ -277,8 +271,6 @@ tbody>:nth-child(2n-1) {
 .navbar-toggle {
     border: 1px solid #fff !important;
     margin-top: 25px !important;
-    position: absolute!important;
-    right: 0;
 }
 
 .navbar-toggle .icon-bar {

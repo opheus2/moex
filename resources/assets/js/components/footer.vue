@@ -2,7 +2,7 @@
 
 <footer>
     <div class="container-fluid main-footer ">
-        <section id="contact-group" class="visible-xs-block md-show col-xs-12 col-md-3">
+        <section id="contact-group" class="visible-xs-block col-xs-12 col-md-3">
         	<div class="col-xs-12 h-100 px-0">
     				<h6>Get updates from us</h6>
     				<div class="input-group">
@@ -32,7 +32,7 @@
 		        </div>
         	</div>
         	<div class="col-xs-12 px-xs-0 mt-xs-2 col-md-6">
-        		<div class="col-xs-6 pl-xs-0 col-md-6 mv-left">
+        		<div class="col-xs-6 pl-xs-0 col-md-6">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">Support</h4></li>
 		                <li><router-link to="/landing/contact"><p class="text-white"> Contact Us</p></router-link></li>
@@ -52,7 +52,7 @@
         	</div>
 
         </section>
-        <section id="contact-group" class="hidden-xs hide-md px-0 col-xs-12 col-md-3">
+        <section id="contact-group" class="hidden-xs px-0 col-xs-12 col-md-3">
         	<div class="col-xs-12 h-100 " style="margin-top:30%;">
       				<h6>Get updates from us</h6>
       				<div class="input-group">
@@ -135,22 +135,6 @@
 			padding-left: 0px;
 		}
 	}
-
-  @media only screen
-  and (min-width:481px)
-  and (max-width: 991px) {
-    .mv-left {
-      padding-left: 0px !important;
-      margin-left: -55px;
-      margin-right: 55px;
-    }
-    .visible-xs-block {
-        display: block!important;
-    }
-    .hide-md {
-      display:none!important;
-    }
-  }
 
     /* Smartphones (portrait and landscape) ----------- */
     @media only screen

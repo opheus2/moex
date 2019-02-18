@@ -521,7 +521,7 @@ nav{
     .about .right img {
       margin-top: 1%;
       width:100%;
-
+      
     }
     .title{
       font-size: 24px;
@@ -670,18 +670,6 @@ nav{
   }
 }
 
-  @media only screen
-  and (min-width:481px)
-  and (max-width: 991px) {
-      .navbar-toggle {
-          display: block!important;
-      }
-      .collapse, .navbar-nav, .header-links, .navbar-collapse {
-        display: none!important;
-      }
-
-  }
-
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -719,7 +707,7 @@ nav{
       margin-bottom: 0px!important;
   } */
 
-/* } */
+/* } */ 
 /* Extra large devices (large desktops, 1600px and up) */
 @media (min-width: 2000px)  and (max-width: 2399.99px) {
   /* .sidenav {
