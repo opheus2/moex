@@ -67,7 +67,7 @@ class OffersController extends Controller
     public function getRate($from_currency, $to_currency){
         $from_Currency  = urlencode($from_currency);
         $to_Currency    = urlencode($to_currency);
-        $query          = "{$from_Currency}_{$to_Currency}";
+        $query          = $from_Currency.$to_Currency;
         $url            = "http://apilayer.net/api/live?access_key=47edfa1856dc3a1c879fc17f5c4d0ad9&currencies=$to_Currency&source=$from_Currency&format=1";
         // $url            = "https://forex.1forge.com/1.0.3/convert?from=$from_Currency&to=$to_Currency&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
         // $url            = "https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
@@ -77,7 +77,7 @@ class OffersController extends Controller
 
         $response       = json_decode($client->get($url)->getBody(), true);
         
-        $val            = $response['value'];
+        $val            = $response['quotes'][$query];
 
         return $val;
     }
