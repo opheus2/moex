@@ -670,7 +670,7 @@ nav{
   }
 }
 
-  @media only screen
+@media only screen
   and (min-width:481px)
   and (max-width: 991px) {
       .navbar-toggle {
@@ -710,26 +710,8 @@ nav{
 }
 
 /* Extra large devices (large desktops, 1600px and up) */
-/* @media (min-width: 1600px)  and (max-width: 1999.99px) {
-  /* .sidenav {
-      display: none;
-  } */
-  /* .jumbotron {
-      min-height: 1600px;
-      min-width: 100vw!important;
-      background-size: cover;
-      background-color: #FFFFFF!important;
-      background-image: url('../images/landing/hero.svg');
-      background-repeat: no-repeat;
-      margin-bottom: 0px!important;
-  } */
-
-/* } */
-/* Extra large devices (large desktops, 1600px and up) */
 @media (min-width: 2000px)  and (max-width: 2399.99px) {
-  /* .sidenav {
-      display: none;
-  } */
+
   .jumbotron {
       min-height: 2000px;
       min-width: 100vw!important;

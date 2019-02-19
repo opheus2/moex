@@ -1,0 +1,207 @@
+.containers {
+  display: flex;
+  justify-content: center;
+  .career-inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width:75%;
+    .article {
+      padding-bottom: 50px;
+      padding-top: 50px;
+      .title {
+        font-family: Nunito;
+        line-height: normal;
+        font-size: 22px;
+        color: #1B264B;
+      }
+      .subtitle {
+        font-family: Nunito;
+        font-weight: 300;
+        font-size: 16px;
+        color: #797979;
+      }
+    }
+    .career-flex-tab {
+      .left {
+        background: #F7F8FA;
+        min-height: 300px;
+        padding: 3%!important;
+        .title {
+          font-family: Nunito;
+          font-weight: 600;
+          line-height: normal;
+          font-size: 22px;
+          text-align: center;
+          color: #797979;
+        }
+        .dash {
+          background: #1B264B;
+          min-width: 60px;
+          min-height: 0.961938px;
+          margin-bottom: 20px;
+        }
+        .list-group {
+          .list-group-item {
+            border:none;
+            background: transparent;
+          }
+          .active {
+            font-family: Nunito;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 16px;
+            color: #1B264B;
+          }
+        }
+      }
+      .right {
+        .article {
+          padding-bottom: 0px;
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+  .blog-inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 86%;
+    .flex-container {
+      display: flex;
+      flex-flow: wrap;
+      align-items: stretch;
+    }
+    .flex-container > div {
+      color: white;
+      width: 250px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .flex-container .blog-body {
+      min-width: 600px;
+      .media-heading {
+        font-family: Nunito;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 24px;
+        text-align: justify;
+        color: #797979;
+      }
+      .media-text {
+        font-family: Nunito;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 16px;
+        text-align: justify;
+        color: #797979;
+      }
+      .date {
+        margin-top: 40px;
+        font-style: normal;
+        line-height: normal;
+        font-size: 18px;
+        text-align: justify;
+        color: #797979;
+        position: relative;
+        bottom:0;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .containers {
+    .flex-container {
+      display: block!important;
+      .image-tab {
+        display: flex;
+        justify-content: center;
+      }
+      .blog-body {
+        min-width: 250px!important;
+        width: 95%!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .containers {
+    .career-inner {
+      width: 85%;
+    }
+    .flex-container {
+      display: flex;
+      flex-flow: wrap;
+      align-items: stretch;
+    }
+    .flex-container > div {
+      color: white;
+      width: 250px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .flex-container .blog-body {
+      min-width: 600px;
+      padding: 5% 0%;
+      .media-heading {
+        font-family: Nunito;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 24px;
+        text-align: justify;
+        color: #797979;
+      }
+      .media-text {
+        font-family: Nunito;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 16px;
+        text-align: justify;
+        color: #797979;
+      }
+      .date {
+        margin-top: 40px;
+        font-style: normal;
+        line-height: normal;
+        font-size: 18px;
+        text-align: justify;
+        color: #797979;
+        position: relative;
+        bottom:0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .flex-container .blog-body {
+    padding: 3% 0%;
+  }
+}
+
+/* Extra large devices (large desktops, 1600px and up) */
+@media (min-width: 2000px)  and (max-width: 2399.99px) {
+
+}
+@media (min-width: 2400px) {
+
+}
