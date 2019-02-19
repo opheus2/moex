@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Notifications\Authentication\UserRegistered;
+use App\Traits\ManageReferrals;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -24,7 +25,7 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers, VerifiesEmail;
+    use RegistersUsers, VerifiesEmail, ManageReferrals;
 
     /**
      * Where to redirect users after registration.
@@ -110,6 +111,13 @@ class RegisterController extends Controller
         ]);
 
         $user->assignRole('user');
+
+        /*
+         * Check if the registration was through a referral
+         */
+        if (session()->has('referrer_id')) {
+            $this->newReferral($user->id, session()->pull('referrer_id'));
+        }
 
         resolve('Lunaweb\EmailVerification\EmailVerification')
             ->sendVerifyLink($user);
