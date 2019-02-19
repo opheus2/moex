@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.39 on 2019-02-11 10:32:21.
+ * Generated for Laravel 5.6.39 on 2019-02-19 19:16:08.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3391,6 +3391,103 @@ namespace Illuminate\Support\Facades {
         public static function getQueuedCookies()
         {
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     * @see \Illuminate\Encryption\Encrypter
+     */ 
+    class Crypt {
+        
+        /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */ 
+        public static function supported($key, $cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+        
+        /**
+         * Create a new encryption key for the given cipher.
+         *
+         * @param string $cipher
+         * @return string 
+         * @static 
+         */ 
+        public static function generateKey($cipher)
+        {
+            return \Illuminate\Encryption\Encrypter::generateKey($cipher);
+        }
+        
+        /**
+         * Encrypt the given value.
+         *
+         * @param mixed $value
+         * @param bool $serialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encrypt($value, $serialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::encrypt($value, $serialize);
+        }
+        
+        /**
+         * Encrypt a string without serialization.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptString($value)
+        {
+            return \Illuminate\Encryption\Encrypter::encryptString($value);
+        }
+        
+        /**
+         * Decrypt the given value.
+         *
+         * @param mixed $payload
+         * @param bool $unserialize
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decrypt($payload, $unserialize = true)
+        {
+            return \Illuminate\Encryption\Encrypter::decrypt($payload, $unserialize);
+        }
+        
+        /**
+         * Decrypt the given string without unserialization.
+         *
+         * @param string $payload
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptString($payload)
+        {
+            return \Illuminate\Encryption\Encrypter::decryptString($payload);
+        }
+        
+        /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getKey()
+        {
+            return \Illuminate\Encryption\Encrypter::getKey();
         }
          
     }
@@ -13072,6 +13169,173 @@ namespace Illuminate\Support\Facades {
  
 }
 
+namespace Torann\Currency\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Currency {
+        
+        /**
+         * Format given number.
+         *
+         * @param float $amount
+         * @param string $from
+         * @param string $to
+         * @param bool $format
+         * @return string 
+         * @static 
+         */ 
+        public static function convert($amount, $from = null, $to = null, $format = true)
+        {
+            return \Torann\Currency\Currency::convert($amount, $from, $to, $format);
+        }
+        
+        /**
+         * Format the value into the desired currency.
+         *
+         * @param float $value
+         * @param string $code
+         * @param bool $include_symbol
+         * @return string 
+         * @static 
+         */ 
+        public static function format($value, $code = null, $include_symbol = true)
+        {
+            return \Torann\Currency\Currency::format($value, $code, $include_symbol);
+        }
+        
+        /**
+         * Set user's currency.
+         *
+         * @param string $code
+         * @static 
+         */ 
+        public static function setUserCurrency($code)
+        {
+            return \Torann\Currency\Currency::setUserCurrency($code);
+        }
+        
+        /**
+         * Return the user's currency code.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getUserCurrency()
+        {
+            return \Torann\Currency\Currency::getUserCurrency();
+        }
+        
+        /**
+         * Determine if the provided currency is valid.
+         *
+         * @param string $code
+         * @return array|null 
+         * @static 
+         */ 
+        public static function hasCurrency($code)
+        {
+            return \Torann\Currency\Currency::hasCurrency($code);
+        }
+        
+        /**
+         * Determine if the provided currency is active.
+         *
+         * @param string $code
+         * @return bool 
+         * @static 
+         */ 
+        public static function isActive($code)
+        {
+            return \Torann\Currency\Currency::isActive($code);
+        }
+        
+        /**
+         * Return the current currency if the
+         * one supplied is not valid.
+         *
+         * @param string $code
+         * @return array|null 
+         * @static 
+         */ 
+        public static function getCurrency($code = null)
+        {
+            return \Torann\Currency\Currency::getCurrency($code);
+        }
+        
+        /**
+         * Return all currencies.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getCurrencies()
+        {
+            return \Torann\Currency\Currency::getCurrencies();
+        }
+        
+        /**
+         * Return all active currencies.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getActiveCurrencies()
+        {
+            return \Torann\Currency\Currency::getActiveCurrencies();
+        }
+        
+        /**
+         * Get storage driver.
+         *
+         * @return \Torann\Currency\Contracts\DriverInterface 
+         * @static 
+         */ 
+        public static function getDriver()
+        {
+            return \Torann\Currency\Currency::getDriver();
+        }
+        
+        /**
+         * Get formatter driver.
+         *
+         * @return \Torann\Currency\Contracts\FormatterInterface 
+         * @static 
+         */ 
+        public static function getFormatter()
+        {
+            return \Torann\Currency\Currency::getFormatter();
+        }
+        
+        /**
+         * Clear cached currencies.
+         *
+         * @static 
+         */ 
+        public static function clearCache()
+        {
+            return \Torann\Currency\Currency::clearCache();
+        }
+        
+        /**
+         * Get configuration value.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function config($key = null, $default = null)
+        {
+            return \Torann\Currency\Currency::config($key, $default);
+        }
+         
+    }
+ 
+}
+
 namespace HolluwaTosin\Installer { 
 
     /**
@@ -16365,6 +16629,8 @@ namespace  {
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
 
+    class Crypt extends \Illuminate\Support\Facades\Crypt {}
+
     class DB extends \Illuminate\Support\Facades\DB {}
 
     class Eloquent extends \Illuminate\Database\Eloquent\Model {         
@@ -18687,6 +18953,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Currency extends \Torann\Currency\Facades\Currency {}
 
     class 0 extends \HolluwaTosin\Installer\InstallerServiceProvider {}
 

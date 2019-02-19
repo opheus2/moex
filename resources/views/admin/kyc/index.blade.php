@@ -40,6 +40,7 @@
                                         <th class="none"> Verification Status</th>
                                         <th class="all"> Front View </th>
                                         <th class="all"> Back View </th>
+                                        <th class="all"> Action </th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -55,6 +56,10 @@
                                                 <td> {{ $kyc->verify }} </td>
                                                 <td><button data-toggle="modal" data-target="#front-{{ $kyc->id }}" class="btn btn-primary">View</button></td>
                                                 <td><button data-toggle="modal" data-target="#back-{{ $kyc->id }}" class="btn btn-primary">View</button> </td>
+                                                <td>
+                                                    <a href="kyc/verify/{{ $kyc->id }}" class="btn btn-primary">Accept</a> 
+                                                    <a href="kyc/reject/{{ $kyc->id }}" class="btn btn-primary">Reject</a> 
+                                                </td>
                                             </tr>
                                         @endforeach                        
                                     </tbody>

@@ -222,6 +222,11 @@
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
                                             </div>
 
+                                            <div class="form-group skin-square">
+                                                    {!! Form::checkbox('kyc_verification', 1) !!}
+                                                    {!! Form::label('kyc_verification', 'Verified Customer') !!}
+                                                </div>
+
                                         </div>
                                         <div class="col-md-6">
                                             <h4 class="form-section"><i class="ft-eye"></i> {{__('Visibility')}}</h4>

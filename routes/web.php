@@ -470,6 +470,8 @@ Route::group([], function () {
             ], function () {
                 // Index
                 Route::get('', 'KycController@index')->name('index');
+                Route::get('/verify/{id}', 'KycController@verify');
+                Route::get('/reject/{id}', 'KycController@reject');
                 
             });
 

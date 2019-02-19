@@ -37,6 +37,8 @@ class Kyc extends Model
     {
         if ($this->attributes['verified'] == 1){
             return 'Verified';
+        }elseif($this->attributes['verified'] == 2){
+            return 'Rejected';
         }else{
             return 'Not Verified';
         }
