@@ -10,6 +10,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
+use GuzzleHttp\Client;
+
+
 
 class OffersController extends Controller
 {
@@ -26,11 +29,24 @@ class OffersController extends Controller
         $offers = $offers->filter(function ($offer) {return $offer->canShow(Auth::user());});
 
         if ($offer = $offers->first()) {
-            $rate = get_price($offer->multiplier(), $offer->coin, $offer->currency, false);
-            $rate_formatted = get_price($offer->multiplier(), $offer->coin, $offer->currency);
+            if($offer->currency == 'USD'){
+                $rate           = get_price($offer->multiplier(), $offer->coin, 'NGN', false);
+                $rate_formatted = get_price($offer->multiplier(), $offer->coin, 'NGN');
+                $currencyRate   = $this->getRate($offer->currency, 'NGN');
+                $min_cur_amount = get_price($offer->min_amount, $offer->coin, 'NGN', false);
+                $max_cur_amount = get_price($offer->max_amount, $offer->coin, 'NGN', false);
+            }else{
+                $rate           = get_price($offer->multiplier(), $offer->coin, $offer->currency, false);
+                $rate_formatted = get_price($offer->multiplier(), $offer->coin, $offer->currency);
+                $currencyRate   = $this->getRate($offer->currency, 'USD');
+                $min_cur_amount = get_price($offer->min_amount, $offer->coin, $offer->currency, false);
+                $max_cur_amount = get_price($offer->max_amount, $offer->coin, $offer->currency, false);
+            }
 
-            $usd_rate = get_price($offer->multiplier(), $offer->coin, 'USD', false);
+            $usd_rate           = get_price($offer->multiplier(), $offer->coin, 'USD', false);
             $usd_rate_formatted = get_price($offer->multiplier(), $offer->coin, 'USD');
+            $min_usd_amount     = get_price($offer->min_amount, $offer->coin, 'USD', false);
+            $max_usd_amount     = get_price($offer->max_amount, $offer->coin, 'USD', false);
 
             // $min_amount = money($offer->min_amount, $offer->currency, true);
             // $max_amount = money($offer->max_amount, $offer->currency, true);
@@ -38,17 +54,31 @@ class OffersController extends Controller
             $min_amount = $offer->min_amount . $offer->coin;
             $max_amount = $offer->max_amount . $offer->coin;
 
-            // dd($min_amount);
             
 
             return view('home.offers.index')
-                ->with(compact('min_amount', 'max_amount'))
-                ->with(compact('offer', 'rate', 'rate_formatted', 'usd_rate', 'usd_rate_formatted'));
+                ->with(compact('min_amount', 'max_amount', 'min_usd_amount', 'max_usd_amount', 'min_cur_amount', 'max_cur_amount'))
+                ->with(compact('offer', 'rate', 'rate_formatted', 'usd_rate', 'usd_rate_formatted', 'currencyRate'));
         } else {
             return abort(404);
         }
     }
 
+    public function getRate($from_currency, $to_currency){
+        $from_Currency  = urlencode($from_currency);
+        $to_Currency    = urlencode($to_currency);
+        $query          =  "{$from_Currency}_{$to_Currency}";
+        $url            = "http://free.currencyconverterapi.com/api/v6/convert?q=$query";
+
+        $client         = new Client();
+        $response       = $client->get($url);
+
+        $response       = json_decode($client->get($url)->getBody(), true);
+        
+        $val            = $response['results'][$query]['val'];
+
+        return $val;
+    }
     /**
      * @param Request $request
      * @param $token
