@@ -26,8 +26,21 @@ class KycController extends Controller
             ->with(compact('kycs', 'kycs'));
     }
 
-    public function update()
+    public function verify($id)
     {
-        
+        $kyc     = Kyc::find($id);
+        $kyc->verified = 1;
+        $kyc->save();
+
+        return back();
+    }
+
+    public function reject($id)
+    {
+        $kyc     = Kyc::find($id);
+        $kyc->verified = 2;
+        $kyc->save();
+
+        return back();
     }
 }

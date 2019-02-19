@@ -123,13 +123,23 @@ class Offer extends Model
 
     /**
      * @param User $user
+     * @return bool|int|mixed
+     */
+    public function verifyKyc(User $user)
+    {
+        return ($this->kyc_verification) ? $user->verified_kyc : true;
+    }
+
+    /**
+     * @param User $user
      * @return bool
      */
     public function canTradeWith(User $user)
     {
         return $this->verifyEmail($user)
             && ($user->id !== $this->user->id)
-            && $this->verifyPhone($user);
+            && $this->verifyPhone($user)
+            && $this->verifyKyc($user);
     }
 
     /**
