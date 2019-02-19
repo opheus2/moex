@@ -470,6 +470,17 @@ Route::group([], function () {
             ], function () {
                 // Index
                 Route::get('', 'KycController@index')->name('index');
+                Route::get('/verify/{id}', 'KycController@verify');
+                Route::get('/reject/{id}', 'KycController@reject');
+                
+            });
+
+            Route::group([
+                'as'     => 'referrals.',
+                'prefix' => 'referrals'
+            ], function () {
+                // Index
+                Route::get('', 'ReferralController@index')->name('index');
                 
             });
 
@@ -627,9 +638,16 @@ Route::group([], function () {
                 // Data
                 Route::post('data', 'TradesController@data')->name('data');
             });
+
+            // Manage Referrals 
+            Route::group(['as' => 'referrals.', 'prefix' => 'referrals'], function () {
+                Route::get('', 'ReferralController@index')->name('index');
+            });
         });
     });
 });
+
+Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
 Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
 

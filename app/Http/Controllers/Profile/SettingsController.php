@@ -66,13 +66,16 @@ class SettingsController extends Controller
         $qr_code = $this->getQRCodeUrl($user, true);
 
         $kycs     = Kyc::all(); 
+        
+        $referrals = $user->referrals;
 
 
         return view('profile.settings.index')
             ->with(compact('user', 'profile'))
             ->with(compact('notification_settings'))
             ->with(compact('qr_code', 'setting'))
-            ->with(compact('kycs', 'kycs'));
+            ->with(compact('kycs', 'kycs'))
+            ->with(compact('referrals', 'referrals'));
     }
 
     /**

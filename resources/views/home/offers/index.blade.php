@@ -64,7 +64,7 @@
                                                 <div class="col-4">
                                                     {!! Form::label('amount', __('Amount in USD:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount']) !!}
+                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'step' =>"0.01"]) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">USD</span>
@@ -75,7 +75,7 @@
                                                 <div class="col-4">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount]) !!}
+                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">{{strtoupper($offer->coin)}}</span>
@@ -86,7 +86,7 @@
                                                     {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount']) !!}
+                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">NGN</span>
@@ -94,7 +94,7 @@
                                                         </div>
                                                     @else
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount']) !!}
+                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">{{ $offer->currency }}</span>
@@ -158,6 +158,26 @@
                                                                 </h5>
                                                                 {{__('The user requires that you verify your phone number before you can continue with the trade.')}}
                                                                 {{__('If you have not received a confirmation sms, you may resend in your profile settings')}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+
+                                                @if(!$offer->verifyKyc(Auth::user()))
+                                                    <div class="col-xl media-list">
+                                                        <div class="media">
+                                                            <span class="media-left">
+                                                                <a href="{{route('profile.settings.index', ['user' => Auth::user()->name])}}"
+                                                                   class="btn-icon btn btn-outline-danger btn-round">
+                                                                    <i class="ft-shield"></i>
+                                                                </a>
+                                                            </span>
+                                                            <div class="media-body">
+                                                                <h5 class="media-heading text-bold-400">
+                                                                    KYC Verification Required
+                                                                </h5>
+                                                                {{__('The user requires that your kyc must be verify before you can continue with the trade.')}}
+                                                                {{__('If you have not submit your kyc details, go to your profile settings')}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -305,6 +325,7 @@
 
                 'rate' => $rate,
                 'usd_rate' => $usd_rate,
+                'cur_rate' => $currencyRate,
 
             ]) !!}
     </script>

@@ -132,7 +132,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::text('min_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'minAmount', 'novalidate']) !!}
+                                                        {!! Form::text('min_amount', null, ['class' => 'form-control', 'required', ':value' => 'minAmount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -143,7 +143,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::text('max_amount', null, ['class' => 'form-control', 'required', 'v-model' => 'max_amount', 'novalidate']) !!}
+                                                        {!! Form::text('max_amount', null, ['class' => 'form-control', 'required', ':value' => 'minAmount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -221,6 +221,11 @@
                                                 {!! Form::checkbox('email_verification', 1) !!}
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
                                             </div>
+
+                                            <div class="form-group skin-square">
+                                                    {!! Form::checkbox('kyc_verification', 1) !!}
+                                                    {!! Form::label('kyc_verification', 'Verified Customer') !!}
+                                                </div>
 
                                         </div>
                                         <div class="col-md-6">

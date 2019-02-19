@@ -29,6 +29,13 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{route('admin.referrals.index')}}">
+                        <i class="la la-users"></i>
+                        <span class="menu-title">{{__('Referrals')}}</span>
+                    </a>
+                </li>
+
                 <li class="navigation-header">
                     <span>{{__('SETTINGS')}}</span>
                 </li>

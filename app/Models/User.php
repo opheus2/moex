@@ -610,4 +610,12 @@ class User extends Authenticatable implements CanVerifyEmailContract
     {
         return $this->hasOne('App\Models\Kyc', 'user_id', 'id');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function referrals()
+    {
+        return $this->hasMany(Referral::class, 'referrer_id');
+    }
 }

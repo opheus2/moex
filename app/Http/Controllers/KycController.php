@@ -24,4 +24,6 @@ class KycController extends Controller
         return view('admin.kyc.index')
             ->with(compact('kycs', 'kycs'));
     }
+
+    
 }

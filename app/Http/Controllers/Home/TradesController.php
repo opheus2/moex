@@ -13,6 +13,7 @@ use App\Notifications\Trades\Completed;
 use App\Notifications\Trades\Confirmed;
 use App\Notifications\Trades\Disputed;
 use App\Notifications\Trades\Rated;
+use App\Traits\ManageReferrals;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +23,7 @@ use Yajra\DataTables\Facades\DataTables;
 
 class TradesController extends Controller
 {
+    use ManageReferrals;
     /**
      * Show active/successful trades
      *
@@ -70,11 +72,19 @@ class TradesController extends Controller
 
                 $trade->processTransaction();
 
+                /* Checks Referral Matters */
+                $this->validateReferral($trade->buyer()->id);
+                $this->validateReferral($trade->seller()->id);
+
                 $trade->buyer()->notify(new Completed($trade));
 
                 $message = __('The coin held on escrow has been released to the buyer.');
 
                 broadcast(new TradeStatusUpdated($trade));
+                $offer = Offer::find($trade->offer_id)->first();
+                Offer::find($trade->offer_id)->update([
+                    'max_amount'          => $offer->max_amount - $trade->amount,
+                ]);
 
                 return response($message);
 

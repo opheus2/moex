@@ -16,9 +16,18 @@ class CreateOfferController extends Controller
 {
     public function buyIndex()
     {
-        return view('market.create_offer.buy', [
+        $min_btc_amount     = get_convert(config('settings.min_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $min_ltc_amount     = get_convert(config('settings.min_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $min_dash_amount    = get_convert(config('settings.min_offer_amount'), 'DASH',  config('settings.default_currency'));
+
+
+        $max_btc_amount     = get_convert(config('settings.max_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $max_ltc_amount     = get_convert(config('settings.max_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $max_dash_amount    = get_convert(config('settings.max_offer_amount'), 'DASH',  config('settings.default_currency'));
+
+         return view('market.create_offer.buy', [
             'payment_methods' => $this->getPaymentMethods()
-        ]);
+            ], compact('min_btc_amount', 'max_btc_amount', 'min_ltc_amount', 'max_ltc_amount', 'min_dash_amount', 'max_dash_amount'));
 
     }
 
@@ -104,6 +113,7 @@ class CreateOfferController extends Controller
                     'trusted_offer'      => $request->filled('trusted_offer'),
                     'phone_verification' => $request->filled('phone_verification'),
                     'email_verification' => $request->filled('email_verification'),
+                    'kyc_verification' => $request->filled('kyc_verification'),
                     'type'               => $type,
                     'user_trade_in'      => strtoupper($request->coin),
                 ]);

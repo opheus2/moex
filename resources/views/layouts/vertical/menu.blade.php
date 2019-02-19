@@ -93,6 +93,13 @@
                             @endif
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('moderation.referrals.index') }}">
+                            <i class="la la-users"></i>
+                            <span class="menu-title">{{__('Referrals')}}</span>
+                        </a>
+                    </li>
                 @endcan
             </ul>
         </div>
