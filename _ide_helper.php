@@ -3480,11 +3480,8 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-<<<<<<< HEAD
-=======
      * @method static string encrypt(string $value, bool $serialize = true)
      * @method static string decrypt(string $payload, bool $unserialize = true)
->>>>>>> 9c61f631046834e503ee13a8ef6b7e7cf386107e
      * @see \Illuminate\Encryption\Encrypter
      */ 
     class Crypt {
@@ -3582,8 +3579,6 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-<<<<<<< HEAD
-=======
      * @method static \Illuminate\Database\ConnectionInterface connection(string $name = null)
      * @method static string getDefaultConnection()
      * @method static void setDefaultConnection(string $name)
@@ -3604,7 +3599,6 @@ namespace Illuminate\Support\Facades {
      * @method static void rollBack()
      * @method static int transactionLevel()
      * @method static array pretend(\Closure $callback)
->>>>>>> 9c61f631046834e503ee13a8ef6b7e7cf386107e
      * @see \Illuminate\Database\DatabaseManager
      * @see \Illuminate\Database\Connection
      */ 
