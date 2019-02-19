@@ -64,7 +64,7 @@
                                                 <div class="col-4">
                                                     {!! Form::label('amount', __('Amount in USD:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount']) !!}
+                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount]) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">USD</span>
@@ -75,7 +75,7 @@
                                                 <div class="col-4">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount]) !!}
+                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">{{strtoupper($offer->coin)}}</span>
@@ -86,7 +86,7 @@
                                                     {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount']) !!}
+                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">NGN</span>
@@ -94,7 +94,7 @@
                                                         </div>
                                                     @else
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount']) !!}
+                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">{{ $offer->currency }}</span>
@@ -305,6 +305,7 @@
 
                 'rate' => $rate,
                 'usd_rate' => $usd_rate,
+                'cur_rate' => $currencyRate,
 
             ]) !!}
     </script>
