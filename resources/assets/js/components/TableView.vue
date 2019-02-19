@@ -234,6 +234,9 @@
     };
 </script>
 
-<style lang="css" scoped>
-
+<style>
+  .VuePagination {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
 </style>

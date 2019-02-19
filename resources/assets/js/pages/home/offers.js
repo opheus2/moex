@@ -117,8 +117,8 @@ export default {
         },
 
         usd_amount: function (value) {
-            this.amount = parseFloat((value * this.usd_rate).toFixed(8));
-            this.coinValue = parseFloat((value * this.usd_rate).toFixed(8));
+            this.amount = parseFloat((value * this.rate).toFixed(8));
+            // this.coinValue = parseFloat((value / this.rate).toFixed(8));
 
         }
     },

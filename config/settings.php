@@ -47,7 +47,7 @@ return [
 
     'min_offer_amount' => env('SET_MIN_OFFER_AMOUNT', 1),
     'max_offer_amount' => env('SET_MAX_OFFER_AMOUNT', 10000),
-    'default_currency' => env('SET_DEFAULT_CURRENCY', 'BTC'),
+    'default_currency' => env('SET_DEFAULT_CURRENCY', 'USD'),
 
     /*
    |--------------------------------------------------------------------------
