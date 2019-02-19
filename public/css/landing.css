@@ -679,15 +679,20 @@ nav{
       .collapse, .navbar-nav, .header-links, .navbar-collapse {
         display: none!important;
       }
+      .sidenav {
+          display: block;
+      }
 
   }
-
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 992px){
   .sidenav {
       display: none;
   }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
   .join .button-group .login{
       margin-left: 0px!important;
       margin-top: 15px!important;
