@@ -473,6 +473,15 @@ Route::group([], function () {
                 
             });
 
+            Route::group([
+                'as'     => 'referrals.',
+                'prefix' => 'referrals'
+            ], function () {
+                // Index
+                Route::get('', 'ReferralController@index')->name('index');
+                
+            });
+
             // Users Page
             Route::group([
                 'as'         => 'earnings.',
@@ -627,9 +636,16 @@ Route::group([], function () {
                 // Data
                 Route::post('data', 'TradesController@data')->name('data');
             });
+
+            // Manage Referrals 
+            Route::group(['as' => 'referrals.', 'prefix' => 'referrals'], function () {
+                Route::get('', 'ReferralController@index')->name('index');
+            });
         });
     });
 });
+
+Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
 Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
 

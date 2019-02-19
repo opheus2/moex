@@ -129,3 +129,13 @@ Breadcrumbs::for('kyc', function ($trail) {
     $trail->parent('admin.home');
     $trail->push('KYC', route('admin.kyc.index'));
 });
+
+Breadcrumbs::for('admin_referral', function ($trail) {
+    $trail->parent('admin.home');
+    $trail->push('Referral', route('admin.referrals.index'));
+});
+
+Breadcrumbs::for('moderator_referral', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Referral', route('admin.referrals.index'));
+});
