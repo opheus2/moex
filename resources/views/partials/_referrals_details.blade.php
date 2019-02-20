@@ -20,26 +20,28 @@
                     </thead>
                     <tbody>
                         @foreach($referrals as $referral)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->user->name }} </a></td>
-                                <td class="text-capitalize"><a href="{{ route('profile.index', $referral->referrer->name) }}"> {{ $referral->referrer->name}} </a></td>
-                                <td class="text-capitalize">
-                                    @if ($referral->is_verified)
-                                        <button type="button" class="btn btn-success" >Verified</button>  
-                                    @else
-                                        <button class="btn btn-danger">Unverified</button>
-                                    @endif
-                                </td>
-                                <td class="text-capitalize"> 
-                                    @if ($referral->has_been_paid)
-                                        <button type="button" class="btn btn-success">Paid</button>
-                                    @else
-                                        <button type="button" class="btn {{ $referral->is_verified ? 'btn-danger' : 'btn-secondary' }} ">Not Paid</button>
-                                    @endif
-                                </td>
-                                {{-- <td></td> --}}
-                            </tr>
+                            @if(!is_null($referral->user))
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->user->name }} </a></td>
+                                    <td class="text-capitalize"><a href="{{ route('profile.index', $referral->referrer->name) }}"> {{ $referral->referrer->name}} </a></td>
+                                    <td class="text-capitalize">
+                                        @if ($referral->is_verified)
+                                            <button type="button" class="btn btn-success" >Verified</button>
+                                        @else
+                                            <button class="btn btn-danger">Unverified</button>
+                                        @endif
+                                    </td>
+                                    <td class="text-capitalize">
+                                        @if ($referral->has_been_paid)
+                                            <button type="button" class="btn btn-success">Paid</button>
+                                        @else
+                                            <button type="button" class="btn {{ $referral->is_verified ? 'btn-danger' : 'btn-secondary' }} ">Not Paid</button>
+                                        @endif
+                                    </td>
+                                    {{-- <td></td> --}}
+                                </tr>
+                            @endif
                         @endforeach                        
                     </tbody>
                 </table>

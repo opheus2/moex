@@ -34,38 +34,40 @@
                     </thead>
                     <tbody>
                         @foreach($referrals as $referral)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->user->name}} </a></td>
-                                <td class="text-capitalize">
-                                    @if ($referral->is_verified)
-                                        <button type="button" class="btn btn-success" >Verified</button>  
+                            @if(!is_null($referral->user))
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td class="text-capitalize"><a href="{{ route('profile.index', $referral->user->name) }}"> {{ $referral->user->name}} </a></td>
+                                    <td class="text-capitalize">
+                                        @if ($referral->is_verified)
+                                            <button type="button" class="btn btn-success" >Verified</button>
+                                        @else
+                                            <button class="btn btn-danger">Unverified</button>
+                                        @endif
+                                    </td>
+
+                                    @if ($referral->has_been_paid)
+                                        <td class="text-capitalize">
+                                            <button type="button" class="btn btn-success">Paid</button>
+                                        </td>
+
                                     @else
-                                        <button class="btn btn-danger">Unverified</button>
+                                        <td>
+                                            <button type="button" class="btn {{ $referral->is_verified ? 'btn-danger' : 'btn-secondary' }} ">Not Paid</button>
+                                        </td>
                                     @endif
-                                </td>
-                                
-                                @if ($referral->has_been_paid)
-                                    <td class="text-capitalize"> 
-                                        <button type="button" class="btn btn-success">Paid</button>
-                                    </td>
-                                    
-                                @else
-                                    <td>
-                                        <button type="button" class="btn {{ $referral->is_verified ? 'btn-danger' : 'btn-secondary' }} ">Not Paid</button>
-                                    </td>
-                                @endif
-                                @if ($referral->is_verified && !$referral->has_been_paid)
-                                    <td>
-                                        <button type="button" class="btn btn-light">Request for Payment</button>
-                                    </td> 
-                                @else 
-                                    <td>
-                                        <button type="button" class="btn btn-light" disabled>Request for Payment</button>
-                                    </td> 
-                                @endif
-                                
-                            </tr>
+                                    @if ($referral->is_verified && !$referral->has_been_paid)
+                                        <td>
+                                            <button type="button" class="btn btn-light">Request for Payment</button>
+                                        </td>
+                                    @else
+                                        <td>
+                                            <button type="button" class="btn btn-light" disabled>Request for Payment</button>
+                                        </td>
+                                    @endif
+
+                                </tr>
+                            @endif
                         @endforeach                        
                     </tbody>
                 </table>
