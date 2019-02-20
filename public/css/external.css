@@ -1,0 +1,225 @@
+.containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containers .career-inner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 75%;
+}
+
+.containers .career-inner .article {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.containers .career-inner .article .title {
+  font-family: Nunito;
+  line-height: normal;
+  font-size: 22px;
+  color: #1B264B;
+}
+
+.containers .career-inner .article .subtitle {
+  font-family: Nunito;
+  font-weight: 300;
+  font-size: 16px;
+  color: #797979;
+}
+
+.containers .career-inner .career-flex-tab .left {
+  background: #F7F8FA;
+  min-height: 300px;
+  padding: 3% !important;
+}
+
+.containers .career-inner .career-flex-tab .left .title {
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 22px;
+  text-align: center;
+  color: #797979;
+}
+
+.containers .career-inner .career-flex-tab .left .dash {
+  background: #1B264B;
+  min-width: 60px;
+  min-height: 0.961938px;
+  margin-bottom: 20px;
+}
+
+.containers .career-inner .career-flex-tab .left .list-group .list-group-item {
+  border: none;
+  background: transparent;
+}
+
+.containers .career-inner .career-flex-tab .left .list-group .active {
+  font-family: Nunito;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 16px;
+  color: #1B264B;
+}
+
+.containers .career-inner .career-flex-tab .right .article {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.containers .blog-inner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 86%;
+}
+
+.containers .blog-inner .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.containers .blog-inner .flex-container > div {
+  color: white;
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.containers .blog-inner .flex-container .blog-body {
+  min-width: 600px;
+}
+
+.containers .blog-inner .flex-container .blog-body .media-heading {
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 24px;
+  text-align: justify;
+  color: #797979;
+}
+
+.containers .blog-inner .flex-container .blog-body .media-text {
+  font-family: Nunito;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 16px;
+  text-align: justify;
+  color: #797979;
+}
+
+.containers .blog-inner .flex-container .blog-body .date {
+  margin-top: 40px;
+  font-style: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: justify;
+  color: #797979;
+  position: relative;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .containers .flex-container {
+    display: block !important;
+  }
+
+  .containers .flex-container .image-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .containers .flex-container .blog-body {
+    min-width: 250px !important;
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .containers .career-inner {
+    width: 85%;
+  }
+
+  .containers .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .containers .flex-container > div {
+    color: white;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+  .containers .flex-container .blog-body {
+    min-width: 600px;
+    padding: 5% 0%;
+  }
+
+  .containers .flex-container .blog-body .media-heading {
+    font-family: Nunito;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    text-align: justify;
+    color: #797979;
+  }
+
+  .containers .flex-container .blog-body .media-text {
+    font-family: Nunito;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    text-align: justify;
+    color: #797979;
+  }
+
+  .containers .flex-container .blog-body .date {
+    margin-top: 40px;
+    font-style: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: justify;
+    color: #797979;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .flex-container .blog-body {
+    padding: 3% 0%;
+  }
+}
+
+/* Extra large devices (large desktops, 1600px and up) */
+

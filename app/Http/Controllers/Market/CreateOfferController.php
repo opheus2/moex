@@ -113,6 +113,7 @@ class CreateOfferController extends Controller
                     'trusted_offer'      => $request->filled('trusted_offer'),
                     'phone_verification' => $request->filled('phone_verification'),
                     'email_verification' => $request->filled('email_verification'),
+                    'kyc_verification' => $request->filled('kyc_verification'),
                     'type'               => $type,
                     'user_trade_in'      => strtoupper($request->coin),
                 ]);

@@ -33,6 +33,8 @@ mix.js('resources/assets/js/app.js', 'public/js');
 mix.sass('resources/assets/sass/vendors.scss', 'public/css')
    .sass('resources/assets/sass/app.scss', 'public/css')
 
+   .sass('resources/assets/sass/external/external.scss', 'public/css/external.css')
+
    // Pages
    .sass('resources/assets/sass/pages/chat.scss', 'public/css/pages')
    .sass('resources/assets/sass/pages/auth.scss', 'public/css/pages')
@@ -60,4 +62,3 @@ mix.sass('resources/assets/sass/vendors.scss', 'public/css')
 
 
 ;
-

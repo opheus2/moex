@@ -76,7 +76,7 @@ class OffersController extends Controller
         $response       = $client->get($url);
 
         $response       = json_decode($client->get($url)->getBody(), true);
-        
+
         $val            = $response['quotes'][$query];
 
         return $val;
