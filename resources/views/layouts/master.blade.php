@@ -39,6 +39,7 @@
     <!-- BEGIN APPLICATION CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" type="text/css" href="{{platformSettings()->template()->stylesheet()}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css" />
     <!-- END APPLICATION CSS-->
 
     <!-- BEGIN PAGE CSS-->
@@ -71,9 +72,10 @@
     </div>
 
     <!-- BEGIN APPLICATION LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.min.js"></script>
     <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
     <!-- END APPLICATION LIBRARIES -->
-
+    
     {!! toastr()->render() !!}
     @include('includes.toastr')
 
