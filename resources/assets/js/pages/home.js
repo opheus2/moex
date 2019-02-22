@@ -22,9 +22,9 @@ export default {
             if (document.head.parentElement.classList.contains('loaded')) {
                 if (window._isFirstTimeLogin) {
                     window.introJs().start()
+                    this.updateUserLog();
                 }
                 clearInterval(interval);
-                this.updateUserLog();
             }
 
         }, 10);

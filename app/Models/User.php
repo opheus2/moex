@@ -627,6 +627,7 @@ class User extends Authenticatable implements CanVerifyEmailContract
 
     public function isFirstTimeLogin()
     {
+        if (is_null($this->log)) return false;
         return (bool) $this->log->is_first_time;
     }
 }
