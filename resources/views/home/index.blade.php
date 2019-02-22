@@ -22,7 +22,7 @@
     <home-page inline-template>
         <div class="content-wrapper">
             <div class="content-body">
-                <div class="row">
+                <div class="row" data-intro="Quick Wallet details and navigation" data-step="2">
                     <div class="col-xl-4 col-lg-6 col-12">
                         <div class="card crypto-card-3 bg-warning">
                             <div class="card-content">
@@ -146,7 +146,7 @@
 
                 <div class="row">
                     <div class="col-xl-8">
-                        <div class="card">
+                        <div class="card"data-intro="Table showing all currently active trades" data-step="3">
                             <div class="card-header border-top-primary">
                                 <h4 class="card-title">
                                     {{__('Active Trades')}}
@@ -213,7 +213,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" data-intro="This table will show all trade offers created by you" data-step="4">
                             <div class="card-header border-top-success">
                                 <h4 class="card-title">
                                     {{__('My Offers')}}
@@ -276,7 +276,7 @@
                         </div>
                     </div>
                     <div class="col-xl-4">
-                        <div class="card">
+                        <div class="card" data-intro="All feedback received will be show here" data-step="5">
                             <div class="card-header {{platformSettings()->template()->background()}}">
                                 <h4 class="card-title white">
                                     {{__('RECENT FEEDBACKS')}}
@@ -318,7 +318,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <div class="card" data-intro="All succesfull trades will be shown here" data-step="6">
                             <div class="card-content">
                                 <div class="earning-chart position-relative">
                                     <div class="chart-title position-absolute mt-2 ml-2">
@@ -350,6 +350,9 @@
 @endsection
 
 @push('data')
+    <script>
+        window._isFirstTimeLogin = {{ Auth::user()->isFirstTimeLogin()? 1 : 0 }};
+    </script>
     <script type="text/javascript">
         window._tableData = [
             // Trades

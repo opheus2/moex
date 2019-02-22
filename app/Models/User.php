@@ -16,6 +16,7 @@ use Lunaweb\EmailVerification\Contracts\CanVerifyEmail as CanVerifyEmailContract
 use Spatie\Permission\Traits\HasRoles;
 use willvincent\Rateable\Rateable;
 use willvincent\Rateable\Rating;
+use App\Models\Log as UserLog;
 
 class User extends Authenticatable implements CanVerifyEmailContract
 {
@@ -617,5 +618,15 @@ class User extends Authenticatable implements CanVerifyEmailContract
     public function referrals()
     {
         return $this->hasMany(Referral::class, 'referrer_id');
+    }
+
+    public function log()
+    {
+        return $this->hasOne(UserLog::class, 'user_id');
+    }
+
+    public function isFirstTimeLogin()
+    {
+        return (bool) $this->log->is_first_time;
     }
 }
