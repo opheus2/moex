@@ -3,11 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use App\Models\User;
 
 
 class Kyc extends Model
 {
+    use Notifiable;
 
     protected $table    = "kyc";
     protected $fillable = [

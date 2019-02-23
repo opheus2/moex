@@ -93,7 +93,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="security-tab" data-toggle="pill"
                                        href="#verify" role="tab" aria-controls="verify" aria-expanded="false">
-                                        <i class="ft-key"></i> {{__('Verify Your Identity')}}
+                                        <i class="ft-briefcase"></i> {{__('Verify Your Identity')}}
                                     </a>
                                 </li>
 

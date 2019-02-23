@@ -6,6 +6,7 @@ import AdminFooter from './admin/footer';
 import AdminHome from './pages/admin/home';
 import AdminEarnings from './pages/admin/earnings';
 import AdminUsers from './pages/admin/users';
+import AdminKyc from './pages/admin/kyc';
 
 import AdminSettingsGeneral from './pages/admin/settings/general';
 import AdminSettingsTransaction from './pages/admin/settings/transaction';
@@ -61,6 +62,7 @@ Vue.component('app-footer', Footer);
 Vue.component('admin-home-page', AdminHome);
 Vue.component('admin-earnings-page', AdminEarnings);
 Vue.component('admin-users-page', AdminUsers);
+Vue.component('admin-kyc-page', AdminKyc);
 
 Vue.component('admin-settings-general-page', AdminSettingsGeneral);
 Vue.component('admin-settings-notification-page', AdminSettingsNotification);

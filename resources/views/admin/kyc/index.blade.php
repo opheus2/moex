@@ -4,7 +4,7 @@
 @php
     $sn = 1;
 @endphp
-<admin-kyc-page inline-template >
+<div>
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-2">
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-detached content-right">
+        <div class="content-detached">
             <div class="content-body">
                 <div class="card border-top-primary">
                     <div class="card-head ">
@@ -27,44 +27,40 @@
                     <div class="card-content">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="trades-list" class="table table-white-space table-bordered row-grouping display no-wrap icheck table-middle">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th class="all"> Username </th>
-                                        <th class="all"> BVN </th>
-                                        <th class="all"> DOB </th>
-                                        <th class="all"> Address </th>
-                                        <th class="all"> Location </th>
-                                        <th class="none"> Verification Type</th>
-                                        <th class="none"> Verification Status</th>
-                                        <th class="all"> Front View </th>
-                                        <th class="all"> Back View </th>
-                                        <th class="all"> Action </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($kycs as $kyc)
+                                    <table id="kyc-list" class="table table-white-space table-bordered row-grouping display icheck table-middle">
+                                        <thead>
                                             <tr>
-                                                <td>{{ $sn++ }}</td>
-                                                <td> {{ $kyc->bvn }} </td>
-                                                <td> {{ ucfirst($kyc->username )}} </td>
-                                                <td> {{ $kyc->dob }} </td>
-                                                <td> {{ $kyc->address }} </td>
-                                                <td> {{ $kyc->city }}, {{ $kyc->state }}, {{ $kyc->country }} </td>
-                                                <td> {{ ucfirst($kyc->identity_type) }} </td>
-                                                <td> {{ $kyc->verify }} </td>
-                                                <td><button data-toggle="modal" data-target="#front-{{ $kyc->id }}" class="btn btn-primary">View</button></td>
-                                                <td><button data-toggle="modal" data-target="#back-{{ $kyc->id }}" class="btn btn-primary">View</button> </td>
-                                                <td>
-                                                    <a href="kyc/verify/{{ $kyc->id }}" class="btn btn-primary">Accept</a> 
-                                                    <a href="kyc/reject/{{ $kyc->id }}" class="btn btn-primary">Reject</a> 
-                                                </td>
+                                                <th class="all">#</th>
+                                                <th class="all"> Username </th>
+                                                <th class="all"> BVN </th>
+                                                <th class="all"> DOB </th>
+                                                <th class="all"> Address </th>
+                                                <th class="all"> Location </th>
+                                                <th class="all"> Verification Type</th>
+                                                <th class="all"> Verification Status</th>
+                                                <th class="all"> Front View </th>
+                                                <th class="all"> Back View </th>
+                                                <th class="all"> Action </th>
                                             </tr>
-                                        @endforeach                        
-                                    </tbody>
-                                </table>
-                            </div>
+                                        </thead>
+                                        <tfoot>
+                                        <tr>
+                                            <tr>
+                                                <th class="all">#</th>
+                                                <th class="all"> Username </th>
+                                                <th class="all"> BVN </th>
+                                                <th class="all"> DOB </th>
+                                                <th class="all"> Address </th>
+                                                <th class="all"> Location </th>
+                                                <th class="all"> Verification Type</th>
+                                                <th class="all"> Verification Status</th>
+                                                <th class="all"> Front View </th>
+                                                <th class="all"> Back View </th>
+                                                <th class="all"> Action </th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -103,5 +99,50 @@
             </div>
         </div>
     </div>
-</admin-kyc-page>
 @endforeach
+</div>
+
+@endsection
+@push('data')
+
+<script type="text/javascript">
+
+    window._tableData = [
+        {
+            'selector': '#kyc-list',
+            'options': {
+                processing: true,
+                serverSide: true,
+                "ajax": {
+                        "async": true,
+                        "type": "POST",
+                        "url": '{{route('admin.kyc.data')}}',
+                    },
+                columns: [
+                    {data: null, defaultContent: ''},
+                    {data: 'username'},
+                    {data: 'bvn'},
+                    {data: 'dob'},
+                    {data: 'address', searchable: false, orderable: false},
+                    {data: 'location', searchable: false, orderable: false},
+                    {data: 'identity_type', searchable: false, orderable: false},
+                    {data: 'verify', searchable: false, orderable: false},
+                    {data: 'front', searchable: false, orderable: false},
+                    {data: 'back', searchable: false, orderable: false},
+                    {data: 'actions', searchable: false, orderable: false},
+                ]
+            }
+        }
+    ]
+</script>
+@endpush
+
+
+
+@push('scripts')
+    <script type="text/javascript">
+        // function reloadUsersTable() {
+        //     App._reloadDataTable('#users-list')
+        // }
+    </script>
+@endpush
