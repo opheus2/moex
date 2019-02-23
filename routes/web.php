@@ -469,9 +469,11 @@ Route::group([], function () {
                 'prefix' => 'kyc'
             ], function () {
                 // Index
-                Route::get('', 'KycController@index')->name('index');
-                Route::get('/verify/{id}', 'KycController@verify');
-                Route::get('/reject/{id}', 'KycController@reject');
+                Route::get('',              'KycController@index')->name('index');
+                Route::get('/verify/{id}',  'KycController@verify');
+                Route::get('/reject/{id}',  'KycController@reject');
+                Route::post('data',         'KycController@data')->name('data');
+
                 
             });
 

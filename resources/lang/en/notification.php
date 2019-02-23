@@ -139,5 +139,13 @@ return [
         'outro_line' => 'Tip: Enable two factor authentication to ensure maximum security of your wallet!',
         'message' => 'You have a new unconfirmed :coin transaction.'
     ],
+    
+    //kyc
+    'user_kyc_verified' => [
+        'subject' => 'KYC Verified Successfully - :app_name',
+        'intro_line' => 'Hi :user_name! Your KYC has been verified successfully!',
+        'outro_line' => 'Do make use of our help center to get started fast and easy!',
+        'message' => 'Your kyc has been verified successfully!'
+    ],
 
 ];

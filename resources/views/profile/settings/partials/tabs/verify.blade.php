@@ -6,7 +6,13 @@
 <div class="card border-top-primary">
     <div class="card-head ">
         <div class="card-header">
-            <h4 class="card-title">{{__('Verify Your Identity')}}</h4>
+            <h4 class="card-title">{{__('Verify Your Identity')}}</h4><br/>
+            @if (!empty($user->identityDetails))
+                @if ( $user->identityDetails->verified == 1)
+                    <h4 class="card-title">{{__('NB: Kyc Already Verified')}}</h4>
+                @endif
+            @endif
+
         </div>
     </div>
  
