@@ -226,6 +226,11 @@ namespace App\Models{
  * @property string|null $address
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $country
+ * @property string|null $state
+ * @property string|null $city
+ * @property string|null $bvn
+ * @property int $verified
  * @property-read mixed $username
  * @property-read mixed $verify
  * @property-read \App\Models\User|null $user
@@ -234,13 +239,18 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereBackView($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereBvn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCountry($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereDob($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereFrontView($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereIdentityType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Kyc whereVerified($value)
  */
 	class Kyc extends \Eloquent {}
 }
@@ -451,6 +461,7 @@ namespace App\Models{
  * @property int $deadline
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $user_trade_in
  * @property-read \App\Models\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newQuery()
@@ -476,6 +487,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereUserTradeIn($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer withToken($flag = true)
  */
 	class Offer extends \Eloquent {}
@@ -608,13 +620,29 @@ namespace App\Models{
 	class Profile extends \Eloquent {}
 }
 
-namespace App{
+namespace App\Models{
 /**
- * App\Referral
+ * App\Models\Referral
  *
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Referral newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Referral newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Referral query()
+ * @property int $id
+ * @property int $user_id
+ * @property int $referrer_id
+ * @property int $is_verified
+ * @property int $has_been_paid
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\User $referrer
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereHasBeenPaid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereIsVerified($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereReferrerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Referral whereUserId($value)
  */
 	class Referral extends \Eloquent {}
 }
@@ -762,7 +790,6 @@ namespace App\Models{
  * @property string $name
  * @property string $email
  * @property string|null $phone
- * @property string $currency
  * @property string $status
  * @property int $verified_phone
  * @property string $password
@@ -776,6 +803,7 @@ namespace App\Models{
  * @property int $schedule_delete
  * @property int $schedule_deactivate
  * @property string|null $timezone
+ * @property string $currency
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinAddress[] $bitcoin_addresses
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\BitcoinTransaction[] $bitcoin_transactions
  * @property-read \App\Models\BitcoinWallet $bitcoin_wallet
@@ -798,6 +826,7 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
  * @property-read \App\Models\Profile $profile
  * @property-read \Illuminate\Database\Eloquent\Collection|\willvincent\Rateable\Rating[] $ratings
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Referral[] $referrals
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Role[] $roles
  * @property-read \App\Models\UserSetting $setting
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Trade[] $trades

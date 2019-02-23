@@ -649,6 +649,8 @@ Route::group([], function () {
     });
 });
 
+Route::post('/update-log', 'LogController@updateFirstTime');
+
 Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
 Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');

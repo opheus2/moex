@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use PragmaRX\Google2FA\Google2FA;
+use App\Traits\ManageLogs;
 
 class LoginController extends Controller
 {
@@ -25,7 +26,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers, ManageLogs;
 
     /**
      * Where to redirect users after login.
@@ -158,6 +159,8 @@ class LoginController extends Controller
 
             throw ValidationException::withMessages($messages);
         }
+
+        $this->curateLog($user->id, $request);
 
         return redirect()->intended($this->redirectPath());
     }

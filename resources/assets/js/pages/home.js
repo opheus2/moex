@@ -18,9 +18,24 @@ export default {
             this.handleScrollElements();
             this.initTradesChart();
         })
+        let interval = setInterval(() => {
+            if (document.head.parentElement.classList.contains('loaded')) {
+                if (window._isFirstTimeLogin) {
+                    window.introJs().start()
+                    this.updateUserLog();
+                }
+                clearInterval(interval);
+            }
+
+        }, 10);
+        
     },
 
     methods: {
+        updateUserLog () {
+            axios.post('/update-log');
+        },
+
         initTradesChart: function(){
             const vm = this;
             const canvas = $('#trades-chart');

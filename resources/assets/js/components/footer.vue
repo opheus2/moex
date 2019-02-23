@@ -137,7 +137,7 @@
 	}
 
   @media only screen
-  and (min-width:481px)
+  and (min-width: 481px)
   and (max-width: 991px) {
     .mv-left {
       padding-left: 0px !important;

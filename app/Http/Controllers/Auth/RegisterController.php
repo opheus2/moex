@@ -119,8 +119,8 @@ class RegisterController extends Controller
             $this->newReferral($user->id, session()->pull('referrer_id'));
         }
 
-        resolve('Lunaweb\EmailVerification\EmailVerification')
-            ->sendVerifyLink($user);
+        /*resolve('Lunaweb\EmailVerification\EmailVerification')
+            ->sendVerifyLink($user);*/
 
         $user->notify(new UserRegistered());
 
