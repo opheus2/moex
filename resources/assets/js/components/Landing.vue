@@ -4,7 +4,7 @@
             <div class="landing-buy text-color">
                 <div class="w-93">
                     <span>Buy and Sell Bitcoins Easily</span>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis arcu et odio volutpat, ornare dignissim ante interdum. </h6>
+                    <h6>exchange your bitoins for cash in minutes easily. It's safe, relaible and fast!. </h6>
                     <a style="" class="text-color btn btn-default btn-lg button-sign" href="#">Sign Up</a>
                 </div>
             </div>
@@ -12,8 +12,8 @@
         <div class="d-flex justify-content-center">
             <div class="about">
                 <div class="left mt-5">
-                    <h4 class="title">About MyOwn Exchange</h4>
-                    <h6 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt. Nullam nec nulla tortor. Maecenas eros est, tempus sed placerat non, laoreet vitae diam. Aenean eu pretium risus. Pellentesque vel lorem tempus, aliquet justo eleifend, commodo nunc. Aliquam sed libero malesuada, venenatis augue in, ornare lectus.</h6>
+                    <h4 class="title">WHAT TO KNOW</h4>
+                    <h6 class="subtitle">MOEX is a peer to peer exchange service provider that allows you to trade your cryptocurrencies such as Bitcoin, Litecoin and other types of cryptocurrency with an escrow fee of just 1% with no fees for selling.</h6>
                 </div>
                 <div class="right">
                     <img src="/images/bit.png">
@@ -55,27 +55,27 @@
         <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
         <div class="d-flex justify-content-center security" style="width: 100%">
             <div class="row w-93">
-                <h6 class="notch">Top Notch Security</h6>
+                <h6 class="notch">Features</h6>
                 <div class="col-md-12 px-0">
                     <div class="col-md-3 text-center pl-0">
                         <img class="myimage" src="/images/ssl.png">
-                        <h4 class="ssl-text-head">SSL</h4>
-                        <h6 class="ssl-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt.</h6>
+                        <h4 class="ssl-text-head">Security</h4>
+                        <h6 class="ssl-text">256-Bit encryption SSL to always keep yor transcactions safe and secure.</h6>
                     </div>
                     <div class="col-md-3">
                         <img class="transactions myimage" src="/images/transaction.png">
                         <h4 class="ssl-text-head">Transactions</h4>
-                        <h6 class="ssl-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt.</h6>
+                        <h6 class="ssl-text">Peer to peer transactions with disputing makes sure you never loose your money.</h6>
                     </div>
                     <div class="col-md-3">
                         <img class="myimage" src="/images/bitcoin.png">
-                        <h4 class="ssl-text-head">Save</h4>
-                        <h6 class="ssl-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt.</h6>
+                        <h4 class="ssl-text-head">Wallet</h4>
+                        <h6 class="ssl-text">Sign up and get a personalised wallet to save your coins. Completely free no deposit/withdrawal fees!.</h6>
                     </div>
                     <div class="col-md-3 pr-0">
                         <img  class="transactions myimage" src="/images/time.png">
                         <h4 class="ssl-text-head">Quick Response</h4>
-                        <h6 class="ssl-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt.</h6>
+                        <h6 class="ssl-text">24/7 Customer Service at your fingertips! Hit us up at any time - We are always here for you.</h6>
                     </div>
                 </div>
             </div>
@@ -89,8 +89,9 @@
                     <div style="float:right; margin-top:10%;">
                     <span class="refer">
                         <h3 >Refer Friends</h3><br>
-                        <span class="refer-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor imperdiet tincidunt. Nullam nec nulla tortor. Maecenas eros est, tempus sed placerat non, laoreet vitae diam. Aenean eu pretium risus. Pellentesque vel lorem tempus, aliquet justo eleifend, commodo nunc. Aliquam sed libero malesuada, venenatis augue in, ornare lectus
+                        <span class="refer-text">You can earn <b>NGN 20,000.00 </b>  worth of any cryptocurrency of your choice for every sucessful referral.
+Commission will be credited directly to your account and can be used immediately.
+<b>*Terms and Conditions apply.</b>
                         </span>
                     </span>
                     </div>

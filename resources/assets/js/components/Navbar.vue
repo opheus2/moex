@@ -13,10 +13,10 @@
       <div id="mySidenav" class="sidenav">
         <ul>
           <li><a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a></li>
-          <li><a class="text-color" href="#">Buy Bitcoins</a>  </li>
-          <li><a class="text-color" href="#">Sell Bitcoins</a> </li>
-          <li><a class="text-color" href="#">Forums</a></li>
-          <li><router-link to="/foo" class="text-color" href="#">About</router-link></li>
+          <li><a class="text-color" href="/login">Buy Bitcoins</a>  </li>
+          <li><a class="text-color" href="/login">Sell Bitcoins</a> </li>
+          <li><a class="text-color" href="/landing/blog">Blog</a></li>
+          <li><router-link to="/landing/about" class="text-color" href="#">About</router-link></li>
           <li><a class="text-color btn btn-default btn-lg button-sign" href="#">Sign In</a></li>
         </ul>
       </div>
@@ -24,9 +24,9 @@
         <ul class="nav navbar-nav navbar-right header-links">
           <li><a class="text-color" href="/login">Buy Bitcoins</a></li>
           <li><a class="text-color" href="/login">Sell Bitcoins</a></li>
-          <li><router-link to="/landing" class="text-color" href="#">Blog</router-link></li>
-          <li><router-link to="/landing/contact" class="text-color" href="#">About</router-link></li>
-          <li><a class="text-color btn btn-default btn-lg button-sign" href="#">Sign In</a></li>
+          <li><router-link to="/landing/blog" class="text-color" href="#">Blog</router-link></li>
+          <li><router-link to="/landing/about" class="text-color" href="#">About</router-link></li>
+          <li><a class="text-color btn btn-default btn-lg button-sign" href="/login">Sign In</a></li>
         </ul>
       </div>
     </div>
