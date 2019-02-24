@@ -16,10 +16,10 @@
         <section class="col-xs-12 mt-xs-2 pr-xs-0 col-md-9">
         	<div class="col-xs-12  px-0 col-md-6">
         		<div class="col-xs-6 pl-0 col-md-6">
-		            <h4>MyOwnexchange</h4>
-		            <p> &copy; 2019 - 2023, MOEX</p>
-	                <p>Babylon Solutions Limited</p>
-	                <p>Seychelles Reg. No. 168830</p>
+		            <h4>MOEX</h4>
+		            <p> &copy; <span id="year">2019</span> MOEX</p>
+	                <p>MYOWN CONCEPTS WORLDWIDE LTD</p>
+	                <!-- p>Seychelles Reg. No. 168830</p -->
 		        </div>
 		        <div class="col-xs-6 col-md-6">
 		            <ul class="footer-list">
@@ -69,12 +69,16 @@
     		<hr  style="border: 1px solid rgba(218, 218, 218, 0.43);">
     	</div>
         <div class="col-md-12 px-0 foot">
-            <p class="col-xs-8 col-md-9">&copy; 2019 MOEX. All rights reserved.</p>
-            <p class="col-xs-4 col-md-3" style="margin-left: auto; text-align: right; cursor: pointer;" @click="scrollToTop"> Back to top</p>
+            <!-- p class="col-xs-8 col-md-9">&copy; 2019 MOEX. All rights reserved.</p -->
+            <p class="col-xs-4 col-md-3" style="margin-left: auto; text-align: right; cursor: pointer; float: right;" @click="scrollToTop"> Back to top</p>
         </div>
     </div>
+    
 </footer>
 </template>
+<!-- script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script -->
 
 <style scoped>
 	.btn-moex {
