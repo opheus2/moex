@@ -102,23 +102,50 @@ export default {
                 $state.complete();
             }
         },
+        amountCon: function (value) {
+        //     this.coinValue  = parseFloat((value.key / this.rate).toFixed(8));
+        //     this.usd_amount = parseFloat((value.key / this.cur_rate).toFixed(2));
+
+        //     console.log(value)
+
+        //     return [this.coinValue] [this.usd_amount];
+        },
+
+        coinCon: function (value) {
+        //     this.amount     = parseFloat((value.key * this.rate).toFixed(2));
+        //     this.usd_amount = parseFloat((value.key * this.usd_rate).toFixed(2));
+        //     console.log(value.key)
+
+        //     return [this.amount] [this.usd_amount];
+        },
+
+        usdCon: function (value) {
+        //     this.amount     = parseFloat((value.key * this.cur_rate).toFixed(2));
+        //     this.coinValue  = parseFloat((value.key / this.usd_rate).toFixed(8));
+
+        //     return this.amount;
+        }
 
     },
 
     watch: {
         amount: function (value) {
-            this.coinValue  = parseFloat((value / this.rate).toFixed(8));
-            this.usd_amount = parseFloat((value / this.cur_rate));
+            // this.coinValue  = parseFloat((value / this.rate).toFixed(8));
+            // this.usd_amount
+            // this.usd_amount = parseFloat((value / this.cur_rate)).toFixed(2);
+            // console.log('amount' + value)
         },
 
         coinValue: function (value) {
-            this.amount     = parseFloat((value * this.rate));
-            this.usd_amount = parseFloat((value * this.usd_rate));
+            this.amount     = parseFloat((value * this.rate).toFixed(2));
+            this.usd_amount = parseFloat((value * this.usd_rate).toFixed(2));
         },
 
         usd_amount: function (value) {
-            this.amount     = parseFloat((value * this.cur_rate));
-            // this.coinValue = parseFloat((value / this.rate).toFixed(8));
+            // this.amount     = parseFloat((value * this.cur_rate).toFixed(2));
+            // console.log('usd' + value)
+
+            // this.coinValue = parseFloat((value * this.cur_rate).toFixed(8));
             // this.amount = parseFloat((value / this.rate).toFixed(8));
         }
     },
