@@ -150,9 +150,9 @@
                 sellColumns: ['seller', 'payment_method', 'coin', 'amount_range', 'action'],
                 buyColumns: ['buyer', 'payment_method', 'coin', 'amount_range', 'action'],
                 options: {
-                    perPage: 10,
+                    perPage: 5,
                     filterable: false,
-                    sortable: ['payment_method', 'amount_range'],
+                    sortable: ['payment_method', 'amount_range', 'coin'],
                     skin: "table mytable table-bordered table-hover",
                 }
             }
@@ -186,7 +186,7 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        this.sellData.push({seller, payment_method , coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
+                        this.sellData.push({seller, payment_method , coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
