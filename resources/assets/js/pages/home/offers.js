@@ -102,38 +102,24 @@ export default {
                 $state.complete();
             }
         },
-        amountCon: function (value) {
-        //     this.coinValue  = parseFloat((value.key / this.rate).toFixed(8));
-        //     this.usd_amount = parseFloat((value.key / this.cur_rate).toFixed(2));
+        formatUsd: function (value) {
+            let currency = (this.currency == 'NGN') ? 'NGN' : 'USD';
 
-        //     console.log(value)
-
-        //     return [this.coinValue] [this.usd_amount];
+            return new Intl.NumberFormat(this.locale, {
+                style: 'currency', currencyDisplay: 'symbol', currency: currency
+            }).format(value);
         },
+        formatOfferCurrency: function (value) {
+            let currency = (this.currency) ? this.currency : 'USD';
 
-        coinCon: function (value) {
-        //     this.amount     = parseFloat((value.key * this.rate).toFixed(2));
-        //     this.usd_amount = parseFloat((value.key * this.usd_rate).toFixed(2));
-        //     console.log(value.key)
-
-        //     return [this.amount] [this.usd_amount];
+            return new Intl.NumberFormat(this.locale, {
+                style: 'currency', currencyDisplay: 'symbol', currency: currency
+            }).format(value);
         },
-
-        usdCon: function (value) {
-        //     this.amount     = parseFloat((value.key * this.cur_rate).toFixed(2));
-        //     this.coinValue  = parseFloat((value.key / this.usd_rate).toFixed(8));
-
-        //     return this.amount;
-        }
-
     },
 
     watch: {
         amount: function (value) {
-            // this.coinValue  = parseFloat((value / this.rate).toFixed(8));
-            // this.usd_amount
-            // this.usd_amount = parseFloat((value / this.cur_rate)).toFixed(2);
-            // console.log('amount' + value)
         },
 
         coinValue: function (value) {
@@ -142,11 +128,7 @@ export default {
         },
 
         usd_amount: function (value) {
-            // this.amount     = parseFloat((value * this.cur_rate).toFixed(2));
-            // console.log('usd' + value)
-
-            // this.coinValue = parseFloat((value * this.cur_rate).toFixed(8));
-            // this.amount = parseFloat((value / this.rate).toFixed(8));
+            
         }
     },
 
