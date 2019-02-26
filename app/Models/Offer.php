@@ -191,6 +191,10 @@ class Offer extends Model
             return ($user)? $user->id == $this->user->id: false;
         }
 
+        if($this->min_amount > $this->max_amount){
+            return false;
+        }
+
 
         if ($this->type == 'sell') {
             $balance = $this->user->getCoinAvailable($this->coin);
