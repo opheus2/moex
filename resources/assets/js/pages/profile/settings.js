@@ -37,13 +37,7 @@ export default {
                     initialCountry: 'auto',
                     nationalMode: false,
 
-                    geoIpLookup: function (callback) {
-                        $.get("https://ipinfo.io", function () {
-                        }, "jsonp")
-                         .always(function (resp) {
-                             callback((resp && resp.country) ? resp.country : "");
-                         });
-                    }
+                    
                 });
 
                 let data = phone.intlTelInput("getSelectedCountryData");
