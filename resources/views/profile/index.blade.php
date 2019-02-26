@@ -145,7 +145,7 @@
                                                     <tr>
                                                         <th></th>
                                                         <th class="all">{{__('Coin')}}</th>
-                                                        <th>{{__('Pay with')}}</th>
+                                                        <th>{{__('Pay Method')}}</th>
                                                         <th>{{__('Currency')}}</th>
                                                         <th class="all">{{__('Amount Range')}}</th>
                                                         <th class="all">{{__('Worth')}}</th>
@@ -157,7 +157,7 @@
                                                     <tr>
                                                         <th></th>
                                                         <th>{{__('Coin')}}</th>
-                                                        <th>{{__('Pay with')}}</th>
+                                                        <th>{{__('Payment Method')}}</th>
                                                         <th>{{__('Currency')}}</th>
                                                         <th>{{__('Amount Range')}}</th>
                                                         <th>{{__('Worth')}}</th>

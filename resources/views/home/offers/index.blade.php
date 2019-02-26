@@ -114,13 +114,13 @@
 
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-block btn-lg btn-success" {{!$offer->canTradeWith(Auth::user()) ? 'disabled': '' }}>
-                                                    <span class="font-large-1 text-bold-600" style="text-shadow: 1px 1px 1px #4d4d4d;">
+                                                    <span class="font-large-1 text-bold-600">
                                                         @if($offer->type == 'sell') {{__('BUY NOW!')}} @else {{__('SELL NOW!')}} @endif
                                                     </span>
-                                                    <br/>
+                                                    <!-- br/>
                                                     <small class="text-bold-500">
                                                         {{__('SECURE ESCROW + LIVE CHAT')}}
-                                                    </small>
+                                                    </small -->
                                                 </button>
                                             </div>
 

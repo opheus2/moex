@@ -5,7 +5,7 @@
                 <div class="w-93">
                     <span>Buy and Sell Bitcoins Easily</span>
                     <h6>exchange your bitoins for cash in minutes easily. It's safe, relaible and fast!. </h6>
-                    <a style="" class="text-color btn btn-default btn-lg button-sign" href="#">Sign Up</a>
+                    <a style="" class="text-color btn btn-default btn-lg button-sign" href="/register">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -170,8 +170,8 @@ Commission will be credited directly to your account and can be used immediately
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="button-group">
-                        <button class="btn btn-purple signup">SIGN UP</button>
-                        <button class="btn btn-white login">SIGN IN</button>
+                        <a class="btn btn-purple signup" href="/register">SIGN UP</a>
+                        <a class="btn btn-white login"  href="/login">SIGN IN </a>
                     </div>
                 </div>
             </div>
