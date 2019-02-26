@@ -74,6 +74,7 @@
         "vue-full-screen-file-drop": "^1.0.0",
         "vue-infinite-loading": "^2.3.5",
         "vue-perfect-scrollbar": "^0.1.0",
+        "vue-round-filter": "^1.1.2",
         "vue-router": "^3.0.2",
         "vue-scrollto": "^2.13.0",
         "vue-tables-2": "^1.4.70",
