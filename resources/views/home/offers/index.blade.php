@@ -61,7 +61,7 @@
                                             @endif
 
                                             <div class="form-group row">
-                                                <div class="col-4">
+                                                <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
                                                         {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
@@ -72,7 +72,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('amount', __('Amount in USD:')) !!}
                                                     <div class="input-group">
                                                         {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required','v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'step' =>"0.01", 'readonly']) !!}
@@ -83,7 +83,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
                                                         <div class="input-group">
