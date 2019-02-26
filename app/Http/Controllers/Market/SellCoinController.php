@@ -43,6 +43,9 @@ class SellCoinController extends Controller
                         }
                     ])->get();
             });
+            $offers = $offers->filter(function ($offer) {
+                return $offer->tradeShow($offer->user_id, true);
+            });
 
             if ($filter = $request->currency) {
                 $offers = $offers->where('currency', $filter);

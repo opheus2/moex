@@ -125,9 +125,11 @@ class Offer extends Model
      * @param User $user
      * @return bool|int|mixed
      */
-    public function verifyKyc(User $user)
+    public function verifyKyc($user)
     {
-        return ($this->kyc_verification) ? $user->verified_kyc : true;
+        $kyc = Kyc::select('verified')->where('user_id', $user->id)->first()->verified;
+
+        return ($this->kyc_verification) ? $kyc : true;
     }
 
     /**
@@ -187,6 +189,10 @@ class Offer extends Model
 
         if($this->user->schedule_deactivate || $this->user->schedule_delete){
             return ($user)? $user->id == $this->user->id: false;
+        }
+
+        if($this->min_amount > $this->max_amount){
+            return false;
         }
 
 
