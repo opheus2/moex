@@ -97,6 +97,11 @@ class BuyCoinController extends Controller
                         $data->multiplier(), $data->coin, $data->currency
                     );
                 })
+                ->addColumn('coin_rate_ngn', function ($data) {
+                    return get_price(
+                        $data->multiplier(), $data->coin, 'NGN'
+                    );
+                })
                 ->addColumn('action', function ($data) {
                     return view('market.buy_coin.partials.datatable.action')
                         ->with(compact('data'));
