@@ -125,9 +125,11 @@ class Offer extends Model
      * @param User $user
      * @return bool|int|mixed
      */
-    public function verifyKyc(User $user)
+    public function verifyKyc($user)
     {
-        return ($this->kyc_verification) ? $user->verified_kyc : true;
+        $kyc = Kyc::select('verified')->where('user_id', $user->id)->first()->verified;
+
+        return ($this->kyc_verification) ? $kyc : true;
     }
 
     /**

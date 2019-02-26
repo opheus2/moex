@@ -64,7 +64,7 @@
                                                 <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
+                                                        {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
                                                         {{-- {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!} --}}
 
                                                         <div class="input-group-append">
@@ -87,7 +87,7 @@
                                                     {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01", 'readonly']) !!}
+                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01", 'readonly']) !!}
                                                             {{-- {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!} --}}
 
                                                             <div class="input-group-append">
@@ -96,7 +96,7 @@
                                                         </div>
                                                     @else
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'readonly']) !!}
+                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'readonly']) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">{{ $offer->currency }}</span>
