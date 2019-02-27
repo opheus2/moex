@@ -53,7 +53,8 @@
                                                     <th>{{__('Currency')}}</th>
                                                     <th class="all">{{__('Amount Range')}}</th>
                                                     <th class="all">{{__('Worth')}}</th>
-                                                    <th>{{__('Coin Rate')}}</th>
+                                                    <th>{{__('Coin Rate (USD)')}}</th>
+                                                    <th>{{__('Coin Rate (NGN)')}}</th>
                                                     <th class="all">{{__('Action')}}</th>
                                                 </tr>
                                                 </thead>
@@ -66,7 +67,8 @@
                                                     <th>{{__('Currency')}}</th>
                                                     <th>{{__('Amount Range')}}</th>
                                                     <th>{{__('Worth')}}</th>
-                                                    <th>{{__('Coin Rate')}}</th>
+                                                    <th>{{__('Coin Rate (USD)')}}</th>
+                                                    <th>{{__('Coin Rate (NGN)')}}</th>
                                                     <th>{{__('Action')}}</th>
                                                 </tr>
                                                 </tfoot>
@@ -190,6 +192,7 @@
                         {data: 'amount_range', orderable: false, searchable: false},
                         {data: 'worth', searchable: false},
                         {data: 'coin_rate', searchable: false},
+                        {data: 'coin_rate_ngn', searchable: false},
                         {data: 'action', orderable: false},
                     ]
                 }

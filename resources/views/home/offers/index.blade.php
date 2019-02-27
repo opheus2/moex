@@ -61,32 +61,34 @@
                                             @endif
 
                                             <div class="form-group row">
-                                                <div class="col-4">
-                                                    {!! Form::label('amount', __('Amount in USD:')) !!}
-                                                    <div class="input-group">
-                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'step' =>"0.01"]) !!}
-
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text">USD</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-4">
+                                                <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
+                                                        {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!}
+                                                        {{-- {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!} --}}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">{{strtoupper($offer->coin)}}</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-lg-4 col-md-12">
+                                                    {!! Form::label('amount', __('Amount in USD:')) !!}
+                                                    <div class="input-group">
+                                                        {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required','v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'step' =>"0.01", 'readonly']) !!}
+                                                        {{-- {!! Form::number('usd_amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'step' =>"0.01"]) !!} --}}
+
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">USD</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!}
+                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01", 'readonly']) !!}
+                                                            {{-- {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!} --}}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">NGN</span>
@@ -94,7 +96,7 @@
                                                         </div>
                                                     @else
                                                         <div class="input-group">
-                                                            {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount]) !!}
+                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'readonly']) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">{{ $offer->currency }}</span>
@@ -112,13 +114,13 @@
 
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-block btn-lg btn-success" {{!$offer->canTradeWith(Auth::user()) ? 'disabled': '' }}>
-                                                    <span class="font-large-1 text-bold-600" style="text-shadow: 1px 1px 1px #4d4d4d;">
+                                                    <span class="font-large-1 text-bold-600">
                                                         @if($offer->type == 'sell') {{__('BUY NOW!')}} @else {{__('SELL NOW!')}} @endif
                                                     </span>
-                                                    <br/>
+                                                    <!-- br/>
                                                     <small class="text-bold-500">
                                                         {{__('SECURE ESCROW + LIVE CHAT')}}
-                                                    </small>
+                                                    </small -->
                                                 </button>
                                             </div>
 
@@ -326,6 +328,7 @@
                 'rate' => $rate,
                 'usd_rate' => $usd_rate,
                 'cur_rate' => $currencyRate,
+                'currency' => $offer->currency,
 
             ]) !!}
     </script>

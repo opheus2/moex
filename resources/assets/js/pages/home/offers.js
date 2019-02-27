@@ -102,24 +102,33 @@ export default {
                 $state.complete();
             }
         },
+        formatUsd: function (value) {
+            let currency = (this.currency == 'NGN') ? 'NGN' : 'USD';
 
+            return new Intl.NumberFormat(this.locale, {
+                style: 'currency', currencyDisplay: 'symbol', currency: currency
+            }).format(value);
+        },
+        formatOfferCurrency: function (value) {
+            let currency = (this.currency) ? this.currency : 'USD';
+
+            return new Intl.NumberFormat(this.locale, {
+                style: 'currency', currencyDisplay: 'symbol', currency: currency
+            }).format(value);
+        },
     },
 
     watch: {
         amount: function (value) {
-            this.coinValue  = parseFloat((value / this.rate).toFixed(8));
-            this.usd_amount = parseFloat((value / this.cur_rate));
         },
 
         coinValue: function (value) {
-            this.amount     = parseFloat((value * this.rate));
-            this.usd_amount = parseFloat((value * this.usd_rate));
+            this.amount     = parseFloat((value * this.rate).toFixed(2));
+            this.usd_amount = parseFloat((value * this.usd_rate).toFixed(2));
         },
 
         usd_amount: function (value) {
-            this.amount     = parseFloat((value * this.cur_rate));
-            // this.coinValue = parseFloat((value / this.rate).toFixed(8));
-            // this.amount = parseFloat((value / this.rate).toFixed(8));
+            
         }
     },
 
