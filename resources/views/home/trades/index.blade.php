@@ -361,7 +361,7 @@
 
                     </div>
                 </section>
-
+                <div v-if="status !== 'successful'">
                 <section class="chat-app-form">
                     <form class="chat-app-input d-flex">
                         <fieldset class="form-group position-relative has-icon-left col-9 col-sm-10 m-0">
@@ -381,6 +381,12 @@
                         </fieldset>
                     </form>
                 </section>
+              </div>
+              <div v-else>
+                <section class="chat-app-done">
+                    
+                </section>
+              </div>
             </div>
         </div>
     </home-trades-page>
