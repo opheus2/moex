@@ -73,6 +73,7 @@
         "vue-disable-autocomplete": "0.0.4",
         "vue-full-screen-file-drop": "^1.0.0",
         "vue-infinite-loading": "^2.3.5",
+        "vue-multiselect": "^2.1.3",
         "vue-perfect-scrollbar": "^0.1.0",
         "vue-router": "^3.0.2",
         "vue-scrollto": "^2.13.0",
