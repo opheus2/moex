@@ -8,6 +8,8 @@ import contact  from './components/contact'
 import faq      from './components/faq'
 import career   from './components/career'
 import blog     from './components/blog'
+import api     from './components/api'
+import about     from './components/about'
 
 Vue.use(Router)
 
@@ -53,6 +55,16 @@ export default new Router({
             path: '/landing/faq',
             name: 'Faq',
             component: faq
+        },
+        {
+            path: '/landing/api',
+            name: 'Api',
+            component: api
+        },
+        {
+            path: '/landing/about',
+            name: 'About',
+            component: about
         }
     ],
     scrollBehavior (to, from, savedPosition) {
