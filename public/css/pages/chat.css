@@ -42,13 +42,6 @@
   overflow: hidden;
 }
 
-.chat-application .chat-app-done {
-  position: relative;
-  padding: 20px 10px;
-  background-color: #ffffff;
-  overflow: hidden;
-}
-
 .chat-application .chats {
   padding: 0;
 }

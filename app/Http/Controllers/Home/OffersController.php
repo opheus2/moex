@@ -156,7 +156,7 @@ class OffersController extends Controller
                     'label' => $offer->label,
                     'payment_method' => $offer->payment_method,
                     'deadline' => $offer->deadline,
-                    'amount' => $request->amount,
+                    'amount' => get_percentage($request->amount, get_fee_percentage($request->coin)),
                     'rate' => $rate
                 ]);
 

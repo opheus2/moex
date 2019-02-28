@@ -132,7 +132,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::text('min_amount', null, ['class' => 'form-control', 'required', ':value' => 'minAmount', 'novalidate']) !!}
+                                                        {!! Form::text('min_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -143,7 +143,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::text('max_amount', null, ['class' => 'form-control', 'required', ':value' => 'minAmount', 'novalidate']) !!}
+                                                        {!! Form::text('max_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -260,11 +260,11 @@
                 'coins' => get_coins(),
                 'coin_prices' => get_prices(),
                 'btc_min'   => $min_btc_amount,
-                'btc_max'   => $max_btc_amount,
+                'btc_max'   => Auth::user()->wallet('btc')->totalAvailable(),
                 'ltc_min'   => $min_ltc_amount,
-                'ltc_max'   => $max_ltc_amount,
+                'ltc_max'   => Auth::user()->wallet('ltc')->totalAvailable(),
                 'dash_min'  => $min_dash_amount,
-                'dash_max'  => $max_dash_amount,
+                'dash_max'  => Auth::user()->wallet('dash')->totalAvailable(),
             ]) !!}
     </script>
 @endpush

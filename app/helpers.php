@@ -790,6 +790,34 @@ if (!function_exists('get_fee_percentage')) {
     }
 }
 
+if (!function_exists('get_percentage')) {
+    /**
+     * Get trading fee
+     *
+     * @param $coin
+     * @return mixed
+     */
+    function get_percentage($amount, $percentage)
+    {
+        $percent = $percentage / 100;
+        return  $percent;
+    }
+}
+
+if (!function_exists('get_trade_amount')) {
+    /**
+     * Get trading fee
+     *
+     * @param $coin
+     * @return mixed
+     */
+    function get_trade_amount($amount, $percentage)
+    {
+        $percent = $percentage / 100;
+        return  $amount - $percent;
+    }
+}
+
 if (!function_exists('calc_fee')) {
 
     /**

@@ -20,16 +20,13 @@
                 </div>
             </div>
         </div>
-        <div class="" style="margin-bottom:5%;">
-            <h4 class="trade" style="margin-top:5%;margin-bottom:0%; text-align:center">Trade Offers</h4>
-            <div class="d-flex justify-content-center">
+        <div class="table-container">
+            <h5 class="trade" style="text-align:center">Trade Offers</h5>
+            <div class="d-flex justify-content-center" style="margin-bottom:12px;">
                 <div class="d-flex justify-content-between w-93 sm-block" style="margin-top:0%;margin-bottom:0%;">
                     <div class="pl-0 d-flex child">
-                        <h6 class="buy-cash lg-hide " style="margin-bottom:0px; margin-right:15px; margin-top:15px;" >Buy Bitcoins with </h6>
-                        <div class="button-group">
-                            <select2 v-model="selectedPaymentMethod" :options="paymentMethods"/>
-                        </div>
-                        <div class="button-group sm-hide">
+                        <select2 v-model="selectedPaymentMethod" :options="paymentMethods"/>
+                        <div class="sm-hide">
                             <select class="form-control" disabled>
                                 <option>In Nigeria</option>
                             </select>
@@ -37,22 +34,18 @@
                         </div>
                     </div>
                     <div class="d-flex child">
-                        <div class="button-group">
-                            <button @click="tableType = 'sell'" class="btn" :class="tableType === 'sell' ? 'btn-purple' : 'btn-white'">Sell Bitcoin</button>
-                        </div>
-                        <div class="button-group">
-                            <button @click="tableType = 'buy'" class="btn" :class="tableType === 'buy' ? 'btn-purple' : 'btn-white'">Buy Bitcoin</button>
-                        </div>
-                        <div class="button-group lg-hide" style="float:right; margin-left: 5px; ">
-                            <select class="form-control" disabled>
-                                <option>In Nigeria</option>
-                            </select>
-                        </div>
+                        <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
+                        <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                        <select class="form-control hidden-xs" disabled>
+                            <option>In Nigeria</option>
+                        </select>
                     </div>
                 </div>
             </div>
+            <div>
+                <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
+            </div>
         </div>
-        <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
         <div class="d-flex justify-content-center security" style="width: 100%">
             <div class="row w-93">
                 <h6 class="notch">Features</h6>
@@ -178,8 +171,41 @@ Commission will be credited directly to your account and can be used immediately
         </div>
     </div>
 </template>
-<style scoped>
-
+<style>
+    .mylink {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ededed;
+        display: block;
+        width: 150px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .mylink:hover {
+        /* text-decoration: none; */
+        color: #ffffff;
+    }
+    .link-active {
+        color: white;
+        text-decoration:underline white;
+    }
+    .select2 {
+        width: 170px !important;
+    }
+    .select2-selection__rendered {
+        color: #6C63FF;
+    }
+    .select2-container--default .select2-selection--single {
+        border-radius: 2px;
+        border-color:rgba(107, 99, 255, 0.246)
+    }
+    .table-container {
+        background-color: #6C63FF;
+        padding-top: 10px;
+    }
+    .table-container > h5 {
+        color: #ffffff;
+    }
 </style>
 <script>
     import Select2 from 'v-select2-component';
