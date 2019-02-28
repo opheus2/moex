@@ -138,7 +138,10 @@ class OffersController extends Controller
                 $offer->multiplier(), $offer->coin, $offer->currency, false
             );
 
+            dd($rate);
+
             $trade->type = ($offer->type == 'sell') ? 'buy' : 'sell';
+            dd($request->all());
 
             try {
 
@@ -146,14 +149,14 @@ class OffersController extends Controller
                     'coin' => $offer->coin,
                     'partner_id' => $offer->user->id,
                     'offer_id' => $offer->id,
-                    'currency' => $offer->coin,
+                    'currency' => $offer->currency,
                     'fee' => get_fee_percentage($offer->coin),
                     'offer_terms' => $offer->terms,
                     'instruction' => $offer->trade_instruction,
                     'label' => $offer->label,
                     'payment_method' => $offer->payment_method,
                     'deadline' => $offer->deadline,
-                    'amount' => $request->amount,
+                    'amount' => get_percentage($request->amount, get_fee_percentage($request->coin)),
                     'rate' => $rate
                 ]);
 

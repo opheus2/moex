@@ -68,7 +68,8 @@ class CreateOfferController extends Controller
             // $max_offer_amount = currency_convert(
             //     (float) config('settings.max_offer_amount'), 'USD', $currency
             // );
-            $max_offer_amount    = get_convert(config('settings.max_offer_amount'), $request->coin,  config('settings.default_currency'));
+            // $max_offer_amount    = get_convert(config('settings.max_offer_amount'), $request->coin,  config('settings.default_currency'));
+            $max_offer_amount    = Auth::user()->wallet($request->coin)->totalAvailable();
             
             $max_amount_rule = "required|numeric|max:{$max_offer_amount}|gte:min_amount";
         }else{
@@ -106,16 +107,17 @@ class CreateOfferController extends Controller
 
                 $offer->fill($request->only([
                     'coin', 'payment_method', 'currency', 'label', 'trade_instruction',
-                    'profit_margin', 'tags', 'min_amount', 'max_amount', 'deadline', 'terms',
+                    'tags', 'min_amount', 'max_amount', 'deadline', 'terms',
                 ]));
 
                 $offer->fill([
-                    'trusted_offer'      => $request->filled('trusted_offer'),
-                    'phone_verification' => $request->filled('phone_verification'),
-                    'email_verification' => $request->filled('email_verification'),
-                    'kyc_verification' => $request->filled('kyc_verification'),
-                    'type'               => $type,
-                    'user_trade_in'      => strtoupper($request->coin),
+                    'trusted_offer'         => $request->filled('trusted_offer'),
+                    'phone_verification'    => $request->filled('phone_verification'),
+                    'email_verification'    => $request->filled('email_verification'),
+                    'kyc_verification'      => $request->filled('kyc_verification'),
+                    'type'                  => $type,
+                    'user_trade_in'         => strtoupper($request->coin),
+                    'profit_margin'         => $request->profit_margin + get_fee_percentage($request->coin),
                 ]);
 
                 if (!$offer->token) {
