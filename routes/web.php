@@ -474,7 +474,7 @@ Route::group([], function () {
                 Route::get('/reject/{id}',  'KycController@reject');
                 Route::post('data',         'KycController@data')->name('data');
 
-                
+
             });
 
             Route::group([
@@ -483,7 +483,7 @@ Route::group([], function () {
             ], function () {
                 // Index
                 Route::get('', 'ReferralController@index')->name('index');
-                
+
             });
 
             // Users Page
@@ -641,7 +641,7 @@ Route::group([], function () {
                 Route::post('data', 'TradesController@data')->name('data');
             });
 
-            // Manage Referrals 
+            // Manage Referrals
             Route::group(['as' => 'referrals.', 'prefix' => 'referrals'], function () {
                 Route::get('', 'ReferralController@index')->name('index');
             });

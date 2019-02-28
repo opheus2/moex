@@ -131,6 +131,94 @@
   bottom: 0;
 }
 
+.containers .about-inner {
+  width: 93%;
+  padding: 50px 0px;
+}
+
+.containers .about-inner .title {
+  font-family: Nunito;
+  font-weight: bold;
+  line-height: 49px;
+  font-size: 24px;
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.containers .about-inner .body {
+  font-family: Nunito;
+  line-height: 37px;
+  font-size: 18px;
+  color: #878787;
+  margin-bottom: 50px;
+}
+
+.containers .about-inner .header .body {
+  width: 80%;
+}
+
+.containers .about-inner .icon {
+  min-width: 55px;
+  max-width: 55px;
+  min-height: 55px;
+  max-height: 55px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.containers .about-inner .icon i {
+  font-size: 28px;
+  color: #FFFFFF;
+}
+
+.containers .about-inner .left-icon {
+  background-color: #FF6663;
+}
+
+.containers .about-inner .right-icon {
+  background-color: #8AC541;
+}
+
+.containers .about-inner .top {
+  font-family: Nunito;
+  font-size: 15.9519px;
+  color: #878787;
+  margin-bottom: 0px;
+}
+
+.containers .about-inner .bottom {
+  font-family: Nunito;
+  font-size: 22.5px;
+  color: #878787;
+  margin-bottom: 0px;
+}
+
+.containers .about-inner .lower {
+  font-family: Nunito;
+  font-size: 13.673px;
+  color: #878787;
+  margin-top: 13px;
+  width: 35%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 @media (max-width: 768px) {
   .containers .flex-container {
     display: block !important;
