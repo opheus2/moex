@@ -1,21 +1,12 @@
 <template>
-    <div>
+    <!-- <div style="background-color: white;">
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
-            <div slot="seller" slot-scope="props" class="user-tag h-50p d-flex align-items-center">
-                <span class="media-left d-none d-sm-block pr-1">
-                    <span  class="avatar avatar-md rounded-circle avatar-off">
-                        <img  src="http://expresscargo.me/images/objects/avatar.png" width="50px" height="50px" style="border-radius: 50%;" alt="avatar">
-                        <i ></i>
-                    </span>
-                </span>
-                <div>
-                    <div class="">
-                        <a  :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">{{ props.row.seller }}</a><br >
-                    </div>
-                    <div class="blue-grey font-small-3 lighten-2 alert-primary">
-                        {{ props.row.user.status }}
-                    </div>
-                </div>
+            <div slot="seller" slot-scope="props" class="user-tag h-50p d-flex">
+                <a style="color: black"  :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">
+                    {{ props.row.seller }} &nbsp;(100%)
+                </a>
+                <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
+                <div class="notif" :class="props.row.user.identityDetails.verified ? 'bg-blue' : 'bd-red'"><i></i></div>
             </div>
             <div slot="coin" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.coin }}</p></div>
             <div slot="payment_method" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
@@ -50,8 +41,9 @@
                 <a :href="`/home/offer/${props.row.token}`" class="btn btn-primary px-2">Sell</a>
             </div>
         </v-client-table>
-    </div>
-    <!--<div class="">
+    </div> -->
+    <div class="" style="background-color: white;">
+
       <div style="overflow-x:auto;">
           <table class="table table-hover table-responsive responsive" id="tableView" style="">
               <thead>
@@ -135,7 +127,7 @@
               </tbody>
           </table>
       </div>
-  </div>-->
+  </div>
 </template>
 
 <script>
@@ -152,8 +144,8 @@
                 options: {
                     perPage: 5,
                     filterable: false,
-                    sortable: ['payment_method', 'amount_range', 'coin'],
-                    skin: "table mytable table-bordered table-hover",
+                    sortable: [/* 'payment_method', 'amount_range', 'coin' */],
+                    skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
                 }
             }
         },
@@ -173,11 +165,14 @@
         created () {
             window.axios.get(`/api/offers/test-sell`)
                 .then(res => {
-                    let response = [];
+                    let response = JSON.parse(res.data.data);
+                    debugger;
                     for (let data in res.data.data) {
-                        if (res.data.data.hasOwnProperty(data))
+                        if (res.data.data.hasOwnProperty(data)) {
                             response.push(res.data.data[data]);
+                        }
                     }
+                    debugger;
                     response.forEach (data => {
                         let seller = data.user.name;
                         let user = data.user;
@@ -235,8 +230,27 @@
 </script>
 
 <style>
-  .VuePagination {
-    margin: 0px !important;
-    padding: 0px !important;
-  }
+    .VuePagination {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .notif {
+        margin-top: 4px;
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%; 
+    }
+    .bg-green {
+        background-color: green;
+    }
+    .bg-blue {
+        background-color: blue;
+    }
+    .bg-orange {
+        background-color: orange;
+    }
+    .bg-red {
+        background-color: red;
+    }
 </style>
