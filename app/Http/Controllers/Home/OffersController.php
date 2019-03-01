@@ -138,10 +138,8 @@ class OffersController extends Controller
                 $offer->multiplier(), $offer->coin, $offer->currency, false
             );
 
-            dd($rate);
 
             $trade->type = ($offer->type == 'sell') ? 'buy' : 'sell';
-            dd($request->all());
 
             try {
 
