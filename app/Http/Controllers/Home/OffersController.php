@@ -140,7 +140,6 @@ class OffersController extends Controller
 
 
             $trade->type = ($offer->type == 'sell') ? 'buy' : 'sell';
-            dd($request->all());
 
             try {
 
