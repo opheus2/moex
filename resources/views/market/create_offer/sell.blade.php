@@ -123,6 +123,7 @@
                                                     <b>@{{ coins[coin] }}</b>
                                                     {{__('sale')}}.
                                                 </p>
+                                                <p class="card-text">{{__('NB: An additional 1% will be added to the total percentage, But you get the value of what you you inserted')}} </p>
                                             </div>
                                         </div>
                                         <div class="col-md-6">

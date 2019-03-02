@@ -27,7 +27,7 @@ class BuyCoinController extends Controller
     public function data(Request $request)
     {
         if ($request->ajax()) {
-            $offers = Cache::remember("offers.sell", 30, function () {
+            $offers = Cache::remember("offers.sell", 0, function () {
                 return Offer::has('user')
                     ->where('type', 'sell')->where('status', true)
                     ->with([
@@ -48,14 +48,14 @@ class BuyCoinController extends Controller
             $offers = $offers->filter(function ($offer) {
                 return $offer->tradeShow($offer->user_id, true);
             });
-    
+
     
             if ($filter = $request->currency) {
                 $offers = $offers->where('currency', $filter);
             }
     
             if ($filter = $request->amount) {
-                $offers = $offers->where('min_amount', '<=', $filter)->where('max_amount', '>=', $filter);
+                $offers = $offers->where('min_amount', '<=', $filter)->where('max_amount_with_fee', '>=', $filter);
             }
     
             if ($filter = $request->coin) {
@@ -69,6 +69,8 @@ class BuyCoinController extends Controller
             $offers = $offers->filter(function ($offer) {
                 return $offer->canShow(Auth::user(), true);
             });
+
+
 
 
             return DataTables::of($offers)
@@ -85,7 +87,7 @@ class BuyCoinController extends Controller
                 })
                 ->addColumn('amount_range', function ($data) {
                     $min = $data->min_amount . $data->coin;
-                    $max = $data->max_amount . $data->coin;
+                    $max = $data->max_amount_with_fee . $data->coin;
 
                     return "<b>{$min}</b>" . ' - ' . "<b>{$max}</b>";
                 })

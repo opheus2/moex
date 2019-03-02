@@ -189,7 +189,7 @@ class Offer extends Model
             return ($user)? $user->id == $this->user->id: false;
         }
 
-        if($this->min_amount > $this->max_amount){
+        if($this->min_amount > $this->max_amount_with_fee){
             return false;
         }
 

@@ -34,25 +34,25 @@ class OffersController extends Controller
                 $rate_formatted = get_price($offer->multiplier(), $offer->coin, 'NGN');
                 $currencyRate   = $this->getRate($offer->currency, 'NGN');
                 $min_cur_amount = get_price($offer->min_amount, $offer->coin, 'NGN', false);
-                $max_cur_amount = get_price($offer->max_amount, $offer->coin, 'NGN', false);
+                $max_cur_amount = get_price($offer->max_amount_with_fee, $offer->coin, 'NGN', false);
             }else{
                 $rate           = get_price($offer->multiplier(), $offer->coin, $offer->currency, false);
                 $rate_formatted = get_price($offer->multiplier(), $offer->coin, $offer->currency);
                 $currencyRate   = $this->getRate($offer->currency, 'USD');
                 $min_cur_amount = get_price($offer->min_amount, $offer->coin, $offer->currency, false);
-                $max_cur_amount = get_price($offer->max_amount, $offer->coin, $offer->currency, false);
+                $max_cur_amount = get_price($offer->max_amount_with_fee, $offer->coin, $offer->currency, false);
             }
 
             $usd_rate           = get_price($offer->multiplier(), $offer->coin, 'USD', false);
             $usd_rate_formatted = get_price($offer->multiplier(), $offer->coin, 'USD');
             $min_usd_amount     = get_price($offer->min_amount, $offer->coin, 'USD', false);
-            $max_usd_amount     = get_price($offer->max_amount, $offer->coin, 'USD', false);
+            $max_usd_amount     = get_price($offer->max_amount_with_fee, $offer->coin, 'USD', false);
 
             // $min_amount = money($offer->min_amount, $offer->currency, true);
             // $max_amount = money($offer->max_amount, $offer->currency, true);
 
             $min_amount = $offer->min_amount . $offer->coin;
-            $max_amount = $offer->max_amount . $offer->coin;
+            $max_amount = $offer->max_amount_with_fee . $offer->coin;
 
             
 
@@ -140,6 +140,8 @@ class OffersController extends Controller
 
 
             $trade->type = ($offer->type == 'sell') ? 'buy' : 'sell';
+//            $percent = get_percentage($request->amount, get_fee_percentage($request->coin));
+//            $amount = $request->amount - $percent;
 
             try {
 
@@ -154,9 +156,14 @@ class OffersController extends Controller
                     'label' => $offer->label,
                     'payment_method' => $offer->payment_method,
                     'deadline' => $offer->deadline,
-                    'amount' => get_percentage($request->amount, get_fee_percentage($request->coin)),
-                    'rate' => $rate
+                    'amount' => $request->amount,
+                    'rate' => $request->offer_cur,
                 ]);
+
+                $update_max_account  = $offer->max_amount - ($request->amount + (float) config()->get("settings.{$offer->coim}.locked_balance"));
+                $offer->max_amount = $update_max_account;
+                $offer->max_amount_with_fee = $offer->max_amount_with_fee - ($request->amount + (float) config()->get("settings.{$offer->coim}.locked_balance"));
+                $offer->save();
 
                 if (!$trade->token) $trade->setToken();
 
