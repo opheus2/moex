@@ -84,19 +84,21 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-12">
-                                                    {!! Form::label('amount', __('Amount in Currency:')) !!}
                                                     @if($offer->currency == 'USD')
+                                                        {!! Form::label('amount', __('Amount in NGN:')) !!}
                                                         <div class="input-group">
                                                             {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01", 'readonly']) !!}
-                                                            {{-- {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!} --}}
+                                                             {!! Form::number('offer_cur', null, ['class' => 'form-control', 'required', 'hidden', 'v-model.number' => 'usd_amount', 'min' => $min_usd_amount,  'max' => $max_usd_amount, 'readonly', 'step' =>"0.01"]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">NGN</span>
                                                             </div>
                                                         </div>
                                                     @else
+                                                        {!! Form::label('amount', __("Amount in :currency:' ['currency' => $offer->currency ]")) !!}
                                                         <div class="input-group">
                                                             {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'readonly']) !!}
+                                                            {!! Form::number('offer_cur', null, ['class' => 'form-control', 'required', 'hidden', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!}
 
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">{{ $offer->currency }}</span>

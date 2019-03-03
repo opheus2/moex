@@ -118,6 +118,7 @@ class CreateOfferController extends Controller
                     'type'                  => $type,
                     'user_trade_in'         => strtoupper($request->coin),
                     'profit_margin'         => $request->profit_margin + get_fee_percentage($request->coin),
+                    'max_amount_with_fee'   => get_max_with_fee_percentage($request->max_amount, $request->coin),
                 ]);
 
                 if (!$offer->token) {
