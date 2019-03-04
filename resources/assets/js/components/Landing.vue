@@ -25,13 +25,16 @@
             <div class="d-flex justify-content-center" style="margin-bottom:12px;">
                 <div class="d-flex justify-content-between w-93 sm-block" style="margin-top:0%;margin-bottom:0%;">
                     <div class="pl-0 d-flex child">
-                        <select2 v-model="selectedPaymentMethod" :options="paymentMethods"/>
-                        <select v-model="selectedCoin" id="selectedCoin" style="margin-left: 5px" class="form-control">
-                            <option value="All">All Coins</option>
-                            <option value="BTC">BitCoin</option>
-                            <option value="LTC">LiteCoin</option>
-                            <option value="DSH">DashCoin</option>
-                        </select>
+                        <select2 v-model="selectedPaymentMethod" class="w-sm-100 pl-sm-0" :options="paymentMethods"/>
+                        <div class="w-sm-100">
+                            <select v-model="selectedCoin" id="selectedCoin" style="margin-left: 5px" class="form-control">
+                                <option value="All">All Coins</option>
+                                <option value="BTC">BitCoin</option>
+                                <option value="LTC">LiteCoin</option>
+                                <option value="DSH">DashCoin</option>
+                            </select>
+                        </div>
+                        
                         <!-- <div class="sm-hide">
                             <select class="form-control" disabled>
                                 <option>In Nigeria</option>
@@ -39,11 +42,15 @@
                         </div> -->
                     </div>
                     <div class="d-flex child mt-sm-2">
-                        <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
-                        <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
-                        <select class="form-control" disabled>
-                            <option>In Nigeria</option>
-                        </select>
+                        <div class="w-sm-100 d-flex">
+                            <a @click.prevent="tableType = 'sell'" class="mylink w-sm-100 pl-sm-0" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
+                            <a @click.prevent="tableType = 'buy'" class="mylink w-sm-100" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                        </div>
+                        <div class="w-sm-100 col-sm-6 pr-sm-0">
+                            <select class="form-control" disabled>
+                                <option>In Nigeria</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,8 +201,10 @@ Commission will be credited directly to your account and can be used immediately
         color: white;
         text-decoration:underline white;
     }
-    .select2 {
-        width: 170px !important;
+    @media (min-width: 760px) {
+        .select2 {
+            width: 170px !important;
+        }
     }
     .select2-selection__rendered {
         color: #6C63FF;
@@ -215,6 +224,17 @@ Commission will be credited directly to your account and can be used immediately
     }
     .table-container > h5 {
         color: #ffffff;
+    }
+    @media (min-width: 300px) and (max-width: 760px ){
+        .pl-sm-0 {
+            padding-left: 0;
+        }
+        .w-sm-100 {
+            width: 100% !important;
+        }
+        .pr-sm-0 {
+            padding-right: 0;
+        }
     }
 </style>
 <script>

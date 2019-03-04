@@ -113,7 +113,7 @@ class OffersController extends Controller
         }
 
         $offers = $offers->filter(function ($offer) {
-            return $offer->canShow();
+            return $offer->tradeShow();
         });
 
         return paginate($offers, 100);
