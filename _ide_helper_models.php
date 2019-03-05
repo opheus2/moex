@@ -109,6 +109,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $user_trade_in
  * @property string $kyc_verification
+ * @property string $max_amount_with_fee
  * @property-read \App\Models\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer newQuery()
@@ -122,6 +123,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereKycVerification($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereLabel($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereMaxAmount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereMaxAmountWithFee($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer whereMinAmount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer wherePaymentMethod($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Offer wherePhoneVerification($value)
