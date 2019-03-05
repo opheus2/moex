@@ -1,45 +1,55 @@
 <template>
-    <div style="background-color: white;">
+    <div class="table-view">
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
-            <div slot="seller" slot-scope="props" class="user-tag h-50p d-flex">
-                <a style="color: black"  :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">
+            <div slot="seller" slot-scope="props" class="user-tag d-flex">
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.seller}`" class="text-capitalize">
                     {{ props.row.seller }} &nbsp;(100%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" :class="props.row.isVerified ? 'bg-blue' : 'bg-red'"><i></i></div>
+                <div class="notif" >
+                    <span class="fa-stack">
+                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
+                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
+                    </span>
+                </div>
             </div>
-            <div slot="price(N)" class="h-50p d-flex  align-items-center" slot-scope="props">
-                <p>N{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
+            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+                <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex h-50p  align-items-center">
+            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
-            <div slot="payment_method" class="h-50p d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex h-50p align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
-            <div slot="action" slot-scope="props" class="d-flex h-50p  align-items-center" style="width: 30px;" >
-                <a :href="`/home/offer/${props.row.token}`" class="btn btn-purple px-2">Buy</a>
+            <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
+            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;" >
+                <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Buy</a>
             </div>
 
         </v-client-table>
 
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
-            <div slot="buyer" slot-scope="props" class="user-tag h-50p d-flex">
-                <a style="color: black"  :href="`/profile/${props.row.buyer}`" class="media-heading text-capitalize">
+            <div slot="buyer" slot-scope="props" class="user-tag d-flex">
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.buyer}`" class="text-capitalize">
                     {{ props.row.buyer }} &nbsp;(100%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" :class="props.row.isVerified ? 'bg-blue' : 'bg-red'"><i></i></div>
+                <div class="notif" >
+                    <span class="fa-stack">
+                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
+                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
+                    </span>
+                </div>
             </div>
-            <div slot="price(N)" class="h-50p d-flex  align-items-center" slot-scope="props">
-                <p>N{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
+            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+                <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex h-50p  align-items-center">
+            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
-            <div slot="payment_method" class="h-50p d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex h-50p align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
-            <div slot="action" slot-scope="props" class="d-flex h-50p  align-items-center" style="width: 30px;" >
-                <a :href="`/home/offer/${props.row.token}`" class="btn btn-purple px-2">Sell</a>
+            <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
+            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;">
+                <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Sell</a>
             </div>
         </v-client-table>
     </div>
@@ -140,11 +150,12 @@
                 tableData: [],
                 sellData: [],
                 buyData: [],
-                sellColumns: ['seller', 'payment_method', 'price(N)', 'price{USD}' ,'limit{BTC}', 'action'],
-                buyColumns: ['buyer', 'payment_method', 'price(N)', 'price{USD}' ,'limit{BTC}', 'action'],
+                sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
+                buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 options: {
                     perPage: 5,
                     filterable: false,
+                    perPageValues: [],
                     sortable: [/* 'payment_method', 'amount_range', 'coin' */],
                     skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
                 },
@@ -278,15 +289,36 @@
         margin: 0px !important;
         padding: 0px !important;
     }
+    .table-view {
+        background-color: white;
+        padding: 10px;
+    }
+    .table-view td > div {
+        height: 30px;
+    }
+    .table-view td > div p {
+        margin: 0;
+    }
+    .table-view th {
+        font-size: 18px;
+    }
+    .table-view td {
+        font-size: 16px;
+    }
+    .mybtn {
+        height: 30px;
+        padding: 3px 10px;
+    }
     .notif {
         margin-top: 4px;
         margin-left: 5px;
-        width: 15px;
-        height: 15px;
+        width: 19px;
+        height: 19px;
         border-radius: 50%; 
+        font-size: 10px;
     }
     .bg-green {
-        background-color: green;
+        background-color: #02d802;
     }
     .bg-blue {
         background-color: blue;
@@ -296,5 +328,17 @@
     }
     .bg-red {
         background-color: red;
+    }
+
+    @media (min-width: 300px) and (max-width: 760px ){
+        .table-view th {
+            font-size: 16px;
+        }
+        .table-view td {
+            font-size: 15px;
+        }
+        .mt-sm-2 {
+            margin-top: 10px;
+        }
     }
 </style>
