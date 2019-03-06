@@ -192,14 +192,19 @@ class TradesController extends Controller
     {
         if ($request->ajax()) {
             $trades = Trade::where('token', $token)
-                ->has('user')->has('partner')->get()
-                ->filter(function ($trade) {
-                    return $trade->party(Auth::user(), 'moderator');
-                });
+                ->has('user')->has('partner')->get();
+                // ->filter(function ($trade) {
+                //     return $trade->party(Auth::user(), 'moderator');
+                // });
 
             if ($trade = $trades->first()) {
                 $trade->status = 'cancelled';
                 $trade->save();
+
+                $offer = Offer::where('id', $trade->offer_id)->first();
+                $offer->max_amount = $offer->max_amount + $trade->amount;
+                $offer->max_amount_with_fee = $offer->max_amount_with_fee + $trade->amount;
+                $offer->save();
 
                 broadcast(new TradeStatusUpdated($trade));
 

@@ -217,6 +217,12 @@
                                                                    data-text="{{__("You should upload the proof of payment, just in case the seller raises a dispute!")}}">
                                                                     <i class="la la-check-circle"></i> {{__('CONFIRM PAYMENT')}}
                                                                 </a>
+
+                                                                <a href="{{route('home.trades.cancel', ['token' => $trade->token])}}" data-swal="confirm-ajax"
+                                                                    class="btn btn-secondary btn-sm box-shadow-1 round mb-1" data-icon="warning" data-ajax-type="POST"
+                                                                    data-text="{{__("The coin held on escrow will be returned back to the seller!")}}">
+                                                                     <i class="la la-ban"></i> {{__('CANCEL TRADE')}}
+                                                                 </a>
                                                             </span>
                                                         @endif
 

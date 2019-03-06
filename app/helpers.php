@@ -800,7 +800,7 @@ if (!function_exists('get_max_with_fee_percentage')) {
     function get_max_with_fee_percentage($amount, $coin)
     {
         $percent = get_fee_percentage($coin) / 100;
-        return  $amount - $percent;
+        return  round( ($amount - $percent), 8);
     }
 }
 if (!function_exists('get_percentage')) {
