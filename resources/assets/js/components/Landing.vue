@@ -43,8 +43,12 @@
                     </div>
                     <div class="d-flex child mt-sm-2">
                         <div class="w-sm-100 d-flex">
-                            <a @click.prevent="tableType = 'sell'" class="mylink w-sm-100 pl-sm-0" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
-                            <a @click.prevent="tableType = 'buy'" class="mylink w-sm-100" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                            <div class="w-sm-100 pl-sm-0 link-holder">
+                                <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
+                            </div>
+                            <div class="w-sm-100 link-holder">
+                                <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                            </div>
                         </div>
                         <div class="w-sm-100 col-sm-6 pr-sm-0">
                             <select class="form-control" disabled>
@@ -188,18 +192,21 @@ Commission will be credited directly to your account and can be used immediately
         font-size: 20px;
         font-weight: bold;
         color: #ededed;
-        display: block;
+        cursor: pointer;
+        padding-bottom: 3px;
+    }
+    .link-holder {
         width: 150px;
         margin-right: 5px;
-        cursor: pointer;
     }
     .mylink:hover {
-        /* text-decoration: none; */
+        text-decoration: none;
         color: #ffffff;
     }
     .link-active {
         color: white;
-        text-decoration:underline white;
+        text-decoration:none;
+        border-bottom: solid 2px #ffffff;
     }
     @media (min-width: 760px) {
         .select2 {
