@@ -127,7 +127,9 @@ class Offer extends Model
      */
     public function verifyKyc($user)
     {
-            return ($this->kyc_verification) ? Kyc::select('verified')->where('user_id', $user->id)->first()->verified  : true;
+
+        if($kyc = Kyc::select('verified')->where('user_id', $user->id)->first()->verified == 1)
+            return ($this->kyc_verification) ?  $kyc : true;
     }
 
     /**
@@ -180,7 +182,10 @@ class Offer extends Model
 
     public function tradeShow($userid = null, $public = false)
     {
-        $user = User::find($userid)->first();
+        if (!is_null($userid)) {
+            $user = User::find($userid)->first();
+        }
+        
         if($user && !$this->trust($user)) {
             return false;
         }
