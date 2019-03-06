@@ -95,7 +95,7 @@
                                                             </div>
                                                         </div>
                                                     @else
-                                                        {!! Form::label('amount', __("Amount in :currency:' ['currency' => $offer->currency ]")) !!}
+                                                        {!! Form::label('amount', __('Amount in :currency:', ['currency' => $offer->currency ])) !!}
                                                         <div class="input-group">
                                                             {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'readonly']) !!}
                                                             {!! Form::number('offer_cur', null, ['class' => 'form-control', 'required', 'hidden', 'v-model.number' => 'amount', 'min' => $min_cur_amount,  'max' => $max_cur_amount, 'step' =>"0.01"]) !!}
