@@ -184,11 +184,12 @@ class Offer extends Model
     {
         if (!is_null($userid)) {
             $user = User::find($userid)->first();
+            
+            if($user && !$this->trust($user)) {
+                return false;
+            }
         }
         
-        if($user && !$this->trust($user)) {
-            return false;
-        }
 
         if($this->user->schedule_deactivate || $this->user->schedule_delete){
             return ($user)? $user->id == $this->user->id: false;
