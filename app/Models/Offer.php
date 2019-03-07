@@ -128,8 +128,8 @@ class Offer extends Model
     public function verifyKyc($user)
     {
 
-        if($kyc = Kyc::select('verified')->where('user_id', $user->id)->first()->verified == 1)
-            return ($this->kyc_verification) ?  $kyc : true;
+        if($kyc = Kyc::where('user_id', $user->id)->first())
+            return ($this->kyc_verification && $kyc->verified == 1) ?  $kyc->verified : true;
     }
 
     /**
