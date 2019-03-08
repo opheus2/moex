@@ -48,3 +48,7 @@ Route::group(['namespace' => 'Resources'], function () {
     });
 });
 
+Route::get('/docs', function ($id) {
+    return "In the docs route";
+});
+
