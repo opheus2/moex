@@ -129,7 +129,7 @@ class Offer extends Model
     {
 
         if($kyc = Kyc::where('user_id', $user->id)->first())
-            return ($this->kyc_verification && $kyc->verified == 1) ?  $kyc->verified : true;
+            return ($this->kyc_verification) ?  $kyc->verified : true;
     }
 
     /**
