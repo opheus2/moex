@@ -844,7 +844,7 @@ namespace App\Models{
  * @property int|null $offer_id
  * @property string $currency
  * @property float $fee
- * @property int $amount
+ * @property string|null $amount
  * @property float $rate
  * @property string|null $offer_terms
  * @property string|null $instruction
