@@ -1,48 +1,59 @@
 <template>
-    <!-- <div style="background-color: white;">
+    <div class="table-view">
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
-            <div slot="seller" slot-scope="props" class="user-tag h-50p d-flex">
-                <a style="color: black"  :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">
+            <div slot="seller" slot-scope="props" class="user-tag d-flex">
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.seller}`" class="text-capitalize">
                     {{ props.row.seller }} &nbsp;(100%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" :class="props.row.user.identityDetails.verified ? 'bg-blue' : 'bd-red'"><i></i></div>
+                <div class="notif" >
+                    <span class="fa-stack">
+                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
+                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
+                    </span>
+                </div>
             </div>
-            <div slot="coin" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.coin }}</p></div>
-            <div slot="payment_method" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="amount_range" slot-scope="props" class="d-flex h-50p justify-content-center align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
-            <div slot="action" slot-scope="props" class="d-flex h-50p justify-content-center align-items-center" >
-                <a :href="`/home/offer/${props.row.token}`" class="btn btn-primary px-2">Buy</a>
+            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+                <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
+            </div>
+            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+                <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
+            </div>
+            <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
+            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;" >
+                <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Buy</a>
             </div>
 
         </v-client-table>
 
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
-            <div slot="buyer" slot-scope="props" class="user-tag h-50p d-flex align-items-center">
-                <span class="media-left d-none d-sm-block pr-1">
-                    <span  class="avatar avatar-md rounded-circle avatar-off">
-                        <img  src="http://expresscargo.me/images/objects/avatar.png" width="50px" height="50px" style="border-radius: 50%;" alt="avatar">
-                        <i ></i>
+            <div slot="buyer" slot-scope="props" class="user-tag d-flex">
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.buyer}`" class="text-capitalize">
+                    {{ props.row.buyer }} &nbsp;(100%)
+                </a>
+                <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
+                <div class="notif" >
+                    <span class="fa-stack">
+                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
+                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
                     </span>
-                </span>
-                <div>
-                    <div class="">
-                        <a :href="`/profile/${props.row.seller}`" class="media-heading text-capitalize">{{ props.row.buyer }}</a><br >
-                    </div>
-                    <div class="blue-grey font-small-3 lighten-2 alert-primary">
-                        {{ props.row.user.status }}
-                    </div>
                 </div>
             </div>
-            <div slot="coin" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.coin }}</p></div>
-            <div slot="payment_method" class="h-50p d-flex justify-content-center align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="amount_range" slot-scope="props" class="d-flex h-50p justify-content-center align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
-            <div slot="action" slot-scope="props" class="d-flex h-50p justify-content-center align-items-center" >
-                <a :href="`/home/offer/${props.row.token}`" class="btn btn-primary px-2">Sell</a>
+            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+                <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
+            </div>
+            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+                <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
+            </div>
+            <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
+            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;">
+                <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Sell</a>
             </div>
         </v-client-table>
-    </div> -->
-    <div class="" style="background-color: white;">
+    </div>
+    <!-- <div class="" style="background-color: white;">
 
       <div style="overflow-x:auto;">
           <table class="table table-hover table-responsive responsive" id="tableView" style="">
@@ -127,26 +138,31 @@
               </tbody>
           </table>
       </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
     export default {
         name: 'TableView',
-        props: ['paymentMethod', 'paymentMethods', 'tableType'],
+        props: ['paymentMethod', 'coin', 'paymentMethods', 'tableType'],
         data () {
             return {
                 tableData: [],
                 sellData: [],
                 buyData: [],
-                sellColumns: ['seller', 'payment_method', 'coin', 'amount_range', 'action'],
-                buyColumns: ['buyer', 'payment_method', 'coin', 'amount_range', 'action'],
+                sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
+                buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 options: {
                     perPage: 5,
                     filterable: false,
+                    perPageValues: [],
                     sortable: [/* 'payment_method', 'amount_range', 'coin' */],
                     skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
-                }
+                },
+                btcNGN: 0,
+                btcUSD: 0,
+                ltcNGN: 0,
+                ltcUSD: 0,
             }
         },
         watch: {
@@ -160,28 +176,39 @@
                 }
                 let method = this.paymentMethods.find(meth => meth.id === Number(this.paymentMethod));
                 this.tableData = this.getCurrentTableData().filter(data => {return data.payment_method === method.name});
+            },
+            coin () {
+                if (this.coin === "All") {
+                    this.tableData = [...this.getCurrentTableData()];
+                    return;
+                }
+                this.tableData = this.getCurrentTableData().filter(data => {return data.coin.toUpperCase() === this.coin.toUpperCase()});
             }
         },
         created () {
             window.axios.get(`/api/offers/test-sell`)
                 .then(res => {
-                    let response = JSON.parse(res.data.data);
-                    debugger;
+                    let response = [];
+                    
+                    // The response comes as an object so we need to transform it to an array
+                    
                     for (let data in res.data.data) {
                         if (res.data.data.hasOwnProperty(data)) {
                             response.push(res.data.data[data]);
                         }
                     }
-                    debugger;
+                    
                     response.forEach (data => {
                         let seller = data.user.name;
+                        let otherDetails = data;
                         let user = data.user;
                         let token = data.token;
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        this.sellData.push({seller, payment_method , coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
+                        let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
+                        this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -200,12 +227,14 @@
                     response.forEach (data => {
                         let buyer = data.user.name;
                         let user = data.user;
+                        let otherDetails = data;
                         let token = data.token;
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        this.buyData.push({buyer, payment_method , coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
+                        let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
+                        this.buyData.push({buyer, payment_method, isVerified, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -213,6 +242,32 @@
                     console.error(err);
                 })
             ;
+
+            window.axios.get(`/api/rate/btc/ngn`).then(res => {
+                this.btcNGN = res.data;
+                if (this.btcUSD === 0) {
+                    this.btcUSD = this.btcNGN / 360;
+                }
+            }).catch();
+            window.axios.get(`/api/rate/btc/usd`).then(res => {
+                this.btcUSD = res.data;
+                if (this.btcNGN === 0) {
+                    this.btcNGN = this.btcUSD * 360;
+                }
+            }).catch();
+            window.axios.get(`/api/rate/ltc/usd`).then(res => {
+                this.ltcUSD = res.data;
+                if (this.ltcNGN === 0) {
+                    this.ltcNGN = this.ltcUSD * 360
+                }
+            }).catch();
+            window.axios.get(`/api/rate/ltc/ngn`).then(res => {
+                this.ltcNGN = res.data;
+                if (this.ltcUSD === 0) {
+                    this.ltcUSD = this.ltcNGN * 360;
+                }
+            }).catch();
+
         },
         mounted () {
             this.tableData = [...this.getCurrentTableData()];
@@ -234,15 +289,36 @@
         margin: 0px !important;
         padding: 0px !important;
     }
+    .table-view {
+        background-color: white;
+        padding: 10px;
+    }
+    .table-view td > div {
+        height: 30px;
+    }
+    .table-view td > div p {
+        margin: 0;
+    }
+    .table-view th {
+        font-size: 18px;
+    }
+    .table-view td {
+        font-size: 16px;
+    }
+    .mybtn {
+        height: 30px;
+        padding: 3px 10px;
+    }
     .notif {
         margin-top: 4px;
         margin-left: 5px;
-        width: 15px;
-        height: 15px;
+        width: 19px;
+        height: 19px;
         border-radius: 50%; 
+        font-size: 10px;
     }
     .bg-green {
-        background-color: green;
+        background-color: #02d802;
     }
     .bg-blue {
         background-color: blue;
@@ -252,5 +328,17 @@
     }
     .bg-red {
         background-color: red;
+    }
+
+    @media (min-width: 300px) and (max-width: 760px ){
+        .table-view th {
+            font-size: 16px;
+        }
+        .table-view td {
+            font-size: 15px;
+        }
+        .mt-sm-2 {
+            margin-top: 10px;
+        }
     }
 </style>

@@ -93,7 +93,7 @@
                                                                 <div class="p-2 media-body">
                                                                     <h5>{{__('VALUE')}}</h5>
                                                                     <h5 class="text-bold-400 mb-0">
-                                                                        {{$trade->coinValue() . strtoupper($trade->coin)}}
+                                                                        {{$trade->coinValue2() . strtoupper($trade->coin)}}
                                                                     </h5>
                                                                 </div>
                                                             </div>
@@ -175,7 +175,7 @@
 
                                             @if($trade->party(Auth::user(), 'buyer'))
                                                 <h4 class="card-title text-bold-500 text-center">
-                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->amount(), 'payment_method' => $trade->payment_method])}}
+                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->rate(), 'payment_method' => $trade->payment_method])}}
                                                 </h4>
                                             @else
                                                 <h4 class="card-title text-bold-500 text-center">
@@ -193,8 +193,10 @@
                                                 @else
                                                     <h6>{{__('Time left for buyer to complete payment:')}}</h6>
                                                 @endif
+                                                <div v-if="status === 'active'">
+                                                    <count-down deadline="{{$trade->created_at->addMinutes($trade->deadline)->format('Y-m-d H:i:s')}}"></count-down>
+                                                </div>
 
-                                                <count-down deadline="{{$trade->created_at->addMinutes($trade->deadline)->format('Y-m-d H:i:s')}}"></count-down>
                                             </div>
 
                                             <div v-else-if="status === 'active'">
@@ -207,6 +209,10 @@
                                                 @endif
                                             </div>
 
+                                            <div v-if="status === 'cancelled'">
+                                                    <h5>{{__('Timer has been stopped! Trade was cancelled.')}}</h5>
+                                            </div>
+
                                             <div v-if="status === 'active' || status === 'dispute'">
                                                 <div class="row pt-1">
                                                     <div class="col-12">
@@ -217,6 +223,12 @@
                                                                    data-text="{{__("You should upload the proof of payment, just in case the seller raises a dispute!")}}">
                                                                     <i class="la la-check-circle"></i> {{__('CONFIRM PAYMENT')}}
                                                                 </a>
+
+                                                                <a href="{{route('home.trades.cancel', ['token' => $trade->token])}}" data-swal="confirm-ajax"
+                                                                    class="btn btn-secondary btn-sm box-shadow-1 round mb-1" data-icon="warning" data-ajax-type="POST"
+                                                                    data-text="{{__("The coin held on escrow will be returned back to the seller!")}}">
+                                                                     <i class="la la-ban"></i> {{__('CANCEL TRADE')}}
+                                                                 </a>
                                                             </span>
                                                         @endif
 

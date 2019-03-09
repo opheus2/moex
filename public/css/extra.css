@@ -337,7 +337,7 @@ body {
 
 .banner {
     height: 250px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/banner.png) no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/banner.png) no-repeat;
     background-size: cover;
 }
 
@@ -740,7 +740,7 @@ body {
 
 @media (max-width: 769px){
   .policy {
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     font-size: 24px;
     letter-spacing: 0.01em;

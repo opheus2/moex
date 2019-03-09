@@ -8,6 +8,7 @@ use App\Notifications\Verification\UserKycVerification;
 use Image;
 use App\Models\Kyc;
 use Yajra\DataTables\Facades\DataTables;
+use App\Models\User;
 
 
 
@@ -33,8 +34,9 @@ class KycController extends Controller
     {
         $kyc     = Kyc::where('id', $id);
         $noti = $kyc->first();
+        $user = User::find($noti->user_id);
 
-        if($kyc->update(['verified' => 1])){
+        if($kyc->update(['verified' => 1]) && $user->update(['kyc_verification' => 1])){
             $noti->user->notify(new UserKycVerification());
         }
         return back();

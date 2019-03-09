@@ -230,6 +230,22 @@ class Trade extends Model
     }
 
     /**
+     * Determine coin value
+     *
+     * @return float
+     */
+    public function coinValue2()
+    {
+        $percent = get_percentage($this->amount, get_fee_percentage($this->coin));
+//        $value = $this->amount - $percent;
+        $value = $this->amount;
+
+//        $value = $this->amount - $this->rate;
+
+        return coin($value, $this->coin, true)->getValue();
+    }
+
+    /**
      * Calculate Fee
      *
      * @return float|int

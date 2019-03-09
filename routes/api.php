@@ -37,5 +37,17 @@ Route::group(['namespace' => 'Resources'], function () {
         Route::get('{id}', 'OffersController@get')->name('get');
 
     });
+
+    // Rating
+    Route::group(['prefix' => 'rating'], function () {
+        Route::get('user/{id}', 'RatingController@getAvgRating');
+    });
+
+    Route::get('rate/{coin}/{currency}', function ($coin, $currency) {
+        return 1 / get_convert (1, $coin, $currency);
+    });
 });
 
+Route::get('/docs', function () {
+    return "In the docs route";
+});

@@ -127,11 +127,7 @@ class Offer extends Model
      */
     public function verifyKyc($user)
     {
-        if (!$kyc = Kyc::select('verified')->where('user_id', $user->id)->first()->verified){
-            return ($this->kyc_verification) ? $kyc : true;
-        }else{
-            return false;
-        }
+            return ($this->kyc_verification) ?  $user->kyc_verification : true;
     }
 
     /**
@@ -184,16 +180,20 @@ class Offer extends Model
 
     public function tradeShow($userid = null, $public = false)
     {
-        $user = User::find($userid)->first();
-        if($user && !$this->trust($user)) {
-            return false;
+        if (!is_null($userid)) {
+            $user = User::find($userid)->first();
+            
+            if($user && !$this->trust($user)) {
+                return false;
+            }
         }
+        
 
         if($this->user->schedule_deactivate || $this->user->schedule_delete){
             return ($user)? $user->id == $this->user->id: false;
         }
 
-        if($this->min_amount > $this->max_amount){
+        if($this->min_amount > $this->max_amount_with_fee){
             return false;
         }
 

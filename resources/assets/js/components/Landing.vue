@@ -25,25 +25,41 @@
             <div class="d-flex justify-content-center" style="margin-bottom:12px;">
                 <div class="d-flex justify-content-between w-93 sm-block" style="margin-top:0%;margin-bottom:0%;">
                     <div class="pl-0 d-flex child">
-                        <select2 v-model="selectedPaymentMethod" :options="paymentMethods"/>
-                        <div class="sm-hide">
+                        <select2 v-model="selectedPaymentMethod" class="w-sm-100 pl-sm-0" :options="paymentMethods"/>
+                        <div class="w-sm-100">
+                            <select v-model="selectedCoin" id="selectedCoin" style="margin-left: 5px" class="form-control">
+                                <option value="All">All Coins</option>
+                                <option value="BTC">BitCoin</option>
+                                <option value="LTC">LiteCoin</option>
+                                <option value="DSH">DashCoin</option>
+                            </select>
+                        </div>
+                        
+                        <!-- <div class="sm-hide">
                             <select class="form-control" disabled>
                                 <option>In Nigeria</option>
                             </select>
-                            <!-- <button class="btn btn-white">In Nigeria</button> -->
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="d-flex child">
-                        <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
-                        <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
-                        <select class="form-control hidden-xs" disabled>
-                            <option>In Nigeria</option>
-                        </select>
+                    <div class="d-flex child mt-sm-2">
+                        <div class="w-sm-100 d-flex">
+                            <div class="w-sm-100 pl-sm-0 link-holder">
+                                <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
+                            </div>
+                            <div class="w-sm-100 link-holder">
+                                <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                            </div>
+                        </div>
+                        <div class="w-sm-100 col-sm-6 pr-sm-0">
+                            <select class="form-control" disabled>
+                                <option>In Nigeria</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
-                <table-view :tableType="tableType" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
+                <table-view :tableType="tableType" :coin="selectedCoin" :paymentMethod="selectedPaymentMethod" :paymentMethods="children"></table-view>
             </div>
         </div>
         <div class="d-flex justify-content-center security" style="width: 100%">
@@ -176,28 +192,38 @@ Commission will be credited directly to your account and can be used immediately
         font-size: 20px;
         font-weight: bold;
         color: #ededed;
-        display: block;
+        cursor: pointer;
+        padding-bottom: 3px;
+    }
+    .link-holder {
         width: 150px;
         margin-right: 5px;
-        cursor: pointer;
     }
     .mylink:hover {
-        /* text-decoration: none; */
+        text-decoration: none;
         color: #ffffff;
     }
     .link-active {
         color: white;
-        text-decoration:underline white;
+        text-decoration:none;
+        border-bottom: solid 2px #ffffff;
     }
-    .select2 {
-        width: 170px !important;
+    @media (min-width: 760px) {
+        .select2 {
+            width: 170px !important;
+        }
     }
     .select2-selection__rendered {
         color: #6C63FF;
     }
     .select2-container--default .select2-selection--single {
-        border-radius: 2px;
+        border-radius: 5px;
+        height: 34px;
+        padding-top: 2px;
         border-color:rgba(107, 99, 255, 0.246)
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 3px;
     }
     .table-container {
         background-color: #6C63FF;
@@ -205,6 +231,17 @@ Commission will be credited directly to your account and can be used immediately
     }
     .table-container > h5 {
         color: #ffffff;
+    }
+    @media (min-width: 300px) and (max-width: 760px ){
+        .pl-sm-0 {
+            padding-left: 0;
+        }
+        .w-sm-100 {
+            width: 100% !important;
+        }
+        .pr-sm-0 {
+            padding-right: 0;
+        }
     }
 </style>
 <script>
@@ -219,6 +256,7 @@ Commission will be credited directly to your account and can be used immediately
                 selectedPaymentMethod: "all",
                 paymentMethods: [],
                 children: [],
+                selectedCoin: 'All',
                 tableType: 'sell'
             }
         },

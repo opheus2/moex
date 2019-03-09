@@ -790,6 +790,48 @@ if (!function_exists('get_fee_percentage')) {
     }
 }
 
+if (!function_exists('get_max_with_fee_percentage')) {
+    /**
+     * Get trading fee
+     *
+     * @param $coin
+     * @return mixed
+     */
+    function get_max_with_fee_percentage($amount, $coin)
+    {
+        $percent = get_fee_percentage($coin) / 100;
+        return  round( ($amount - $percent), 8);
+    }
+}
+if (!function_exists('get_percentage')) {
+    /**
+     * Get trading fee
+     *
+     * @param $coin
+     * @return mixed
+     */
+    function get_percentage($amount, $coin)
+    {
+        $percent = get_fee_percentage($coin) / 100;
+        return  $percent;
+    }
+}
+
+
+if (!function_exists('get_trade_amount')) {
+    /**
+     * Get trading fee
+     *
+     * @param $coin
+     * @return mixed
+     */
+    function get_trade_amount($amount, $percentage)
+    {
+        $percent = $percentage / 100;
+        return  $amount - $percent;
+    }
+}
+
 if (!function_exists('calc_fee')) {
 
     /**

@@ -53,21 +53,38 @@ export default {
             if( this.coin === 'btc' ){
 
                 this.min_amount = this.btc_min
-                this.max_amount = this.btc_max
 
             } else if( this.coin === 'ltc'){
 
                 this.min_amount = this.ltc_min
-                this.max_amount = this.ltc_max
 
             } else if( this.coin === 'dash'){
 
                 this.min_amount = this.dash_min
-                this.max_amount = this.dash_max
 
             }
 
             return this.min_amount;
+        },
+
+        maxAmount: function(value){
+
+
+            if( this.coin === 'btc' ){
+
+                this.max_amount = this.btc_max
+
+            } else if( this.coin === 'ltc'){
+
+                this.max_amount = this.ltc_max
+
+            } else if( this.coin === 'dash'){
+
+                this.max_amount = this.dash_max
+
+            }
+
+            return this.max_amount;
         },
 
         coinPrice: function () {

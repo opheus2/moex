@@ -113,7 +113,7 @@ class OffersController extends Controller
         }
 
         $offers = $offers->filter(function ($offer) {
-            return $offer->canShow();
+            return $offer->tradeShow();
         });
 
         return paginate($offers, 100);
@@ -362,162 +362,201 @@ class OffersController extends Controller
 
     public function buyTest()
     {
-        /* $json = '{
-            "current_page": 1,
-            "data": [
-                {
-                    "id": 5,
-                    "token": "0YRZyeYlFk",
-                    "type": "buy",
-                    "coin": "btc",
-                    "currency": "USD",
-                    "user_id": 7,
-                    "status": 1,
-                    "min_amount": 50,
-                    "max_amount": 1000,
-                    "profit_margin": 5,
-                    "payment_method": "Bank Transfers",
-                    "tags": [
-                        "online payments"
-                    ],
-                    "trade_instruction": "eeeeeee",
-                    "terms": "1824 Millrun Pl\r\nyyyyyy",
-                    "label": "INSTANT RELEASE",
-                    "phone_verification": 0,
-                    "email_verification": 0,
-                    "trusted_offer": 0,
-                    "deadline": 30,
-                    "created_at": "2019-02-04 15:23:06",
-                    "updated_at": "2019-02-04 15:23:06",
-                    "user": {
-                        "id": 7,
-                        "name": "Opheus",
-                        "presence": "offline",
-                        "last_seen": "2019-02-08 16:07:01",
-                        "currency": "USD",
-                        "status": "active",
-                        "timezone": "UTC",
-                        "verified_phone": 0,
-                        "verified": false,
-                        "schedule_delete": 0,
-                        "schedule_deactivate": 0,
-                        "identity_details": null,
-                        "profile": {
-                            "id": 1,
-                            "user_id": 7,
-                            "picture": null,
-                            "first_name": null,
-                            "last_name": null,
-                            "bio": null
-                        },
-                        "identityDetails": {
-                            "verified": false,
-                        }
-                    }
-                },
-                {
-                    "id": 9,
-                    "token": "emwEWxseTw",
-                    "type": "buy",
-                    "coin": "btc",
-                    "currency": "USD",
-                    "user_id": 6,
-                    "status": 1,
-                    "min_amount": 50,
-                    "max_amount": 100,
-                    "profit_margin": 5,
-                    "payment_method": "Cardless Cash",
-                    "tags": [
-                        "no verification needed"
-                    ],
-                    "trade_instruction": "jjaksd",
-                    "terms": "28 Edem Urua Street\r\nFaculty Of Engineering",
-                    "label": "Instant Release",
-                    "phone_verification": 0,
-                    "email_verification": 0,
-                    "trusted_offer": 0,
-                    "deadline": 10,
-                    "created_at": "2019-02-07 14:58:07",
-                    "updated_at": "2019-02-07 14:58:07",
-                    "user": {
-                        "id": 6,
-                        "name": "jaycodes",
-                        "presence": "away",
-                        "last_seen": "2019-02-08 17:59:39",
-                        "currency": "USD",
-                        "status": "active",
-                        "timezone": "UTC",
-                        "verified_phone": 0,
-                        "verified": false,
-                        "schedule_delete": 0,
-                        "schedule_deactivate": 0,
-                        "identity_details": null,
-                        "profile": null,
-                        "identityDetails": {
-                            "verified": false,
-                        }
-                    }
-                },
-                {
-                    "id": 10,
-                    "token": "EBjC1B82pT",
-                    "type": "buy",
-                    "coin": "btc",
-                    "currency": "USD",
-                    "user_id": 6,
-                    "status": 1,
-                    "min_amount": 51,
-                    "max_amount": 100,
-                    "profit_margin": 5,
-                    "payment_method": "Cash Deposit To Banks",
-                    "tags": [
-                        "no verification needed"
-                    ],
-                    "trade_instruction": "jkasddb",
-                    "terms": "28 Edem Urua Street\r\nFaculty Of Engineering",
-                    "label": "Instant Release",
-                    "phone_verification": 0,
-                    "email_verification": 0,
-                    "trusted_offer": 0,
-                    "deadline": 10000,
-                    "created_at": "2019-02-07 15:00:56",
-                    "updated_at": "2019-02-07 15:00:56",
-                    "user": {
-                        "id": 6,
-                        "name": "jaycodes",
-                        "presence": "away",
-                        "last_seen": "2019-02-08 17:59:39",
-                        "currency": "USD",
-                        "status": "active",
-                        "timezone": "UTC",
-                        "verified_phone": 0,
-                        "verified": false,
-                        "schedule_delete": 0,
-                        "schedule_deactivate": 0,
-                        "identity_details": null,
-                        "profile": null,
-                        "identityDetails": {
-                            "verified": false,
-                        }
-                    }
-                }
+        $json = '{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 5,
+            "token": "0YRZyeYlFk",
+            "type": "buy",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 7,
+            "status": 1,
+            "min_amount": 50,
+            "max_amount": 450,
+            "profit_margin": 5,
+            "payment_method": "Bank Transfers",
+            "tags": [
+                "online payments"
             ],
-            "first_page_url": "http://expresscargo.me/api/offers/buy?page=1",
-            "from": 1,
-            "last_page": 1,
-            "last_page_url": "http://expresscargo.me/api/offers/buy?page=1",
-            "next_page_url": null,
-            "path": "http://expresscargo.me/api/offers/buy",
-            "per_page": 100,
-            "prev_page_url": null,
-            "to": 3,
-            "total": 3
-        }'; */
+            "trade_instruction": "eeeeeee",
+            "terms": "1824 Millrun Pl\r\nyyyyyy",
+            "label": "INSTANT RELEASE",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 30,
+            "created_at": "2019-02-04 15:23:06",
+            "updated_at": "2019-02-26 18:38:00",
+            "user_trade_in": null,
+            "kyc_verification": "0",
+            "user": {
+                "id": 7,
+                "name": "Opheus",
+                "presence": "offline",
+                "last_seen": "2019-02-27 20:16:02",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": {
+                    "id": 1,
+                    "user_id": 7,
+                    "picture": null,
+                    "first_name": null,
+                    "last_name": null,
+                    "bio": null
+                }
+            }
+        },
+        {
+            "id": 9,
+            "token": "emwEWxseTw",
+            "type": "buy",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 6,
+            "status": 1,
+            "min_amount": 50,
+            "max_amount": 100,
+            "profit_margin": 5,
+            "payment_method": "Cardless Cash",
+            "tags": [
+                "no verification needed"
+            ],
+            "trade_instruction": "jjaksd",
+            "terms": "28 Edem Urua Street\r\nFaculty Of Engineering",
+            "label": "Instant Release",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 10,
+            "created_at": "2019-02-07 14:58:07",
+            "updated_at": "2019-02-07 14:58:07",
+            "user_trade_in": null,
+            "kyc_verification": "0",
+            "user": {
+                "id": 6,
+                "name": "jaycodes",
+                "presence": "offline",
+                "last_seen": "2019-02-20 09:27:01",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        },
+        {
+            "id": 10,
+            "token": "EBjC1B82pT",
+            "type": "buy",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 6,
+            "status": 1,
+            "min_amount": 51,
+            "max_amount": 100,
+            "profit_margin": 5,
+            "payment_method": "Cash Deposit To Banks",
+            "tags": [
+                "no verification needed"
+            ],
+            "trade_instruction": "jkasddb",
+            "terms": "28 Edem Urua Street\r\nFaculty Of Engineering",
+            "label": "Instant Release",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 10000,
+            "created_at": "2019-02-07 15:00:56",
+            "updated_at": "2019-02-07 15:00:56",
+            "user_trade_in": null,
+            "kyc_verification": "0",
+            "user": {
+                "id": 6,
+                "name": "jaycodes",
+                "presence": "offline",
+                "last_seen": "2019-02-20 09:27:01",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        },
+        {
+            "id": 17,
+            "token": "OMh9Mv7DUo",
+            "type": "buy",
+            "coin": "btc",
+            "currency": "USD",
+            "user_id": 6,
+            "status": 1,
+            "min_amount": 1,
+            "max_amount": 2,
+            "profit_margin": 5,
+            "payment_method": "Cash Deposit To Banks",
+            "tags": [
+                "no receipt needed"
+            ],
+            "trade_instruction": "asadadasd",
+            "terms": "University Of Uyo, Mechanical Engineering Department\r\nFaculty Of Engineering",
+            "label": "Instant Release",
+            "phone_verification": 0,
+            "email_verification": 0,
+            "trusted_offer": 0,
+            "deadline": 12333,
+            "created_at": "2019-02-18 15:46:23",
+            "updated_at": "2019-02-18 15:46:23",
+            "user_trade_in": "BTC",
+            "kyc_verification": "0",
+            "user": {
+                "id": 6,
+                "name": "jaycodes",
+                "presence": "offline",
+                "last_seen": "2019-02-20 09:27:01",
+                "currency": "USD",
+                "status": "active",
+                "timezone": "UTC",
+                "verified_phone": 0,
+                "verified": false,
+                "schedule_delete": 0,
+                "schedule_deactivate": 0,
+                "identity_details": null,
+                "profile": null
+            }
+        }
+    ],
+    "first_page_url": "http://expresscargo.me/api/offers/buy?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://expresscargo.me/api/offers/buy?page=1",
+    "next_page_url": null,
+    "path": "http://expresscargo.me/api/offers/buy",
+    "per_page": 100,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4
+}';
 
         $client = new Client(['base_uri' => 'http://expresscargo.me/api/offers/']);
         $response = $client->get('buy');
         return $response->getBody();
  
-    //    return json_encode(json_decode($json));
+    //    return $json;
     }
 }
