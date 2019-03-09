@@ -173,6 +173,119 @@
       width: 35%;
     }
   }
+  .faq-inner {
+    width: 100%;
+    .faq-flex-tab {
+      .left {
+        background: #FFFFFF!important;
+        min-height: 300px;
+        padding: 3%!important;
+        padding-right: 8%!important;
+        .list-group {
+          border-radius: 0px;
+          .list-group-item {
+            border:none;
+            border-bottom: 1px solid #878787;
+            background: transparent;
+            font-family: Nunito;
+            line-height: normal;
+            font-size: 18px;
+            color: #878787;
+          }
+          .active {
+            font-family: Nunito;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 18px;
+            color: #878787;;
+            border:none;
+            border-bottom: 2px solid #878787;
+            background: transparent;
+          }
+          .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+          }
+        }
+      }
+      .right {
+        .article {
+          padding-bottom: 0px;
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+  .api-inner {
+    width: 100%;
+    margin-top: 50px;
+    .api-flex-tab {
+      .left {
+        background: #FFFFFF!important;
+        min-height: 300px;
+        padding-left: 3%!important;
+        padding-right: 3%!important;
+        .title {
+          font-family: Nunito;
+          font-style: normal;
+          font-weight: bold;
+          line-height: normal;
+          font-size: 18px;
+          letter-spacing: 1px;
+          text-align: center;
+          color: #878787;
+        }
+        .list-group {
+          border-radius: 0px;
+          .list-group-item {
+            border:none;
+            background: #F7F8FA;
+            border-radius: 0px;
+            font-family: Nunito;
+            line-height: normal;
+            font-size: 18px;
+            color: #878787;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+          .active {
+            font-family: Nunito;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 18px;
+            border-radius: 0px;
+            color: #FFFFFF;
+            border:none;
+            background: #1B264B;;
+          }
+          .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+          }
+        }
+      }
+      .right {
+        p {
+          font-family: Nunito;
+          font-style: normal;
+          letter-spacing: 1px;
+          color: #878787;
+        }
+        .title {
+          font-weight: bold;
+          line-height: normal;
+          font-size: 36px;
+        }
+        .body {
+          font-weight: normal;
+          line-height: normal;
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
 .w-100 {

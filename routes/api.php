@@ -42,13 +42,12 @@ Route::group(['namespace' => 'Resources'], function () {
     Route::group(['prefix' => 'rating'], function () {
         Route::get('user/{id}', 'RatingController@getAvgRating');
     });
-    
+
     Route::get('rate/{coin}/{currency}', function ($coin, $currency) {
         return 1 / get_convert (1, $coin, $currency);
     });
 });
 
-Route::get('/docs', function ($id) {
-    return "In the docs route";
+Route::get('/docs', function () {
+    return view('api');
 });
-
