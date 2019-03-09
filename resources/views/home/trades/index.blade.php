@@ -193,8 +193,10 @@
                                                 @else
                                                     <h6>{{__('Time left for buyer to complete payment:')}}</h6>
                                                 @endif
+                                                <div v-if="status === 'active'">
+                                                    <count-down deadline="{{$trade->created_at->addMinutes($trade->deadline)->format('Y-m-d H:i:s')}}"></count-down>
+                                                </div>
 
-                                                <count-down deadline="{{$trade->created_at->addMinutes($trade->deadline)->format('Y-m-d H:i:s')}}"></count-down>
                                             </div>
 
                                             <div v-else-if="status === 'active'">
@@ -205,6 +207,10 @@
                                                 @else
                                                     <h5>{{__('Payment has been confirmed by buyer!')}}</h5>
                                                 @endif
+                                            </div>
+
+                                            <div v-if="status === 'cancelled'">
+                                                    <h5>{{__('Timer has been stopped! Trade was cancelled.')}}</h5>
                                             </div>
 
                                             <div v-if="status === 'active' || status === 'dispute'">

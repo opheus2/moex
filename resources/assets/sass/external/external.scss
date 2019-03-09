@@ -173,6 +173,50 @@
       width: 35%;
     }
   }
+  .faq-inner {
+    width: 100%;
+    .faq-flex-tab {
+      .left {
+        background: #FFFFFF!important;
+        min-height: 300px;
+        padding: 3%!important;
+        padding-right: 8%!important;
+        .list-group {
+          border-radius: 0px;
+          .list-group-item {
+            border:none;
+            border-bottom: 1px solid #878787;
+            background: transparent;
+            font-family: Nunito;
+            line-height: normal;
+            font-size: 18px;
+            color: #878787;
+          }
+          .active {
+            font-family: Nunito;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 18px;
+            color: #878787;;
+            border:none;
+            border-bottom: 2px solid #878787;
+            background: transparent;
+          }
+          .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+          }
+        }
+      }
+      .right {
+        .article {
+          padding-bottom: 0px;
+          padding-top: 0px;
+        }
+      }
+    }
+  }
 }
 
 .w-100 {
