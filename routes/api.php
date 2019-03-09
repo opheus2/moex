@@ -49,5 +49,5 @@ Route::group(['namespace' => 'Resources'], function () {
 });
 
 Route::get('/docs', function () {
-    return "In the docs route";
+    return view('api');
 });
