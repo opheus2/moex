@@ -6,7 +6,7 @@
                     {{ props.row.seller }} &nbsp;(100%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" >
+                <div class="notif" v-if="props.row.isVerified">
                     <span class="fa-stack">
                         <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
                         <i class="fas fa-check fa-stack-1x" style="color:white"></i>
@@ -33,7 +33,7 @@
                     {{ props.row.buyer }} &nbsp;(100%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" >
+                <div class="notif"  v-if="props.row.isVerified">
                     <span class="fa-stack">
                         <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
                         <i class="fas fa-check fa-stack-1x" style="color:white"></i>
@@ -156,6 +156,9 @@
                     perPage: 5,
                     filterable: false,
                     perPageValues: [],
+                    texts: {
+                        count: ' '
+                    },
                     sortable: [/* 'payment_method', 'amount_range', 'coin' */],
                     skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
                 },
@@ -207,7 +210,7 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
+                        let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
                         this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
