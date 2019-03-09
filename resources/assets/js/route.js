@@ -10,6 +10,7 @@ import career   from './components/career'
 import blog     from './components/blog'
 import api     from './components/api'
 import about     from './components/about'
+import aboutApi     from './components/aboutApi'
 
 Vue.use(Router)
 
@@ -65,6 +66,11 @@ export default new Router({
             path: '/landing/about',
             name: 'About',
             component: about
+        },
+        {
+            path: '/landing/about',
+            name: 'aboutApi',
+            component: aboutApi
         }
     ],
     scrollBehavior (to, from, savedPosition) {
