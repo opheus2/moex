@@ -52,7 +52,7 @@ class User extends Authenticatable implements CanVerifyEmailContract
      */
     protected $fillable = [
         'name', 'email', 'password', 'phone', 'timezone',
-        'verified', 'verified_phone', 'currency'
+        'verified', 'verified_phone', 'currency', 'kyc_verification'
     ];
 
     /**

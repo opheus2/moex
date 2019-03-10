@@ -1,5 +1,11 @@
 <template>
   <div class="">
+    <div class="banner">
+        <div class="row center">
+            <h6 class="policy">Careers</h6>
+            <h6 class="read">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia, est eleifend scelerisque tristique.</h6>
+        </div>
+    </div>
     <div class="containers">
       <div class="career-inner">
         <p class="text-center">Lorem Ipsum Dolor</p>

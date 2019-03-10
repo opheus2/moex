@@ -23,7 +23,7 @@
         <div class="table-container">
             <h5 class="trade" style="text-align:center">Trade Offers</h5>
             <div class="d-flex justify-content-center" style="margin-bottom:12px;">
-                <div class="d-flex justify-content-between w-93 sm-block" style="margin-top:0%;margin-bottom:0%;">
+                <div class="d-flex justify-content-between w-93 d-sm-block" style="margin-top:0%;margin-bottom:0%;">
                     <div class="pl-0 d-flex child">
                         <select2 v-model="selectedPaymentMethod" class="w-sm-100 pl-sm-0" :options="paymentMethods"/>
                         <div class="w-sm-100">
@@ -50,7 +50,7 @@
                                 <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
                             </div>
                         </div>
-                        <div class="w-sm-100 col-sm-6 pr-sm-0">
+                        <div class="w-sm-100 pr-sm-0">
                             <select class="form-control" disabled>
                                 <option>In Nigeria</option>
                             </select>
@@ -213,6 +213,11 @@ Commission will be credited directly to your account and can be used immediately
             width: 170px !important;
         }
     }
+    @media (min-width: 760px) and (max-width: 1000px) {
+        .link-holder {
+            width:70px;
+        }
+    }
     .select2-selection__rendered {
         color: #6C63FF;
     }
@@ -233,6 +238,9 @@ Commission will be credited directly to your account and can be used immediately
         color: #ffffff;
     }
     @media (min-width: 300px) and (max-width: 760px ){
+        .link-holder {
+            width: 70px;
+        }
         .pl-sm-0 {
             padding-left: 0;
         }
@@ -241,6 +249,9 @@ Commission will be credited directly to your account and can be used immediately
         }
         .pr-sm-0 {
             padding-right: 0;
+        }
+        .d-sm-block {
+            display: block;
         }
     }
 </style>
