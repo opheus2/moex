@@ -54,7 +54,7 @@ class OffersController extends Controller
             $min_amount = $offer->min_amount . $offer->coin;
             $max_amount = $offer->max_amount_with_fee . $offer->coin;
 
-            
+
 
             return view('home.offers.index')
                 ->with(compact('min_amount', 'max_amount', 'min_usd_amount', 'max_usd_amount', 'min_cur_amount', 'max_cur_amount'))
@@ -157,7 +157,7 @@ class OffersController extends Controller
                     'payment_method' => $offer->payment_method,
                     'deadline' => $offer->deadline,
                     'amount' => $request->amount,
-                    'rate' => $request->offer_cur,
+                    'rate' => $rate
                 ]);
 
                 $update_max_account  = $offer->max_amount - ($request->amount + (float) config()->get("settings.{$offer->coim}.locked_balance"));
