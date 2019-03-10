@@ -133,7 +133,7 @@ class OffersController extends Controller
             ]);
 
             $trade = new Trade();
-
+ 
             $rate = get_price(
                 $offer->multiplier(), $offer->coin, $offer->currency, false
             );
