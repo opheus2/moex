@@ -54,7 +54,7 @@ class OffersController extends Controller
             $min_amount = $offer->min_amount . $offer->coin;
             $max_amount = $offer->max_amount_with_fee . $offer->coin;
 
-
+            
 
             return view('home.offers.index')
                 ->with(compact('min_amount', 'max_amount', 'min_usd_amount', 'max_usd_amount', 'min_cur_amount', 'max_cur_amount'))
@@ -133,7 +133,7 @@ class OffersController extends Controller
             ]);
 
             $trade = new Trade();
- 
+
             $rate = get_price(
                 $offer->multiplier(), $offer->coin, $offer->currency, false
             );
@@ -146,28 +146,30 @@ class OffersController extends Controller
             try {
 
                 $trade->fill([
-                    'coin' => $offer->coin,
-                    'partner_id' => $offer->user->id,
-                    'offer_id' => $offer->id,
-                    'currency' => $offer->currency,
-                    'fee' => get_fee_percentage($offer->coin),
-                    'offer_terms' => $offer->terms,
-                    'instruction' => $offer->trade_instruction,
-                    'label' => $offer->label,
-                    'payment_method' => $offer->payment_method,
-                    'deadline' => $offer->deadline,
-                    'amount' => $request->amount,
-                    'rate' => $rate
+                    'coin'          => $offer->coin,
+                    'partner_id'    => $offer->user->id,
+                    'offer_id'      => $offer->id,
+                    'currency'      => $offer->currency,
+                    'fee'           => get_fee_percentage($offer->coin),
+                    'offer_terms'   => $offer->terms,
+                    'instruction'   => $offer->trade_instruction,
+                    'label'         => $offer->label,
+                    'payment_method'=> $offer->payment_method,
+                    'deadline'      => $offer->deadline,
+                    'amount'        => $request->offer_cur,
+                    'rate'          => $rate,
+                    'amount_btc'    => $request->amount,
                 ]);
 
-                $update_max_account  = $offer->max_amount - ($request->amount + (float) config()->get("settings.{$offer->coim}.locked_balance"));
-                $offer->max_amount = $update_max_account;
-                $offer->max_amount_with_fee = $offer->max_amount_with_fee - ($request->amount + (float) config()->get("settings.{$offer->coim}.locked_balance"));
-                $offer->save();
+                $update_max_account         = $offer->max_amount - ($request->amount + (float) config()->get("settings.{$offer->coin}.locked_balance"));
+                $offer->max_amount          = $update_max_account;
+                $offer->max_amount_with_fee = $offer->max_amount_with_fee - ($request->amount + (float) config()->get("settings.{$offer->coin}.locked_balance"));
 
                 if (!$trade->token) $trade->setToken();
 
                 $trade = Auth::user()->trades()->save($trade);
+                $offer->save();
+
                 $trade->partner->notify(new Started($trade));
 
                 return redirect()->route('home.trades.index', [

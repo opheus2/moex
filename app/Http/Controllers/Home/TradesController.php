@@ -81,10 +81,10 @@ class TradesController extends Controller
                 $message = __('The coin held on escrow has been released to the buyer.');
 
                 broadcast(new TradeStatusUpdated($trade));
-                $offer = Offer::find($trade->offer_id)->first();
-                Offer::find($trade->offer_id)->update([
-                    'max_amount'          => $offer->max_amount - $trade->amount,
-                ]);
+                // $offer = Offer::find($trade->offer_id)->first();
+                // Offer::find($trade->offer_id)->update([
+                //     'max_amount'          => $offer->max_amount - $trade->amount,
+                // ]);
 
                 return response($message);
 
