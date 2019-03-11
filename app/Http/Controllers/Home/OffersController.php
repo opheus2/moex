@@ -54,7 +54,7 @@ class OffersController extends Controller
             $min_amount = $offer->min_amount . $offer->coin;
             $max_amount = $offer->max_amount_with_fee . $offer->coin;
 
-            
+
 
             return view('home.offers.index')
                 ->with(compact('min_amount', 'max_amount', 'min_usd_amount', 'max_usd_amount', 'min_cur_amount', 'max_cur_amount'))

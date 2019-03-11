@@ -175,7 +175,7 @@
 
                                             @if($trade->party(Auth::user(), 'buyer'))
                                                 <h4 class="card-title text-bold-500 text-center">
-                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->rate(), 'payment_method' => $trade->payment_method])}}
+                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->amount(), 'payment_method' => $trade->payment_method])}}
                                                 </h4>
                                             @else
                                                 <h4 class="card-title text-bold-500 text-center">
@@ -313,7 +313,7 @@
                         </div>
 
                         <div v-else>
-                            @if($trade->user->id == Auth::id())
+                            @if($trade->user->id == Auth::id() && $trade->partner->id == Auth::id())
                                 <div class="media-list media-bordered">
                                     <div class="media">
                                         <h4 class="media-head text-uppercase">
