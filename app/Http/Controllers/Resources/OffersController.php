@@ -38,6 +38,11 @@ class OffersController extends Controller
                        $query->select([
                            'id', 'user_id', 'verified'
                        ]); 
+                    },
+                    'user.ratings' => function ($query) {
+                        $query->select([
+                            'id', 'rating'
+                        ]);
                     }
                 ])->get();
         });
@@ -59,7 +64,7 @@ class OffersController extends Controller
         }
 
         $offers = $offers->filter(function ($offer) {
-            return $offer->canShow();
+            return $offer->tradeShow();
         });
 
         return paginate($offers, 100);
@@ -92,6 +97,11 @@ class OffersController extends Controller
                        $query->select([
                            'id', 'user_id', 'verified'
                        ]); 
+                    },
+                    'user.ratings' => function ($query) {
+                        $query->select([
+                            'id', 'rating'
+                        ]);
                     }
                 ])->get();
         });
@@ -141,11 +151,6 @@ class OffersController extends Controller
                         'id', 'user_id', 'picture', 'first_name', 'last_name', 'bio'
                     ]);
                 },
-                'user.ratings' => function ($query) {
-                    $query->select([
-                        'rating'
-                    ])->get()->avg('rating');
-                }
             ])
             ->findOrFail($id);
     }
