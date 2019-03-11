@@ -313,7 +313,7 @@
                         </div>
 
                         <div v-else>
-                            @if($trade->user->id == Auth::id())
+                            @if($trade->user->id == Auth::id() && $trade->partner->id == Auth::id())
                                 <div class="media-list media-bordered">
                                     <div class="media">
                                         <h4 class="media-head text-uppercase">
