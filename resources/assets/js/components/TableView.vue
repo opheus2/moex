@@ -2,8 +2,8 @@
     <div class="table-view">
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
             <div slot="seller" slot-scope="props" class="user-tag d-flex">
-                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.seller}`" class="text-capitalize">
-                    {{ props.row.seller }} &nbsp;({{ props.row.avgRating }}%)
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
+                    {{`${props.row.user.name} (${props.row.avgRating}%)` }}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif" v-if="props.row.isVerified">
@@ -29,8 +29,8 @@
 
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
             <div slot="buyer" slot-scope="props" class="user-tag d-flex">
-                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.buyer}`" class="text-capitalize">
-                    {{ props.row.buyer }} &nbsp;({{ props.row.avgRating }}%)
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
+                    {{ `${props.row.user.name} (${props.row.avgRating}%) `}}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif"  v-if="props.row.isVerified">
@@ -209,10 +209,10 @@
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
-                        let avgRating = this.getAverage(data.user.ratings, 'rating');
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), data.user.ratings.length);
                         let coin = data.coin.toUpperCase();
                         let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
-                        this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
+                        this.sellData.push({seller, payment_method, otherDetails, avgRating, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -237,9 +237,9 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), this.user.ratings.length);
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), data.user.ratings.length);
                         let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
-                        this.buyData.push({buyer, payment_method, isVerified, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
+                        this.buyData.push({buyer, payment_method, isVerified, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -326,10 +326,9 @@
              * @returns {number} The percentage rating
              */
             getPercentageRating (avg, length) {
-                if (isNaN(Number(avg)) || length === 0) {
+                if (isNaN(Number(avg)) || avg === 0 || length === 0) {
                     return 0;
                 }
-
                 const percentile = 100;
                 
                 return avg / length * percentile;
