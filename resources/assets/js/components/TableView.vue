@@ -3,7 +3,7 @@
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
             <div slot="seller" slot-scope="props" class="user-tag d-flex">
                 <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.seller}`" class="text-capitalize">
-                    {{ props.row.seller }} &nbsp;(100%)
+                    {{ props.row.seller }} &nbsp;({{ props.row.avgRating }}%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif" v-if="props.row.isVerified">
@@ -30,7 +30,7 @@
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
             <div slot="buyer" slot-scope="props" class="user-tag d-flex">
                 <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.buyer}`" class="text-capitalize">
-                    {{ props.row.buyer }} &nbsp;(100%)
+                    {{ props.row.buyer }} &nbsp;({{ props.row.avgRating }}%)
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif"  v-if="props.row.isVerified">
@@ -209,6 +209,7 @@
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
+                        let avgRating = this.getAverage(data.user.rating, 'rating');
                         let coin = data.coin.toUpperCase();
                         let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
                         this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
@@ -236,6 +237,7 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), this.user.ratings.length);
                         let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
                         this.buyData.push({buyer, payment_method, isVerified, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
@@ -276,12 +278,61 @@
             this.tableData = [...this.getCurrentTableData()];
         },
         methods: {
+            /**
+             * Return the right table data based on the selected table type
+             * @returns {array}
+             */
             getCurrentTableData () {
                 if (this.tableType === 'sell') {
                     return this.buyData;
                 } else {
                     return this.sellData;
                 }
+            },
+
+            /**
+             * A function to calculate the average of a particular key in an array of objects
+             * 
+             * @param {array} list - An array of object of items to be averaged
+             * @param {string} key - A string specifying
+             * @returns {number} Average of `key` items in `list` 
+             */
+            getAverage (list, key) {
+                let sum = 0;
+                let length = list.length;
+
+                if (typeof list !== 'object') {
+                    return;
+                }
+
+                if (length === 0) {
+                    return 0;
+                }
+
+                list.forEach((obj) => {
+                    if (obj.hasOwnProperty(key)) {
+                        sum = sum + Number(obj[key]);
+                    }
+                });
+
+                return sum / length;
+            },
+
+            /**
+             * Calculate the percentage based on an already computed average and a given length
+             * 
+             * @param {number} avg - The already computed average
+             * @param {int} length - The denominator
+             * @returns {number} The percentage rating
+             */
+            getPercentageRating (avg, length) {
+                if (isNaN(Number(avg)) || length === 0) {
+                    return 0;
+                }
+                
+                const percentile = 100;
+                
+                return avg / length * percentile;
             }
         }
     };
