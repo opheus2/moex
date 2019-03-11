@@ -42,7 +42,6 @@ class TradesController extends Controller
             $rating = $trade->partner->ratings()->where([
                 'trade_id' => $trade->id,
                 'user_id'  => $trade->user->id,
-                'partner_id'  => $trade->partner->id,
             ])->latest()->first();
 
             return view('home.trades.index')
