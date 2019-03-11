@@ -1,5 +1,11 @@
 <template>
   <div class="">
+    <div class="banner">
+        <div class="row center">
+            <h6 class="policy">Frequently Asked Questions</h6>
+            <h6 class="read">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia, est eleifend scelerisque tristique.</h6>
+        </div>
+    </div>
     <div class="containers">
       <div class="faq-inner">
         <div class="faq-flex-tab container-fluid">
@@ -34,15 +40,15 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container-fluid bg">
-      <div class="">
-        <p class="bg-text">Start Trading</p>
-        <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
-        <div align="center">
-          <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>
+      <div class="container-fluid bg">
+        <div class="">
+          <p class="bg-text">Start Trading</p>
+          <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
+          <div align="center">
+            <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>
+          </div>
         </div>
       </div>
-    </div> -->
   </div>
 </template>
 

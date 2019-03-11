@@ -86,8 +86,8 @@ class BuyCoinController extends Controller
                         ->with(compact('data'));
                 })
                 ->addColumn('amount_range', function ($data) {
-                    $min = $data->min_amount . $data->coin;
-                    $max = $data->max_amount_with_fee . $data->coin;
+                    $min = $data->min_amount;
+                    $max = $data->max_amount_with_fee;
 
                     return "<b>{$min}</b>" . ' - ' . "<b>{$max}</b>";
                 })

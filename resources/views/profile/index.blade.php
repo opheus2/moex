@@ -75,6 +75,14 @@
                                                 @endif
                                                 {{__('Email')}}
                                             </li>
+                                            <li class="list-group-item">
+                                                @if($user->kyc_verification)
+                                                    <span class="la la-check text-success float-right"></span>
+                                                @else
+                                                    <span class="la la-close text-danger float-right"></span>
+                                                @endif
+                                                {{__('KYC')}}
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

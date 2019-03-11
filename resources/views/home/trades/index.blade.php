@@ -93,7 +93,7 @@
                                                                 <div class="p-2 media-body">
                                                                     <h5>{{__('VALUE')}}</h5>
                                                                     <h5 class="text-bold-400 mb-0">
-                                                                        {{$trade->coinValue2() . strtoupper($trade->coin)}}
+                                                                        {{$trade->coinValue() . strtoupper($trade->coin)}}
                                                                     </h5>
                                                                 </div>
                                                             </div>
@@ -175,7 +175,7 @@
 
                                             @if($trade->party(Auth::user(), 'buyer'))
                                                 <h4 class="card-title text-bold-500 text-center">
-                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->rate(), 'payment_method' => $trade->payment_method])}}
+                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->amount(), 'payment_method' => $trade->payment_method])}}
                                                 </h4>
                                             @else
                                                 <h4 class="card-title text-bold-500 text-center">

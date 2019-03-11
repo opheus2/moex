@@ -120,18 +120,18 @@ Please kindly fill the form below.</h6>
     </div>
 </div> -->
 <div class="">
-        <img src="images/map.svg" style="width:100%">
-    </div>
-    <div class="container-fluid bg">
-        <div class="">
-            <p class="bg-text">Start Trading</p>
-            <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
-            <div align="center">
-                <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>
-            </div>
-        </div>
-    </div>
-    </div>
+  <img src="images/map.svg" style="width:100%">
+</div>
+<div class="container-fluid bg">
+  <div class="">
+    <p class="bg-text">Start Trading</p>
+      <p class="bg-text-2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis luctus sodales. </p>
+      <div align="center">
+        <a class="text-color btn btn-default btn-lg button-sign" style="color:#6C63FF !important" href="#">Sign Up</a>
+      </div>
+  </div>
+</div>
+</div>
 
 </template>
 e

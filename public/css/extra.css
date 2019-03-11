@@ -336,9 +336,10 @@ body {
 
 
 .banner {
-    height: 250px;
+    height: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/banner.png) no-repeat;
     background-size: cover;
+    padding: 2% 0%;
 }
 
 .policy {
@@ -350,17 +351,17 @@ body {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     text-align: center;
-    padding-top: 50px;
 }
 
 .read {
     font-family: Nunito;
     font-style: normal;
-    line-height: 49px;
+    line-height: normal;
     font-size: 24px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     text-align: center;
+    margin: 0 15%;
 }
 
 .bar {
