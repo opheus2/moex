@@ -175,7 +175,7 @@
 
                                             @if($trade->party(Auth::user(), 'buyer'))
                                                 <h4 class="card-title text-bold-500 text-center">
-                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->rate(), 'payment_method' => $trade->payment_method])}}
+                                                    {{__('Pay :amount With :payment_method', ['amount' => $trade->amount(), 'payment_method' => $trade->payment_method])}}
                                                 </h4>
                                             @else
                                                 <h4 class="card-title text-bold-500 text-center">
