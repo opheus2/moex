@@ -209,7 +209,7 @@
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
-                        let avgRating = this.getAverage(data.user.rating, 'rating');
+                        let avgRating = this.getAverage(data.user.ratings, 'rating');
                         let coin = data.coin.toUpperCase();
                         let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
                         this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
@@ -329,7 +329,7 @@
                 if (isNaN(Number(avg)) || length === 0) {
                     return 0;
                 }
-                
+
                 const percentile = 100;
                 
                 return avg / length * percentile;
