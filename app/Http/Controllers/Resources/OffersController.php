@@ -140,6 +140,11 @@ class OffersController extends Controller
                     $query->select([
                         'id', 'user_id', 'picture', 'first_name', 'last_name', 'bio'
                     ]);
+                },
+                'user.ratings' => function ($query) {
+                    $query->select([
+                        'rating'
+                    ])->get()->avg('rating');
                 }
             ])
             ->findOrFail($id);
