@@ -189,7 +189,7 @@
             }
         },
         created () {
-            window.axios.get(`/api/offers/test-sell`)
+            window.axios.get(`/api/offers/sell`)
                 .then(res => {
                     let response = [];
                     
@@ -220,7 +220,7 @@
                 })
             ;
 
-            window.axios.get(`/api/offers/test-buy`)
+            window.axios.get(`/api/offers/buy`)
                 .then(res => {
                     let response = [];
                     for (let data in res.data.data) {
@@ -277,7 +277,7 @@
         },
         methods: {
             getCurrentTableData () {
-                if (this.tableType === 'buy') {
+                if (this.tableType === 'sell') {
                     return this.buyData;
                 } else {
                     return this.sellData;

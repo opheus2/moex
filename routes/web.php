@@ -13,6 +13,10 @@ use Vsch\TranslationManager\Translator;
 |
 */
 
+Route::get('testing', function () {
+    return dd(Auth::user()->ratings->avg('rating'));
+});
+
 Route::group([], function () {
     // Landing routes
     Route::get('/', function () {
