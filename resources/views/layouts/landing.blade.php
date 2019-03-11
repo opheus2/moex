@@ -33,9 +33,13 @@
     {{-- <landing></landing> --}}
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    </body>
+
+<script>
+    window._isOffline = {{is_null(auth::user()) }}
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/landing.js') }}"></script>
 @yield('custom_js')
-</body>
 </html>
