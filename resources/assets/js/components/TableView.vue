@@ -304,13 +304,14 @@
                         return rating.rating;
                     }
                 });
-
-                window.axios.get(`/rating/user/${id}/avg`)
+                this.ratings.push({
+                    userId: id,
+                    rating: 0,
+                })
+                window.axios.get(`/api/rating/user/${id}/avg`)
                     .then(res => {
-                        this.ratings.push({
-                            userId: id,
-                            rating: res.data
-                        })
+                        let rating = this.ratings.find(rate => rate.userId === id);
+                        rating.rating = res.data;
                         return res.data;
                     })
                     .catch(err => {
