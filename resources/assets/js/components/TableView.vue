@@ -150,6 +150,7 @@
                 tableData: [],
                 sellData: [],
                 buyData: [],
+                ratings: [],
                 sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 options: {
@@ -209,7 +210,7 @@
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
-                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), data.user.ratings.length);
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let coin = data.coin.toUpperCase();
                         let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
                         this.sellData.push({seller, payment_method, otherDetails, avgRating, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
@@ -237,7 +238,7 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
-                        let avgRating = this.getPercentageRating(this.getAverage(data.user.ratings, 'rating'), data.user.ratings.length);
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
                         this.buyData.push({buyer, payment_method, isVerified, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
@@ -291,41 +292,41 @@
             },
 
             /**
-             * A function to calculate the average of a particular key in an array of objects
+             * A function to return tha average user rating
              * 
-             * @param {array} list - An array of object of items to be averaged
-             * @param {string} key - A string specifying
-             * @returns {number} Average of `key` items in `list` 
+             * @param {string} id - The userId
+             * 
+             * @returns {number} Average rating of user
              */
-            getAverage (list, key) {
-                let sum = 0;
-                let length = list.length;
-
-                if (typeof list !== 'object') {
-                    return;
-                }
-
-                if (length === 0) {
-                    return 0;
-                }
-
-                list.forEach((obj) => {
-                    if (obj.hasOwnProperty(key)) {
-                        sum = sum + Number(obj[key]);
+            getAverage (id) {
+                this.ratings.forEach(rating => {
+                    if (rating.userId === id) {
+                        return rating.rating;
                     }
                 });
 
-                return sum / length;
+                window.axios.get(`/rating/user/${id}/avg`)
+                    .then(res => {
+                        this.ratings.push({
+                            userId: id,
+                            rating: res.data
+                        })
+                        return res.data;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    })
+                ;
             },
 
             /**
              * Calculate the percentage based on an already computed average and a given length
              * 
-             * @param {number} avg - The already computed average
+             * @param {number} avg - The average rating
              * @param {int} length - The denominator
              * @returns {number} The percentage rating
              */
-            getPercentageRating (avg, length) {
+            getPercentageRating (avg, length = 5) {
                 if (isNaN(Number(avg)) || avg === 0 || length === 0) {
                     return 0;
                 }

@@ -39,11 +39,6 @@ class OffersController extends Controller
                            'id', 'user_id', 'verified'
                        ]); 
                     },
-                    'user.ratings' => function ($query) {
-                        $query->select([
-                            'id', 'rating'
-                        ]);
-                    }
                 ])->get();
         });
 
@@ -98,7 +93,6 @@ class OffersController extends Controller
                            'id', 'user_id', 'verified'
                        ]); 
                     },
-                    'user.ratings'
                 ])->get();
         });
 

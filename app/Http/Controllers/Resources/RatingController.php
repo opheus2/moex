@@ -8,6 +8,9 @@ use App\Models\User;
 class RatingController extends Controller
 {
     public function getAvgRating ($id) {
-        // TODO: get average user rating from db;
+        $user = User::find($id);
+        if ($user) {
+            return $user->averageRating();
+        }
     }
 }
