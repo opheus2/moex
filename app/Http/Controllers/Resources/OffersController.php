@@ -98,11 +98,7 @@ class OffersController extends Controller
                            'id', 'user_id', 'verified'
                        ]); 
                     },
-                    'user.ratings' => function ($query) {
-                        $query->select([
-                            'id', 'rating'
-                        ]);
-                    }
+                    'user.ratings'
                 ])->get();
         });
 
