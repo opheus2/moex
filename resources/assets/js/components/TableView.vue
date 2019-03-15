@@ -299,11 +299,9 @@
              * @returns {number} Average rating of user
              */
             getAverage (id) {
-                this.ratings.forEach(rating => {
-                    if (rating.userId === id) {
-                        return rating.rating;
-                    }
-                });
+                let rating = this.ratings.find(rate => rate.userId === id);
+                if (rating) return rating;
+    
                 this.ratings.push({
                     userId: id,
                     rating: 0,
@@ -312,6 +310,16 @@
                     .then(res => {
                         let rating = this.ratings.find(rate => rate.userId === id);
                         rating.rating = res.data;
+                        this.sellData.forEach(data => {
+                            if (data.user.id === id) {
+                                data.avgRating = this.getPercentageRating(rating.rating);
+                            }
+                        });
+                        this.buyData.forEach(data => {
+                            if (data.user.id === id) {
+                                data.avgRating = this.getPercentageRating(rating.rating);
+                            }
+                        });
                         return res.data;
                     })
                     .catch(err => {
