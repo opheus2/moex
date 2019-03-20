@@ -17,46 +17,46 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/landing',
+            path: '/',
             component: land
         },
         {
-            path: '/landing/home',
+            path: '/home',
             name: 'Home',
             component: Homes
         },
         {
-            path: '/landing/terms-of-service',
+            path: '/terms-of-service',
             name: 'terms-of-service',
             component: terms
         },
         {
-            path: '/landing/privacy-policy',
+            path: '/privacy-policy',
             name: 'Privacy Policy',
             component: privacy
         },
         {
-            path: '/landing/contact',
+            path: '/contact',
             name: 'Contact',
             component: contact
         },
         {
-            path: '/landing/blog',
+            path: '/blog',
             name: 'Blog',
             component: blog
         },
         {
-            path: '/landing/careers',
+            path: '/careers',
             name: 'Careers',
             component: career
         },
         {
-            path: '/landing/faq',
+            path: '/faq',
             name: 'Faq',
             component: faq
         },
         {
-            path: '/landing/about',
+            path: '/about',
             name: 'About',
             component: about
         },
