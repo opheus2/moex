@@ -13,9 +13,13 @@ use Vsch\TranslationManager\Translator;
 |
 */
 
+Route::get('testing', function () {
+    return dd(Auth::user()->ratings->avg('rating'));
+});
+
 Route::group([], function () {
     // Landing routes
-    Route::get('/', function () {
+    Route::get('/dashboard', function () {
         $root_url = platformSettings()->root_url;
 
         if (!$root_url || Auth::check()) {
@@ -653,8 +657,8 @@ Route::post('/update-log', 'LogController@updateFirstTime');
 
 Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
-Route::get('/landing', 'LandingController@index')->where('all', '^(?!api).*$');
-Route::get('/landing/{any}', 'LandingController@index')->where('any', '^(?!api).*$');
+Route::get('/', 'LandingController@index')->where('all', '^(?!api).*$');
+Route::get('/{any}', 'LandingController@index')->where('any', '^(?!api).*$');
 
 Route::get('kyc/{image}', [
     'uses'      => 'KycController@picture'

@@ -2,8 +2,8 @@
     <div class="table-view">
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
             <div slot="seller" slot-scope="props" class="user-tag d-flex">
-                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.seller}`" class="text-capitalize">
-                    {{ props.row.seller }} &nbsp;(100%)
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
+                    {{`${props.row.user.name} (${props.row.avgRating}%)` }}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif" v-if="props.row.isVerified">
@@ -29,8 +29,8 @@
 
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
             <div slot="buyer" slot-scope="props" class="user-tag d-flex">
-                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.buyer}`" class="text-capitalize">
-                    {{ props.row.buyer }} &nbsp;(100%)
+                <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
+                    {{ `${props.row.user.name} (${props.row.avgRating}%) `}}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif"  v-if="props.row.isVerified">
@@ -150,6 +150,7 @@
                 tableData: [],
                 sellData: [],
                 buyData: [],
+                ratings: [],
                 sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 options: {
@@ -189,7 +190,7 @@
             }
         },
         created () {
-            window.axios.get(`/api/offers/test-sell`)
+            window.axios.get(`/api/offers/sell`)
                 .then(res => {
                     let response = [];
                     
@@ -209,9 +210,10 @@
                         let payment_method = data.payment_method;
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let coin = data.coin.toUpperCase();
                         let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
-                        this.sellData.push({seller, payment_method, otherDetails, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
+                        this.sellData.push({seller, payment_method, otherDetails, avgRating, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -220,7 +222,7 @@
                 })
             ;
 
-            window.axios.get(`/api/offers/test-buy`)
+            window.axios.get(`/api/offers/buy`)
                 .then(res => {
                     let response = [];
                     for (let data in res.data.data) {
@@ -236,8 +238,9 @@
                         let maxAmount = data.max_amount;
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
+                        let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
-                        this.buyData.push({buyer, payment_method, isVerified, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
+                        this.buyData.push({buyer, payment_method, isVerified, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -276,12 +279,69 @@
             this.tableData = [...this.getCurrentTableData()];
         },
         methods: {
+            /**
+             * Return the right table data based on the selected table type
+             * @returns {array}
+             */
             getCurrentTableData () {
-                if (this.tableType === 'buy') {
+                if (this.tableType === 'sell') {
                     return this.buyData;
                 } else {
                     return this.sellData;
                 }
+            },
+
+            /**
+             * A function to return tha average user rating
+             * 
+             * @param {string} id - The userId
+             * 
+             * @returns {number} Average rating of user
+             */
+            getAverage (id) {
+                let rating = this.ratings.find(rate => rate.userId === id);
+                if (rating) return rating;
+    
+                this.ratings.push({
+                    userId: id,
+                    rating: 0,
+                })
+                window.axios.get(`/api/rating/user/${id}/avg`)
+                    .then(res => {
+                        let rating = this.ratings.find(rate => rate.userId === id);
+                        rating.rating = res.data;
+                        this.sellData.forEach(data => {
+                            if (data.user.id === id) {
+                                data.avgRating = this.getPercentageRating(rating.rating);
+                            }
+                        });
+                        this.buyData.forEach(data => {
+                            if (data.user.id === id) {
+                                data.avgRating = this.getPercentageRating(rating.rating);
+                            }
+                        });
+                        return res.data;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    })
+                ;
+            },
+
+            /**
+             * Calculate the percentage based on an already computed average and a given length
+             * 
+             * @param {number} avg - The average rating
+             * @param {int} length - The denominator
+             * @returns {number} The percentage rating
+             */
+            getPercentageRating (avg, length = 5) {
+                if (isNaN(Number(avg)) || avg === 0 || length === 0) {
+                    return 0;
+                }
+                const percentile = 100;
+                
+                return avg / length * percentile;
             }
         }
     };

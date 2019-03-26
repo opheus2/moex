@@ -40,7 +40,8 @@ Route::group(['namespace' => 'Resources'], function () {
 
     // Rating
     Route::group(['prefix' => 'rating'], function () {
-        Route::get('user/{id}', 'RatingController@getAvgRating');
+        Route::get('user/{id}/avg', 'RatingController@getAvgRating');
+        Route::get('user/{id}/test-avg', 'RatingController@testGetAvgRating');
     });
 
     Route::get('rate/{coin}/{currency}', function ($coin, $currency) {

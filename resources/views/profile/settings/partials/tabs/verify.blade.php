@@ -7,10 +7,10 @@
     <div class="card-head ">
         <div class="card-header">
             <h4 class="card-title">{{__('Verify Your Identity')}}</h4><br/>
-            @if (!empty($user->identityDetails))
-                @if ( $user->identityDetails->verified == 1)
-                    <h4 class="card-title">{{__('NB: Kyc Already Verified')}}</h4>
-                @endif
+            @if($user->kyc_verification)
+                <span class="badge badge-success">Verified</span>
+            @else
+                <span class="badge badge-danger">Unverified</span>
             @endif
 
         </div>
