@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Notifications\Verification\UserKycVerification;
+use App\Notifications\Verification\KycVerification;
 use Image;
 use App\Models\Kyc;
 use Yajra\DataTables\Facades\DataTables;
@@ -47,7 +48,10 @@ class KycController extends Controller
         $kyc     = Kyc::find($id);
         $kyc->verified = 2;
         $kyc->save();
-
+        $noti = $kyc->first();
+        $user = User::find($noti->user_id);
+        $user->update(['kyc_verification' => 2]);
+        $noti->user->notify(new KycVerification());
         return back();
     }
 
