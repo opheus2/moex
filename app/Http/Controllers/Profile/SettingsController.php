@@ -474,13 +474,14 @@ class SettingsController extends Controller
                                     'state'         => $request->state,
                                     'city'          => $request->city,
                                     'bvn'           => $request->bvn,
-                                    'verified'        => 0,
+                                    'verified'      => 0,
                                 ]
 
         );
+        $user               = User::where('id', $request->user_id)->update(['kyc_verification' => 0]);
   
   
-        if($kyc){
+        if($kyc && $user){
             return back()->with('status', 'Profile updated!');
         }else{
 
