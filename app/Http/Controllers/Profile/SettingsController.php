@@ -473,7 +473,8 @@ class SettingsController extends Controller
                                     'country'       => $request->country,
                                     'state'         => $request->state,
                                     'city'          => $request->city,
-                                    'bvn'          => $request->bvn,
+                                    'bvn'           => $request->bvn,
+                                    'verified'        => 0,
                                 ]
 
         );
