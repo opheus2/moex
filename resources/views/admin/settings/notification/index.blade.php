@@ -142,6 +142,20 @@
 										'configuration' => \App\Notifications\Transactions\IncomingUnconfirmed::getConfiguration()
 									])
                                 </div>
+
+                                <div class="tab-pane fade" id="user-kyc-verifeied" role="tabpanel"
+                                     aria-labelledby="user-kyc-not-verifeied" aria-expanded="false">
+                                    @include('admin.settings.notification.partials.tabs.template', [
+										'configuration' => \App\Notifications\Verification\UserKycVerification::getConfiguration()
+									])
+                                </div>
+
+                                <div class="tab-pane fade" id="user-kyc-not-verifeied" role="tabpanel"
+                                     aria-labelledby="user-kyc-not-verifeied-tab" aria-expanded="false">
+                                    @include('admin.settings.notification.partials.tabs.template', [
+										'configuration' => \App\Notifications\Verification\KycVerification::getConfiguration()
+									])
+                                </div>
                             </div>
 
                         </div>
@@ -296,6 +310,23 @@
                                             <a class="nav-link" id="incoming-unconfirmed-tab" data-toggle="pill" aria-expanded="false"
                                                href="#incoming-unconfirmed" role="tab" aria-controls="incoming-unconfirmed">
                                                 <i class="ft-square"></i> {{__('Incoming Unconfirmed')}}
+                                            </a>
+                                        </li>
+
+                                        <li class="pt-1"><p class="lead">{{__('KYC')}}</p></li>
+
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="user-kyc-verifeied-tab" data-toggle="pill" aria-expanded="false"
+                                               href="#user-kyc-verifeied" role="tab" aria-controls="user-kyc-verifeied">
+                                                <i class="ft-bag"></i> {{__('User KYC Verified')}}
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="user-kyc-not-verifeied-tab" data-toggle="pill" aria-expanded="false"
+                                               href="#user-kyc-not-verifeied" role="tab" aria-controls="user-kyc-not-verifeied">
+                                                <i class="ft-bag"></i> {{__('User KYC Not Verified')}}
                                             </a>
                                         </li>
                                     </ul>

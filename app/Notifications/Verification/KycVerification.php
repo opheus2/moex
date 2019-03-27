@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class UserKycVerification extends Notification
+class KycVerification extends Notification
 {
     use Queueable, Template;
 
@@ -46,14 +46,14 @@ class UserKycVerification extends Notification
      *
      * @var
      */
-    protected static $level = 'success';
+    protected static $level = 'error';
 
     /**
      * Template record
      *
      * @var string
      */
-    protected static $template_name = 'user_kyc_verified';
+    protected static $template_name = 'user_kyc_not_verified';
 
     /**
      * Default notification channel
