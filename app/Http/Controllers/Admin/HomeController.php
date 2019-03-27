@@ -85,13 +85,13 @@ class HomeController extends Controller
     {
         $key = 'statistics.visible_offers';
 
-        return Cache::remember($key, 30, function () {
+        return Cache::remember($key, 0, function () {
             $statistics = [];
 
             $offers = Offer::has('user')->where('status', true)->get();
 
             $offers = $offers->filter(function ($offer) {
-                return $offer->canShow();
+                return $offer->tradeShow();
             });
 
             $total = max(Offer::where('status', true)->count(), 1);
