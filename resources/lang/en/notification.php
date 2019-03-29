@@ -142,10 +142,17 @@ return [
     
     //kyc
     'user_kyc_verified' => [
-        'subject' => 'KYC Verified Successfully - :app_name',
-        'intro_line' => 'Hi :user_name! Your KYC has been verified successfully!',
-        'outro_line' => 'Do make use of our help center to get started fast and easy!',
-        'message' => 'Your kyc has been verified successfully!'
+        'subject'       => 'KYC Verified Successfully - :app_name',
+        'intro_line'    => 'Hi :user_name! Your KYC has been verified successfully!',
+        'outro_line'    => 'Do make use of our help center to get started fast and easy!',
+        'message'       => 'Your kyc has been verified successfully!'
     ],
+
+    'user_kyc_not_verified' => [
+        'subject'       => 'KYC Verification Not Accepted - :app_name',
+        'intro_line'    => 'Hi :user_name! Your KYC was not verified!',
+        'outro_line'    => 'Do make use of our help center to get started fast and easy!',
+        'message'       => 'Your kyc was not  verified!'
+    ]
 
 ];

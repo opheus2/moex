@@ -7,7 +7,7 @@
     <div class="card-head ">
         <div class="card-header">
             <h4 class="card-title">{{__('Verify Your Identity')}}</h4><br/>
-            @if($user->kyc_verification)
+            @if(!empty($user->kyc_verification ) && $user->kyc_verification == 1)
                 <span class="badge badge-success">Verified</span>
             @else
                 <span class="badge badge-danger">Unverified</span>
