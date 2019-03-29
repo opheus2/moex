@@ -26,7 +26,7 @@ class SellCoinController extends Controller
     public function data(Request $request)
     {
         if ($request->ajax()) {
-            $offers = Cache::remember("offers.buy", 30, function () {
+            $offers = Cache::remember("offers.buy", 0, function () {
                 return Offer::has('user')
                     ->where('type', 'buy')->where('status', true)
                     ->with([

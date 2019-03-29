@@ -8,7 +8,7 @@
 
 namespace App\Traits;
 
-const MINIMUM_TRADE_AMOUNT = 10;
+const MINIMUM_BTC_TRADED = 4;
 
 use App\Models\Referral;
 use App\Models\User;
@@ -81,7 +81,8 @@ trait ManageReferrals
      */
     private function hasCompletedTrades (User $user)
     {
-        return $user->trades->count() >= $this->getMinimumTradeAmount();
+
+        return $this->userTradeInUSD($user) >= get_price($this->getMinimumBTC(), 'BTC', 'USD');
     }
 
     /**
@@ -89,8 +90,33 @@ trait ManageReferrals
      *
      * @return integer
      */
-    private function getMinimumTradeAmount()
+    private function getMinimumBTC()
     {
-        return env('MINIMUM_TRADE_AMOUNT', MINIMUM_TRADE_AMOUNT);
+        return env('MINIMUM_BTC_TRADED', MINIMUM_BTC_TRADED);
+    }
+
+    /**
+     * Get the amount of BTC a user has transacted
+     * 
+     * @return float
+     */
+    private function userTradeInUSD(User $user) {
+        // TODO: Calculate the amount of trades for the user
+        $btc_amount = 0;
+        $dash_amount = 0;
+        $ltc_amount = 0;
+        foreach ($user->trades as $trade) {
+            if (strtoupper($trade->coin) == 'BTC') {
+                $btc_amount += $trade->amount;
+            } elseif (strtoupper($trade->coin) == 'LTC') {
+                $ltc_amount += $trade->amount;
+            } else {
+                $dash_amount += $trade->amount;
+            }
+        }
+        
+        return ($btc_amount > 0 ? get_price($btc_amount, 'BTC', 'USD') : 0) 
+                + ($ltc_amount > 0 ? get_price($ltc_amount, 'LTC', 'USD'): 0) 
+                 + ($dash_amount > 0 ? get_price($dash_amount, 'DASH', 'USD'): 0);
     }
 }
