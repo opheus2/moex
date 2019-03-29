@@ -14,7 +14,7 @@ use Vsch\TranslationManager\Translator;
 */
 
 Route::get('testing', function () {
-    return dd(Auth::user()->ratings->avg('rating'));
+    return dd(get_price(10, 'dash', 'usd'));
 });
 
 Route::group([], function () {
