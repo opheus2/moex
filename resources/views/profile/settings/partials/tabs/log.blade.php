@@ -19,7 +19,7 @@
                                 <th class="all"> Ip Address </th>
                                 <th class="all"> Logged At </th>
                                 <th class="all"> Location </th>
-                                <th class="all"> Internet Provider </th>
+                                <th class="all"> Host Name </th>
                                 <th class="all"> User Agent </th>
 
                             </tr>
@@ -31,7 +31,7 @@
                                 <th class="all"> Ip Address </th>
                                 <th class="all"> Logged At </th>
                                 <th class="all"> Location </th>
-                                <th class="all"> Internet Provider </th>
+                                <th class="all"> Host Name </th>
                                 <th class="all"> User Agent </th>
                             </tr>
                         </tfoot>
