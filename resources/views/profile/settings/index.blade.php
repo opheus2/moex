@@ -37,6 +37,11 @@
                                      aria-labelledby="verify-tab" aria-expanded="false">
                                     @include('profile.settings.partials.tabs.verify')
                                 </div>
+
+                                <div class="tab-pane fade" id="logs" role="tabpanel"
+                                     aria-labelledby="verify-tab" aria-expanded="false">
+                                    @include('profile.settings.partials.tabs.log')
+                                </div>
                                
 
                                 @if(Auth::user()->priority() < $user->priority())
@@ -94,6 +99,11 @@
                                     <a class="nav-link" id="security-tab" data-toggle="pill"
                                        href="#verify" role="tab" aria-controls="verify" aria-expanded="false">
                                         <i class="ft-briefcase"></i> {{__('Verify Your Identity')}}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="security-tab" data-toggle="pill" href="#logs">
+                                        <i class="la la-briefcase"></i>{{__('Login History')}}
                                     </a>
                                 </li>
 
@@ -162,6 +172,28 @@
                 }
             }
         ];
+        window._tableData = [
+        {
+            'selector': '#kyc-list',
+            'options': {
+                processing: true,
+                serverSide: true,
+                "ajax": {
+                        "async": true,
+                        "type": "GET",
+                        "url": '{{route('home.logData', ['id' => $user->id])}}',
+                    },
+                columns: [
+                    {data: null, defaultContent: ''},
+                    {data: 'ip_address'},
+                    {data: 'logged_at'},
+                    {data: 'location'},
+                    {data: 'isp'},
+                    {data: 'useragent'},
+                ]
+            }
+        }
+    ]
 
         window._vueData = {!! json_encode([
                 'profile' => [

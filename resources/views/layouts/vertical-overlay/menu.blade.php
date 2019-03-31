@@ -73,6 +73,8 @@
                     </a>
                 </li>
 
+                
+
                 @can('resolve trade dispute')
                     <li class="navigation-header">
                         <span>{{__('MODERATION')}}</span>

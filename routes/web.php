@@ -135,6 +135,7 @@ Route::group([], function () {
 
                 // Resend Phone Verification
                 Route::post('resend-verification-sms', 'ProfileController@resendVerificationSms')->name('resendVerificationSms');
+
             });
         });
 
@@ -145,6 +146,9 @@ Route::group([], function () {
         ], function () {
             // Index
             Route::get('', 'Home\HomeController@index')->name('index');
+            Route::get('log/{user}',                     'Profile\ProfileController@Log')->name('logs');
+            Route::get('log/data/{id}',         'Profile\ProfileController@data')->name('logData');
+
 
             // Successful Trades Data
             Route::post('successful-trades-data', 'Home\HomeController@successfulTradesData')->name('successful-trades-data');

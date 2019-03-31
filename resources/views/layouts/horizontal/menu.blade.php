@@ -65,6 +65,8 @@
                     </a>
                 </li>
 
+                
+
                 @can('resolve trade dispute')
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('moderation.trades.index')}}">
