@@ -13,14 +13,14 @@
                     </span>
                 </div>
             </div>
-            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+            <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+            <div slot="price_USD" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
             <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="limit" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
             <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;" >
                 <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Buy</a>
             </div>
@@ -40,14 +40,14 @@
                     </span>
                 </div>
             </div>
-            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+            <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+            <div slot="price_USD" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
             <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="limit" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
             <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;">
                 <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Sell</a>
             </div>
@@ -151,7 +151,23 @@
                 sellData: [],
                 buyData: [],
                 ratings: [],
-                sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
+                sellHeadings:{
+                    seller: "seller",
+                    payment_method: "Payment Method",
+                    price_NGN: "Price(NGN)",
+                    price_USD: "Price{USD}",
+                    limit: "limit{BTC}",
+                    action: "action",
+                },
+                buyHeadings: {
+                    buyer: "buyer",
+                    payment_method: "Payment Method",
+                    price_NGN: "Price(NGN)",
+                    price_USD: "Price{USD}",
+                    limit: "limit{BTC}",
+                    action: "action",
+                },
+                sellColumns: ['seller', 'payment_method', 'price_NGN', 'price{USD}' ,'limit{BTC}', 'action'],
                 buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
                 options: {
                     perPage: 5,
