@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Profile;
 
 use App\Models\Trade;
 use App\Models\User;
-use App\Models\LoginLog;
 use App\Notifications\Authentication\UserDeactivated;
 use App\Notifications\Authentication\UserRegistered;
 use Illuminate\Http\Request;
@@ -144,29 +143,6 @@ class ProfileController extends Controller
             return response(__("The user has been deactivated successfully!"));
         }else{
             return abort(403);
-        }
-    }
-
-    public function Log($user)
-    {
-        // $user       = User::where('username', $user)->first();
-        $log        = LoginLog::where('user_id', $user->id)->first(); 
-
-        return view('profile.log.index')
-            ->with(compact('log', 'log'));
-
-    }
-
-
-    public function data(Request $request, $id)
-    {
-        if ($request->ajax()) {
-            $logs     = LoginLog::where('user_id', $id)->get(); 
-
-            return DataTables::of($logs)
-                ->make(true);
-        } else {
-            return abort(404);
         }
     }
 }

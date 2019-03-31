@@ -65,13 +65,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('home.logs', ['user' => Auth::user()->name])}}">
-                        <i class="la la-briefcase"></i>
-                        <span class="menu-title">{{__('Login Logs')}}</span>
-                    </a>
-                </li>
-
                 @can('resolve trade dispute')
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('moderation.trades.index')}}">
