@@ -2349,3 +2349,6 @@
   color: #ff1635;
 }
 
+.sidebar-detached.sidebar-left.sidebar-sticky {
+  width: auto !important;
+} 
