@@ -13,14 +13,14 @@
                     </span>
                 </div>
             </div>
-            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+            <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+            <div slot="price_USD" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
             <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="limit" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
             <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;" >
                 <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Buy</a>
             </div>
@@ -40,105 +40,19 @@
                     </span>
                 </div>
             </div>
-            <div slot="price(NGN)" class="d-flex align-items-center" slot-scope="props">
+            <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
             </div>
-            <div slot="price{USD}" slot-scope="props" class="d-flex align-items-center">
+            <div slot="price_USD" slot-scope="props" class="d-flex align-items-center">
                 <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
             </div>
             <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
-            <div slot="limit{BTC}" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
+            <div slot="limit" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
             <div slot="action" slot-scope="props" class="d-flex align-items-center" style="width: 30px;">
                 <a :href="`/home/offer/${props.row.token}`" class="btn mybtn btn-purple px-2">Sell</a>
             </div>
         </v-client-table>
     </div>
-    <!-- <div class="" style="background-color: white;">
-
-      <div style="overflow-x:auto;">
-          <table class="table table-hover table-responsive responsive" id="tableView" style="">
-              <thead>
-                  <tr>
-                      <th>Seller</th>
-                      <th>Payment Method</th>
-                      <th>Price(N)</th>
-                      <th>Price{BTC}</th>
-                      <th>Limit{BTC}</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td><button class="btn btn-purple" style="width:100px!important; margin:0px!important">Sell Bitcoin</button></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td>Bitcoin Trader (30+, 100%)</td>
-                      <td>National Bank Transfer</td>
-                      <td>N2,061,436.00</td>
-                      <td>$3700.89</td>
-                      <td>0.3 - 100</td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td colspan="6" class="show-more">Show More</td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-  </div> -->
 </template>
 
 <script>
@@ -151,8 +65,24 @@
                 sellData: [],
                 buyData: [],
                 ratings: [],
-                sellColumns: ['seller', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
-                buyColumns: ['buyer', 'payment_method', 'price(NGN)', 'price{USD}' ,'limit{BTC}', 'action'],
+                sellHeadings:{
+                    seller: "seller",
+                    payment_method: "Payment Method",
+                    price_NGN: "Price(NGN)",
+                    price_USD: "Price{USD}",
+                    limit: "limit{BTC}",
+                    action: "Action",
+                },
+                buyHeadings: {
+                    buyer: "buyer",
+                    payment_method: "Payment Method",
+                    price_NGN: "Price(NGN)",
+                    price_USD: "Price{USD}",
+                    limit: "limit{BTC}",
+                    action: "Action",
+                },
+                sellColumns: ['seller', 'payment_method', 'price_NGN', 'price_USD' ,'limit', 'action'],
+                buyColumns: ['buyer', 'payment_method', 'price_NGN', 'price_USD' ,'limit', 'action'],
                 options: {
                     perPage: 5,
                     filterable: false,
@@ -160,6 +90,7 @@
                     texts: {
                         count: ' '
                     },
+                    headings: this.sellHeadings,
                     sortable: [/* 'payment_method', 'amount_range', 'coin' */],
                     skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
                 },
@@ -184,9 +115,15 @@
             coin () {
                 if (this.coin === "All") {
                     this.tableData = [...this.getCurrentTableData()];
+                    this.sellHeadings.limit = `limit{BTC}`;
+                    this.buyHeadings.limit = `limit{BTC}`;
                     return;
+                } else {
+                    this.sellHeadings.limit = `limit{${this.coin}}`;
+                    this.buyHeadings.limit = `limit{${this.coin}}`;
                 }
                 this.tableData = this.getCurrentTableData().filter(data => {return data.coin.toUpperCase() === this.coin.toUpperCase()});
+                this.$forceUpdate();
             }
         },
         created () {
@@ -285,8 +222,10 @@
              */
             getCurrentTableData () {
                 if (this.tableType === 'sell') {
+                    this.options.headings = this.buyHeadings;
                     return this.buyData;
                 } else {
+                    this.options.headings = this.sellHeadings;
                     return this.sellData;
                 }
             },
