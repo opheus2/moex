@@ -9,6 +9,7 @@ import faq      from './components/faq'
 import career   from './components/career'
 import blog     from './components/blog'
 import about     from './components/about'
+import error404 from "./components/404";
 
 Vue.use(Router)
 
@@ -18,11 +19,12 @@ export default new Router({
     routes: [
         {
             path: '/',
+            name: 'land',
             component: land
         },
         {
             path: '/home',
-            name: 'Home',
+            name: 'home',
             component: Homes
         },
         {
@@ -60,6 +62,10 @@ export default new Router({
             name: 'about',
             component: about
         },
+        {
+            path: '*',
+            component: error404,
+        }
     ],
     scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {
