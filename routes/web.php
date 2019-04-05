@@ -13,10 +13,6 @@ use Vsch\TranslationManager\Translator;
 |
 */
 
-Route::get('testing', function () {
-    return dd(get_price(10, 'dash', 'usd'));
-});
-
 Route::group([], function () {
     // Landing routes
     Route::get('/dashboard', function () {

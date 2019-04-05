@@ -24,10 +24,10 @@
 		        <div class="col-xs-6 col-md-6">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">About</h4></li>
-		                <li><router-link to="/landing/careers"><p class="text-white">Careers</p></router-link></li>
-		                <li><router-link to="/landing/terms-of-service"><p class="text-white">Terms of Service</p></router-link></li>
-		                <li><router-link to="/landing/privacy-policy"><p class="text-white">Privacy Policy</p></router-link></li>
-		                <li><router-link to="/landing/blog"><p class="text-white">Blog</p></router-link></li>
+		                <li><router-link :to="{name: 'careers'}"><p class="text-white">Careers</p></router-link></li>
+		                <li><router-link :to="{name: 'terms-of-service'}"><p class="text-white">Terms of Service</p></router-link></li>
+		                <li><router-link :to="{name: 'privacy-policy'}"><p class="text-white">Privacy Policy</p></router-link></li>
+		                <li><router-link :to="{name: 'blog'}"><p class="text-white">Blog</p></router-link></li>
 		            </ul>
 		        </div>
         	</div>
@@ -35,9 +35,9 @@
         		<div class="col-xs-6 pl-xs-0 col-md-6 mv-left">
 		            <ul class="footer-list">
 		                <li><h4 class="text-white">Support</h4></li>
-		                <li><router-link to="/landing/contact"><p class="text-white"> Contact Us</p></router-link></li>
-		                <li><router-link to="/landing/faq"><p class="text-white">FAQ</p></router-link></li>
-		                <li><router-link to="/landing/api"><p class="text-white">API Documention</p></router-link></li>
+		                <li><router-link :to="{name: 'contact'}"><p class="text-white"> Contact Us</p></router-link></li>
+		                <li><router-link :to="{name: 'faq'}"><p class="text-white">FAQ</p></router-link></li>
+		                <li><router-link to="/api/docs"><p class="text-white">API Documention</p></router-link></li>
 		            </ul>
 		        </div>
 		        <div class="col-xs-6 col-md-6">
@@ -69,16 +69,12 @@
     		<hr  style="border: 1px solid rgba(218, 218, 218, 0.43);">
     	</div>
         <div class="col-md-12 px-0 foot">
-            <!-- p class="col-xs-8 col-md-9">&copy; 2019 MOEX. All rights reserved.</p -->
             <p class="col-xs-4 col-md-3" style="margin-left: auto; text-align: right; cursor: pointer; float: right;" @click="scrollToTop"> Back to top</p>
         </div>
     </div>
     
 </footer>
 </template>
-<!-- script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-</script -->
 
 <style scoped>
 	.btn-moex {

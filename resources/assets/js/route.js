@@ -32,32 +32,32 @@ export default new Router({
         },
         {
             path: '/privacy-policy',
-            name: 'Privacy Policy',
+            name: 'privacy-policy',
             component: privacy
         },
         {
             path: '/contact',
-            name: 'Contact',
+            name: 'contact',
             component: contact
         },
         {
             path: '/blog',
-            name: 'Blog',
+            name: 'blog',
             component: blog
         },
         {
             path: '/careers',
-            name: 'Careers',
+            name: 'careers',
             component: career
         },
         {
             path: '/faq',
-            name: 'Faq',
+            name: 'faq',
             component: faq
         },
         {
             path: '/about',
-            name: 'About',
+            name: 'about',
             component: about
         },
     ],
