@@ -1,23 +1,15 @@
 @extends('layouts.master')
-@section('page.name', __('Create Buy Offer'))
+@section('page.name', 'Edit Offer')
 @section('page.body')
     <market-create-offer-page inline-template>
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-8 mb-2">
-                    <h3 class="content-header-title">{{__('Create Buy Offer')}}</h3>
+                    <h3 class="content-header-title">Edit Offer</h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
-                            {{ Breadcrumbs::render('market.create_offer.buy') }}
+                            {{ Breadcrumbs::render('offers.edit') }}
                         </div>
-                    </div>
-                </div>
-
-                <div class="content-header-right col-4">
-                    <div class="btn-group float-right">
-                        <a href="{{route('market.create-offer.sell')}}" class="btn btn-danger round box-shadow-2 px-2">
-                            <i class="ft-activity"></i> {{__('SELL')}}
-                        </a>
                     </div>
                 </div>
             </div>
@@ -40,7 +32,7 @@
 
                         <div class="card-content">
                             <div class="card-body">
-                                {!! Form::open(['url' => route('market.create-offer.store', ['type' => 'buy']), 'class' => 'form form-horizontal']) !!}
+                                {!! Form::open(['url' => route('home.offers.edit', ['token' => $offer->token]), 'class' => 'form form-horizontal']) !!}
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -49,7 +41,7 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('coin', __('Select Wallet')) !!}
-                                                {!! Form::select('coin', get_coins(), 'btc', ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'coin']) !!}
+                                                {!! Form::select('coin', get_coins(), $offer->coin, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'coin']) !!}
                                             </div>
 
                                             <div class="bs-callout-info callout-border-left mt-1 p-1">
@@ -66,12 +58,12 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('payment_method', __('Payment Method')) !!}
-                                                {!! Form::select('payment_method', $payment_methods, null, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method']) !!}
+                                                {!! Form::select('payment_method', $payment_methods, $offer->payment_method, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method']) !!}
                                             </div>
 
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
-                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
+                                                {!! Form::select('currency', get_iso_currencies(), $offer->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
                                                 <p class="help-inline mt-1">
                                                     {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to sell bitcoin with US Dollar currency.')}}
                                                 </p>
@@ -87,7 +79,7 @@
                                                 {!! Form::label('profit_margin', __('I want to earn'), ['class' => 'col-md-3']) !!}
                                                 <div class="col-md-9">
                                                     <div class="input-group">
-                                                        {!! Form::number('profit_margin', null, ['class' => 'form-control', 'required', 'v-model.number' => 'profit_margin']) !!}
+                                                        {!! Form::number('profit_margin', $offer->profit_margin, ['class' => 'form-control', 'required', 'v-model.number' => 'profit_margin']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text"><i class="ft-percent"></i>
@@ -121,7 +113,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
+                                                        {!! Form::number('min_amount', $offer->min_amount, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -132,7 +124,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount', 'novalidate']) !!}
+                                                        {!! Form::number('max_amount', $offer->max_amount, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount', 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -147,7 +139,7 @@
                                                 {!! Form::label('deadline', __('Auto cancel after:'), ['class' => 'col-md-3']) !!}
                                                 <div class="col-md-9">
                                                     <div class="input-group">
-                                                        {!! Form::number('deadline', null, ['class' => 'form-control', 'required', 'min' => 0]) !!}
+                                                        {!! Form::number('deadline', $offer->deadline, ['class' => 'form-control', 'required', 'min' => 0]) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text"> {{__('minutes')}} </span>
@@ -163,7 +155,7 @@
                                             <h4 class="form-section"><i class="ft-tag"></i> {{__('Tags & Labels')}}</h4>
                                             <div class="form-group">
                                                 {!! Form::label('tags', __('Select Tags:')) !!}
-                                                {!! Form::select('tags[]', get_tags(), null, ['is' => 'select2', 'html-class' => 'form-control', 'multiple', 'novalidate']) !!}
+                                                {!! Form::select('tags[]', get_tags(), $offer->tags, ['is' => 'select2', 'html-class' => 'form-control', 'multiple', 'novalidate']) !!}
                                                 <p class="help-block">
                                                     {{__('Add quick tags that best describe your offer terms.')}}
                                                     <b>{{__('Maximum 3 tags.')}}</b>
@@ -172,7 +164,7 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('label', __('Offer Label:')) !!}
-                                                {!! Form::text('label', null, ['class' => 'form-control', 'required', 'maxlength' => 25, 'placeholder' => __('e.g INSTANT RELEASE')]) !!}
+                                                {!! Form::text('label', $offer->label, ['class' => 'form-control', 'required', 'maxlength' => 25, 'placeholder' => __('e.g INSTANT RELEASE')]) !!}
                                                 <p class="help-block">
                                                     {{__('Any marketing text that will appear after your payment method. Maximum 25 characters and only letters and numbers.')}}
                                                 </p>
@@ -184,11 +176,11 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('terms', __('Offer Terms:')) !!}
-                                                {!! Form::textarea('terms', null, ['class' => 'form-control', 'rows' => 4]) !!}
+                                                {!! Form::textarea('terms', $offer->terms, ['class' => 'form-control', 'rows' => 4]) !!}
                                             </div>
                                             <div class="form-group">
                                                 {!! Form::label('trade_instruction', __('Trade Instructions:')) !!}
-                                                {!! Form::textarea('trade_instruction', null, ['class' => 'form-control', 'rows' => 4]) !!}
+                                                {!! Form::textarea('trade_instruction', $offer->trade_instruction, ['class' => 'form-control', 'rows' => 4]) !!}
                                                 <p class="help-block">
                                                     {{__('Shown once the trade has started. Trade instructions must be short, clear and bulleted if possible')}}
                                                 </p>
@@ -202,12 +194,12 @@
                                             </h4>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('phone_verification', 1) !!}
+                                                {!! Form::checkbox('phone_verification', 1, $offer->phone_verification ) !!}
                                                 {!! Form::label('phone_verification', __('Verified Phone')) !!}
                                             </div>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('email_verification', 1) !!}
+                                                {!! Form::checkbox('email_verification', 1, $offer->email_verification) !!}
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
                                             </div>
 
@@ -216,7 +208,7 @@
                                             <h4 class="form-section"><i class="ft-eye"></i> {{__('Visibility')}}</h4>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('trusted_offer', 1) !!}
+                                                {!! Form::checkbox('trusted_offer', 1, $offer->trusted_offer) !!}
                                                 {!! Form::label('trusted_offer', __('Show to only trusted contacts')) !!}
                                             </div>
                                         </div>

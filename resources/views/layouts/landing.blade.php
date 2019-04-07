@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{asset('css/landing.css')}}">
     <link rel="stylesheet" href="{{asset('css/extra.css')}}">
     <link rel="stylesheet" href="{{asset('css/external.css')}}">
+    <link rel="stylesheet" href="{{asset('css/error.css')}}">
     <title>@yield("title", config('app.name', 'Moex'))</title>
     @include('includes.scripts')
 

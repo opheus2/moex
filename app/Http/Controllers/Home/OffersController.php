@@ -64,6 +64,27 @@ class OffersController extends Controller
         }
     }
 
+    public function edit(Request $request, $token)
+    {
+        $offer = Offer::where('token', $token)->first();
+        if ($offer) {
+            return view('home.offers.edit')->with(compact('offer'));
+        }
+
+        return redirect()->back();
+    }
+
+    public function update(Request $request, $token)
+    {
+        $offer = Offer::where('token', $token)->first();
+        if ($offer) {
+            $offer->update($request->all());
+            return redirect()->route('home.offers.index', ['token' => $token]);
+        }
+
+        return redirect()->back();
+    }
+
     public function getRate($from_currency, $to_currency){
         $from_Currency  = urlencode($from_currency);
         $to_Currency    = urlencode($to_currency);

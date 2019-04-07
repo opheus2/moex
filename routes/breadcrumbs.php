@@ -139,3 +139,8 @@ Breadcrumbs::for('moderator_referral', function ($trail) {
     $trail->parent('home');
     $trail->push('Referral', route('admin.referrals.index'));
 });
+
+Breadcrumbs::for('offers.edit', function ($trail) {
+    $trail->parent('home');
+    $trail->push(__('Create Sell Offer'), route('market.create-offer.sell'));
+});
