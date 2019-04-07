@@ -162,7 +162,9 @@ class LoginController extends Controller
         }
 
         $this->curateLog($user->id, $request);
-        $this->getLogData($user->id, $request);
+        if ($request->ip() !== '127.0.0.1') {
+            $this->getLogData($user->id, $request);
+        }
 
         return redirect()->intended($this->redirectPath());
     }

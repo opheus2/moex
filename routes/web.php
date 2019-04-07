@@ -158,6 +158,12 @@ Route::group([], function () {
                     // Index
                     Route::get('', 'Home\OffersController@index')->name('index');
 
+                    //Edit Offer
+                    Route::get('edit', 'Home\OffersController@edit')->name('edit');
+
+                    // Update Offer
+                    Route::post('post', 'Home\OffersController@update')->name('update');
+
                     // Start Trade
                     Route::post('start-trade', 'Home\OffersController@startTrade')->name('start-trade');
 
