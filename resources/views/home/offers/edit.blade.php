@@ -113,8 +113,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('min_amount', $offer->min_amount, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
-
+                                                        {!! Form::text('min_amount', $offer->min_amount, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
                                                         </div>
@@ -124,8 +123,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('max_amount', $offer->max_amount, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount', 'novalidate']) !!}
-
+                                                        {!! Form::text('max_amount', $offer->max_amount, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
                                                         </div>
