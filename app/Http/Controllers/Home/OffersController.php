@@ -69,8 +69,16 @@ class OffersController extends Controller
     {
         $offer = Offer::where('token', $token)->first();
         $payment_methods = $this->getPaymentMethods();
+        $min_btc_amount     = get_convert(config('settings.min_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $min_ltc_amount     = get_convert(config('settings.min_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $min_dash_amount    = get_convert(config('settings.min_offer_amount'), 'DASH',  config('settings.default_currency'));
+
+
+        $max_btc_amount     = get_convert(config('settings.max_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $max_ltc_amount     = get_convert(config('settings.max_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $max_dash_amount    = get_convert(config('settings.max_offer_amount'), 'DASH',  config('settings.default_currency'));
         if ($offer) {
-            return view('home.offers.edit')->with(compact('offer', 'payment_methods'));
+            return view('home.offers.edit')->with(compact('offer', 'payment_methods', 'min_btc_amount', 'max_btc_amount', 'min_ltc_amount', 'max_ltc_amount', 'min_dash_amount', 'max_dash_amount'));
         }
 
         return redirect()->back();
