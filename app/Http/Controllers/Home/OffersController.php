@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Models\Offer;
 use App\Models\Trade;
+use App\Models\PaymentMethodCategory;
 use App\Notifications\Trades\Started;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -67,11 +68,26 @@ class OffersController extends Controller
     public function edit(Request $request, $token)
     {
         $offer = Offer::where('token', $token)->first();
+        $payment_methods = $this->getPaymentMethods();
         if ($offer) {
-            return view('home.offers.edit')->with(compact('offer'));
+            return view('home.offers.edit')->with(compact('offer', 'payment_methods'));
         }
 
         return redirect()->back();
+    }
+    
+    public function getPaymentMethods()
+    {
+        $categories = PaymentMethodCategory::all();
+
+        $payment_methods = array();
+
+        foreach ($categories as $category) {
+            $payment_methods[$category->name] = $category->payment_methods()
+                ->get()->pluck('name', 'name');
+        }
+
+        return $payment_methods;
     }
 
     public function update(Request $request, $token)
