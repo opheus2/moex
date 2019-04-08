@@ -24,6 +24,6 @@
     <i class="ft-trash"></i>
 </a>
 
-<a href="{{ route('home.offers.edit'), ['token' => $data->token]}}" class="btn btn-icon btn-sm btn-pure warning">
+<a href="{{ route('home.offers.edit', ['token' => $data->token])}}" class="btn btn-icon btn-sm btn-pure warning">
     <i class="ft-edit"></i>
 </a>
