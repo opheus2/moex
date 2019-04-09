@@ -41,7 +41,7 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('coin', __('Select Wallet')) !!}
-                                                {!! Form::select('coin', get_coins(), $offer->coin, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'coin']) !!}
+                                                {!! Form::select('coin', get_coins(), $offer->coin, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'coin', 'value' => "'$offer->coin'"]) !!}
                                             </div>
 
                                             <div class="bs-callout-info callout-border-left mt-1 p-1">
@@ -58,12 +58,12 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('payment_method', __('Payment Method')) !!}
-                                                {!! Form::select('payment_method', $payment_methods, $offer->payment_method, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method', 'payment_method' => "'$offer->payment_method'"]) !!}
+                                                {!! Form::select('payment_method', $payment_methods, $offer->payment_method, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method', 'value' => "'$offer->payment_method'"]) !!}
                                             </div>
 
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
-                                                {!! Form::select('currency', get_iso_currencies(), $offer->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
+                                                {!! Form::select('currency', get_iso_currencies(), $offer->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency', 'value' => "'$offer->currency'"]) !!}
                                                 <p class="help-inline mt-1">
                                                     {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to sell bitcoin with US Dollar currency.')}}
                                                 </p>
