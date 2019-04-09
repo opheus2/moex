@@ -32,7 +32,7 @@
 
                         <div class="card-content">
                             <div class="card-body">
-                                {!! Form::open(['url' => route('home.offers.edit', ['token' => $offer->token]), 'class' => 'form form-horizontal']) !!}
+                                {!! Form::open(['url' => route('home.offers.update', ['token' => $offer->token]), 'class' => 'form form-horizontal']) !!}
                                 <div class="form-body">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -58,7 +58,7 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('payment_method', __('Payment Method')) !!}
-                                                {!! Form::select('payment_method', $payment_methods, $offer->payment_method, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method']) !!}
+                                                {!! Form::select('payment_method', $payment_methods, $offer->payment_method, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'payment_method', 'payment_method' => "'$offer->payment_method'"]) !!}
                                             </div>
 
                                             <div class="form-group">
