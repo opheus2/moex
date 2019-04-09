@@ -9,6 +9,7 @@ import faq      from './components/faq'
 import career   from './components/career'
 import blog     from './components/blog'
 import about     from './components/about'
+import docs     from './components/docs'
 import error404 from "./components/404";
 
 Vue.use(Router)
@@ -61,6 +62,11 @@ export default new Router({
             path: '/about',
             name: 'about',
             component: about
+        },
+        {
+            path: '/docs',
+            name: 'api',
+            component: docs
         },
         {
             path: '*',
