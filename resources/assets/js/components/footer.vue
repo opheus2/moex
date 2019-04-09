@@ -37,7 +37,7 @@
 		                <li><h4 class="text-white">Support</h4></li>
 		                <li><router-link :to="{name: 'contact'}"><p class="text-white"> Contact Us</p></router-link></li>
 		                <li><router-link :to="{name: 'faq'}"><p class="text-white">FAQ</p></router-link></li>
-		                <li><router-link to="/api/docs"><p class="text-white">API Documention</p></router-link></li>
+		                <li><router-link :to="{name: 'api'}"><p class="text-white">API Documention</p></router-link></li>
 		            </ul>
 		        </div>
 		        <div class="col-xs-6 col-md-6">
