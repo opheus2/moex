@@ -27,8 +27,8 @@
         <ul class="nav navbar-nav navbar-right header-links">
           <li><a class="text-color" href="/login">Buy Bitcoins</a></li>
           <li><a class="text-color" href="/login">Sell Bitcoins</a></li>
-          <li><router-link to="/landing" class="text-color" href="/landing/blog">Blog</router-link></li>
-          <li><router-link to="/landing/contact" class="text-color" href="#">About</router-link></li>
+          <li><router-link to="/landing" class="text-color" href="/blog">Blog</router-link></li>
+          <li><router-link to="/landing/contact" class="text-color" href="/about">About</router-link></li>
           <li>
             <a class="text-color btn btn-default btn-lg button-sign" href="/login" v-if="isOffline">Sign In</a>
             <a class="text-color btn btn-default btn-lg button-sign" href="/home" v-else>Dashboard</a>
