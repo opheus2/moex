@@ -41,6 +41,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="/home#offers">
+                        <i class="la la-cart-plus"></i>
+                        <span class="menu-title">My Offers</span>
+                    </a>
+                </li>
+
                 <li class="navigation-header">
                     <span>{{__('MY PROFILE')}}</span>
                 </li>
