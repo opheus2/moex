@@ -18,7 +18,8 @@ export default {
             this.handleScrollElements();
             this.initTradesChart();
         })
-        let interval = setInterval(() => {
+        debugger;
+        /* let interval = setInterval(() => {
             if (document.head.parentElement.classList.contains('loaded')) {
                 if (window._isFirstTimeLogin) {
                     window.introJs().start()
@@ -27,7 +28,7 @@ export default {
                 clearInterval(interval);
             }
 
-        }, 10);
+        }, 10); */
         
     },
 
