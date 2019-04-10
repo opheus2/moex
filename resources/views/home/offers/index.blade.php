@@ -64,7 +64,7 @@
                                                 <div class="col-lg-4 col-md-12">
                                                     {!! Form::label('coin_value', __('Amount in Coin:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount_with_fee, 'step' =>".00000001"]) !!}
+                                                        {!! Form::number('amount', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue',  'min' => $offer->min_amount, 'max' => $offer->max_amount_with_fee, 'step' =>".00000001", 'novalidate']) !!}
                                                         {{-- {!! Form::number('coin_value', null, ['class' => 'form-control', 'required', 'v-model.number' => 'coinValue', 'min' => $offer->min_amount, 'max' => $offer->max_amount, 'step' =>".00000001"]) !!} --}}
 
                                                         <div class="input-group-append">
@@ -97,7 +97,7 @@
                                                     @else
                                                         {!! Form::label('amount', __('Amount in :currency:', ['currency' => $offer->currency ])) !!}
                                                         <div class="input-group">
-                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount',  'readonly']) !!}
+                                                            {!! Form::number('amount_cur', null, ['class' => 'form-control', 'required', 'v-model.number' => 'amount',  'readonly', 'step'=>"0.01"]) !!}
                                                             {!! Form::number('offer_cur', null, ['class' => 'form-control', 'required', 'hidden', 'v-model.number' => 'amount',  'step' =>"0.01"]) !!}
 
                                                             <div class="input-group-append">
@@ -333,5 +333,8 @@
                 'currency' => $offer->currency,
 
             ]) !!}
+            console.log('{!! $offer->currency !!}')
+            console.log('{!! $currencyRate !!}')
+            console.log('{!! $rate !!}')
     </script>
 @endpush
