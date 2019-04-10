@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Models\Offer;
 use App\Models\Trade;
+use App\Models\PaymentMethodCategory;
 use App\Notifications\Trades\Started;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 use GuzzleHttp\Client;
+use Illuminate\Validation\Rule;
 
 
 
@@ -62,6 +64,90 @@ class OffersController extends Controller
         } else {
             return abort(404);
         }
+    }
+
+    public function edit(Request $request, $token)
+    {
+        $offer = Offer::where('token', $token)->first();
+        $payment_methods = $this->getPaymentMethods();
+        $min_btc_amount     = get_convert(config('settings.min_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $min_ltc_amount     = get_convert(config('settings.min_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $min_dash_amount    = get_convert(config('settings.min_offer_amount'), 'DASH',  config('settings.default_currency'));
+
+
+        $max_btc_amount     = get_convert(config('settings.max_offer_amount'), 'BTC',  config('settings.default_currency'));
+        $max_ltc_amount     = get_convert(config('settings.max_offer_amount'), 'LTC',  config('settings.default_currency'));
+        $max_dash_amount    = get_convert(config('settings.max_offer_amount'), 'DASH',  config('settings.default_currency'));
+        if ($offer) {
+            return view('home.offers.edit')->with(compact('offer', 'payment_methods', 'min_btc_amount', 'max_btc_amount', 'min_ltc_amount', 'max_ltc_amount', 'min_dash_amount', 'max_dash_amount'));
+        }
+
+        return redirect()->back();
+    }
+    
+    public function getPaymentMethods()
+    {
+        $categories = PaymentMethodCategory::all();
+
+        $payment_methods = array();
+
+        foreach ($categories as $category) {
+            $payment_methods[$category->name] = $category->payment_methods()
+                ->get()->pluck('name', 'name');
+        }
+
+        return $payment_methods;
+    }
+
+    public function update(Request $request, $token)
+    {
+        $offer = Offer::where('token', $token)->first();
+
+        if ($offer) {
+            if($currency = $request->currency){
+                $min_offer_amount    = get_convert(config('settings.min_offer_amount'), $request->coin,  config('settings.default_currency'));
+
+                $min_amount_rule = "required|numeric|min:{$min_offer_amount}";
+
+                $max_offer_amount    = Auth::user()->wallet($request->coin)->totalAvailable();
+                
+                $max_amount_rule = "required|numeric|max:{$max_offer_amount}|gte:min_amount";
+            }else{
+                $min_amount_rule = 'required|numeric|min:0';
+                $max_amount_rule = 'required|numeric|min:0|gte:min_amount';
+            }
+
+            $payment_methods = collect($this->getPaymentMethods());
+            $coins = collect(get_coins());
+            $currencies = collect(get_iso_currencies());
+
+            $this->validate($request, [
+                'min_amount'        => $min_amount_rule,
+                'max_amount'        => $max_amount_rule,
+
+                'payment_method'    => ['required', Rule::in($payment_methods->flatten())],
+                'currency'          => ['required', Rule::in($currencies->keys()->toArray())],
+                'coin'              => ['required', Rule::in($coins->keys()->toArray())],
+
+                'tags'              => 'required|array|max:3',
+
+                'label'             => 'required|string|max:25',
+                'terms'             => 'required|string',
+                'trade_instruction' => 'required|string',
+
+                'deadline'          => 'required|numeric|min:0',
+                'profit_margin'     => 'required|numeric',
+            ]);
+
+            $offerUpdate = $request->all() ;
+            $offerUpdate['profit_margin'] = $request->profit_margin + get_fee_percentage($request->coin);
+            $offerUpdate['max_amount_with_fee'] = get_max_with_fee_percentage($request->max_amount, $request->coin);
+
+            $offer->update($offerUpdate);
+            return redirect()->route('home.offers.index', ['token' => $token]);
+        }
+
+        return redirect()->back();
     }
 
     public function getRate($from_currency, $to_currency){
