@@ -15,8 +15,8 @@ trait LoginLogs
 {
     public function getLogData (int $user_id, Request $request) 
     {
-        // $url            = "https://api.ipgeolocation.io/ipgeo?apiKey=b6b481f32a4446b1a0a6a90067e0f10d&ip=".$request->ip();
-        $url            = "https://api.ipgeolocation.io/ipgeo?apiKey=b6b481f32a4446b1a0a6a90067e0f10d&ip=105.112.43.161";
+        $url            = "https://api.ipgeolocation.io/ipgeo?apiKey=b6b481f32a4446b1a0a6a90067e0f10d&ip=".$request->ip();
+        //$url            = "https://api.ipgeolocation.io/ipgeo?apiKey=b6b481f32a4446b1a0a6a90067e0f10d&ip=105.112.43.161";
 
         $client         = new Client();
         $response       = $client->get($url);
