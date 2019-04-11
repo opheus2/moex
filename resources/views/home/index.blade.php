@@ -213,7 +213,7 @@
                             </div>
                         </div>
 
-                        <div class="card" data-intro="This table will show all trade offers created by you" data-step="4">
+                        <div id="offers" class="card" data-intro="This table will show all trade offers created by you" data-step="4">
                             <div class="card-header border-top-success">
                                 <h4 class="card-title">
                                     {{__('My Offers')}}
@@ -237,7 +237,7 @@
                                         {{__('Your offers are only visible to the public when you have enough balance!')}}
                                     </h5>
                                     <div class="table-responsive">
-                                        <table id="my-offers" class="table table-white-space table-bordered row-grouping display icheck table-middle">
+                                        <table class="table table-white-space table-bordered row-grouping display icheck table-middle">
                                             <thead>
                                             <tr>
                                                 <th></th>

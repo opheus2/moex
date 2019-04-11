@@ -301,7 +301,7 @@ class OffersController extends Controller
                     $min = money($data->min_amount, $data->currency, true);
                     $max = money($data->max_amount, $data->currency, true);
 
-                    return "<b>{$min}</b>" . ' - ' . "<b>{$max}</b>";
+                    return "<b>{$data->min_amount}</b>" . ' - ' . "<b>{$data->max_amount}</b>";
                 })
                 ->editColumn('type', function ($data) {
                     return strtoupper($data->type);

@@ -15,23 +15,27 @@ export default {
 
     mounted: function () {
         this.$nextTick(function () {
+            this.handleIntroJs();
             this.handleScrollElements();
             this.initTradesChart();
         })
-        let interval = setInterval(() => {
-            if (document.head.parentElement.classList.contains('loaded')) {
-                if (window._isFirstTimeLogin) {
-                    window.introJs().start()
-                    this.updateUserLog();
-                }
-                clearInterval(interval);
-            }
-
-        }, 10);
+        
         
     },
 
     methods: {
+        handleIntroJs () {
+            let interval = setInterval(() => {
+                if (document.head.parentElement.classList.contains('loaded')) {
+                    if (window._isFirstTimeLogin) {
+                        window.introJs().start()
+                        this.updateUserLog();
+                    }
+                    clearInterval(interval);
+                }
+
+            }, 10);
+        },
         updateUserLog () {
             axios.post('/update-log');
         },
