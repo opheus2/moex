@@ -5,7 +5,7 @@ return [
     'AED' => [
         'name'                => 'UAE Dirham',
         'code'                => 784,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'د.إ',
         'symbol_first'        => true,
@@ -16,7 +16,7 @@ return [
     'AFN' => [
         'name'                => 'Afghani',
         'code'                => 971,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '؋',
         'symbol_first'        => false,
@@ -27,7 +27,7 @@ return [
     'ALL' => [
         'name'                => 'Lek',
         'code'                => 8,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'L',
         'symbol_first'        => false,
@@ -38,7 +38,7 @@ return [
     'AMD' => [
         'name'                => 'Armenian Dram',
         'code'                => 51,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'դր.',
         'symbol_first'        => false,
@@ -48,8 +48,8 @@ return [
 
     'ANG' => [
         'name'                => 'Netherlands Antillean Guilder',
-        'code'                => 532,
-        'precision'           => 2,
+        'code'                => 534,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ƒ',
         'symbol_first'        => true,
@@ -60,7 +60,7 @@ return [
     'AOA' => [
         'name'                => 'Kwanza',
         'code'                => 973,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Kz',
         'symbol_first'        => false,
@@ -70,8 +70,8 @@ return [
 
     'ARS' => [
         'name'                => 'Argentine Peso',
-        'code'                => 32,
-        'precision'           => 2,
+        'code'                => 34,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -82,7 +82,7 @@ return [
     'AUD' => [
         'name'                => 'Australian Dollar',
         'code'                => 36,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -93,7 +93,7 @@ return [
     'AWG' => [
         'name'                => 'Aruban Florin',
         'code'                => 533,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ƒ',
         'symbol_first'        => false,
@@ -104,7 +104,7 @@ return [
     'AZN' => [
         'name'                => 'Azerbaijanian Manat',
         'code'                => 944,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₼',
         'symbol_first'        => true,
@@ -115,7 +115,7 @@ return [
     'BAM' => [
         'name'                => 'Convertible Mark',
         'code'                => 977,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'КМ',
         'symbol_first'        => true,
@@ -125,8 +125,8 @@ return [
 
     'BBD' => [
         'name'                => 'Barbados Dollar',
-        'code'                => 52,
-        'precision'           => 2,
+        'code'                => 54,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -137,7 +137,7 @@ return [
     'BDT' => [
         'name'                => 'Taka',
         'code'                => 50,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '৳',
         'symbol_first'        => true,
@@ -148,7 +148,7 @@ return [
     'BGN' => [
         'name'                => 'Bulgarian Lev',
         'code'                => 975,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'лв',
         'symbol_first'        => false,
@@ -181,7 +181,7 @@ return [
     'BMD' => [
         'name'                => 'Bermudian Dollar',
         'code'                => 60,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -192,7 +192,7 @@ return [
     'BND' => [
         'name'                => 'Brunei Dollar',
         'code'                => 96,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -203,7 +203,7 @@ return [
     'BOB' => [
         'name'                => 'Boliviano',
         'code'                => 68,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Bs.',
         'symbol_first'        => true,
@@ -214,7 +214,7 @@ return [
     'BOV' => [
         'name'                => 'Mvdol',
         'code'                => 984,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Bs.',
         'symbol_first'        => true,
@@ -225,7 +225,7 @@ return [
     'BRL' => [
         'name'                => 'Brazilian Real',
         'code'                => 986,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'R$',
         'symbol_first'        => true,
@@ -236,7 +236,7 @@ return [
     'BSD' => [
         'name'                => 'Bahamian Dollar',
         'code'                => 44,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -247,7 +247,7 @@ return [
     'BTN' => [
         'name'                => 'Ngultrum',
         'code'                => 64,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Nu.',
         'symbol_first'        => false,
@@ -257,8 +257,8 @@ return [
 
     'BWP' => [
         'name'                => 'Pula',
-        'code'                => 72,
-        'precision'           => 2,
+        'code'                => 74,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'P',
         'symbol_first'        => true,
@@ -280,7 +280,7 @@ return [
     'BZD' => [
         'name'                => 'Belize Dollar',
         'code'                => 84,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -290,8 +290,8 @@ return [
 
     'CAD' => [
         'name'                => 'Canadian Dollar',
-        'code'                => 124,
-        'precision'           => 2,
+        'code'                => 144,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -302,7 +302,7 @@ return [
     'CDF' => [
         'name'                => 'Congolese Franc',
         'code'                => 976,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Fr',
         'symbol_first'        => false,
@@ -313,7 +313,7 @@ return [
     'CHF' => [
         'name'                => 'Swiss Franc',
         'code'                => 756,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'CHF',
         'symbol_first'        => true,
@@ -334,7 +334,7 @@ return [
 
     'CLP' => [
         'name'                => 'Chilean Peso',
-        'code'                => 152,
+        'code'                => 154,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => '$',
@@ -346,7 +346,7 @@ return [
     'CNY' => [
         'name'                => 'Yuan Renminbi',
         'code'                => 156,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '¥',
         'symbol_first'        => true,
@@ -357,7 +357,7 @@ return [
     'COP' => [
         'name'                => 'Colombian Peso',
         'code'                => 170,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -368,7 +368,7 @@ return [
     'CRC' => [
         'name'                => 'Costa Rican Colon',
         'code'                => 188,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₡',
         'symbol_first'        => true,
@@ -379,7 +379,7 @@ return [
     'CUC' => [
         'name'                => 'Peso Convertible',
         'code'                => 931,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -389,8 +389,8 @@ return [
 
     'CUP' => [
         'name'                => 'Cuban Peso',
-        'code'                => 192,
-        'precision'           => 2,
+        'code'                => 194,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -400,8 +400,8 @@ return [
 
     'CVE' => [
         'name'                => 'Cape Verde Escudo',
-        'code'                => 132,
-        'precision'           => 2,
+        'code'                => 134,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -411,8 +411,8 @@ return [
 
     'CZK' => [
         'name'                => 'Czech Koruna',
-        'code'                => 203,
-        'precision'           => 2,
+        'code'                => 403,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Kč',
         'symbol_first'        => false,
@@ -422,7 +422,7 @@ return [
 
     'DJF' => [
         'name'                => 'Djibouti Franc',
-        'code'                => 262,
+        'code'                => 464,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => 'Fdj',
@@ -433,8 +433,8 @@ return [
 
     'DKK' => [
         'name'                => 'Danish Krone',
-        'code'                => 208,
-        'precision'           => 2,
+        'code'                => 408,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'kr',
         'symbol_first'        => false,
@@ -444,8 +444,8 @@ return [
 
     'DOP' => [
         'name'                => 'Dominican Peso',
-        'code'                => 214,
-        'precision'           => 2,
+        'code'                => 414,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -455,8 +455,8 @@ return [
 
     'DZD' => [
         'name'                => 'Algerian Dinar',
-        'code'                => 12,
-        'precision'           => 2,
+        'code'                => 14,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'د.ج',
         'symbol_first'        => false,
@@ -467,7 +467,7 @@ return [
     'EGP' => [
         'name'                => 'Egyptian Pound',
         'code'                => 818,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ج.م',
         'symbol_first'        => true,
@@ -477,8 +477,8 @@ return [
 
     'ERN' => [
         'name'                => 'Nakfa',
-        'code'                => 232,
-        'precision'           => 2,
+        'code'                => 434,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Nfk',
         'symbol_first'        => false,
@@ -488,8 +488,8 @@ return [
 
     'ETB' => [
         'name'                => 'Ethiopian Birr',
-        'code'                => 230,
-        'precision'           => 2,
+        'code'                => 430,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Br',
         'symbol_first'        => false,
@@ -500,7 +500,7 @@ return [
     'EUR' => [
         'name'                => 'Euro',
         'code'                => 978,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '€',
         'symbol_first'        => true,
@@ -510,8 +510,8 @@ return [
 
     'FJD' => [
         'name'                => 'Fiji Dollar',
-        'code'                => 242,
-        'precision'           => 2,
+        'code'                => 444,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -521,8 +521,8 @@ return [
 
     'FKP' => [
         'name'                => 'Falkland Islands Pound',
-        'code'                => 238,
-        'precision'           => 2,
+        'code'                => 438,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => false,
@@ -532,8 +532,8 @@ return [
 
     'GBP' => [
         'name'                => 'Pound Sterling',
-        'code'                => 826,
-        'precision'           => 2,
+        'code'                => 846,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => true,
@@ -544,7 +544,7 @@ return [
     'GEL' => [
         'name'                => 'Lari',
         'code'                => 981,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ლ',
         'symbol_first'        => false,
@@ -555,7 +555,7 @@ return [
     'GHS' => [
         'name'                => 'Ghana Cedi',
         'code'                => 936,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₵',
         'symbol_first'        => true,
@@ -565,8 +565,8 @@ return [
 
     'GIP' => [
         'name'                => 'Gibraltar Pound',
-        'code'                => 292,
-        'precision'           => 2,
+        'code'                => 494,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => true,
@@ -576,8 +576,8 @@ return [
 
     'GMD' => [
         'name'                => 'Dalasi',
-        'code'                => 270,
-        'precision'           => 2,
+        'code'                => 470,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'D',
         'symbol_first'        => false,
@@ -587,7 +587,7 @@ return [
 
     'GNF' => [
         'name'                => 'Guinea Franc',
-        'code'                => 324,
+        'code'                => 344,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => 'Fr',
@@ -598,8 +598,8 @@ return [
 
     'GTQ' => [
         'name'                => 'Quetzal',
-        'code'                => 320,
-        'precision'           => 2,
+        'code'                => 340,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Q',
         'symbol_first'        => true,
@@ -609,8 +609,8 @@ return [
 
     'GYD' => [
         'name'                => 'Guyana Dollar',
-        'code'                => 328,
-        'precision'           => 2,
+        'code'                => 348,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -621,7 +621,7 @@ return [
     'HKD' => [
         'name'                => 'Hong Kong Dollar',
         'code'                => 344,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -632,7 +632,7 @@ return [
     'HNL' => [
         'name'                => 'Lempira',
         'code'                => 340,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'L',
         'symbol_first'        => true,
@@ -643,7 +643,7 @@ return [
     'HRK' => [
         'name'                => 'Croatian Kuna',
         'code'                => 191,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'kn',
         'symbol_first'        => true,
@@ -653,8 +653,8 @@ return [
 
     'HTG' => [
         'name'                => 'Gourde',
-        'code'                => 332,
-        'precision'           => 2,
+        'code'                => 334,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'G',
         'symbol_first'        => false,
@@ -665,7 +665,7 @@ return [
     'HUF' => [
         'name'                => 'Forint',
         'code'                => 348,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Ft',
         'symbol_first'        => false,
@@ -676,7 +676,7 @@ return [
     'IDR' => [
         'name'                => 'Rupiah',
         'code'                => 360,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Rp',
         'symbol_first'        => true,
@@ -687,7 +687,7 @@ return [
     'ILS' => [
         'name'                => 'New Israeli Sheqel',
         'code'                => 376,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₪',
         'symbol_first'        => true,
@@ -698,7 +698,7 @@ return [
     'INR' => [
         'name'                => 'Indian Rupee',
         'code'                => 356,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₹',
         'symbol_first'        => true,
@@ -720,7 +720,7 @@ return [
     'IRR' => [
         'name'                => 'Iranian Rial',
         'code'                => 364,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '﷼',
         'symbol_first'        => true,
@@ -730,7 +730,7 @@ return [
 
     'ISK' => [
         'name'                => 'Iceland Krona',
-        'code'                => 352,
+        'code'                => 354,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => 'kr',
@@ -742,7 +742,7 @@ return [
     'JMD' => [
         'name'                => 'Jamaican Dollar',
         'code'                => 388,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -763,7 +763,7 @@ return [
 
     'JPY' => [
         'name'                => 'Yen',
-        'code'                => 392,
+        'code'                => 394,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => '¥',
@@ -775,7 +775,7 @@ return [
     'KES' => [
         'name'                => 'Kenyan Shilling',
         'code'                => 404,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'KSh',
         'symbol_first'        => true,
@@ -786,7 +786,7 @@ return [
     'KGS' => [
         'name'                => 'Som',
         'code'                => 417,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'som',
         'symbol_first'        => false,
@@ -797,7 +797,7 @@ return [
     'KHR' => [
         'name'                => 'Riel',
         'code'                => 116,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '៛',
         'symbol_first'        => false,
@@ -819,7 +819,7 @@ return [
     'KPW' => [
         'name'                => 'North Korean Won',
         'code'                => 408,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₩',
         'symbol_first'        => false,
@@ -852,7 +852,7 @@ return [
     'KYD' => [
         'name'                => 'Cayman Islands Dollar',
         'code'                => 136,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -863,7 +863,7 @@ return [
     'KZT' => [
         'name'                => 'Tenge',
         'code'                => 398,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '〒',
         'symbol_first'        => false,
@@ -874,7 +874,7 @@ return [
     'LAK' => [
         'name'                => 'Kip',
         'code'                => 418,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₭',
         'symbol_first'        => false,
@@ -884,8 +884,8 @@ return [
 
     'LBP' => [
         'name'                => 'Lebanese Pound',
-        'code'                => 422,
-        'precision'           => 2,
+        'code'                => 444,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ل.ل',
         'symbol_first'        => true,
@@ -896,7 +896,7 @@ return [
     'LKR' => [
         'name'                => 'Sri Lanka Rupee',
         'code'                => 144,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₨',
         'symbol_first'        => false,
@@ -907,7 +907,7 @@ return [
     'LRD' => [
         'name'                => 'Liberian Dollar',
         'code'                => 430,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -917,8 +917,8 @@ return [
 
     'LSL' => [
         'name'                => 'Loti',
-        'code'                => 426,
-        'precision'           => 2,
+        'code'                => 446,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'L',
         'symbol_first'        => false,
@@ -929,7 +929,7 @@ return [
     'LTL' => [
         'name'                => 'Lithuanian Litas',
         'code'                => 440,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Lt',
         'symbol_first'        => false,
@@ -939,8 +939,8 @@ return [
 
     'LVL' => [
         'name'                => 'Latvian Lats',
-        'code'                => 428,
-        'precision'           => 2,
+        'code'                => 448,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Ls',
         'symbol_first'        => true,
@@ -962,7 +962,7 @@ return [
     'MAD' => [
         'name'                => 'Moroccan Dirham',
         'code'                => 504,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'د.م.',
         'symbol_first'        => false,
@@ -973,7 +973,7 @@ return [
     'MDL' => [
         'name'                => 'Moldovan Leu',
         'code'                => 498,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'L',
         'symbol_first'        => false,
@@ -984,7 +984,7 @@ return [
     'MGA' => [
         'name'                => 'Malagasy Ariary',
         'code'                => 969,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 5,
         'symbol'              => 'Ar',
         'symbol_first'        => true,
@@ -995,7 +995,7 @@ return [
     'MKD' => [
         'name'                => 'Denar',
         'code'                => 807,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ден',
         'symbol_first'        => false,
@@ -1006,7 +1006,7 @@ return [
     'MMK' => [
         'name'                => 'Kyat',
         'code'                => 104,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'K',
         'symbol_first'        => false,
@@ -1017,7 +1017,7 @@ return [
     'MNT' => [
         'name'                => 'Tugrik',
         'code'                => 496,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₮',
         'symbol_first'        => false,
@@ -1028,7 +1028,7 @@ return [
     'MOP' => [
         'name'                => 'Pataca',
         'code'                => 446,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'P',
         'symbol_first'        => false,
@@ -1039,7 +1039,7 @@ return [
     'MRO' => [
         'name'                => 'Ouguiya',
         'code'                => 478,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 5,
         'symbol'              => 'UM',
         'symbol_first'        => false,
@@ -1050,7 +1050,7 @@ return [
     'MUR' => [
         'name'                => 'Mauritius Rupee',
         'code'                => 480,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₨',
         'symbol_first'        => true,
@@ -1060,8 +1060,8 @@ return [
 
     'MVR' => [
         'name'                => 'Rufiyaa',
-        'code'                => 462,
-        'precision'           => 2,
+        'code'                => 464,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'MVR',
         'symbol_first'        => false,
@@ -1072,7 +1072,7 @@ return [
     'MWK' => [
         'name'                => 'Kwacha',
         'code'                => 454,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'MK',
         'symbol_first'        => false,
@@ -1083,7 +1083,7 @@ return [
     'MXN' => [
         'name'                => 'Mexican Peso',
         'code'                => 484,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1094,7 +1094,7 @@ return [
     'MYR' => [
         'name'                => 'Malaysian Ringgit',
         'code'                => 458,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'RM',
         'symbol_first'        => true,
@@ -1105,7 +1105,7 @@ return [
     'MZN' => [
         'name'                => 'Mozambique Metical',
         'code'                => 943,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'MTn',
         'symbol_first'        => true,
@@ -1116,7 +1116,7 @@ return [
     'NAD' => [
         'name'                => 'Namibia Dollar',
         'code'                => 516,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -1127,7 +1127,7 @@ return [
     'NGN' => [
         'name'                => 'Naira',
         'code'                => 566,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₦',
         'symbol_first'        => true,
@@ -1138,7 +1138,7 @@ return [
     'NIO' => [
         'name'                => 'Cordoba Oro',
         'code'                => 558,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'C$',
         'symbol_first'        => false,
@@ -1149,7 +1149,7 @@ return [
     'NOK' => [
         'name'                => 'Norwegian Krone',
         'code'                => 578,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'kr',
         'symbol_first'        => false,
@@ -1159,8 +1159,8 @@ return [
 
     'NPR' => [
         'name'                => 'Nepalese Rupee',
-        'code'                => 524,
-        'precision'           => 2,
+        'code'                => 544,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₨',
         'symbol_first'        => true,
@@ -1171,7 +1171,7 @@ return [
     'NZD' => [
         'name'                => 'New Zealand Dollar',
         'code'                => 554,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1181,7 +1181,7 @@ return [
 
     'OMR' => [
         'name'                => 'Rial Omani',
-        'code'                => 512,
+        'code'                => 514,
         'precision'           => 3,
         'subunit'             => 1000,
         'symbol'              => 'ر.ع.',
@@ -1193,7 +1193,7 @@ return [
     'PAB' => [
         'name'                => 'Balboa',
         'code'                => 590,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'B/.',
         'symbol_first'        => false,
@@ -1204,7 +1204,7 @@ return [
     'PEN' => [
         'name'                => 'Nuevo Sol',
         'code'                => 604,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'S/.',
         'symbol_first'        => true,
@@ -1215,7 +1215,7 @@ return [
     'PGK' => [
         'name'                => 'Kina',
         'code'                => 598,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'K',
         'symbol_first'        => false,
@@ -1226,7 +1226,7 @@ return [
     'PHP' => [
         'name'                => 'Philippine Peso',
         'code'                => 608,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₱',
         'symbol_first'        => true,
@@ -1237,7 +1237,7 @@ return [
     'PKR' => [
         'name'                => 'Pakistan Rupee',
         'code'                => 586,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₨',
         'symbol_first'        => true,
@@ -1248,7 +1248,7 @@ return [
     'PLN' => [
         'name'                => 'Zloty',
         'code'                => 985,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'zł',
         'symbol_first'        => false,
@@ -1270,7 +1270,7 @@ return [
     'QAR' => [
         'name'                => 'Qatari Rial',
         'code'                => 634,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ر.ق',
         'symbol_first'        => false,
@@ -1281,7 +1281,7 @@ return [
     'RON' => [
         'name'                => 'New Romanian Leu',
         'code'                => 946,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Lei',
         'symbol_first'        => true,
@@ -1292,7 +1292,7 @@ return [
     'RSD' => [
         'name'                => 'Serbian Dinar',
         'code'                => 941,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'РСД',
         'symbol_first'        => true,
@@ -1303,7 +1303,7 @@ return [
     'RUB' => [
         'name'                => 'Russian Ruble',
         'code'                => 643,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₽',
         'symbol_first'        => false,
@@ -1324,8 +1324,8 @@ return [
 
     'SAR' => [
         'name'                => 'Saudi Riyal',
-        'code'                => 682,
-        'precision'           => 2,
+        'code'                => 684,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ر.س',
         'symbol_first'        => true,
@@ -1336,7 +1336,7 @@ return [
     'SBD' => [
         'name'                => 'Solomon Islands Dollar',
         'code'                => 90,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -1347,7 +1347,7 @@ return [
     'SCR' => [
         'name'                => 'Seychelles Rupee',
         'code'                => 690,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₨',
         'symbol_first'        => false,
@@ -1358,7 +1358,7 @@ return [
     'SDG' => [
         'name'                => 'Sudanese Pound',
         'code'                => 938,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => true,
@@ -1368,8 +1368,8 @@ return [
 
     'SEK' => [
         'name'                => 'Swedish Krona',
-        'code'                => 752,
-        'precision'           => 2,
+        'code'                => 754,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'kr',
         'symbol_first'        => false,
@@ -1379,8 +1379,8 @@ return [
 
     'SGD' => [
         'name'                => 'Singapore Dollar',
-        'code'                => 702,
-        'precision'           => 2,
+        'code'                => 704,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1391,7 +1391,7 @@ return [
     'SHP' => [
         'name'                => 'Saint Helena Pound',
         'code'                => 654,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => false,
@@ -1402,7 +1402,7 @@ return [
     'SLL' => [
         'name'                => 'Leone',
         'code'                => 694,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Le',
         'symbol_first'        => false,
@@ -1413,7 +1413,7 @@ return [
     'SOS' => [
         'name'                => 'Somali Shilling',
         'code'                => 706,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Sh',
         'symbol_first'        => false,
@@ -1424,7 +1424,7 @@ return [
     'SRD' => [
         'name'                => 'Surinam Dollar',
         'code'                => 968,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -1434,8 +1434,8 @@ return [
 
     'SSP' => [
         'name'                => 'South Sudanese Pound',
-        'code'                => 728,
-        'precision'           => 2,
+        'code'                => 748,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£',
         'symbol_first'        => false,
@@ -1446,7 +1446,7 @@ return [
     'STD' => [
         'name'                => 'Dobra',
         'code'                => 678,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Db',
         'symbol_first'        => false,
@@ -1456,8 +1456,8 @@ return [
 
     'SVC' => [
         'name'                => 'El Salvador Colon',
-        'code'                => 222,
-        'precision'           => 2,
+        'code'                => 444,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₡',
         'symbol_first'        => true,
@@ -1468,7 +1468,7 @@ return [
     'SYP' => [
         'name'                => 'Syrian Pound',
         'code'                => 760,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '£S',
         'symbol_first'        => false,
@@ -1479,7 +1479,7 @@ return [
     'SZL' => [
         'name'                => 'Lilangeni',
         'code'                => 748,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'E',
         'symbol_first'        => true,
@@ -1490,7 +1490,7 @@ return [
     'THB' => [
         'name'                => 'Baht',
         'code'                => 764,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '฿',
         'symbol_first'        => true,
@@ -1500,8 +1500,8 @@ return [
 
     'TJS' => [
         'name'                => 'Somoni',
-        'code'                => 972,
-        'precision'           => 2,
+        'code'                => 974,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ЅМ',
         'symbol_first'        => false,
@@ -1512,7 +1512,7 @@ return [
     'TMT' => [
         'name'                => 'Turkmenistan New Manat',
         'code'                => 934,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'T',
         'symbol_first'        => false,
@@ -1534,7 +1534,7 @@ return [
     'TOP' => [
         'name'                => 'Pa’anga',
         'code'                => 776,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'T$',
         'symbol_first'        => true,
@@ -1545,7 +1545,7 @@ return [
     'TRY' => [
         'name'                => 'Turkish Lira',
         'code'                => 949,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₺',
         'symbol_first'        => true,
@@ -1556,7 +1556,7 @@ return [
     'TTD' => [
         'name'                => 'Trinidad and Tobago Dollar',
         'code'                => 780,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => false,
@@ -1567,7 +1567,7 @@ return [
     'TWD' => [
         'name'                => 'New Taiwan Dollar',
         'code'                => 901,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1578,7 +1578,7 @@ return [
     'TZS' => [
         'name'                => 'Tanzanian Shilling',
         'code'                => 834,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Sh',
         'symbol_first'        => true,
@@ -1589,7 +1589,7 @@ return [
     'UAH' => [
         'name'                => 'Hryvnia',
         'code'                => 980,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '₴',
         'symbol_first'        => false,
@@ -1611,7 +1611,7 @@ return [
     'USD' => [
         'name'                => 'US Dollar',
         'code'                => 840,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1622,7 +1622,7 @@ return [
     'UYU' => [
         'name'                => 'Peso Uruguayo',
         'code'                => 858,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1633,7 +1633,7 @@ return [
     'UZS' => [
         'name'                => 'Uzbekistan Sum',
         'code'                => 860,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => null,
         'symbol_first'        => false,
@@ -1644,7 +1644,7 @@ return [
     'VEF' => [
         'name'                => 'Bolivar',
         'code'                => 937,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'Bs F',
         'symbol_first'        => true,
@@ -1676,8 +1676,8 @@ return [
 
     'WST' => [
         'name'                => 'Tala',
-        'code'                => 882,
-        'precision'           => 2,
+        'code'                => 884,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'T',
         'symbol_first'        => false,
@@ -1721,7 +1721,7 @@ return [
     'XCD' => [
         'name'                => 'East Caribbean Dollar',
         'code'                => 951,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1742,7 +1742,7 @@ return [
 
     'XOF' => [
         'name'                => 'CFA Franc BCEAO',
-        'code'                => 952,
+        'code'                => 954,
         'precision'           => 0,
         'subunit'             => 1,
         'symbol'              => 'Fr',
@@ -1765,7 +1765,7 @@ return [
     'YER' => [
         'name'                => 'Yemeni Rial',
         'code'                => 886,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '﷼',
         'symbol_first'        => false,
@@ -1776,7 +1776,7 @@ return [
     'ZAR' => [
         'name'                => 'Rand',
         'code'                => 710,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'R',
         'symbol_first'        => true,
@@ -1787,7 +1787,7 @@ return [
     'ZMW' => [
         'name'                => 'Zambian Kwacha',
         'code'                => 967,
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'ZK',
         'symbol_first'        => false,
@@ -1797,8 +1797,8 @@ return [
 
     'ZWL' => [
         'name'                => 'Zimbabwe Dollar',
-        'code'                => 932,
-        'precision'           => 2,
+        'code'                => 934,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => '$',
         'symbol_first'        => true,
@@ -1809,7 +1809,7 @@ return [
     'BTC' => [
         'name'                => 'Bitcoin',
         'code'                => '',
-        'precision'           => 2,
+        'precision'           => 4,
         'subunit'             => 100,
         'symbol'              => 'BTC',
         'symbol_first'        => false,

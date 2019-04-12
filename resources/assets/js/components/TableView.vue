@@ -3,7 +3,7 @@
         <v-client-table v-if="tableType === 'sell'" ref="table" :data="tableData" :columns="sellColumns" :options="options">
             <div slot="seller" slot-scope="props" class="user-tag d-flex">
                 <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
-                    {{`${props.row.user.name} (${props.row.avgRating}%)` }}
+                    {{`${props.row.user.name} (${props.row.avgRating.toFixed(1)}%)` }}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif" v-if="props.row.isVerified">
@@ -30,7 +30,7 @@
         <v-client-table v-if="tableType === 'buy'" ref="table" :data="tableData" :columns="buyColumns" :options="options">
             <div slot="buyer" slot-scope="props" class="user-tag d-flex">
                 <a style="color: black; margin-top: 3px"  :href="`/profile/${props.row.user.name}`" class="text-capitalize">
-                    {{ `${props.row.user.name} (${props.row.avgRating}%) `}}
+                    {{ `${props.row.user.name} (${props.row.avgRating.toFixed(1)}%) `}}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
                 <div class="notif"  v-if="props.row.isVerified">
