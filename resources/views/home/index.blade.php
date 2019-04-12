@@ -237,7 +237,7 @@
                                         {{__('Your offers are only visible to the public when you have enough balance!')}}
                                     </h5>
                                     <div class="table-responsive">
-                                        <table class="table table-white-space table-bordered row-grouping display icheck table-middle">
+                                        <table id="my-offers"class="table table-white-space table-bordered row-grouping display icheck table-middle">
                                             <thead>
                                             <tr>
                                                 <th></th>
