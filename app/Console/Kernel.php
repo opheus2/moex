@@ -40,6 +40,8 @@ class Kernel extends ConsoleKernel
             $schedule->command('users:deactivate')->everyMinute()->withoutOverlapping();
 
             $schedule->command('users:delete')->everyMinute()->withoutOverlapping();
+
+            $schedule->command('currency:rate')->everyFiveMinutes()->withoutOverlapping();
         }
 
         $schedule->call(function(){

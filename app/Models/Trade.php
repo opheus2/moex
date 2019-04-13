@@ -217,6 +217,24 @@ class Trade extends Model
         return $rate;
     }
 
+
+    /**
+     * Get coin rate NGN/USD
+     *
+     * @param bool $format
+     * @return \Akaunting\Money\Money|float|mixed
+     */
+    public function rateOdd($format = true, $currency = 'NGN')
+    {
+        $rate = $this->odd_rate;
+
+        if ($format) {
+            return money($rate, $currency, true);
+        }
+
+        return $rate;
+    }
+
     /**
      * Determine coin value
      *

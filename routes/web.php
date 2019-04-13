@@ -663,9 +663,14 @@ Route::post('/update-log', 'LogController@updateFirstTime');
 
 Route::get('/r/{username}', 'ReferralController@index')->name('referral.url');
 
+Route::get('/currency', 'CurrencyController@index');
+
+
 Route::get('/', 'LandingController@index')->where('all', '^(?!api).*$');
 Route::get('/{any}', 'LandingController@index')->where('any', '^(?!api).*$');
 
 Route::get('kyc/{image}', [
     'uses'      => 'KycController@picture'
 ]);
+
+
