@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\Currency;
 use App\Models\Offer;
 use App\Models\Trade;
 use App\Models\PaymentMethodCategory;
@@ -151,19 +152,14 @@ class OffersController extends Controller
     }
 
     public function getRate($from_currency, $to_currency){
-        $from_Currency  = urlencode($from_currency);
-        $to_Currency    = urlencode($to_currency);
-        $query          = $from_Currency.$to_Currency;
-        $url            = "http://apilayer.net/api/live?access_key=2b230e37477ff413791f105b7fad8489&currencies=$to_Currency&source=$from_Currency&format=1";
-        // $url            = "https://forex.1forge.com/1.0.3/convert?from=$from_Currency&to=$to_Currency&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
-        // $url            = "https://forex.1forge.com/1.0.3/convert?from=USD&to=EUR&quantity=1&api_key=J7TOjmVUd0ziobpXLfRk6h1ZNIVTZEow";
+        if($from_currency == 'USD') {
+            $rate = Currency::where('name', 'NGN')->first();
+        }else{
+            $rate = Currency::where('name', $from_currency)->first();
+        }
 
-        $client         = new Client();
-        $response       = $client->get($url);
 
-        $response       = json_decode($client->get($url)->getBody(), true);
-
-        $val            = $response['quotes'][$query];
+        $val            = $rate->rate;
 
         return $val;
     }
@@ -220,6 +216,16 @@ class OffersController extends Controller
 
             $trade = new Trade();
 
+            if($offer->currency == 'NGN'){
+                $oddrate = get_price(
+                    $offer->multiplier(), $offer->coin, 'USD', false
+                );
+            }else{
+                $oddrate = get_price(
+                    $offer->multiplier(), $offer->coin, 'NGN', false
+                );
+            }
+
             $rate = get_price(
                 $offer->multiplier(), $offer->coin, $offer->currency, false
             );
@@ -244,6 +250,7 @@ class OffersController extends Controller
                     'deadline'      => $offer->deadline,
                     'amount'        => $request->offer_cur,
                     'rate'          => $rate,
+                    'odd_rate'      => $oddrate,
                     'amount_btc'    => $request->amount,
                 ]);
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterOffersTable extends Migration
+class AltersOffersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AlterOffersTable extends Migration
     public function up()
     {
         Schema::table('trades', function (Blueprint $table) {
-            $table->string('amount_btc')->nullable();
+//            $table->string('amount_btc')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AlterOffersTable extends Migration
     public function down()
     {
         Schema::table('trades', function (Blueprint $table) {
-            $table->dropColumn('amount_btc');
+//            $table->dropColumn('amount_btc');
         });
     }
 }

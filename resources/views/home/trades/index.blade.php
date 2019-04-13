@@ -77,6 +77,7 @@
                                                                 <div class="p-2 media-body">
                                                                     <h5>{{__('RATE')}}</h5>
                                                                     <h5 class="text-bold-400 mb-0">{{$trade->rate()}}</h5>
+                                                                    <h5 class="text-bold-400 mb-0">{{$trade->rateOdd()}}</h5>
                                                                 </div>
                                                             </div>
                                                         </div>
