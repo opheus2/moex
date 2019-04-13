@@ -44,9 +44,15 @@ class TradesController extends Controller
                 'user_id'  => $trade->user->id,
             ])->latest()->first();
 
+            $partnerRating = $trade->user->ratings()->where([
+                'trade_id' => $trade->id,
+                'user_id'  => $trade->partner->id,
+            ])->latest()->first();
+
             return view('home.trades.index')
                 ->with(compact('trade'))
-                ->with(compact('rating'));
+                ->with(compact('rating'))
+                ->with(compact('partnerRating'));
         } else {
             return abort(404);
         }
@@ -354,23 +360,37 @@ class TradesController extends Controller
             ->has('user')->has('partner')
             ->where('status', 'successful')
             ->get()->filter(function ($trade) {
-                return $trade->user->id == Auth::id();
+                return $trade->user->id == Auth::id() ?? $trade->partner->id == Auth::id();
             });
 
         if ($trade = $trades->first()) {
-            $rating = $trade->partner->ratings()->firstOrNew([
-                'trade_id' => $trade->id,
-                'user_id'  => Auth::id(),
-            ]);
+            
+            $isPartner = $trade->partner->id == Auth::id();
 
+            if ($isPartner) {
+                    $rating = $trade->user->ratings()->firstOrNew([
+                    'trade_id' => $trade->id,
+                    'user_id'  => Auth::id(),
+                ]);    
+            } else {
+                $rating = $trade->partner->ratings()->firstOrNew([
+                    'trade_id' => $trade->id,
+                    'user_id'  => Auth::id(),
+                ]);
+            }
+            
             $rating->rating = $request->score;
             $rating->comment = $request->comment;
             $rating->trade_id = $trade->id;
             $rating->user_id = $trade->user->id;
 
-            $trade->partner->ratings()->save($rating);
-
-            $trade->partner->notify(new Rated($trade, $request->score, $request->comment));
+            if ($isPartner) {
+                $trade->user->ratings()->save($rating);
+                $trade->user->notify(new Rated($trade, $request->score, $request->comment));
+            } else {
+                $trade->partner->ratings()->save($rating);
+                $trade->partner->notify(new Rated($trade, $request->score, $request->comment));
+            }
 
             $message = __('Rating has been stored successfully!');
 
