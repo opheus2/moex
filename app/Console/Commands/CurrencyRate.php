@@ -6,8 +6,9 @@ namespace App\Console\Commands;
 
 use App\Models\Currency;
 use GuzzleHttp\Client;
+use Illuminate\Console\Command;
 
-class CurrencyRate
+class CurrencyRate extends Command
 {
 
     /**
