@@ -369,6 +369,63 @@
                                     </div>
                                 </div>
                             @endif
+
+                            @if($trade->partner->id == Auth::id())
+                                <div class="media-list media-bordered">
+                                    <div class="media">
+                                        <h4 class="media-head text-uppercase">
+                                            {{__('Leave a Rating')}}
+                                        </h4>
+                                    </div>
+                                    {!! Form::open(['url' => route('home.trades.rate', ['token' => $trade->token]), 'class' => 'form form-horizontal']) !!}
+                                    <div class="media">
+                                        <a class="media-left" href="#">
+                                            <img class="media-object rounded-circle" src="{{getProfileAvatar($trade->partner)}}"
+                                                 alt="{{$trade->partner->name}}" style="width: 50px;height: 50px;"/>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                <rating :score="{{$partnerRrating->rating ?? 0}}" size="md" :read-only="false"></rating>
+                                            </h4>
+                                            <div class="row">
+                                                <div class="col-md-10 offset-md-1">
+                                                    {!! Form::textarea('comment', $partnerRating->comment ?? null, ['placeholder' => __('Write a comment...'), 'class' => 'form-control m-1', 'rows' => 4]) !!}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions right">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{__('Submit')}}
+                                        </button>
+                                    </div>
+                                    {!! Form::close() !!}
+                                </div>
+                            @else
+                                <div class="media-list media-bordered">
+                                    <div class="media">
+                                        <h4 class="media-head text-uppercase">
+                                            {{__('Trade Rating')}}
+                                        </h4>
+                                    </div>
+                                    <div class="media">
+                                        <a class="media-left" href="#">
+                                            <img class="media-object rounded-circle" src="{{getProfileAvatar($trade->partner)}}"
+                                                 alt="{{$trade->partner->name}}" style="width: 70px;height: 70px;"/>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                <rating :score="{{$partnerRating->rating ?? 0}}" size="md"></rating>
+                                            </h4>
+                                            <div class="row">
+                                                <div class="col-md-10 offset-md-1">
+                                                    {{$partnerRating->comment ?? __('No Rating Yet!')}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
 
                     </div>
