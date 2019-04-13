@@ -385,7 +385,7 @@
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">
-                                                <rating :score="{{$partnerRrating->rating ?? 0}}" size="md" :read-only="false"></rating>
+                                                <rating :score="{{$partnerRating->rating ?? 0}}" size="md" :read-only="false"></rating>
                                             </h4>
                                             <div class="row">
                                                 <div class="col-md-10 offset-md-1">
