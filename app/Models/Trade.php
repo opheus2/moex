@@ -226,7 +226,7 @@ class Trade extends Model
      */
     public function rateOdd($format = true, $currency = 'NGN')
     {
-        $rate = $this->odd_rate ?? 0;
+        $rate = ($this->odd_rate == '') ? 0 : $this->odd_rate;
 
         if ($format) {
             return money($rate, $currency, true);
