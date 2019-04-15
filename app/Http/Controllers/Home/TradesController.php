@@ -360,9 +360,18 @@ class TradesController extends Controller
             ->has('user')->has('partner')
             ->where('status', 'successful')
             ->get()->filter(function ($trade) {
-                return $trade->user->id == Auth::id() ?? $trade->partner->id == Auth::id();
+                return $trade->user->id == Auth::id();
             });
-        dd($trades);
+
+        if ($trades->count() == 0) {
+            $trades = Trade::where('token', $token)
+            ->has('user')->has('partner')
+            ->where('status', 'successful')
+            ->get()->filter(function ($trade) {
+                return $trade->partner->id == Auth::id();
+            });
+        }
+        
         if ($trade = $trades->first()) {
             
             $isPartner = $trade->partner->id == Auth::id();
