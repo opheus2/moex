@@ -362,7 +362,7 @@ class TradesController extends Controller
             ->get()->filter(function ($trade) {
                 return $trade->user->id == Auth::id() ?? $trade->partner->id == Auth::id();
             });
-
+        dd($trades);
         if ($trade = $trades->first()) {
             
             $isPartner = $trade->partner->id == Auth::id();
