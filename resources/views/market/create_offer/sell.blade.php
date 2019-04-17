@@ -71,9 +71,11 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
-                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
+                                                {{--                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}--}}
+                                                {!! Form::text('currency', 'USD', ['class' => 'form-control', 'required', 'readonly']) !!}
+
                                                 <p class="help-inline mt-1">
-                                                    {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to buy bitcoin with US Dollar currency.')}}
+                                                    {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to sell bitcoin with US Dollar currency.')}}
                                                 </p>
                                             </div>
                                         </div>
@@ -214,19 +216,18 @@
                                             </h4>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('phone_verification', 1) !!}
+                                                {!! Form::checkbox('phone_verification', 1, ['checked'=> 'checked']) !!}
                                                 {!! Form::label('phone_verification', __('Verified Phone')) !!}
                                             </div>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('email_verification', 1) !!}
+                                                {!! Form::checkbox('email_verification', 1, ['checked'=> 'checked']) !!}
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
                                             </div>
-
                                             <div class="form-group skin-square">
-                                                    {!! Form::checkbox('kyc_verification', 1) !!}
-                                                    {!! Form::label('kyc_verification', 'Verified Customer') !!}
-                                                </div>
+                                                {!! Form::checkbox('kyc_verification', 1) !!}
+                                                {!! Form::label('kyc_verification', 'Verified Customer') !!}
+                                            </div>
 
                                         </div>
                                         <div class="col-md-6">

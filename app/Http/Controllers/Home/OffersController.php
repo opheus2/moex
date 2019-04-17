@@ -46,7 +46,7 @@ class OffersController extends Controller
                 $max_cur_amount = get_price($offer->max_amount_with_fee, $offer->coin, $offer->currency, false);
             }
 
-            $usd_rate           = get_price($offer->multiplier(), $offer->coin, 'USD', false);
+            $usd_rate           = $this->getRate($offer->currency, 'USD');
             $usd_rate_formatted = get_price($offer->multiplier(), $offer->coin, 'USD');
             $min_usd_amount     = get_price($offer->min_amount, $offer->coin, 'USD', false);
             $max_usd_amount     = get_price($offer->max_amount_with_fee, $offer->coin, 'USD', false);
@@ -153,13 +153,13 @@ class OffersController extends Controller
 
     public function getRate($from_currency, $to_currency){
         if($from_currency == 'USD') {
-            $rate = Currency::where('name', 'NGN')->first();
+            $rate = Currency::where('name', 'NGN');
         }else{
-            $rate = Currency::where('name', $from_currency)->first();
+            $rate = Currency::where('name', $from_currency);
         }
 
 
-        $val            = $rate->rate;
+        $val  = ($rate->first() == null) ? '' : $rate->first()->rate;
 
         return $val;
     }
