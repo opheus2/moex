@@ -327,9 +327,8 @@
                     'presence' => $offer->user->presence
                 ],
 
-                'rate' => $rate,
+                'rate' => $currencyRate,
                 'usd_rate' => $usd_rate,
-                'cur_rate' => $currencyRate,
                 'currency' => $offer->currency,
 
             ]) !!}
