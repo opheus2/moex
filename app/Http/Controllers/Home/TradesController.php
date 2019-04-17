@@ -375,7 +375,6 @@ class TradesController extends Controller
         if ($trade = $trades->first()) {
             
             $isPartner = $trade->partner->id == Auth::id();
-            dd($isPartner);
             if ($isPartner) {
                     $rating = $trade->user->ratings()->firstOrNew([
                     'trade_id' => $trade->id,
@@ -391,12 +390,14 @@ class TradesController extends Controller
             $rating->rating = $request->score;
             $rating->comment = $request->comment;
             $rating->trade_id = $trade->id;
-            $rating->user_id = $trade->user->id;
+            
 
             if ($isPartner) {
+                $rating->user_id = $trade->partner->id;
                 $trade->user->ratings()->save($rating);
                 $trade->user->notify(new Rated($trade, $request->score, $request->comment));
             } else {
+                $rating->user_id = $trade->user->id;
                 $trade->partner->ratings()->save($rating);
                 $trade->partner->notify(new Rated($trade, $request->score, $request->comment));
             }
