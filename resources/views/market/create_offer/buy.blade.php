@@ -71,7 +71,9 @@
 
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
-                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}
+{{--                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}--}}
+                                                {!! Form::text('currency', null, ['class' => 'form-control', 'required', 'value' => 'USD', 'readonly']) !!}
+
                                                 <p class="help-inline mt-1">
                                                     {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to sell bitcoin with US Dollar currency.')}}
                                                 </p>
@@ -202,12 +204,12 @@
                                             </h4>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('phone_verification', 1) !!}
+                                                {!! Form::checkbox('phone_verification', 1, ['checked'=> 'checked']) !!}
                                                 {!! Form::label('phone_verification', __('Verified Phone')) !!}
                                             </div>
 
                                             <div class="form-group skin-square">
-                                                {!! Form::checkbox('email_verification', 1) !!}
+                                                {!! Form::checkbox('email_verification', 1, ['checked'=> 'checked']) !!}
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
                                             </div>
 

@@ -208,8 +208,8 @@ class TradesController extends Controller
                 $trade->save();
 
                 $offer = Offer::where('id', $trade->offer_id)->first();
-                $offer->max_amount = $offer->max_amount + $trade->amount;
-                $offer->max_amount_with_fee = $offer->max_amount_with_fee + $trade->amount;
+                $offer->max_amount = $offer->max_amount + $trade->amount_btc;
+                $offer->max_amount_with_fee = $offer->max_amount_with_fee + $trade->amount_btc;
                 $offer->save();
 
                 broadcast(new TradeStatusUpdated($trade));

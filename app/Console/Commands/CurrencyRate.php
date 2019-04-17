@@ -50,7 +50,7 @@ class CurrencyRate extends Command
 
         foreach ($response['quotes'] as $key => $value){
             $currency            = Currency::updateOrCreate([
-                'name'  => ltrim($key, 'USD'),
+                'name'  => substr($key, '3'),
                 'rate'  => $value,
             ]);
         }

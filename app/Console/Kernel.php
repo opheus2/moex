@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\CurrencyRate::class
     ];
 
     /**
@@ -41,7 +41,7 @@ class Kernel extends ConsoleKernel
 
             $schedule->command('users:delete')->everyMinute()->withoutOverlapping();
 
-            $schedule->command('currency:rate')->everyFiveMinutes()->withoutOverlapping();
+            $schedule->command('currency:rate')->everyFiveMinutes();
         }
 
         $schedule->call(function(){
