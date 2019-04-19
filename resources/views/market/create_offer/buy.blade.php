@@ -253,11 +253,11 @@
                 'coins'         => get_coins(),
                 'coin_prices'   => get_prices(),
                 'btc_min'   => $min_btc_amount,
-                'btc_max'   => Auth::user()->wallet('btc')->totalAvailable(),
+                'btc_max'   => $max_btc_amount,
                 'ltc_min'   => $min_ltc_amount,
-                'ltc_max'   => Auth::user()->wallet('ltc')->totalAvailable(),
+                'ltc_max'   => $max_ltc_amount,
                 'dash_min'  => $min_dash_amount,
-                'dash_max'  => Auth::user()->wallet('dash')->totalAvailable(),
+                'dash_max'  => $max_dash_amount,
             ]) !!}
     </script>
 @endpush
