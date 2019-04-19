@@ -72,7 +72,7 @@
                                             <div class="form-group">
                                                 {!! Form::label('currency', __('I Trade In')) !!}
 {{--                                                {!! Form::select('currency', get_iso_currencies(), Auth::user()->currency, ['is' => 'select2', 'html-class' => 'form-control', 'required', 'v-model' => 'currency']) !!}--}}
-                                                {!! Form::text('currency', null, ['class' => 'form-control', 'required', 'value' => 'USD', 'readonly']) !!}
+                                                {!! Form::text('currency', 'USD', ['class' => 'form-control', 'required', 'readonly']) !!}
 
                                                 <p class="help-inline mt-1">
                                                     {{__('Your offer will buy/sell bitcoin for the selected currency. For example, if you select US Dollars then your offer is visible for everyone willing to sell bitcoin with US Dollar currency.')}}
@@ -123,7 +123,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('min_amount', __('Minimum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount']) !!}
+                                                        {!! Form::number('min_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'minAmount', ':min' => 'minAmount', ':max' => 'maxAmount',  'step' =>".00000001", 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -134,7 +134,7 @@
                                                 <div class="col-6">
                                                     {!! Form::label('max_amount', __('Maximum Amount:')) !!}
                                                     <div class="input-group">
-                                                        {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount', 'novalidate']) !!}
+                                                        {!! Form::number('max_amount', null, ['class' => 'form-control', 'required', ':placeholder' => 'maxAmount', ':min' => 'minAmount', ':max' => 'maxAmount', 'step' =>".00000001", 'novalidate']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" style="text-transform:uppercase" v-text="coin"></span>
@@ -211,6 +211,10 @@
                                             <div class="form-group skin-square">
                                                 {!! Form::checkbox('email_verification', 1, ['checked'=> 'checked']) !!}
                                                 {!! Form::label('email_verification', __('Verified Email')) !!}
+                                            </div>
+                                            <div class="form-group skin-square">
+                                                {!! Form::checkbox('kyc_verification', 1) !!}
+                                                {!! Form::label('kyc_verification', 'Verified Customer') !!}
                                             </div>
 
                                         </div>
