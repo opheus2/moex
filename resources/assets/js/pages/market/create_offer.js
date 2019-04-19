@@ -48,6 +48,7 @@ export default {
         },
 
         minAmount: function(value){
+            console.log(this.btc_min);
 
 
             if( this.coin === 'btc' ){
@@ -83,6 +84,8 @@ export default {
                 this.max_amount = this.dash_max
 
             }
+
+            console.log(this.max_amount);
 
             return this.max_amount;
         },
