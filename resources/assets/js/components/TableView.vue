@@ -6,12 +6,6 @@
                     {{`${props.row.user.name} (${props.row.avgRating.toFixed(1)}%)` }}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif" v-if="props.row.isVerified">
-                    <span class="fa-stack">
-                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
-                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
-                    </span>
-                </div>
             </div>
             <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
@@ -33,12 +27,6 @@
                     {{ `${props.row.user.name} (${props.row.avgRating.toFixed(1)}%) `}}
                 </a>
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
-                <div class="notif"  v-if="props.row.isVerified">
-                    <span class="fa-stack">
-                        <i class="fas fa-certificate fa-stack-2x" style="color:#6C63FF"></i>
-                        <i class="fas fa-check fa-stack-1x" style="color:white"></i>
-                    </span>
-                </div>
             </div>
             <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
                 <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
@@ -149,8 +137,7 @@
                         let minAmount = data.min_amount;
                         let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let coin = data.coin.toUpperCase();
-                        let isVerified = Boolean(Number(data.email_verification)) && data.user.verified;
-                        this.sellData.push({seller, payment_method, otherDetails, avgRating, isVerified, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
+                        this.sellData.push({seller, payment_method, otherDetails, avgRating, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })
@@ -176,8 +163,7 @@
                         let minAmount = data.min_amount;
                         let coin = data.coin.toUpperCase();
                         let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
-                        let isVerified = Boolean(Number(data.email_verification)) && Boolean(Number(data.kyc_verification));
-                        this.buyData.push({buyer, payment_method, isVerified, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
+                        this.buyData.push({buyer, payment_method, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
                     });
                     this.tableData = [...this.getCurrentTableData()];
                 })

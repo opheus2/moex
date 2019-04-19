@@ -218,4 +218,14 @@ class LoginController extends Controller
 
         return $this->loggedOut($request) ?: redirect('/');
     }
+
+    public function logoutDestination():string
+    {
+        return "login";
+    }
+
+    public function loggedOut(Request $request)
+    {
+        return redirect()->route($this->logoutDestination());
+    }
 }
