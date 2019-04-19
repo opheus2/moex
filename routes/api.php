@@ -29,9 +29,7 @@ Route::group(['namespace' => 'Resources'], function () {
 
         Route::get('payment-methods', 'OffersController@getPaymentMethods')->name('payment-methods');
 
-        Route::get('test-sell', 'OffersController@sellTest');
-
-        Route::get('test-buy', 'OffersController@buyTest');
+        
 
         // Get
         Route::get('{id}', 'OffersController@get')->name('get');
@@ -41,7 +39,6 @@ Route::group(['namespace' => 'Resources'], function () {
     // Rating
     Route::group(['prefix' => 'rating'], function () {
         Route::get('user/{id}/avg', 'RatingController@getAvgRating');
-        Route::get('user/{id}/test-avg', 'RatingController@testGetAvgRating');
     });
 
     Route::get('rate/{coin}/{currency}', function ($coin, $currency) {
