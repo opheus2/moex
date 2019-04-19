@@ -16,9 +16,4 @@ class RatingController extends Controller
         }
     }
 
-    public function testGetAvgRating($id) {
-        $client = new Client(['base_uri' => 'http://expresscargo.me/api/rating/']);
-        $response = $client->get('user/' . $id . '/avg');
-        return $response->getBody();
-    }
 }
