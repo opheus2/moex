@@ -89,7 +89,7 @@
                                                 {!! Form::label('profit_margin', __('I want to earn'), ['class' => 'col-md-3']) !!}
                                                 <div class="col-md-9">
                                                     <div class="input-group">
-                                                        {!! Form::number('profit_margin', null, ['class' => 'form-control', 'required', 'v-model.number' => 'profit_margin']) !!}
+                                                        {!! Form::number('profit_margin', null, ['class' => 'form-control', 'required', 'v-model.number' => 'profit_margin', 'step' => '0.01']) !!}
 
                                                         <div class="input-group-append">
                                                             <span class="input-group-text"><i class="ft-percent"></i>
