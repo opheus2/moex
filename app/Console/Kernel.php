@@ -26,9 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $installer = resolve('installer');
 
-        if($installer->installed()){
             $schedule->command('trades:cancel')->everyMinute()->withoutOverlapping();
 
             if(config()->get('currency.api_key')){
@@ -42,7 +40,6 @@ class Kernel extends ConsoleKernel
             $schedule->command('users:delete')->everyMinute()->withoutOverlapping();
 
             $schedule->command('currency:rate')->everyFiveMinutes();
-        }
 
         $schedule->call(function(){
             Cache::forever('cron.timestamp', now());

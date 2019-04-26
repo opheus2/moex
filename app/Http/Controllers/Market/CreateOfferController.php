@@ -81,6 +81,7 @@ class CreateOfferController extends Controller
         $coins = collect(get_coins());
         $currencies = collect(get_iso_currencies());
 
+        /** @var TYPE_NAME $type */
         if (in_array($type, ['buy', 'sell'])) {
             $user = Auth::user();
 
