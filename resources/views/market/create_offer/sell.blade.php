@@ -99,7 +99,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="bs-callout-primary callout-border-left mt-1 p-1">
+                                            <div class="bs-callout-info callout-border-left mt-1 p-1">
                                                 <strong>{{__('STATISTICS')}}</strong>
                                                 <p class="card-text">
                                                     {{__('Current market price is')}} <b>@{{ formatAmount(coinPrice)
