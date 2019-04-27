@@ -131,23 +131,23 @@
 }
 
 .climacon-primary.climacon-lighten-3 .climacon_component-stroke {
-  fill: #B3B7F4;
+  fill: #475ca2;
 }
 
 .climacon-primary.climacon-lighten-2 .climacon_component-stroke {
-  fill: #949AEF;
+  fill: #34478a;
 }
 
 .climacon-primary.climacon-lighten-1 .climacon_component-stroke {
-  fill: #7D84EB;
+  fill: #273870;
 }
 
 .bs-callout-primary {
   display: block;
-  border-color: #666EE8 !important;
-  background-color: #f4f4fd;
+  border-color: #1b264b !important;
+  background-color: #4b65be;
   border-radius: 0.25rem;
-  color: #0a0e45;
+  color: black;
 }
 
 .bs-callout-primary h1,
@@ -157,7 +157,7 @@
 .bs-callout-primary h5,
 .bs-callout-primary h6 {
   margin-top: 0;
-  color: #666EE8;
+  color: #1b264b;
 }
 
 .bs-callout-primary p:last-child {
@@ -171,10 +171,10 @@
 
 .bs-callout-primary.callout-transparent {
   display: block;
-  border-color: #666EE8 !important;
+  border-color: #1b264b !important;
   background-color: transparent;
   border-radius: 0.25rem;
-  color: #0a0e45;
+  color: black;
 }
 
 .bs-callout-primary.callout-transparent h1,
@@ -184,7 +184,7 @@
 .bs-callout-primary.callout-transparent h5,
 .bs-callout-primary.callout-transparent h6 {
   margin-top: 0;
-  color: #666EE8;
+  color: #1b264b;
 }
 
 .bs-callout-primary.callout-transparent p:last-child {
@@ -197,27 +197,27 @@
 }
 
 .bs-callout-primary .callout-arrow-left:before {
-  border-left-color: #666EE8;
+  border-left-color: #1b264b;
 }
 
 .bs-callout-primary .callout-arrow-right:before {
-  border-right-color: #666EE8;
+  border-right-color: #1b264b;
 }
 
 .climacon-primary.climacon-darken-1 .climacon_component-stroke {
-  fill: #5E66E5;
+  fill: #1a1c47;
 }
 
 .climacon-primary.climacon-darken-2 .climacon_component-stroke {
-  fill: #535BE2;
+  fill: #191c4f;
 }
 
 .climacon-primary.climacon-darken-3 .climacon_component-stroke {
-  fill: #4951DE;
+  fill: #151746;
 }
 
 .climacon-primary.climacon-darken-4 .climacon_component-stroke {
-  fill: #383FD8;
+  fill: #13143a;
 }
 
 .climacon-primary.climacon-accent-1 .climacon_component-stroke {

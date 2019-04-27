@@ -33,41 +33,41 @@
 }
 
 .bg-gradient-x-primary {
-  background-image: -webkit-gradient(linear, left top, right top, from(#535BE2), to(#949AEF));
-  background-image: linear-gradient(to right, #535BE2 0%, #949AEF 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#191c4f), to(#34478a));
+  background-image: linear-gradient(to right, #191c4f 0%, #34478a 100%);
   background-repeat: repeat-x;
 }
 
 .bg-gradient-y-primary {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#535BE2), to(#949AEF));
-  background-image: linear-gradient(to bottom, #535BE2 0%, #949AEF 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#191c4f), to(#34478a));
+  background-image: linear-gradient(to bottom, #191c4f 0%, #34478a 100%);
   background-repeat: repeat-x;
 }
 
 .bg-gradient-directional-primary {
-  background-image: linear-gradient(45deg, #535BE2, #949AEF);
+  background-image: linear-gradient(45deg, #191c4f, #34478a);
   background-repeat: repeat-x;
 }
 
 .bg-gradient-x2-primary {
-  background-image: -webkit-gradient(linear, left top, right top, from(#949AEF), color-stop(50%, #666EE8), to(#B3B7F4));
-  background-image: linear-gradient(to right, #949AEF, #666EE8 50%, #B3B7F4);
+  background-image: -webkit-gradient(linear, left top, right top, from(#34478a), color-stop(50%, #1b264b), to(#475ca2));
+  background-image: linear-gradient(to right, #34478a, #1b264b 50%, #475ca2);
   background-repeat: no-repeat;
 }
 
 .bg-gradient-y2-primary {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#949AEF), color-stop(50%, #666EE8), to(#B3B7F4));
-  background-image: linear-gradient(#949AEF, #666EE8 50%, #B3B7F4);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#34478a), color-stop(50%, #1b264b), to(#475ca2));
+  background-image: linear-gradient(#34478a, #1b264b 50%, #475ca2);
   background-repeat: no-repeat;
 }
 
 .bg-gradient-radial-primary {
-  background-image: radial-gradient(circle, #535BE2, #949AEF);
+  background-image: radial-gradient(circle, #191c4f, #34478a);
   background-repeat: no-repeat;
 }
 
 .bg-gradient-striped-primary {
-  background-image: linear-gradient(45deg, #B3B7F4 25%, transparent 25%, transparent 50%, #B3B7F4 50%, #B3B7F4 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, #475ca2 25%, transparent 25%, transparent 50%, #475ca2 50%, #475ca2 75%, transparent 75%, transparent);
 }
 
 .bg-gradient-x-primary .card-header,

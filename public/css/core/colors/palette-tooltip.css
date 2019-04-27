@@ -23,15 +23,15 @@
 }
 
 .tooltip-bg-primary .tooltip-inner {
-  background-color: #666EE8;
+  background-color: #1b264b;
 }
 
 .tooltip-bg-primary .tooltip-inner:before {
-  border-top-color: #666EE8 !important;
+  border-top-color: #1b264b !important;
 }
 
 .tooltip-text-primary .tooltip-inner {
-  color: #666EE8;
+  color: #1b264b;
 }
 
 .tooltip-bg-success .tooltip-inner {
