@@ -327,13 +327,13 @@
                     'presence' => $offer->user->presence
                 ],
 
-                'rate' => $currencyRate,
-                'usd_rate' => $usd_rate,
-                'currency' => $offer->currency,
+                'rate' => $rate,
+                'usd_rate' => $usd_coin,
+                'currency' => $currencyRate,
 
             ]) !!}
             console.log('{!! $offer->currency !!}')
             console.log('{!! $currencyRate !!}')
-            console.log('{!! $rate !!}')
+            console.log('{!! $usd_coin !!}')
     </script>
 @endpush

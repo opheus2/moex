@@ -47,7 +47,7 @@ class OffersController extends Controller
             }
 
             $usd_rate           = $this->getRate($offer->currency, 'USD');
-            $usd_rate_formatted = get_price($offer->multiplier(), $offer->coin, 'USD');
+            $usd_coin = get_price($offer->multiplier(), $offer->coin, 'USD', false);
             $min_usd_amount     = get_price($offer->min_amount, $offer->coin, 'USD', false);
             $max_usd_amount     = get_price($offer->max_amount_with_fee, $offer->coin, 'USD', false);
 
@@ -57,11 +57,13 @@ class OffersController extends Controller
             $min_amount = $offer->min_amount . $offer->coin;
             $max_amount = $offer->max_amount_with_fee . $offer->coin;
 
+//            dd($usd_rate_formatted);
+
 
 
             return view('home.offers.index')
                 ->with(compact('min_amount', 'max_amount', 'min_usd_amount', 'max_usd_amount', 'min_cur_amount', 'max_cur_amount'))
-                ->with(compact('offer', 'rate', 'rate_formatted', 'usd_rate', 'usd_rate_formatted', 'currencyRate'));
+                ->with(compact('offer', 'rate', 'rate_formatted', 'usd_rate', 'usd_coin', 'currencyRate'));
         } else {
             return abort(404);
         }
