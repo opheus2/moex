@@ -1,7 +1,7 @@
 .bootstrap-switch .bootstrap-switch-container .bootstrap-switch-handle-on.bootstrap-switch-primary,
 .bootstrap-switch .bootstrap-switch-container .bootstrap-switch-handle-off.bootstrap-switch-primary {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#535BE2), to(#7D84EB));
-  background-image: linear-gradient(to bottom, #535BE2 0%, #7D84EB 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#191c4f), to(#273870));
+  background-image: linear-gradient(to bottom, #191c4f 0%, #273870 100%);
   background-repeat: repeat-x;
 }
 

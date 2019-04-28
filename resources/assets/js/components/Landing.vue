@@ -4,8 +4,8 @@
             <div class="landing-buy text-color">
                 <div class="w-93">
                     <span>Buy and Sell Bitcoins Easily</span>
-                    <h6>exchange your bitoins for cash in minutes easily. It's safe, relaible and fast!. </h6>
-                    <a style="" class="text-color btn btn-default btn-lg button-sign" href="/register">Sign Up</a>
+                    <h6>Exchange your bitcoins for cash in minutes easily. <br>It's safe, reliable and fast!. </h6>
+                    <a class="landing-custom btn btn-purple signup" href="/register">Get Started</a>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <div class="about">
                 <div class="left mt-5">
                     <h4 class="title">WHAT TO KNOW</h4>
-                    <h6 class="subtitle">MOEX is a peer to peer exchange service provider that allows you to trade your cryptocurrencies such as Bitcoin, Litecoin and other types of cryptocurrency with an escrow fee of just 1% with no fees for selling.</h6>
+                    <h6 class="subtitle">MOEX is a peer to peer exchange service provider that allows you to trade your cryptocurrencies such as Bitcoin, Litecoin and other types of cryptocurrency with an escrow fee of just 1% and no seller fee.</h6>
                 </div>
                 <div class="right">
                     <img src="/images/bit.png">
@@ -174,13 +174,13 @@ Commission will be credited directly to your account and can be used immediately
         <div class="d-flex justify-content-center  join">
             <div class="row w-93">
                 <div class="col-xs-12 col-md-8">
-                    <p class="us">Join Us</p><br>
-                    <span class="text">Like what you see and want to be a part of this amazing community of bitcoin traders? Then sign up today.</span>
+                    <p class="us">Join Us<br>
+                    <span class="text">Like what you see and want to be a part of this amazing community of bitcoin traders? Then sign up today.</span></p>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="button-group">
-                        <a class="btn btn-purple signup" href="/register">SIGN UP</a>
-                        <a class="btn btn-white login"  href="/login">SIGN IN </a>
+                        <a class="btn btn-purple signup groupbuttons" href="/register">SIGN UP</a>
+                        <a class="btn btn-white login groupbuttons"  href="/login">SIGN IN </a>
                     </div>
                 </div>
             </div>

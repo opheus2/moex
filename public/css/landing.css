@@ -58,17 +58,17 @@ body{
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  font-size: 36px;
+  font-size: 24px;
   color: #656262;
-  margin-bottom: 18px;
+  margin-bottom: 5px;
 }
 
 .about .subtitle{
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  line-height: 37px;
-  font-size: 18px;
+  line-height: normal;
+  font-size: 16px;
   letter-spacing: 0.02em;
   color: #656262;
 }
@@ -106,7 +106,7 @@ body{
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #656262;
@@ -144,7 +144,7 @@ body{
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  font-size: 36px;
+  font-size: 24px;
   color: #656262;
   float: right;
 }
@@ -154,7 +154,7 @@ body{
   font-style: normal;
   font-weight: normal;
   line-height: 37px;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   width: 100%;
   color: #656262;
@@ -180,6 +180,13 @@ body{
 
 
 /* join */
+.groupbuttons{
+  padding: 8px 20px !important;
+
+}
+
+
+/* join */
 .join{
     min-height: 185px;
     height: 100%;
@@ -193,7 +200,7 @@ body{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    font-size: 30px;
+    font-size: 24px;
     color: #656262;
     padding-top: 15px;
 }
@@ -202,8 +209,8 @@ body{
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
-    line-height: 29px;
-    font-size: 18px;
+    line-height: normal;
+    font-size: 16px;
     color: #656262;
 }
 .join .btn-purple, .join .btn-white{
@@ -221,6 +228,11 @@ body{
     margin-left: -8px!important;
 }
 /* join end */
+
+.join .button-group .login{
+    margin-left: -8px!important;
+}
+/* groupbutton */
 
 /*  */
 
