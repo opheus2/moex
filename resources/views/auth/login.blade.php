@@ -64,7 +64,7 @@
                                 @include('auth.includes.nocaptcha', [
 									'button' => [
 										'title'         => '<i class="ft-unlock"></i> '. __('Login'),
-										'attributes'    => ['class' => 'btn btn-info btn-block round ladda-button', 'id' => 'submit']
+										'attributes'    => ['class' => 'btn btn-primary btn-block round ladda-button', 'id' => 'submit']
 									]
 								])
 
