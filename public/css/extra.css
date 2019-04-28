@@ -27,7 +27,7 @@ body > div:first-of-type {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF !important;
     margin-top: 16px !important;
     margin-right: 12px !important;
@@ -61,10 +61,10 @@ body > div:first-of-type {
 .landing-buy span{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     /* line-height: 102px; */
     /* font-size: 50px; */
-    font-size: 50px;
+    font-size: 36px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
 }
@@ -74,12 +74,17 @@ body > div:first-of-type {
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
-    line-height: 48px;
-    font-size: 36px;
-    letter-spacing:  0.02em;
+    line-height: normal;
+    font-size: 24px;
+    /* letter-spacing:  0.02em; */
     color: #FFFFFF;
-    margin-bottom: 37px;
+    margin-bottom: 20px;
 
+}
+.landing-custom{
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  
 }
 
 .text-color{
