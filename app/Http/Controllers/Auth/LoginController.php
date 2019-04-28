@@ -49,11 +49,13 @@ class LoginController extends Controller
      * @param Google2FA $google2fa
      * @return void
      */
-    public function __construct(Google2FA $google2fa)
+    public function __construct(Google2FA $google2fa, Request $request)
     {
         $this->middleware('guest')->except('logout');
 
         $this->google2fa = $google2fa;
+
+        $this->req = $request;
     }
 
     /**
@@ -176,7 +178,15 @@ class LoginController extends Controller
      */
     public function username()
     {
-        return 'name';
+        $login_type = filter_var($this->req->input('login'), FILTER_VALIDATE_EMAIL )
+            ? 'email'
+            : 'name';
+
+        $this->req->merge([
+            $login_type => $this->req->input('login')
+        ]);
+
+        return $login_type;
     }
 
 

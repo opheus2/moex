@@ -53,15 +53,15 @@ export default {
 
             if( this.coin === 'btc' ){
 
-                this.min_amount = this.btc_min
+                this.min_amount = this.btc_min.toFixed(8)
 
             } else if( this.coin === 'ltc'){
 
-                this.min_amount = this.ltc_min
+                this.min_amount = this.ltc_min.toFixed(8)
 
             } else if( this.coin === 'dash'){
 
-                this.min_amount = this.dash_min
+                this.min_amount = this.dash_min.toFixed(8)
 
             }
 
@@ -73,15 +73,15 @@ export default {
 
             if( this.coin === 'btc' ){
 
-                this.max_amount = this.btc_max
+                this.max_amount = this.btc_max.toFixed(8)
 
             } else if( this.coin === 'ltc'){
 
-                this.max_amount = this.ltc_max
+                this.max_amount = this.ltc_max.toFixed(8)
 
             } else if( this.coin === 'dash'){
 
-                this.max_amount = this.dash_max
+                this.max_amount = this.dash_max.toFixed(8)
 
             }
 

@@ -25,7 +25,7 @@
                                 @include('auth.includes.alerts')
 
                                 <fieldset class="form-group my-2 position-relative has-icon-left {{ $errors->has('name') ? 'error' : '' }}">
-                                    {!! Form::text('name', null, ['id' => 'name', 'class' => 'round form-control', 'placeholder' => __('Your Username'), 'required' => true]) !!}
+                                    {!! Form::text('login', null, ['id' => 'name', 'class' => 'round form-control', 'placeholder' => __('Your Username/E-mail'), 'required' => true]) !!}
                                     <div class="form-control-position"><i class="ft-user"></i></div>
                                 </fieldset>
 
