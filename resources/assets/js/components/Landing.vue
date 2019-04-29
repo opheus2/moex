@@ -179,8 +179,8 @@ Commission will be credited directly to your account and can be used immediately
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="button-group">
-                        <a class="btn btn-purple signup groupbuttons" href="/register">SIGN UP</a>
-                        <a class="btn btn-white login groupbuttons"  href="/login">SIGN IN </a>
+                        <a class="btn btn-purple signup groupbuttons" href="/register">Sign Up</a>
+                        <a class="btn btn-white login groupbuttons"  href="/login">Sign In </a>
                     </div>
                 </div>
             </div>

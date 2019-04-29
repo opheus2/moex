@@ -139,7 +139,7 @@
 .containers .about-inner .title {
   font-family: Nunito;
   font-weight: bold;
-  line-height: 49px;
+  line-height: 37px;
   font-size: 24px;
   color: #878787;
   margin-bottom: 20px;
@@ -148,9 +148,9 @@
 .containers .about-inner .body {
   font-family: Nunito;
   line-height: 37px;
-  font-size: 18px;
+  font-size: 16px;
   color: #878787;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .containers .about-inner .header .body {
