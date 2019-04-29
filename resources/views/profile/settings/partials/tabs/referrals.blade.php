@@ -5,10 +5,10 @@
     <div class="card-content">
         <div class="card-body">
             <div class="alert alert-primary" role="alert">
-                <strong>{{route('referral.url', auth()->user()->name)}}</strong>
+                <span class="text-white">{{route('referral.url', auth()->user()->name)}}</span>
             </div>
-            <p>The above url should be used to refer users to the platform. Referring a user to the platform attracts an earning of 100USD.</p>
-            <p><strong>Note: </strong> <em>You can <strong>only</strong> receive your earnings after the referred user has been verified and has made a minimum of 10 trades</em></p>
+            <p>The above url should be used to refer users to the platform. Referring a user to the platform attracts an earning of 70USD.</p>
+            <p><strong>Note: </strong> <em>You can <strong>only</strong> receive your earnings after the referred user has been verified and has made a minimum trade worth 4BTC</em></p>
         </div>
     </div>
 </div>

@@ -64,7 +64,8 @@
                 </div>
             </div>
 
-            <div class="sidebar-detached sidebar-left sidebar-sticky">
+            <!-- <div class="sidebar-detached sidebar-left sidebar-sticky"> -->
+            <div class="sidebar-detached sidebar-left">
                 <div class="sidebar">
                     <div class="sidebar-content card">
                         <!-- Predefined Views -->

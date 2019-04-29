@@ -1,8 +1,8 @@
-<div class="card border-top-primary">
+<!-- <div class="card border-top-primary">
     <div class="card-head ">
         <div class="card-header">
-            <h4 class="card-title">{{__('Profile Picture')}}</h4>
-            @if($user->profile && $user->profile->picture)
+            <h4 class="card-title">{{{--__('Profile Picture')--}}}</h4>
+            {s{{--@if($user->profile && $user->profile->picture)--}}}
                 <a class="heading-elements-toggle">
                     <i class="la la-ellipsis-h font-medium-3"></i>
                 </a>
@@ -11,10 +11,10 @@
                     <a href="{{route('profile.settings.delete-picture', ['user' => $user->name])}}" data-swal="confirm-ajax" data-ajax-type="POST"
                        class="btn btn-danger btn-sm" data-icon="error" data-text="{{__('Your profile picture will be reset to default!')}}">
                         <i class="ft-trash white"></i>
-                        {{__('Delete Picture')}}
+                        {{{--__('Delete Picture')--}}}
                     </a>
                 </div>
-            @endif
+          {{{--  @endif --}}}
         </div>
     </div>
 
@@ -22,13 +22,13 @@
         <div class="card-body">
             <div id="picture-upload" class="dropzone">
                 <div class="dz-message">
-                    {{__('Click here to upload.')}}
+                {{{--__('Click here to upload.')--}}}
                 </div>
             </div>
         </div>
     </div>
 
-</div>
+</div> -->
 
 
 <div class="card border-top-blue">
