@@ -25,13 +25,9 @@
                             <fieldset class="py-1">
                                 {!! Form::radio('user_login_2fa', 1, $setting->user_login_2fa == true, ['disabled' => !$setting->google2fa_status]) !!}
                                 <label for="user_login_2fa">
-                                    <a href="https://support.google.com/accounts/answer/1066447">
+                                    <span>
                                         <b>GOOGLE AUTHENTICATOR</b>
-                                    </a>
-                                    {{__('OR')}}
-                                    <a href="https://www.authy.com/">
-                                        <b>AUTHY</b>
-                                    </a>
+                                    </span>
                                 </label>
                             </fieldset>
                         </div>
@@ -53,13 +49,9 @@
                             <fieldset class="py-1">
                                 {!! Form::radio('outgoing_transfer_2fa', 1, $setting->outgoing_transfer_2fa == true, ['disabled' => !$setting->google2fa_status]) !!}
                                 <label for="outgoing_transfer_2fa">
-                                    <a href="https://support.google.com/accounts/answer/1066447">
+                                    <span>
                                         <b>GOOGLE AUTHENTICATOR</b>
-                                    </a>
-                                    {{__('OR')}}
-                                    <a href="https://www.authy.com/">
-                                        <b>AUTHY</b>
-                                    </a>
+                                    </span>
                                 </label>
                             </fieldset>
                         </div>
@@ -198,8 +190,8 @@
                             </div>
                         </div>
 
-                        <div class="alert alert-light mb-2" role="alert">
-                            <p>{{trans('auth.delete.warning_message')}}</p>
+                        <div class="alert alert-danger mb-2" role="alert">
+                            <p><em>{{trans('auth.delete.warning_message')}}</em></p>
                         </div>
                     </div>
 
