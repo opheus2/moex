@@ -67,7 +67,7 @@ body{
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
-  line-height: normal;
+  line-height: 37px;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #656262;
@@ -130,6 +130,10 @@ body{
 
 /* referral */
 
+.appicons {
+  -webkit-align-self: center !important; /* Safari 7.0+ */
+  align: center !important;
+}
 
 .refer{
   font-family: Nunito;

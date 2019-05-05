@@ -13,13 +13,18 @@
             <div class="about">
                 <div class="left mt-5">
                     <h4 class="title">WHAT TO KNOW</h4>
-                    <h6 class="subtitle">MOEX is a peer to peer exchange service provider that allows you to trade your cryptocurrencies such as Bitcoin, Litecoin and other types of cryptocurrency with an escrow fee of just 1% and no seller fee.</h6>
+                    <p class="subtitle">MOEX is a peer to peer exchange service provider that allows you to trade your cryptocurrencies such as Bitcoin, Litecoin and other types of cryptocurrency with an escrow fee of just 1% and no seller fee.</p>
+                    <p class="subtitle">Who says buying and selling Cryptocurrencies are complicated? At MOEX, we make the process stress-free and quick. Unlike the competition, we streamline CryptoCurrency buying and selling. We are the most sought-after expert that everyone can depend on and trust.
+                    </p>
+                    <p class="subtitle">Buying or selling Cryptocurrencies can be risky and tricky. MOEX lessens the risks and gives everyone a secure experience. While there’s a large number of platforms to take advantage, only a few are safe. MOEX strives to promote optimal security throughout the process. We use 256-Bit encryption SSL to keep different transactions comfortable. We also develop and level up our systems to provide a user-friendly and easy-to-use system. Thanks to our highly dedicated and talented team of professionals.
+                    <router-link :to="{name: 'about'}" >Read more</router-link></p>
                 </div>
                 <div class="right">
                     <img src="/images/bit.png">
                 </div>
             </div>
         </div>
+        <br>
         <div class="table-container">
             <h5 class="trade" style="text-align:center">Trade Offers</h5>
             <div class="d-flex justify-content-center" style="margin-bottom:12px;">
@@ -101,6 +106,22 @@
                         <span class="refer-text">You can earn <b>NGN 20,000.00 </b>  worth of any cryptocurrency of your choice for every sucessful referral.
 Commission will be credited directly to your account and can be used immediately.
 <b>*Terms and Conditions apply.</b>
+                        </span>
+                    </span>
+                    </div>
+                </div>
+                <div class="col-md-6" >
+                    <div style="margin-top:10%; margin-left:2%;">
+                    <span class="appicons">
+                        <span >
+                        <a href="https://play.google.com">
+                        <img src="/images/google-play-badge.png" />
+                        </a>
+                        </span>
+                        <span >
+                        <a href="https://store.itunes.com">
+                        <img src="/images/app-store-badge.png" />
+                        </a>
                         </span>
                     </span>
                     </div>
