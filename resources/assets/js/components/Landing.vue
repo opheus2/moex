@@ -108,15 +108,19 @@ Commission will be credited directly to your account and can be used immediately
 <b>*Terms and Conditions apply.</b>
                         </span>
                     </span>
-                    <span class="refer">
+                    </div>
+                </div>
+                <div class="col-md-6" >
+                    <div style="margin-top:10%; margin-left:2%;">
+                    <span class="appicons">
                         <span >
                         <a href="https://play.google.com">
-                        <img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge.png" />
+                        <img src="/images/google-play-badge.png" />
                         </a>
                         </span>
                         <span >
                         <a href="https://store.itunes.com">
-                        <img src="https://freeiconshop.com/wp-content/uploads/edd/app-store-badge.png" />
+                        <img src="/images/app-store-badge.png" />
                         </a>
                         </span>
                     </span>

@@ -130,6 +130,10 @@ body{
 
 /* referral */
 
+.appicons {
+  -webkit-align-self: center !important; /* Safari 7.0+ */
+  align: center !important;
+}
 
 .refer{
   font-family: Nunito;
