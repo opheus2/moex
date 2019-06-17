@@ -49,10 +49,10 @@
                     <div class="d-flex child mt-sm-2">
                         <div class="w-sm-100 d-flex">
                             <div class="w-sm-100 pl-sm-0 link-holder">
-                                <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Sell</a>
+                                <a @click.prevent="tableType = 'sell'" class="mylink" :class="tableType === 'sell' ? 'link-active' : ''">Buy</a>
                             </div>
                             <div class="w-sm-100 link-holder">
-                                <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Buy</a>
+                                <a @click.prevent="tableType = 'buy'" class="mylink" :class="tableType === 'buy' ? 'link-active' : ''">Sell</a>
                             </div>
                         </div>
                         <div class="w-sm-100 pr-sm-0">
