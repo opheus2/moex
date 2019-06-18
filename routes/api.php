@@ -44,6 +44,17 @@ Route::group(['namespace' => 'Resources'], function () {
     Route::get('rate/{coin}/{currency}', function ($coin, $currency) {
         return 1 / get_convert (1, $coin, $currency);
     });
+
+    Route::get('rate/all', function() {
+        return [
+            'btcUSD' => 1 / get_convert(1, 'btc', 'usd'),
+            'btcNGN' => 1 / get_convert(1, 'btc', 'ngn'),
+            'ltcNGN' => 1 / get_convert(1, 'ltc', 'ngn'),
+            'ltcUSD' => 1 / get_convert(1, 'ltc', 'usd'),
+            'dashNGN' => 1 / get_convert(1, 'dash', 'ngn'),
+            'dashUSD' => 1 / get_convert(1, 'dash', 'usd'),
+        ];
+    });
 });
 
 Route::get('/docs', function () {

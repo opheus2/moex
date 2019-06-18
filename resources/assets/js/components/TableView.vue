@@ -29,10 +29,10 @@
                 <div class="notif" :class="props.row.user.status === 'active' ? 'bg-green' : 'bg-orange'"><i></i></div>
             </div>
             <div slot="price_NGN" class="d-flex align-items-center" slot-scope="props">
-                <p>&#8358;{{ ((props.row.otherDetails.profit_margin / 100 * btcNGN) + btcNGN).toFixed(2) }}</p>
+                <p>&#8358;{{ ngnVal(props.row) }}</p>
             </div>
             <div slot="price_USD" slot-scope="props" class="d-flex align-items-center">
-                <strong>${{ ((props.row.otherDetails.profit_margin / 100 * btcUSD) + btcUSD).toFixed(2) }}</strong>
+                <strong>${{ usdVal(props.row) }}</strong>
             </div>
             <div slot="payment_method" class="d-flex align-items-center" slot-scope="props"><p>{{ props.row.payment_method }}</p></div>
             <div slot="limit" slot-scope="props" class="d-flex align-items-center"><strong>{{ props.row.amount_range }}</strong></div>
@@ -84,10 +84,7 @@
                     sortable: [/* 'payment_method', 'amount_range', 'coin' */],
                     skin: /* "table mytable table-bordered table-hover" */ "table table-hover table-responsive responsive",
                 },
-                btcNGN: 0,
-                btcUSD: 0,
-                ltcNGN: 0,
-                ltcUSD: 0,
+                rates: null
             }
         },
         watch: {
@@ -135,8 +132,8 @@
                         let user = data.user;
                         let token = data.token;
                         let payment_method = data.payment_method;
-                        let maxAmount = data.max_amount;
-                        let minAmount = data.min_amount;
+                        let maxAmount = data.max_amount.toFixed(2);
+                        let minAmount = data.min_amount.toFixed(2);
                         let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         let coin = data.coin.toUpperCase();
                         this.sellData.push({seller, payment_method, otherDetails, avgRating, coin, amount_range: `${minAmount} - ${maxAmount}`, user, token});
@@ -161,8 +158,8 @@
                         let otherDetails = data;
                         let token = data.token;
                         let payment_method = data.payment_method;
-                        let maxAmount = data.max_amount;
-                        let minAmount = data.min_amount;
+                        let maxAmount = data.max_amount.toFixed(2);
+                        let minAmount = data.min_amount.toFixed(2);
                         let coin = data.coin.toUpperCase();
                         let avgRating = this.getPercentageRating(this.getAverage(data.user.id));
                         this.buyData.push({buyer, payment_method, avgRating, otherDetails, coin, amount_range: `$${minAmount} - $${maxAmount}`, user, token});
@@ -174,31 +171,9 @@
                 })
             ;
 
-            window.axios.get(`/api/rate/btc/ngn`).then(res => {
-                this.btcNGN = res.data;
-                if (this.btcUSD === 0) {
-                    this.btcUSD = this.btcNGN / 360;
-                }
+            window.axios.get(`/api/rate/all`).then(res => {
+                this.rates = res.data;
             }).catch();
-            window.axios.get(`/api/rate/btc/usd`).then(res => {
-                this.btcUSD = res.data;
-                if (this.btcNGN === 0) {
-                    this.btcNGN = this.btcUSD * 360;
-                }
-            }).catch();
-            window.axios.get(`/api/rate/ltc/usd`).then(res => {
-                this.ltcUSD = res.data;
-                if (this.ltcNGN === 0) {
-                    this.ltcNGN = this.ltcUSD * 360
-                }
-            }).catch();
-            window.axios.get(`/api/rate/ltc/ngn`).then(res => {
-                this.ltcNGN = res.data;
-                if (this.ltcUSD === 0) {
-                    this.ltcUSD = this.ltcNGN * 360;
-                }
-            }).catch();
-
         },
         mounted () {
             this.tableData = [...this.getCurrentTableData()];
@@ -269,6 +244,48 @@
                 const percentile = 100;
                 
                 return avg / length * percentile;
+            },
+
+            ngnVal(row) {
+                let loaderInterval = setInterval(() => {
+                    if (this.rates) {
+                        if (row.coin.toLowerCase() === 'btc') {
+                            return ((
+                                this.rates.btcNGN * row.otherDetails.profit_margin / 100)
+                                + this.rates.btcNGN).toFixed(2);
+                        } else if(row.coin.toLowerCase() === 'ltc') {
+                            return ((
+                                this.rates.ltcNGN * row.otherDetails.profit_margin / 100)
+                                + this.rates.ltcNGN).toFixed(2);
+                        } else if(row.coin.toLowerCase() === 'dash') {
+                            return ((
+                                this.rates.dashNGN * row.otherDetails.profit_margin / 100)
+                                + this.rates.bashNGN).toFixed(2);
+                        }
+                        clearInterval(loaderInterval);
+                    }
+                }, 500);
+            },
+
+            usdVal(row) {
+                let loaderInterval = setInterval(() => {
+                    if (this.rates) {
+                        if (row.coin.toLowerCase() === 'btc') {
+                            return ((
+                                this.rates.btcUSD * row.otherDetails.profit_margin / 100)
+                                + this.rates.btcUSD).toFixed(2);
+                        } else if(row.coin.toLowerCase() === 'ltc') {
+                            return ((
+                                this.rates.ltcUSD * row.otherDetails.profit_margin / 100)
+                                + this.rates.ltcUSD).toFixed(2);
+                        } else if(row.coin.toLowerCase() === 'dash') {
+                            return ((
+                                this.rates.dashUSD * row.otherDetails.profit_margin / 100)
+                                + this.rates.bashUSD).toFixed(2);
+                        }
+                        clearInterval(loaderInterval);
+                    }
+                }, 500);
             }
         }
     };
@@ -329,6 +346,22 @@
         }
         .mt-sm-2 {
             margin-top: 10px;
+        }
+    }
+    @media (min-width: 300px) and (max-width: 400px) {
+        .select2-container {
+            width: 150px !important;
+        }
+    }
+
+    @media (min-width: 400px) and (max-width: 500px) {
+        .select2-container {
+            width: 190px !important;
+        }
+    }
+    @media (min-width: 500px) and (max-width: 900px) {
+        .select2-container {
+            width: 220px !important;
         }
     }
 </style>
